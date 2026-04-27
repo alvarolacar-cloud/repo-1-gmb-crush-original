@@ -66,5 +66,3 @@ Negocio: Cerrajeros Madrid 24h
 - C. Política de presencia física: 2
 - D. Validaciones estructurales: 7
 - E. Notas: 1
-
-**Nota:** solo se completa el QA de 1 página (LBS-001) de las 28 del inventario base.

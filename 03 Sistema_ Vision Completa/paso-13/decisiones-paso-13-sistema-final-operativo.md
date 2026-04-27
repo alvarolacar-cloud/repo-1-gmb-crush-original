@@ -18,7 +18,3 @@ Negocio: Cerrajeros Madrid 24h
 
 **Distribución por bloque:**
 - A. Reconocimiento de gap en GeoArticles: 1
-
-**Notas:**
-- El paso 13 cierra la fórmula con 28 páginas pero solo lista 16 URLs finales (1 + 5 + 1 + 5 + 1 + 3 = 16). Las 12 URLs restantes de GeoArticles nunca se concretan en el sistema.
-- El paso 13 no introduce decisiones nuevas para Cerrajeros, solo reagrupa lo decidido en pasos anteriores.

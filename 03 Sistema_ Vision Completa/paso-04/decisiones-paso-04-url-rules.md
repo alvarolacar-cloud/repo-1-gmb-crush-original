@@ -77,5 +77,3 @@ Negocio: Cerrajeros Madrid 24h
 - C. URLs aprobadas: 13
 - D. Topics y URLs de GeoArticle: 6
 - E. URLs no aprobadas: 1
-
-**Nota:** la fórmula del paso 2 calcula 15 GeoArticles (G=3 × S=5). En este paso solo se aprueban 3 URLs y 3 topics — quedan 12 sin definir.

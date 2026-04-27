@@ -46,9 +46,3 @@ Negocio: Cerrajeros Madrid 24h
 - B. Cambio de página ejemplo: 1
 - C. Reformulación de GeoArticle: 2
 - D. Anchors para nuevo LBS: 1
-
-**Notas (inconsistencias importantes):**
-- En paso 1 las Local Coverage Areas son 4 (Almagro, Chamberí, Salamanca, Retiro). En paso 11 aparecen 5 (se añade Centro) sin justificación.
-- En paso 4 el GeoArticle de costes se llama `guia-precios-cerrajero-urgente`. En paso 11 se llama `cuanto-cuesta-un-cerrajero-urgente`. Misma intención, dos slugs distintos.
-- El LBS ejemplo cambia de `/cerrajero/madrid/cerrajero-urgente/` (pasos 3, 6, 7, 9) a `/cerrajero/madrid/apertura-puertas/` (paso 11).
-- En paso 1 hay 5 servicios core. En paso 11 línea 261 aparece "Duplicado de llaves" listado como core service, en conflicto con la clasificación previa de "Duplicado de llaves" como categoría adicional con página propia.

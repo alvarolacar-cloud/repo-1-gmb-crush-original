@@ -70,7 +70,3 @@ Negocio: Cerrajeros Madrid 24h
 - B. CMS y capacidades técnicas: 4
 - C. Tracking: 3
 - D. Calendario semanal: 20
-
-**Notas:**
-- El calendario cubre 4 semanas pero solo programa 17 páginas + 3 tareas de QA/baseline. De las 28 páginas del inventario base, 11 quedan sin fecha asignada (principalmente los GeoArticles no concretados).
-- Se introduce una nueva URL `/contact/` que no estaba en pasos anteriores como decisión explícita.

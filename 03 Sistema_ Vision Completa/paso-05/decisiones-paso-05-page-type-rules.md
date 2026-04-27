@@ -81,7 +81,3 @@ Negocio: Cerrajeros Madrid 24h
 - E. Brief Additional Category: 2
 - F. Brief GeoHub: 3
 - G. Brief GeoArticle: 1
-
-**Notas:**
-- Aparece un email (`info@cerrajerosmadrid24h.com`) que no se había definido en el paso 1.
-- En la decisión 5.13 hay un duplicado en el documento original ("cambio de bombines" repetido).

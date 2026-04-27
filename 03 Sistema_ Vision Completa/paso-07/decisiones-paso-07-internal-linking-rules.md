@@ -77,5 +77,3 @@ Negocio: Cerrajeros Madrid 24h
 - D. Anchors específicos LBS: 6
 - E. Enlaces requeridos LBS: 1
 - F. Breadcrumbs: 6
-
-**Nota:** la URL de contacto se decide aquí como `/contact/` (inglés). En el paso 14 se usa `/contacto/` (español). Inconsistencia.

@@ -20,7 +20,3 @@ Negocio: Cerrajeros Madrid 24h
 
 **Distribución por bloque:**
 - A. Cambios en trust signals: 3
-
-**Notas:**
-- El paso 12 introduce 6 trust signals (vs 5 en paso 1). El nuevo es "Reconocimiento local de servicio" sin trazabilidad a una fuente.
-- Se renombra "Servicio móvil en el mismo día" (paso 1) a "Soporte móvil en el mismo día" (paso 12) sin justificación.

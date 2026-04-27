@@ -47,7 +47,3 @@ Cada fila muestra las 6 puntuaciones del scoring (Revenue, Search Intent, GBP Ca
 - A. Scores asignados por página: 10
 - B. Notas estratégicas: 1
 - C. Orden recomendado de publicación: 1
-
-**Notas:**
-- Solo se puntúan 10 páginas (1 Homepage + 2 SO + 1 GeoHub + 4 LBS + 1 AC + 1 GA), pero el inventario base es de 28 páginas. Faltan 18 páginas sin score asignado.
-- No se puntúan los 5 SO completos (solo 2), ni el LBS de instalacion-cerraduras-seguridad, ni 2 de los 3 GeoArticles concretados, ni los 12 GeoArticles no concretados.
