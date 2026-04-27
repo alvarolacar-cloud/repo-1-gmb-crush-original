@@ -169,6 +169,8 @@ Approved additional category slugs:
 
 # Cuerpo operativo del Paso 4
 
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
+
 ## Regla 1 — Dominio canónico
 
 ### Explicación
@@ -413,7 +415,7 @@ Los GeoArticles son boosters semánticos y viven bajo la Main City.
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-/madrid/guia-precios-cerrajero-urgente/
+/madrid/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
 ### Ejemplos incorrectos
@@ -422,7 +424,7 @@ Los GeoArticles son boosters semánticos y viven bajo la Main City.
 - /blog/cerrajero-urgente-cost-madrid/
 - /cerrajero/madrid/cerrajero-urgente/
 - /articles/madrid-cerrajero-urgente-cost/
-- /guia-precios-cerrajero-urgente-madrid/
+- /cuanto-cuesta-un-cerrajero-urgente-madrid/
 ```
 
 ### Regla final
@@ -684,7 +686,7 @@ Main City Additional Category:
 /cerrajero/madrid/duplicado-llaves/
 
 GeoArticles de la Main City:
-/madrid/guia-precios-cerrajero-urgente/
+/madrid/cuanto-cuesta-un-cerrajero-urgente/
 /madrid/que-hacer-si-no-puedes-entrar-casa/
 /madrid/cuanto-tarda-un-cerrajero/
 ```
@@ -696,7 +698,7 @@ GeoArticles de la Main City:
 /cerrajero/almagro/cerrajero-urgente/
 /chamberi/
 /cerrajero/salamanca/apertura-puertas/
-/retiro/guia-precios-cerrajero-urgente/
+/retiro/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
 Estas URLs solo se crearían como Approved Expansion Areas.
@@ -940,13 +942,13 @@ Los GeoArticles son contenido de soporte, no landings comerciales. Su URL debe r
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-El artículo de coste usa /madrid/guia-precios-cerrajero-urgente/ y enlaza a /cerrajero/madrid/cerrajero-urgente/.
+El artículo de coste usa /madrid/cuanto-cuesta-un-cerrajero-urgente/ y enlaza a /cerrajero/madrid/cerrajero-urgente/.
 ```
 
 ### Ejemplos incorrectos
 
 ```text
-- /cerrajero/madrid/guia-precios-cerrajero-urgente/ si complica la distinción de landing
+- /cerrajero/madrid/cuanto-cuesta-un-cerrajero-urgente/ si complica la distinción de landing
 - /cerrajero-urgente-cost-madrid/
 - /blog/random-post-123/
 ```
@@ -1126,4 +1128,33 @@ Las URLs de expansión se aprueban antes de generarse.
 - GeoHub Pages AI Framework
 - GeoArticle Pages AI Framework
 - Additional Categories Pages AI Framework
+
+
+
+### GeoArticles completos (15)
+
+**Cerrajero urgente (3):**
+1. /madrid/cuanto-cuesta-un-cerrajero-urgente/
+2. /madrid/que-hacer-si-no-puedes-entrar-casa/
+3. /madrid/cuanto-tarda-un-cerrajero/
+
+**Apertura de puertas (3):**
+4. /madrid/cuanto-cuesta-abrir-una-puerta/
+5. /madrid/que-hacer-si-te-dejas-las-llaves-dentro/
+6. /madrid/apertura-de-puertas-sin-romper-cerradura/
+
+**Cambio de cerraduras (3):**
+7. /madrid/cuando-cambiar-la-cerradura-de-casa/
+8. /madrid/cambio-de-cerradura-tras-perder-llaves/
+9. /madrid/cerradura-nueva-o-reparacion/
+
+**Cambio de bombines (3):**
+10. /madrid/cuando-cambiar-el-bombin/
+11. /madrid/bombin-antibumping-madrid/
+12. /madrid/cambio-de-bombin-sin-cambiar-cerradura/
+
+**Instalación de cerraduras de seguridad (3):**
+13. /madrid/mejores-cerraduras-de-seguridad-para-viviendas/
+14. /madrid/cerraduras-de-seguridad-para-comunidades/
+15. /madrid/instalar-cerradura-de-seguridad-en-puerta-blindada/
 

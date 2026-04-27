@@ -135,6 +135,8 @@ Urgentee cerrajero is high-value, urgente, directly aligned with cerrajero inten
 
 # Cuerpo operativo del Paso 8
 
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
+
 ## Regla 1 — Fórmula de prioridad
 
 ### Explicación
@@ -406,7 +408,7 @@ Landing first → article second
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-/cerrajero/madrid/cerrajero-urgente/ antes de /madrid/guia-precios-cerrajero-urgente/
+/cerrajero/madrid/cerrajero-urgente/ antes de /madrid/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
 ### Ejemplos incorrectos
@@ -469,7 +471,7 @@ La homepage va primero.
 | Location-Based Service | `/cerrajero/madrid/cambio-bombines/` | 5 | 4 | 4 | 5 | 3 | 4 | 25 | P2 |
 | Location-Based Service | `/cerrajero/madrid/cambio-cerraduras/` | 4 | 4 | 4 | 5 | 3 | 4 | 24 | P2 |
 | Additional Category | `/cerrajero/madrid/duplicado-llaves/` | 2 | 3 | 4 | 5 | 3 | 2 | 19 | P3 |
-| GeoArticle | `/madrid/guia-precios-cerrajero-urgente/` | 3 | 3 | 4 | 5 | 4 | 3 | 22 | P2 after landing |
+| GeoArticle | `/madrid/cuanto-cuesta-un-cerrajero-urgente/` | 3 | 3 | 4 | 5 | 4 | 3 | 22 | P2 after landing |
 
 ## Orden recomendado
 
@@ -691,7 +693,7 @@ Page Type + Score + Dependency → Priority final
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Homepage es P1; /madrid/guia-precios-cerrajero-urgente/ puede ser P3 aunque su tema sea importante.
+Homepage es P1; /madrid/cuanto-cuesta-un-cerrajero-urgente/ puede ser P3 aunque su tema sea importante.
 ```
 
 ### Ejemplos incorrectos
@@ -840,3 +842,40 @@ El score es operativo y debe revisarse con datos.
 - GeoArticle Pages AI Framework
 - Additional Categories Pages AI Framework
 
+
+
+### Inventario SEO base — Priority Score completo
+
+| # | URL | Tipo | Priority Score |
+|---|-----|------|----------------|
+| 1 | / | Homepage | 100 |
+| 2 | /cerrajero/cerrajero-urgente/ | Service Overview | 90 |
+| 3 | /cerrajero/apertura-puertas/ | Service Overview | 88 |
+| 4 | /cerrajero/cambio-cerraduras/ | Service Overview | 86 |
+| 5 | /cerrajero/cambio-bombines/ | Service Overview | 84 |
+| 6 | /cerrajero/instalacion-cerraduras-seguridad/ | Service Overview | 82 |
+| 7 | /madrid/ | GeoHub | 95 |
+| 8 | /cerrajero/madrid/cerrajero-urgente/ | LBS | 92 |
+| 9 | /cerrajero/madrid/apertura-puertas/ | LBS | 88 |
+| 10 | /cerrajero/madrid/cambio-cerraduras/ | LBS | 85 |
+| 11 | /cerrajero/madrid/cambio-bombines/ | LBS | 83 |
+| 12 | /cerrajero/madrid/instalacion-cerraduras-seguridad/ | LBS | 80 |
+| 13 | /cerrajero/madrid/duplicado-llaves/ | Additional Category | 75 |
+| 14 | /madrid/cuanto-cuesta-un-cerrajero-urgente/ | GeoArticle | 70 |
+| 15 | /madrid/que-hacer-si-no-puedes-entrar-casa/ | GeoArticle | 68 |
+| 16 | /madrid/cuanto-tarda-un-cerrajero/ | GeoArticle | 65 |
+| 17 | /madrid/cuanto-cuesta-abrir-una-puerta/ | GeoArticle | 64 |
+| 18 | /madrid/que-hacer-si-te-dejas-las-llaves-dentro/ | GeoArticle | 62 |
+| 19 | /madrid/apertura-de-puertas-sin-romper-cerradura/ | GeoArticle | 60 |
+| 20 | /madrid/cuando-cambiar-la-cerradura-de-casa/ | GeoArticle | 58 |
+| 21 | /madrid/cambio-de-cerradura-tras-perder-llaves/ | GeoArticle | 56 |
+| 22 | /madrid/cerradura-nueva-o-reparacion/ | GeoArticle | 54 |
+| 23 | /madrid/cuando-cambiar-el-bombin/ | GeoArticle | 52 |
+| 24 | /madrid/bombin-antibumping-madrid/ | GeoArticle | 50 |
+| 25 | /madrid/cambio-de-bombin-sin-cambiar-cerradura/ | GeoArticle | 48 |
+| 26 | /madrid/mejores-cerraduras-de-seguridad-para-viviendas/ | GeoArticle | 46 |
+| 27 | /madrid/cerraduras-de-seguridad-para-comunidades/ | GeoArticle | 44 |
+| 28 | /madrid/instalar-cerradura-de-seguridad-en-puerta-blindada/ | GeoArticle | 42 |
+| — | /contacto/ | Auxiliar | Sin score SEO |
+
+> Cada URL SEO del inventario base debe tener prioridad asignada.

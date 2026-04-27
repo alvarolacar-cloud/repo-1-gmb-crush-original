@@ -277,9 +277,8 @@ Trust Signals:
 - 10+ años de experiencia
 - reseñas iniciales pendientes de recopilar tras crear el GBP
 - Técnicos cerrajeros cualificados
-- Reconocimiento local de servicio
 - Garantía de trabajo
-- Soporte móvil en el mismo día
+- Servicio móvil en el mismo día
 
 Preferred CTA:
 Llamar ahora
@@ -302,6 +301,8 @@ GMB Crush Geo Grid, Google Search Console, GA4
 
 # Cuerpo operativo del Paso 12
 
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
+
 ## Regla 1 — El Master Prompt debe generar el sistema completo
 
 ### Explicación
@@ -317,7 +318,7 @@ Prompt → validate → generate → link → score → QA → roadmap
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Cerrajeros Madrid 24h recibe un sistema completo de 28 páginas base, no solo una lista de URLs
+Cerrajeros Madrid 24h recibe un sistema completo de 27 páginas SEO base + /contacto/ como página auxiliar, no solo una lista de URLs
 ```
 
 ### Ejemplos incorrectos
@@ -573,7 +574,7 @@ Source URL → Target URL + Anchor + Placement
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-/madrid/guia-precios-cerrajero-urgente/ → /cerrajero/madrid/cerrajero-urgente/
+/madrid/cuanto-cuesta-un-cerrajero-urgente/ → /cerrajero/madrid/cerrajero-urgente/
 ```
 
 ### Ejemplos incorrectos
@@ -1530,7 +1531,7 @@ El prompt debe obligar a calcular la fórmula base antes de generar URLs. Así l
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Para Cerrajeros Madrid 24h, el prompt debe devolver 28 páginas base con S=5, A=1, G=3.
+Para Cerrajeros Madrid 24h, el prompt debe devolver 27 páginas SEO base + /contacto/ como página auxiliar con S=5, A=1, G=3.
 ```
 
 ### Ejemplos incorrectos
@@ -1950,4 +1951,33 @@ El Master Prompt debe generar un sistema, no una respuesta suelta.
 - GeoHub Pages AI Framework
 - GeoArticle Pages AI Framework
 - Additional Categories Pages AI Framework
+
+
+
+### GeoArticles completos (15)
+
+**Cerrajero urgente (3):**
+1. /madrid/cuanto-cuesta-un-cerrajero-urgente/
+2. /madrid/que-hacer-si-no-puedes-entrar-casa/
+3. /madrid/cuanto-tarda-un-cerrajero/
+
+**Apertura de puertas (3):**
+4. /madrid/cuanto-cuesta-abrir-una-puerta/
+5. /madrid/que-hacer-si-te-dejas-las-llaves-dentro/
+6. /madrid/apertura-de-puertas-sin-romper-cerradura/
+
+**Cambio de cerraduras (3):**
+7. /madrid/cuando-cambiar-la-cerradura-de-casa/
+8. /madrid/cambio-de-cerradura-tras-perder-llaves/
+9. /madrid/cerradura-nueva-o-reparacion/
+
+**Cambio de bombines (3):**
+10. /madrid/cuando-cambiar-el-bombin/
+11. /madrid/bombin-antibumping-madrid/
+12. /madrid/cambio-de-bombin-sin-cambiar-cerradura/
+
+**Instalación de cerraduras de seguridad (3):**
+13. /madrid/mejores-cerraduras-de-seguridad-para-viviendas/
+14. /madrid/cerraduras-de-seguridad-para-comunidades/
+15. /madrid/instalar-cerradura-de-seguridad-en-puerta-blindada/
 
