@@ -646,7 +646,7 @@ La fórmula debe devolver un inventario ejecutable, no un mapa teórico inmaneja
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Con S = 5, A = 1 y G = 3, Cerrajeros Madrid 24h produce 1 + 5 + 1 + 5 + 1 + 15 = 28 páginas SEO base. Adicionalmente, /contacto/ como página auxiliar fuera del inventario SEO base..
+Con S = 5, A = 1 y G = 3, Cerrajeros Madrid 24h produce 1 + 5 + 1 + 5 + 1 + 15 = 28 páginas SEO base. Adicionalmente, /contacto/ como página auxiliar fuera del inventario SEO base.
 ```
 
 ### Ejemplos incorrectos

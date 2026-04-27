@@ -1560,7 +1560,7 @@ La fórmula debe devolver un inventario ejecutable, no un mapa teórico inmaneja
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Con S = 5, A = 1 y G = 3, Cerrajeros Madrid 24h produce 1 + 5 + 1 + 5 + 1 + 15 = 28 páginas SEO base. Adicionalmente, /contacto/ como página auxiliar fuera del inventario SEO base..
+Con S = 5, A = 1 y G = 3, Cerrajeros Madrid 24h produce 1 + 5 + 1 + 5 + 1 + 15 = 28 páginas SEO base. Adicionalmente, /contacto/ como página auxiliar fuera del inventario SEO base.
 ```
 
 ### Ejemplos incorrectos
@@ -10058,7 +10058,7 @@ FOR each service IN core_services:
     url = /category/main-city/service/
     parent = /category/service/
     geohub = /main-city/
-    content_uses = local_coverage_areas
+    content_uses = direct_local_coverage_areas + candidate_local_coverage_areas (filtrado por test GEO)
     schema = LocalBusiness + BreadcrumbList
 ```
 
@@ -13572,7 +13572,7 @@ G = 3
 + 5 Madrid Service Pages
 + 1 Madrid Additional Category Page
 + 15 Madrid GeoArticles
-= 28 páginas SEO base + /contacto/ como página auxiliar
+= 28 páginas SEO base. Adicionalmente, /contacto/ como página auxiliar fuera del inventario SEO base.
 ```
 
 ## URLs base finales para Cerrajeros Madrid 24h

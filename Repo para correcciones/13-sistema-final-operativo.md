@@ -666,7 +666,7 @@ G = 3
 + 5 Madrid Service Pages
 + 1 Madrid Additional Category Page
 + 15 Madrid GeoArticles
-= 28 páginas SEO base + /contacto/ como página auxiliar
+= 28 páginas SEO base. Adicionalmente, /contacto/ como página auxiliar fuera del inventario SEO base.
 ```
 
 ## URLs base finales para Cerrajeros Madrid 24h

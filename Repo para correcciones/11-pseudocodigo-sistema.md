@@ -655,7 +655,7 @@ FOR each service IN core_services:
     url = /category/main-city/service/
     parent = /category/service/
     geohub = /main-city/
-    content_uses = local_coverage_areas
+    content_uses = direct_local_coverage_areas + candidate_local_coverage_areas (filtrado por test GEO)
     schema = LocalBusiness + BreadcrumbList
 ```
 
