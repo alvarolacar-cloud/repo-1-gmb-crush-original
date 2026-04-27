@@ -26,7 +26,7 @@ IA sin respaldo
 
 ## Bloque 1 — Identidad del negocio
 
-| ID · Ref. canónica | Decisión que se toma | Fuente | Funcionamiento de la fuente | Decisión en el ejemplo |
+| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Funcionamiento de la fuente | Decisión en el ejemplo |
 |---|---|---|---|---|
 | 1.01 · Paso-01 §7 Business Name | Se define el nombre del negocio | Input humano | El cliente proporciona el nombre del negocio directamente. El sistema lo recoge sin transformación. | Cerrajeros Madrid 24h |
 | 1.02 · Paso-01 §8 Website URL | Se define la URL principal de la web | IA sin respaldo | No hay dato real aportado por el cliente. El dominio fue generado para el ejemplo y debe confirmarse antes de producción. | https://www.cerrajerosmadrid24h.com |
