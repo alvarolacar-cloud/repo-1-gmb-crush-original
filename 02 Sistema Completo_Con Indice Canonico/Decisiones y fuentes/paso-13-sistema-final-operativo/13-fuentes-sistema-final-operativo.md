@@ -1,6 +1,6 @@
 # Paso 13 — Sistema Final Operativo
 
-Fase 2 de trazabilidad: se añade fuente, justificación y estado a las decisiones del ejemplo **Cerrajeros Madrid 24h**.
+Fase 2 de trazabilidad: se añade fuente y funcionamiento a las decisiones del ejemplo **Cerrajeros Madrid 24h**.
 
 Fuentes usadas:
 
@@ -13,37 +13,27 @@ Competidores
 IA sin respaldo
 ```
 
-Estados usados:
-
-```text
-Validada
-Parcialmente validada
-Pendiente de validación
-IA sin respaldo
-```
-
 ---
 
 ## Bloque 1 — Consolidación del sistema
 
-| ID | Decisión tomada | Valor decidido en el ejemplo | Fuente | Justificación | Estado |
-|---|---|---|---|---|---|
-| 13.01 | Se consolida el sistema en SOP final | Sistema GMB Crush de 14 pasos | GMB Crush | El sistema debe quedar operativo y secuencial. | Validada |
-| 13.02 | El sistema empieza con Intake | Paso 1 | GMB Crush | Primero inputs, luego arquitectura. | Validada |
-| 13.03 | El sistema cierra con GBP después de la web | Paso 14 | Input humano + GMB Crush | Web-first acordado. | Validada |
+| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Funcionamiento de la fuente | Decisión en el ejemplo |
+|---|---|---|---|---|
+| 13.01 · Paso-13 §19 Índice final del sistema | Se consolida el sistema en SOP final | GMB Crush | El sistema debe quedar operativo y secuencial. El Paso 13 es la consolidación de todos los pasos anteriores en un SOP ejecutable. | Sistema GMB Crush de 14 pasos |
+| 13.02 · Paso-13 §7 Sistema 1 Intake | El sistema empieza con Intake | GMB Crush | Primero se cargan los inputs del cliente. Sin inputs validados no se genera arquitectura. | Paso 1 |
+| 13.03 · Paso-13 §25 Operating workflow completo | El sistema cierra con GBP después de la web | Input humano + GMB Crush | El flujo web-first está acordado con el cliente y alineado con el framework. El GBP se crea en el Paso 14, después de la web. | Paso 14 |
 
 ## Bloque 2 — Secuencia operativa
 
-| ID | Decisión tomada | Valor decidido en el ejemplo | Fuente | Justificación | Estado |
-|---|---|---|---|---|---|
-| 13.04-13.14 | Se decide la secuencia de pasos 2 a 12 | Arquitectura → matriz → URL rules → page types → contenido → links → score → QA → producción → pseudocódigo → prompt | GMB Crush | Secuencia lógica para evitar duplicados, huérfanas y outputs incompletos. | Validada |
+| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Funcionamiento de la fuente | Decisión en el ejemplo |
+|---|---|---|---|---|
+| 13.04–13.14 · Paso-13 §8–§18 Sistemas 2 a 12 | Se decide la secuencia de pasos 2 a 12 | GMB Crush | La secuencia lógica del framework evita duplicados, páginas huérfanas y outputs incompletos. Cada paso depende del anterior. | Arquitectura → matriz → URL rules → page types → contenido → links → score → QA → producción → pseudocódigo → prompt |
 
 ## Bloque 3 — Outputs finales
 
-| ID | Decisión tomada | Valor decidido en el ejemplo | Fuente | Justificación | Estado |
-|---|---|---|---|---|---|
-| 13.15 | El sistema produce matrices | URL Matrix, Schema Map, Linking Map, QA, Publishing Plan | GMB Crush | Outputs operativos del sistema. | Validada |
-| 13.16 | El sistema se optimiza con tracking | GMB Crush Geo Grid, GSC, GA4 | GMB Crush + IA sin respaldo | Tracking recomendado; herramientas específicas deben confirmarse. | Parcialmente validada |
-| 13.17 | Local Coverage Areas refuerzan contenido, no URLs | LCA como señales GEO | GMB Crush | Zonas se usan como señales, no URLs por defecto. | Validada |
-| 13.18 | Approved Expansion Areas son opcionales | None in Phase 1 | GMB Crush | No expansión sin aprobación. | Validada |
-
+| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Funcionamiento de la fuente | Decisión en el ejemplo |
+|---|---|---|---|---|
+| 13.15 · Paso-13 §25 Operating workflow completo | El sistema produce matrices | GMB Crush | Los outputs operativos del sistema son matrices estructuradas. No son documentos de texto libre sino tablas ejecutables. | URL Matrix, Schema Map, Linking Map, QA, Publishing Plan |
+| 13.16 · Paso-13 §25 Operating workflow completo | El sistema se optimiza con tracking | GMB Crush + IA sin respaldo | GMB Crush recomienda las herramientas de tracking. La disponibilidad real de cada herramienta debe confirmarse en ejecución. | GMB Crush Geo Grid, GSC, GA4 |
+| 13.17 · Paso-13 §24 Local Coverage Areas en contenido | Local Coverage Areas refuerzan contenido, no URLs | GMB Crush | Las zonas se usan como señales GEO en el contenido. No generan URLs por defecto. Solo se crean URLs si hay Approved Expansion Areas. | LCA como señales GEO |
+| 13.18 · Paso-13 §25 Operating workflow completo | Approved Expansion Areas son opcionales | GMB Crush | No se activa la expansión geográfica sin aprobación explícita. La expansión es un módulo posterior a la fase base. | None in Phase 1 |

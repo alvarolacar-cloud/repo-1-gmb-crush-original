@@ -1,6 +1,6 @@
 # Paso 11 — Pseudocódigo del Sistema
 
-Fase 2 de trazabilidad: se añade fuente, justificación y estado a las decisiones del ejemplo **Cerrajeros Madrid 24h**.
+Fase 2 de trazabilidad: se añade fuente y funcionamiento a las decisiones del ejemplo **Cerrajeros Madrid 24h**.
 
 Fuentes usadas:
 
@@ -13,50 +13,40 @@ Competidores
 IA sin respaldo
 ```
 
-Estados usados:
-
-```text
-Validada
-Parcialmente validada
-Pendiente de validación
-IA sin respaldo
-```
-
 ---
 
 ## Bloque 1 — Inputs, slugs y categorías
 
-| ID | Decisión tomada | Valor decidido en el ejemplo | Fuente | Justificación | Estado |
-|---|---|---|---|---|---|
-| 11.01 | Se decide cargar inputs base | Business name, URL, NAP, Main City, servicios, LCA, GBP status | GMB Crush | El sistema necesita inputs antes de generar arquitectura. | Validada |
-| 11.02 | Se decide normalizar slugs | Cerrajero urgente → cerrajero-urgente | GMB Crush | URLs limpias requieren normalización. | Validada |
-| 11.03 | Se decide validar categorías adicionales | Cubierta / necesita página | GMB Crush | Evita duplicados y asegura soporte a categorías. | Validada |
+| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Funcionamiento de la fuente | Decisión en el ejemplo |
+|---|---|---|---|---|
+| 11.01 · Paso-11 §7 Load inputs | Se decide cargar inputs base | GMB Crush | El sistema requiere cargar todos los inputs antes de generar la arquitectura. Sin inputs validados no se genera nada. | Business name, URL, NAP, Main City, servicios, LCA, GBP status |
+| 11.02 · Paso-11 §8 Normalize slugs | Se decide normalizar slugs | GMB Crush | Las URLs limpias requieren normalización de texto: minúsculas, sin acentos, guiones en lugar de espacios. | Cerrajero urgente → cerrajero-urgente |
+| 11.03 · Paso-11 §9 Validate categories | Se decide validar categorías adicionales | GMB Crush | El sistema valida si cada categoría adicional ya tiene página o necesita una nueva. Evita duplicados. | Cubierta / necesita página |
 
 ## Bloque 2 — Generación base
 
-| ID | Decisión tomada | Valor decidido en el ejemplo | Fuente | Justificación | Estado |
-|---|---|---|---|---|---|
-| 11.04 | Se decide generar Homepage | HP-001 | GMB Crush | Root Entity Anchor. | Validada |
-| 11.05 | Se decide generar Service Overview Pages | 5 páginas | GMB Crush + IA sin respaldo | Patrón válido; lista de servicios pendiente. | Parcialmente validada |
-| 11.06 | Se decide generar GeoHub de Madrid | /madrid/ | GMB Crush + Input humano | GeoHub de Main City. | Validada |
-| 11.07 | Se decide generar LBS de Madrid | 5 páginas | GMB Crush + IA sin respaldo | Patrón válido; servicios pendientes. | Parcialmente validada |
-| 11.08 | Se decide generar Additional Category Page efectiva | /cerrajero/madrid/duplicado-llaves/ | GMB Crush + IA sin respaldo | Tipo válido; categoría pendiente. | Parcialmente validada |
-| 11.09 | Se decide generar GeoArticles | 15 artículos | GMB Crush + IA sin respaldo | Cantidad válida; temas pendientes de datos. | Parcialmente validada |
+| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Funcionamiento de la fuente | Decisión en el ejemplo |
+|---|---|---|---|---|
+| 11.04 · Paso-11 §10 Generate homepage | Se decide generar Homepage | GMB Crush | La Homepage es el Root Entity Anchor. Siempre es la primera página generada. | HP-001 |
+| 11.05 · Paso-11 §11 Generate Service Overview Pages | Se decide generar Service Overview Pages | GMB Crush + IA sin respaldo | El patrón de generación es GMB Crush. La lista concreta de servicios está pendiente de validación. | 5 páginas |
+| 11.06 · Paso-11 §12 Generate Main City GeoHub | Se decide generar GeoHub de Madrid | GMB Crush + Input humano | El GeoHub de la Main City es obligatorio. Madrid viene del input del cliente. | /madrid/ |
+| 11.07 · Paso-11 §13 Generate páginas de servicio en Main City | Se decide generar LBS de Madrid | GMB Crush + IA sin respaldo | El patrón de generación es GMB Crush. Los servicios concretos están pendientes de validación. | 5 páginas |
+| 11.08 · Paso-11 §14 Generate páginas de categoría adicional | Se decide generar Additional Category Page efectiva | GMB Crush + IA sin respaldo | El tipo de página es correcto. La categoría concreta está pendiente de validación. | /cerrajero/madrid/duplicado-llaves/ |
+| 11.09 · Paso-11 §15 Generate GeoArticles | Se decide generar GeoArticles | GMB Crush + IA sin respaldo | La cantidad (3 por servicio = 15) es GMB Crush. Los temas concretos están pendientes de keyword research. | 15 artículos |
 
 ## Bloque 3 — LCA y expansión
 
-| ID | Decisión tomada | Valor decidido en el ejemplo | Fuente | Justificación | Estado |
-|---|---|---|---|---|---|
-| 11.10 | Se decide inyectar LCA en contenido y schema | LCA como señales GEO | GMB Crush + Geografía | LCA directas validadas; candidatas pendientes de test GEO. | Parcialmente validada |
-| 11.11 | Se decide no generar expansión si no está aprobada | Approved Expansion Areas: None | GMB Crush | No crear URLs fuera de Main City sin aprobación. | Validada |
+| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Funcionamiento de la fuente | Decisión en el ejemplo |
+|---|---|---|---|---|
+| 11.10 · Paso-11 §16 Use Local Coverage Areas | Se decide inyectar LCA en contenido y schema | GMB Crush + Geografía | Las LCA directas (Almagro, Chamberí) están validadas por el NAP. Las candidatas requieren test GEO antes de inyectarse. | LCA como señales GEO |
+| 11.11 · Paso-11 §17 Generate expansion only if approved | Se decide no generar expansión si no está aprobada | GMB Crush | No se crean URLs fuera de la Main City sin aprobación explícita. La expansión es un módulo opcional posterior. | Approved Expansion Areas: None |
 
 ## Bloque 4 — Enlaces, prioridad, QA y outputs
 
-| ID | Decisión tomada | Valor decidido en el ejemplo | Fuente | Justificación | Estado |
-|---|---|---|---|---|---|
-| 11.12 | Se decide asignar enlaces internos por tipo | Internal Linking Map | GMB Crush | Jerarquía de enlaces del framework. | Validada |
-| 11.13 | Se decide calcular prioridad por página | Priority Score | GMB Crush | Orden de producción requiere scoring. | Validada |
-| 11.14 | Se decide comprobar dependencias | LBS requiere Service Overview + GeoHub | GMB Crush | Evita páginas huérfanas o sin padre. | Validada |
-| 11.15 | Se decide ejecutar QA antes de publicar | QA Matrix | GMB Crush | No publicar sin QA. | Validada |
-| 11.16 | Se decide producir matrices finales | URL Matrix, Internal Linking Matrix, Schema Map, Priority Score, Publishing Plan, QA Matrix | GMB Crush | El output operativo son matrices, no contenido suelto. | Validada |
-
+| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Funcionamiento de la fuente | Decisión en el ejemplo |
+|---|---|---|---|---|
+| 11.12 · Paso-11 §18 Assign internal links | Se decide asignar enlaces internos por tipo | GMB Crush | La jerarquía de enlaces del framework se asigna automáticamente según el tipo de página. | Internal Linking Map |
+| 11.13 · Paso-11 §19 Score priority | Se decide calcular prioridad por página | GMB Crush | El orden de producción requiere scoring previo. Cada página recibe su Priority Score antes de producción. | Priority Score |
+| 11.14 · Paso-11 §7 Load inputs | Se decide comprobar dependencias | GMB Crush | El sistema verifica que las páginas padre existan antes de generar páginas hijas. Evita páginas huérfanas. | LBS requiere Service Overview + GeoHub |
+| 11.15 · Paso-11 §6 Cuerpo operativo | Se decide ejecutar QA antes de publicar | GMB Crush | No se publica ninguna URL sin pasar el QA Gate. El pseudocódigo incluye el check de QA como paso obligatorio. | QA Matrix |
+| 11.16 · Paso-11 §6 Cuerpo operativo | Se decide producir matrices finales | GMB Crush | El output operativo del sistema son matrices estructuradas, no contenido suelto. | URL Matrix, Internal Linking Matrix, Schema Map, Priority Score, Publishing Plan, QA Matrix |
