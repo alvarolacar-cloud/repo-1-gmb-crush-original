@@ -151,13 +151,19 @@ Servicios principales:
 4. Cambio de bombines
 5. Instalación de cerraduras de seguridad
 
-Primary Local Coverage Areas:
+Direct Local Coverage Areas:
 1. Almagro
 2. Chamberí
-3. Salamanca
 
-Additional Local Coverage Areas:
-1. Retiro
+Candidate Local Coverage Areas:
+1. Salamanca
+2. Retiro
+3. Centro
+4. Tetuán
+5. Chamartín
+6. Arganzuela
+7. Moncloa
+8. Prosperidad
 
 Should Local Coverage Areas generate pages?
 No, not in the base build.
@@ -742,7 +748,7 @@ Contacto
 
 ```text
 URL: /madrid/cuanto-cuesta-un-cerrajero-urgente/
-H1: How Much Does an Precio de cerrajero urgente en Madrid?
+H1: Precio de cerrajero urgente en Madrid
 Enlaces: /cerrajero/madrid/cerrajero-urgente/, /madrid/, /madrid/que-hacer-si-no-puedes-entrar-casa/
 ```
 
@@ -1118,3 +1124,6 @@ Cobertura no equivale a presencia física.
 - GeoArticle Pages AI Framework
 - Additional Categories Pages AI Framework
 
+
+> **Nota importante — GBP Services ≠ core services del sitio web:**
+> Las categorías adicionales del Google Business Profile (como "Servicio de duplicado de llaves") pueden tener página propia en la web, pero **no forman parte de `core_services`**. La variable `core_services` define los 5 servicios principales que generan Service Overview, LBS y GeoArticles. Las Additional Categories con página propia se gestionan por separado mediante `additional_categories_with_page`. No mezclar ambos conjuntos.

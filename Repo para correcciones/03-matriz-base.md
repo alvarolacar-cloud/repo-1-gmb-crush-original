@@ -461,7 +461,7 @@ Ninguna página debe estar sin status.
 | GH-001 | GeoHub | `/madrid/` | Cerrajeros Madrid 24h – Servicios de cerrajería en Madrid | CollectionPage, BreadcrumbList | P1 | Phase 1 |
 | LBS-001 | Location-Based Service | `/cerrajero/madrid/cerrajero-urgente/` | Cerrajeros Madrid 24h – Cerrajero urgente en Madrid | LocalBusiness, BreadcrumbList | P1 | Phase 2 |
 | AC-001 | Additional Category | `/cerrajero/madrid/duplicado-llaves/` | Cerrajeros Madrid 24h – Duplicado de llaves experto en Madrid | Service, BreadcrumbList | P3 | Phase 2 |
-| GA-001 | GeoArticle | `/madrid/cuanto-cuesta-un-cerrajero-urgente/` | How Much Does an Precio de cerrajero urgente en Madrid? | Article, FAQPage, BreadcrumbList | P3 | Phase 3 |
+| GA-001 | GeoArticle | `/madrid/cuanto-cuesta-un-cerrajero-urgente/` | Precio de cerrajero urgente en Madrid | Article, FAQPage, BreadcrumbList | P3 | Phase 3 |
 
 ## Filas que NO se generan en la base
 

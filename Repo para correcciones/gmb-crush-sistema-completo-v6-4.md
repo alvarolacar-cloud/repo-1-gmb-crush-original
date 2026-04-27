@@ -49,7 +49,7 @@ Esto evita inventar una GBP URL, reseñas de Google o señales de perfil antes d
 Las Local Coverage Areas no generan URLs por defecto.
 Las Local Coverage Areas se usan para reforzar el contenido, los ejemplos locales, las FAQs y el schema areaServed.
 Solo las Approved Expansion Areas pueden convertirse en URLs propias cuando exista una justificación clara.
-Esta separación evita confundir cobertura real con arquitectura obligatoria.
+Esta separación evita confundir señales GEO de contenido con arquitectura obligatoria.
 También evita que un negocio local pequeño acabe con cientos de páginas antes de tener una base sólida.
 El criterio principal es crear primero las páginas que soportan la entidad, la categoría GBP y la intención comercial.
 Después se añaden artículos, enlaces internos, QA y optimización.
@@ -93,6 +93,7 @@ Full NAP:
 - ZIP / Postal Code:
 - Country:
 - Phone:
+- Email:
 
 Planned Primary GBP Category:
 
@@ -114,16 +115,14 @@ Servicios principales:
 4.
 5.
 
-Primary Local Coverage Areas:
-Recommended: start with 3–5 strongest real areas served.
+Direct Local Coverage Areas:
+Zonas con proximidad directa al NAP y coherencia GEO confirmada.
 1.
 2.
 3.
-4.
-5.
 
-Additional Local Coverage Areas:
-Optional.
+Candidate Local Coverage Areas:
+Zonas candidatas pendientes de validar con el test de coherencia GEO del Paso 1.
 1.
 2.
 3.
@@ -198,6 +197,7 @@ Full NAP:
 - ZIP / Postal Code: 28010
 - Country: España
 - Phone: +34 600 000 000
+- Email: info@cerrajerosmadrid24h.com
 
 Planned Primary GBP Category:
 Cerrajero
@@ -219,13 +219,19 @@ Servicios principales:
 4. Cambio de bombines
 5. Instalación de cerraduras de seguridad
 
-Primary Local Coverage Areas:
+Direct Local Coverage Areas:
 1. Almagro
 2. Chamberí
-3. Salamanca
 
-Additional Local Coverage Areas:
-1. Retiro
+Candidate Local Coverage Areas:
+1. Salamanca
+2. Retiro
+3. Centro
+4. Tetuán
+5. Chamartín
+6. Arganzuela
+7. Moncloa
+8. Prosperidad
 
 Should Local Coverage Areas generate pages?
 No, not in the base build.
@@ -255,6 +261,8 @@ Trust Signals:
 ```
 
 # Cuerpo operativo del Paso 1
+
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
 ## Business Name
 
@@ -516,7 +524,7 @@ Cada core service importante debe tener página propia.
 
 ### Explicación
 
-Son zonas reales atendidas. Incluyen barrios, distritos, municipios cercanos, códigos postales o áreas de servicio. No generan URLs por defecto.
+Son zonas seleccionadas por proximidad al NAP, coherencia GEO y lógica GMB Crush. Incluyen barrios, distritos, municipios cercanos o áreas de servicio. Se clasifican en Direct (salen del ancla física) y Candidate (requieren validación GEO). No generan URLs por defecto.
 
 ### Patrón o fórmula
 
@@ -623,7 +631,7 @@ Reviews + years + certifications + guarantees
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-10+ years, 250+ reviews, licensed technicians
+10+ años de experiencia, 250+ reseñas, técnicos certificados
 ```
 
 ### Ejemplos incorrectos
@@ -736,7 +744,7 @@ Cada categoría adicional debe clasificarse antes de entrar en la arquitectura.
 ## Regla operativa — Main City separada de cobertura local
 ### Explicación
 
-La Main City es la ciudad que genera arquitectura base. Las Local Coverage Areas son zonas reales atendidas que enriquecen contenido, pero no generan URLs por defecto. Si se mezclan ambas cosas, el sistema vuelve a la confusión de target cities, secondary cities y páginas innecesarias.
+La Main City es la ciudad que genera arquitectura base. Las Local Coverage Areas son zonas seleccionadas por proximidad y coherencia GEO que enriquecen contenido, pero no generan URLs por defecto. Si se mezclan ambas cosas, el sistema vuelve a la confusión de target cities, secondary cities y páginas innecesarias.
 
 ### Patrón o fórmula
 
@@ -944,7 +952,7 @@ Esto evita inventar una GBP URL, reseñas de Google o señales de perfil antes d
 Las Local Coverage Areas no generan URLs por defecto.
 Las Local Coverage Areas se usan para reforzar el contenido, los ejemplos locales, las FAQs y el schema areaServed.
 Solo las Approved Expansion Areas pueden convertirse en URLs propias cuando exista una justificación clara.
-Esta separación evita confundir cobertura real con arquitectura obligatoria.
+Esta separación evita confundir señales GEO de contenido con arquitectura obligatoria.
 También evita que un negocio local pequeño acabe con cientos de páginas antes de tener una base sólida.
 El criterio principal es crear primero las páginas que soportan la entidad, la categoría GBP y la intención comercial.
 Después se añaden artículos, enlaces internos, QA y optimización.
@@ -1085,6 +1093,8 @@ Yes
 ```
 
 # Cuerpo operativo del Paso 2
+
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
 ## Planned GBP Categories Before GBP Creation
 
@@ -1785,7 +1795,7 @@ Esto evita inventar una GBP URL, reseñas de Google o señales de perfil antes d
 Las Local Coverage Areas no generan URLs por defecto.
 Las Local Coverage Areas se usan para reforzar el contenido, los ejemplos locales, las FAQs y el schema areaServed.
 Solo las Approved Expansion Areas pueden convertirse en URLs propias cuando exista una justificación clara.
-Esta separación evita confundir cobertura real con arquitectura obligatoria.
+Esta separación evita confundir señales GEO de contenido con arquitectura obligatoria.
 También evita que un negocio local pequeño acabe con cientos de páginas antes de tener una base sólida.
 El criterio principal es crear primero las páginas que soportan la entidad, la categoría GBP y la intención comercial.
 Después se añaden artículos, enlaces internos, QA y optimización.
@@ -1929,6 +1939,8 @@ P3
 ```
 
 # Cuerpo operativo del Paso 3
+
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
 ## Regla 1 — Cada página tiene una fila
 
@@ -2221,7 +2233,7 @@ Ninguna página debe estar sin status.
 | GH-001 | GeoHub | `/madrid/` | Cerrajeros Madrid 24h – Servicios de cerrajería en Madrid | CollectionPage, BreadcrumbList | P1 | Phase 1 |
 | LBS-001 | Location-Based Service | `/cerrajero/madrid/cerrajero-urgente/` | Cerrajeros Madrid 24h – Cerrajero urgente en Madrid | LocalBusiness, BreadcrumbList | P1 | Phase 2 |
 | AC-001 | Additional Category | `/cerrajero/madrid/duplicado-llaves/` | Cerrajeros Madrid 24h – Duplicado de llaves experto en Madrid | Service, BreadcrumbList | P3 | Phase 2 |
-| GA-001 | GeoArticle | `/madrid/cuanto-cuesta-un-cerrajero-urgente/` | How Much Does an Precio de cerrajero urgente en Madrid? | Article, FAQPage, BreadcrumbList | P3 | Phase 3 |
+| GA-001 | GeoArticle | `/madrid/cuanto-cuesta-un-cerrajero-urgente/` | Precio de cerrajero urgente en Madrid | Article, FAQPage, BreadcrumbList | P3 | Phase 3 |
 
 ## Filas que NO se generan en la base
 
@@ -2599,7 +2611,7 @@ Esto evita inventar una GBP URL, reseñas de Google o señales de perfil antes d
 Las Local Coverage Areas no generan URLs por defecto.
 Las Local Coverage Areas se usan para reforzar el contenido, los ejemplos locales, las FAQs y el schema areaServed.
 Solo las Approved Expansion Areas pueden convertirse en URLs propias cuando exista una justificación clara.
-Esta separación evita confundir cobertura real con arquitectura obligatoria.
+Esta separación evita confundir señales GEO de contenido con arquitectura obligatoria.
 También evita que un negocio local pequeño acabe con cientos de páginas antes de tener una base sólida.
 El criterio principal es crear primero las páginas que soportan la entidad, la categoría GBP y la intención comercial.
 Después se añaden artículos, enlaces internos, QA y optimización.
@@ -2744,6 +2756,8 @@ Approved additional category slugs:
 ```
 
 # Cuerpo operativo del Paso 4
+
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
 ## Regla 1 — Dominio canónico
 
@@ -3706,7 +3720,7 @@ Esto evita inventar una GBP URL, reseñas de Google o señales de perfil antes d
 Las Local Coverage Areas no generan URLs por defecto.
 Las Local Coverage Areas se usan para reforzar el contenido, los ejemplos locales, las FAQs y el schema areaServed.
 Solo las Approved Expansion Areas pueden convertirse en URLs propias cuando exista una justificación clara.
-Esta separación evita confundir cobertura real con arquitectura obligatoria.
+Esta separación evita confundir señales GEO de contenido con arquitectura obligatoria.
 También evita que un negocio local pequeño acabe con cientos de páginas antes de tener una base sólida.
 El criterio principal es crear primero las páginas que soportan la entidad, la categoría GBP y la intención comercial.
 Después se añaden artículos, enlaces internos, QA y optimización.
@@ -3813,6 +3827,7 @@ Full NAP:
 - ZIP / Postal Code: 28010
 - Country: España
 - Phone: +34 600 000 000
+- Email: info@cerrajerosmadrid24h.com
 
 Planned Primary GBP Category:
 Cerrajero
@@ -3834,13 +3849,19 @@ Servicios principales:
 4. Cambio de bombines
 5. Instalación de cerraduras de seguridad
 
-Primary Local Coverage Areas:
+Direct Local Coverage Areas:
 1. Almagro
 2. Chamberí
-3. Salamanca
 
-Additional Local Coverage Areas:
-1. Retiro
+Candidate Local Coverage Areas:
+1. Salamanca
+2. Retiro
+3. Centro
+4. Tetuán
+5. Chamartín
+6. Arganzuela
+7. Moncloa
+8. Prosperidad
 
 Should Local Coverage Areas generate pages?
 No, not in the base build.
@@ -3881,6 +3902,8 @@ Friendly, professional, local and urgente when needed
 ```
 
 # Cuerpo operativo del Paso 5
+
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
 ## 1. Homepage — Root Entity Anchor
 
@@ -4423,7 +4446,7 @@ Contacto
 
 ```text
 URL: /madrid/cuanto-cuesta-un-cerrajero-urgente/
-H1: How Much Does an Precio de cerrajero urgente en Madrid?
+H1: Precio de cerrajero urgente en Madrid
 Enlaces: /cerrajero/madrid/cerrajero-urgente/, /madrid/, /madrid/que-hacer-si-no-puedes-entrar-casa/
 ```
 
@@ -4804,7 +4827,7 @@ Esto evita inventar una GBP URL, reseñas de Google o señales de perfil antes d
 Las Local Coverage Areas no generan URLs por defecto.
 Las Local Coverage Areas se usan para reforzar el contenido, los ejemplos locales, las FAQs y el schema areaServed.
 Solo las Approved Expansion Areas pueden convertirse en URLs propias cuando exista una justificación clara.
-Esta separación evita confundir cobertura real con arquitectura obligatoria.
+Esta separación evita confundir señales GEO de contenido con arquitectura obligatoria.
 También evita que un negocio local pequeño acabe con cientos de páginas antes de tener una base sólida.
 El criterio principal es crear primero las páginas que soportan la entidad, la categoría GBP y la intención comercial.
 Después se añaden artículos, enlaces internos, QA y optimización.
@@ -4839,16 +4862,14 @@ Servicios principales:
 4.
 5.
 
-Primary Local Coverage Areas:
-Recommended: start with 3–5 strongest real areas served.
+Direct Local Coverage Areas:
+Zonas con proximidad directa al NAP y coherencia GEO confirmada.
 1.
 2.
 3.
-4.
-5.
 
-Additional Local Coverage Areas:
-Optional.
+Candidate Local Coverage Areas:
+Zonas candidatas pendientes de validar con el test de coherencia GEO del Paso 1.
 1.
 2.
 3.
@@ -4915,13 +4936,19 @@ Servicios principales:
 4. Cambio de bombines
 5. Instalación de cerraduras de seguridad
 
-Primary Local Coverage Areas:
+Direct Local Coverage Areas:
 1. Almagro
 2. Chamberí
-3. Salamanca
 
-Additional Local Coverage Areas:
-1. Retiro
+Candidate Local Coverage Areas:
+1. Salamanca
+2. Retiro
+3. Centro
+4. Tetuán
+5. Chamartín
+6. Arganzuela
+7. Moncloa
+8. Prosperidad
 
 Should Local Coverage Areas generate pages?
 No, not in the base build.
@@ -4962,10 +4989,12 @@ Trust Signals:
 - Servicio móvil en el mismo día
 
 Can the page mention physical office in this area?
-Only for Madrid, not for Local Coverage Areas unless true.
+Solo para Madrid, no para Local Coverage Areas salvo que sea cierto.
 ```
 
 # Cuerpo operativo del Paso 6
+
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
 ## Principio 1 — Main City crea arquitectura
 
@@ -5003,7 +5032,7 @@ La arquitectura base pertenece a una sola Main City.
 
 ### Explicación
 
-Las Local Coverage Areas son zonas reales atendidas que se usan para contexto, FAQs, ejemplos, cobertura y schema areaServed.
+Las Local Coverage Areas son zonas seleccionadas por proximidad al NAP, coherencia GEO y lógica GMB Crush. Se usan para contexto, FAQs, ejemplos, señales locales y schema areaServed.
 
 ### Patrón o fórmula
 
@@ -5028,7 +5057,7 @@ Almagro, Chamberí, Salamanca y Retiro se mencionan en secciones de cobertura
 ### Regla final
 
 ```text
-Las Local Coverage Areas refuerzan contenido, no crean URLs por defecto.
+Las Local Coverage Areas refuerzan contenido como señales GEO, no crean URLs por defecto.
 ```
 
 ## Principio 3 — Approved Expansion Areas crean URLs solo si se aprueban
@@ -5067,7 +5096,7 @@ Solo las zonas aprobadas generan URLs.
 
 ### Explicación
 
-Este principio evita confundir cobertura real con arquitectura.
+Este principio evita confundir señales GEO de contenido con arquitectura de URLs.
 
 ### Patrón o fórmula
 
@@ -5207,8 +5236,8 @@ No se usan Local Coverage Areas. Esta página no debe mencionar Madrid, Almagro,
 
 ```text
 URL: /cerrajero/cerrajero-urgente/
-Intro: Cerrajeros Madrid 24h provides professional urgente servicios de cerrajería for urgente aperturas urgentes, llaves rotas and access problems.
-No local targeting.
+Intro: Cerrajeros Madrid 24h ofrece servicios profesionales de cerrajería urgente: aperturas urgentes, llaves rotas y problemas de acceso.
+Sin segmentación local.
 Internal link to local version: /cerrajero/madrid/cerrajero-urgente/
 ```
 
@@ -5268,7 +5297,7 @@ Respuesta: Sí, atendemos esas zonas según disponibilidad, mientras esta págin
 
 ```text
 - H1: Cerrajero urgente en Almagro, Madrid y Salamanca
-- Create one paragraph for each area with duplicated text
+- Crear un párrafo por cada zona con texto duplicado
 - Claim office in Retiro
 - Link to /almagro/ when that URL does not exist
 ```
@@ -5358,7 +5387,7 @@ El GeoHub es el lugar más natural para una sección explícita de Local Coverag
 ```text
 URL: /madrid/
 H2: Zonas de cobertura de cerrajería en Madrid
-Texto: Cerrajeros Madrid 24h provides servicios de cerrajería en Madrid and local coverage areas such as Almagro, Chamberí, Salamanca and Retiro. Estas áreas representan cobertura real y ayudan al usuario a entender dónde puede estar disponible el servicio.
+Texto: Cerrajeros Madrid 24h ofrece servicios de cerrajería en Madrid con cobertura en zonas como Almagro, Chamberí, Salamanca y Retiro. Estas áreas son señales GEO seleccionadas por proximidad y coherencia, y ayudan al usuario a entender dónde puede estar disponible el servicio.
 Menú de servicios: urgente, apertura de puertas, cambio de cerraduras, cambio de bombines, instalación de cerraduras de seguridad.
 ```
 
@@ -5445,20 +5474,20 @@ Madrid
 Service:
 Cerrajero urgente
 
-Primary Local Coverage Areas:
-Almagro, Chamberí, Salamanca
+Direct Local Coverage Areas:
+Almagro, Chamberí
 
-Additional Local Coverage Areas:
-Retiro
+Candidate Local Coverage Areas:
+Salamanca, Retiro, Centro, Tetuán, Chamartín, Arganzuela, Moncloa, Prosperidad
 
 URL:
 /cerrajero/madrid/cerrajero-urgente/
 
 Sección:
-H2: Cerrajero urgente en Madrid and Nearby Coverage Areas
+H2: Cerrajero urgente en Madrid y zonas de cobertura cercanas
 
 Texto:
-Cerrajeros Madrid 24h ayuda a clientes en Madrid con aperturas urgentes, llaves rotas, cambios de bombín y problemas de acceso. También atendemos zonas de cobertura como Almagro, Chamberí, Salamanca y Retiro según disponibilidad. Estas zonas ayudan a aclarar la cobertura real mientras la página sigue enfocada en el servicio de cerrajero urgente en Madrid.
+Cerrajeros Madrid 24h ayuda a clientes en Madrid con aperturas urgentes, llaves rotas, cambios de bombín y problemas de acceso. También cubrimos zonas de posicionamiento local como Almagro, Chamberí, Salamanca y Retiro según disponibilidad. Estas zonas son señales GEO de proximidad que refuerzan la relevancia local mientras la página sigue enfocada en el servicio de cerrajero urgente en Madrid.
 ```
 
 ## FAQ ejemplo
@@ -5567,7 +5596,7 @@ La intro local debe reforzar la Main City y el problema real del usuario.
 ## Regla operativa — Sección Local Coverage Areas Served
 ### Explicación
 
-Las páginas locales pueden incluir una sección específica de cobertura. Esta sección permite mencionar barrios, distritos o municipios atendidos sin crear páginas propias ni URLs artificiales.
+Las páginas locales pueden incluir una sección específica de cobertura. Esta sección permite mencionar barrios, distritos o municipios seleccionados como señales GEO sin crear páginas propias ni URLs artificiales.
 
 ### Patrón o fórmula
 
@@ -5592,7 +5621,7 @@ Cerrajeros Madrid 24h incluye un H2: Soporte de cerrajería en Madrid y zonas de
 ### Regla final
 
 ```text
-Las áreas de cobertura se mencionan como cobertura real, no como páginas implícitas.
+Las áreas de cobertura se mencionan como señales GEO de proximidad, no como páginas implícitas.
 ```
 
 ## Regla operativa — Additional Category con caso local
@@ -5609,7 +5638,7 @@ Additional Category → problema local → cobertura como ejemplo
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-En /cerrajero/madrid/duplicado-llaves/, Cerrajeros Madrid 24h menciona spare llaves para hogares y negocios en Madrid y zonas de cobertura cercanas.
+En /cerrajero/madrid/duplicado-llaves/, Cerrajeros Madrid 24h menciona llaves de repuesto para hogares y negocios en Madrid y zonas de cobertura cercanas.
 ```
 
 ### Ejemplos incorrectos
@@ -5629,7 +5658,7 @@ La cobertura local debe contextualizar, no multiplicar páginas.
 ## Regla operativa — GeoHub con sección de cobertura principal
 ### Explicación
 
-El GeoHub es el mejor lugar para explicar la cobertura local. Debe tener una sección clara de áreas atendidas, conectada con servicios y sin transformar cada zona en URL si no está aprobada.
+El GeoHub es el mejor lugar para explicar la cobertura local. Debe tener una sección clara de áreas de posicionamiento local (Direct y Candidate LCA), conectada con servicios y sin transformar cada zona en URL si no está aprobada.
 
 ### Patrón o fórmula
 
@@ -5654,7 +5683,7 @@ En /madrid/, Cerrajeros Madrid 24h lista servicios en Madrid y una sección de c
 ### Regla final
 
 ```text
-El GeoHub debe organizar ciudad, servicios y cobertura real.
+El GeoHub debe organizar ciudad, servicios y señales GEO locales (Direct + Candidate LCA).
 ```
 
 ## Regla operativa — GeoArticles con ejemplos locales
@@ -5848,7 +5877,7 @@ La expansión necesita justificación, no solo cobertura.
 | Check | Pregunta | Estado |
 |---|---|---|
 | Main City | ¿La página mantiene clara la Main City? | ✅ / ⬜ |
-| Local Coverage Areas | ¿Las zonas mencionadas representan cobertura real? | ✅ / ⬜ |
+| Local Coverage Areas | ¿Las zonas mencionadas son Direct o Candidate LCA validadas por el test GEO del Paso 1? | ✅ / ⬜ |
 | Uso natural | ¿Las áreas aparecen de forma natural y no forzada? | ✅ / ⬜ |
 | No URLs innecesarias | ¿No se crearon páginas para áreas no aprobadas? | ✅ / ⬜ |
 | No fake office | ¿No se afirma oficina donde no existe? | ✅ / ⬜ |
@@ -5896,7 +5925,7 @@ Esto evita inventar una GBP URL, reseñas de Google o señales de perfil antes d
 Las Local Coverage Areas no generan URLs por defecto.
 Las Local Coverage Areas se usan para reforzar el contenido, los ejemplos locales, las FAQs y el schema areaServed.
 Solo las Approved Expansion Areas pueden convertirse en URLs propias cuando exista una justificación clara.
-Esta separación evita confundir cobertura real con arquitectura obligatoria.
+Esta separación evita confundir señales GEO de contenido con arquitectura obligatoria.
 También evita que un negocio local pequeño acabe con cientos de páginas antes de tener una base sólida.
 El criterio principal es crear primero las páginas que soportan la entidad, la categoría GBP y la intención comercial.
 Después se añaden artículos, enlaces internos, QA y optimización.
@@ -6063,6 +6092,8 @@ servicios de cerrajería en Madrid
 ```
 
 # Cuerpo operativo del Paso 7
+
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
 ## Regla 1 — Enlazar hacia arriba, abajo y lateralmente
 
@@ -6873,7 +6904,7 @@ Esto evita inventar una GBP URL, reseñas de Google o señales de perfil antes d
 Las Local Coverage Areas no generan URLs por defecto.
 Las Local Coverage Areas se usan para reforzar el contenido, los ejemplos locales, las FAQs y el schema areaServed.
 Solo las Approved Expansion Areas pueden convertirse en URLs propias cuando exista una justificación clara.
-Esta separación evita confundir cobertura real con arquitectura obligatoria.
+Esta separación evita confundir señales GEO de contenido con arquitectura obligatoria.
 También evita que un negocio local pequeño acabe con cientos de páginas antes de tener una base sólida.
 El criterio principal es crear primero las páginas que soportan la entidad, la categoría GBP y la intención comercial.
 Después se añaden artículos, enlaces internos, QA y optimización.
@@ -6984,6 +7015,8 @@ Urgentee cerrajero is high-value, urgente, directly aligned with cerrajero inten
 ```
 
 # Cuerpo operativo del Paso 8
+
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
 ## Regla 1 — Fórmula de prioridad
 
@@ -7695,7 +7728,7 @@ Esto evita inventar una GBP URL, reseñas de Google o señales de perfil antes d
 Las Local Coverage Areas no generan URLs por defecto.
 Las Local Coverage Areas se usan para reforzar el contenido, los ejemplos locales, las FAQs y el schema areaServed.
 Solo las Approved Expansion Areas pueden convertirse en URLs propias cuando exista una justificación clara.
-Esta separación evita confundir cobertura real con arquitectura obligatoria.
+Esta separación evita confundir señales GEO de contenido con arquitectura obligatoria.
 También evita que un negocio local pequeño acabe con cientos de páginas antes de tener una base sólida.
 El criterio principal es crear primero las páginas que soportan la entidad, la categoría GBP y la intención comercial.
 Después se añaden artículos, enlaces internos, QA y optimización.
@@ -7836,6 +7869,8 @@ This page supports the core Cerrajero urgente service, Madrid GeoHub, and Servic
 ```
 
 # Cuerpo operativo del Paso 9
+
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
 ## Regla 1 — URL QA
 
@@ -8649,7 +8684,7 @@ Esto evita inventar una GBP URL, reseñas de Google o señales de perfil antes d
 Las Local Coverage Areas no generan URLs por defecto.
 Las Local Coverage Areas se usan para reforzar el contenido, los ejemplos locales, las FAQs y el schema areaServed.
 Solo las Approved Expansion Areas pueden convertirse en URLs propias cuando exista una justificación clara.
-Esta separación evita confundir cobertura real con arquitectura obligatoria.
+Esta separación evita confundir señales GEO de contenido con arquitectura obligatoria.
 También evita que un negocio local pequeño acabe con cientos de páginas antes de tener una base sólida.
 El criterio principal es crear primero las páginas que soportan la entidad, la categoría GBP y la intención comercial.
 Después se añaden artículos, enlaces internos, QA y optimización.
@@ -8822,6 +8857,8 @@ GMB Crush Geo Grid, Google Search Console, GA4
 ```
 
 # Cuerpo operativo del Paso 10
+
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
 ## Fase 1 — Entity Foundation
 
@@ -9439,7 +9476,7 @@ Esto evita inventar una GBP URL, reseñas de Google o señales de perfil antes d
 Las Local Coverage Areas no generan URLs por defecto.
 Las Local Coverage Areas se usan para reforzar el contenido, los ejemplos locales, las FAQs y el schema areaServed.
 Solo las Approved Expansion Areas pueden convertirse en URLs propias cuando exista una justificación clara.
-Esta separación evita confundir cobertura real con arquitectura obligatoria.
+Esta separación evita confundir señales GEO de contenido con arquitectura obligatoria.
 También evita que un negocio local pequeño acabe con cientos de páginas antes de tener una base sólida.
 El criterio principal es crear primero las páginas que soportan la entidad, la categoría GBP y la intención comercial.
 Después se añaden artículos, enlaces internos, QA y optimización.
@@ -9505,15 +9542,26 @@ Local Coverage Areas:
 4.
 5.
 
-Primary Local Coverage Areas:
+Direct Local Coverage Areas:
+Zonas que salen directamente de la dirección física / NAP.
+Ejemplo: barrio, distrito o ciudad mencionados en la dirección.
 1.
 2.
 3.
 
-Additional Local Coverage Areas:
+Candidate Local Coverage Areas:
+Zonas cercanas o relevantes que deben pasar el test de coherencia GEO antes de usarse como señales activas.
 1.
 2.
 3.
+
+Approved Expansion Areas:
+Zonas que sí tendrán URLs propias. Default: None in Phase 1.
+1.
+2.
+3.
+
+> **Regla**: Direct = sale del ancla física. Candidate = se evalúa. Approved Expansion = genera URL.
 
 Approved Expansion Areas:
 Default: None.
@@ -9559,6 +9607,7 @@ Full NAP:
 - ZIP / Postal Code: 28010
 - Country: España
 - Phone: +34 600 000 000
+- Email: info@cerrajerosmadrid24h.com
 
 Planned Primary GBP Category:
 Cerrajero
@@ -9580,13 +9629,19 @@ Servicios principales:
 4. Cambio de bombines
 5. Instalación de cerraduras de seguridad
 
-Primary Local Coverage Areas:
+Direct Local Coverage Areas:
 1. Almagro
 2. Chamberí
-3. Salamanca
 
-Additional Local Coverage Areas:
-1. Retiro
+Candidate Local Coverage Areas:
+1. Salamanca
+2. Retiro
+3. Centro
+4. Tetuán
+5. Chamartín
+6. Arganzuela
+7. Moncloa
+8. Prosperidad
 
 Should Local Coverage Areas generate pages?
 No, not in the base build.
@@ -9620,6 +9675,8 @@ N/A — GBP not created yet
 
 # Cuerpo operativo del Paso 11
 
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
+
 ## 1. Load inputs
 
 ### Explicación
@@ -9642,7 +9699,8 @@ INPUT physical_location_city
 INPUT core_services[]
 INPUT service_slugs[]
 INPUT additional_gbp_categories[]
-INPUT local_coverage_areas[]
+INPUT direct_local_coverage_areas[]
+INPUT candidate_local_coverage_areas[]
 INPUT approved_expansion_areas[]
 INPUT geoarticles_per_service
 INPUT nap
@@ -9673,18 +9731,28 @@ planned_primary_gbp_category:
 Cerrajero
 
 core_services:
-- Apertura de puertas
 - Cerrajero urgente
+- Apertura de puertas
 - Cambio de cerraduras
-- Duplicado de llaves
+- Cambio de bombines
 - Instalación de cerraduras de seguridad
 
-local_coverage_areas:
+additional_categories_with_page:
+- Duplicado de llaves
+
+direct_local_coverage_areas:
 - Almagro
 - Chamberí
+
+candidate_local_coverage_areas:
 - Salamanca
 - Retiro
 - Centro
+- Tetuán
+- Chamartín
+- Arganzuela
+- Moncloa
+- Prosperidad
 
 approved_expansion_areas:
 None
@@ -9945,7 +10013,7 @@ Service Overview URL:
 /cerrajero/apertura-puertas/
 
 H1:
-Professional Apertura de puertas Services by Cerrajeros Madrid 24h
+Servicios profesionales de apertura de puertas por Cerrajeros Madrid 24h
 
 Schema:
 Service
@@ -10233,19 +10301,27 @@ Las Local Coverage Areas ayudan a contextualizar la cobertura del negocio, pero 
 ```text
 FOR each content page:
     IF page_type supports local coverage:
-        inject local_coverage_areas into intro, examples, FAQs, areaServed
-    DO NOT generate URLs for local_coverage_areas
+        inject direct_local_coverage_areas into intro, examples, FAQs, areaServed
+        inject candidate_local_coverage_areas only if GEO coherence test passes
+    DO NOT generate URLs for any local_coverage_areas
 ```
 
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Local Coverage Areas:
+Direct Local Coverage Areas:
 - Almagro
 - Chamberí
+
+Candidate Local Coverage Areas (solo si pasan el test de coherencia GEO del paso 1):
 - Salamanca
 - Retiro
 - Centro
+- Tetuán
+- Chamartín
+- Arganzuela
+- Moncloa
+- Prosperidad
 
 Use in:
 /madrid/
@@ -11002,7 +11078,7 @@ Esto evita inventar una GBP URL, reseñas de Google o señales de perfil antes d
 Las Local Coverage Areas no generan URLs por defecto.
 Las Local Coverage Areas se usan para reforzar el contenido, los ejemplos locales, las FAQs y el schema areaServed.
 Solo las Approved Expansion Areas pueden convertirse en URLs propias cuando exista una justificación clara.
-Esta separación evita confundir cobertura real con arquitectura obligatoria.
+Esta separación evita confundir señales GEO de contenido con arquitectura obligatoria.
 También evita que un negocio local pequeño acabe con cientos de páginas antes de tener una base sólida.
 El criterio principal es crear primero las páginas que soportan la entidad, la categoría GBP y la intención comercial.
 Después se añaden artículos, enlaces internos, QA y optimización.
@@ -11079,16 +11155,14 @@ Service Slugs:
 4.
 5.
 
-Primary Local Coverage Areas:
-Recommended: start with 3–5 strongest real areas served.
+Direct Local Coverage Areas:
+Zonas con proximidad directa al NAP y coherencia GEO confirmada.
 1.
 2.
 3.
-4.
-5.
 
-Additional Local Coverage Areas:
-Optional.
+Candidate Local Coverage Areas:
+Zonas candidatas pendientes de validar con el test de coherencia GEO del Paso 1.
 1.
 2.
 3.
@@ -11190,7 +11264,7 @@ Full NAP:
 - ZIP / Postal Code: 28010
 - Country: España
 - Phone: +34 600 000 000
-
+- Email: info@cerrajerosmadrid24h.com
 GBP URL:
 N/A — GBP not created yet
 
@@ -11218,13 +11292,19 @@ Service Slugs:
 4. cambio-bombines
 5. instalacion-cerraduras-seguridad
 
-Primary Local Coverage Areas:
+Direct Local Coverage Areas:
 1. Almagro
 2. Chamberí
-3. Salamanca
 
-Additional Local Coverage Areas:
-1. Retiro
+Candidate Local Coverage Areas:
+1. Salamanca
+2. Retiro
+3. Centro
+4. Tetuán
+5. Chamartín
+6. Arganzuela
+7. Moncloa
+8. Prosperidad
 
 Should Local Coverage Areas generate pages?
 No, not in the base build.
@@ -11279,6 +11359,8 @@ GMB Crush Geo Grid, Google Search Console, GA4
 ```
 
 # Cuerpo operativo del Paso 12
+
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
 ## Regla 1 — El Master Prompt debe generar el sistema completo
 
@@ -11682,11 +11764,20 @@ Servicios principales:
 Service Slugs:
 [INSERT LIST]
 
-Primary Local Coverage Areas:
-[INSERT 3–5 strongest real service areas]
+Direct Local Coverage Areas:
+Zonas que salen directamente de la dirección física / NAP.
+Ejemplo: barrio, distrito o ciudad mencionados en la dirección.
+[INSERT LIST]
 
-Additional Local Coverage Areas:
-[INSERT OPTIONAL LIST]
+Candidate Local Coverage Areas:
+Zonas cercanas o relevantes que deben pasar el test de coherencia GEO antes de usarse como señales activas.
+[INSERT LIST]
+
+Approved Expansion Areas:
+Zonas que sí tendrán URLs propias. Default: None in Phase 1.
+[INSERT LIST]
+
+> **Regla**: Direct = sale del ancla física. Candidate = se evalúa. Approved Expansion = genera URL.
 
 Should Local Coverage Areas generate pages?
 Default: No.
@@ -12931,7 +13022,7 @@ Esto evita inventar una GBP URL, reseñas de Google o señales de perfil antes d
 Las Local Coverage Areas no generan URLs por defecto.
 Las Local Coverage Areas se usan para reforzar el contenido, los ejemplos locales, las FAQs y el schema areaServed.
 Solo las Approved Expansion Areas pueden convertirse en URLs propias cuando exista una justificación clara.
-Esta separación evita confundir cobertura real con arquitectura obligatoria.
+Esta separación evita confundir señales GEO de contenido con arquitectura obligatoria.
 También evita que un negocio local pequeño acabe con cientos de páginas antes de tener una base sólida.
 El criterio principal es crear primero las páginas que soportan la entidad, la categoría GBP y la intención comercial.
 Después se añaden artículos, enlaces internos, QA y optimización.
@@ -12990,19 +13081,26 @@ Servicios principales:
 4.
 5.
 
-Primary Local Coverage Areas:
+Direct Local Coverage Areas:
+Zonas que salen directamente de la dirección física / NAP.
+Ejemplo: barrio, distrito o ciudad mencionados en la dirección.
 1.
 2.
 3.
-4.
-5.
 
-Additional Local Coverage Areas:
+Candidate Local Coverage Areas:
+Zonas cercanas o relevantes que deben pasar el test de coherencia GEO antes de usarse como señales activas.
 1.
 2.
 3.
-4.
-5.
+
+Approved Expansion Areas:
+Zonas que sí tendrán URLs propias. Default: None in Phase 1.
+1.
+2.
+3.
+
+> **Regla**: Direct = sale del ancla física. Candidate = se evalúa. Approved Expansion = genera URL.
 
 Should Local Coverage Areas generate pages?
 Default: No.
@@ -13061,6 +13159,7 @@ Full NAP:
 - ZIP / Postal Code: 28010
 - Country: España
 - Phone: +34 600 000 000
+- Email: info@cerrajerosmadrid24h.com
 
 Planned Primary GBP Category:
 Cerrajero
@@ -13082,13 +13181,19 @@ Servicios principales:
 4. Cambio de bombines
 5. Instalación de cerraduras de seguridad
 
-Primary Local Coverage Areas:
+Direct Local Coverage Areas:
 1. Almagro
 2. Chamberí
-3. Salamanca
 
-Additional Local Coverage Areas:
-1. Retiro
+Candidate Local Coverage Areas:
+1. Salamanca
+2. Retiro
+3. Centro
+4. Tetuán
+5. Chamartín
+6. Arganzuela
+7. Moncloa
+8. Prosperidad
 
 Should Local Coverage Areas generate pages?
 No, not in the base build.
@@ -13135,6 +13240,8 @@ GMB Crush Geo Grid, Google Search Console, GA4
 ```
 
 # Cuerpo operativo del Paso 13
+
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
 ## Sistema 1 — Intake
 
@@ -14696,7 +14803,7 @@ Final NAP:
 - ZIP / Postal Code: 28010
 - Country: España
 - Phone: +34 600 000 000
-
+- Email: info@cerrajerosmadrid24h.com
 Business Model:
 Service Area Business
 
@@ -14803,6 +14910,8 @@ Tracking Setup:
 ```
 
 # Cuerpo operativo del Paso 14
+
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
 ## Regla operativa — Crear el GBP después de publicar la web base
 
@@ -15877,6 +15986,9 @@ Finalmente, sincronización continua entre web, perfil y tracking.
 13. /madrid/mejores-cerraduras-de-seguridad-para-viviendas/
 14. /madrid/cerraduras-de-seguridad-para-comunidades/
 15. /madrid/instalar-cerradura-de-seguridad-en-puerta-blindada/
+
+> **Nota importante — GBP Services ≠ core services del sitio web:**
+> Las categorías adicionales del Google Business Profile (como "Servicio de duplicado de llaves") pueden tener página propia en la web, pero **no forman parte de `core_services`**. La variable `core_services` define los 5 servicios principales que generan Service Overview, LBS y GeoArticles. Las Additional Categories con página propia se gestionan por separado mediante `additional_categories_with_page`. No mezclar ambos conjuntos.
 
 ---
 
