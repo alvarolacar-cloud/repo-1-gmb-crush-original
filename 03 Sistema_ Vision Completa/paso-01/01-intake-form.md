@@ -504,7 +504,7 @@ Cada core service importante debe tener página propia.
 
 ### Explicación
 
-Son zonas reales atendidas. Incluyen barrios, distritos, municipios cercanos, códigos postales o áreas de servicio. No generan URLs por defecto.
+Son zonas seleccionadas por proximidad al NAP, coherencia GEO y lógica GMB Crush. Incluyen barrios, distritos, municipios cercanos o áreas de servicio. Se clasifican en Direct (salen del ancla física) y Candidate (requieren validación GEO). No generan URLs por defecto.
 
 ### Patrón o fórmula
 
@@ -611,7 +611,7 @@ Reviews + years + certifications + guarantees
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-10+ years, 250+ reviews, licensed technicians
+10+ años de experiencia, 250+ reseñas, técnicos certificados
 ```
 
 ### Ejemplos incorrectos
@@ -728,7 +728,7 @@ Cada categoría adicional debe clasificarse antes de entrar en la arquitectura.
 
 ### Explicación
 
-La Main City es la ciudad que genera arquitectura base. Las Local Coverage Areas son zonas reales atendidas que enriquecen contenido, pero no generan URLs por defecto. Si se mezclan ambas cosas, el sistema vuelve a la confusión de target cities, secondary cities y páginas innecesarias.
+La Main City es la ciudad que genera arquitectura base. Las Local Coverage Areas son zonas seleccionadas por proximidad y coherencia GEO que enriquecen contenido, pero no generan URLs por defecto. Si se mezclan ambas cosas, el sistema vuelve a la confusión de target cities, secondary cities y páginas innecesarias.
 
 ### Patrón o fórmula
 
@@ -1282,3 +1282,6 @@ Una zona tiene sentido GEO si sale del ancla física o ayuda a reforzar la relev
 - GeoArticle Pages AI Framework
 - Additional Categories Pages AI Framework
 
+
+> **Nota importante — GBP Services ≠ core services del sitio web:**
+> Las categorías adicionales del Google Business Profile (como "Servicio de duplicado de llaves") pueden tener página propia en la web, pero **no forman parte de `core_services`**. La variable `core_services` define los 5 servicios principales que generan Service Overview, LBS y GeoArticles. Las Additional Categories con página propia se gestionan por separado mediante `additional_categories_with_page`. No mezclar ambos conjuntos.

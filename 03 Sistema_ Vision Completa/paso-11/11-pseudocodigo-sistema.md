@@ -89,15 +89,26 @@ Local Coverage Areas:
 4.
 5.
 
-Primary Local Coverage Areas:
+Direct Local Coverage Areas:
+Zonas que salen directamente de la dirección física / NAP.
+Ejemplo: barrio, distrito o ciudad mencionados en la dirección.
 1.
 2.
 3.
 
-Additional Local Coverage Areas:
+Candidate Local Coverage Areas:
+Zonas cercanas o relevantes que deben pasar el test de coherencia GEO antes de usarse como señales activas.
 1.
 2.
 3.
+
+Approved Expansion Areas:
+Zonas que sí tendrán URLs propias. Default: None in Phase 1.
+1.
+2.
+3.
+
+> **Regla**: Direct = sale del ancla física. Candidate = se evalúa. Approved Expansion = genera URL.
 
 Approved Expansion Areas:
 Default: None.
@@ -164,13 +175,19 @@ Servicios principales:
 4. Cambio de bombines
 5. Instalación de cerraduras de seguridad
 
-Primary Local Coverage Areas:
+Direct Local Coverage Areas:
 1. Almagro
 2. Chamberí
-3. Salamanca
 
-Additional Local Coverage Areas:
-1. Retiro
+Candidate Local Coverage Areas:
+1. Salamanca
+2. Retiro
+3. Centro
+4. Tetuán
+5. Chamartín
+6. Arganzuela
+7. Moncloa
+8. Prosperidad
 
 Should Local Coverage Areas generate pages?
 No, not in the base build.
@@ -542,7 +559,7 @@ Service Overview URL:
 /cerrajero/apertura-puertas/
 
 H1:
-Professional Apertura de puertas Services by Cerrajeros Madrid 24h
+Servicios profesionales de apertura de puertas por Cerrajeros Madrid 24h
 
 Schema:
 Service
@@ -1591,3 +1608,6 @@ La expansión es un branch opcional, no parte del loop base.
 - GeoHub Pages AI Framework
 - GeoArticle Pages AI Framework
 - Additional Categories Pages AI Framework
+
+> **Nota importante — GBP Services ≠ core services del sitio web:**
+> Las categorías adicionales del Google Business Profile (como "Servicio de duplicado de llaves") pueden tener página propia en la web, pero **no forman parte de `core_services`**. La variable `core_services` define los 5 servicios principales que generan Service Overview, LBS y GeoArticles. Las Additional Categories con página propia se gestionan por separado mediante `additional_categories_with_page`. No mezclar ambos conjuntos.

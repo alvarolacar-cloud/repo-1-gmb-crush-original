@@ -23,7 +23,7 @@ Esto evita inventar una GBP URL, reseñas de Google o señales de perfil antes d
 Las Local Coverage Areas no generan URLs por defecto.
 Las Local Coverage Areas se usan para reforzar el contenido, los ejemplos locales, las FAQs y el schema areaServed.
 Solo las Approved Expansion Areas pueden convertirse en URLs propias cuando exista una justificación clara.
-Esta separación evita confundir cobertura real con arquitectura obligatoria.
+Esta separación evita confundir señales GEO de contenido con arquitectura obligatoria.
 También evita que un negocio local pequeño acabe con cientos de páginas antes de tener una base sólida.
 El criterio principal es crear primero las páginas que soportan la entidad, la categoría GBP y la intención comercial.
 Después se añaden artículos, enlaces internos, QA y optimización.
@@ -58,16 +58,14 @@ Servicios principales:
 4.
 5.
 
-Primary Local Coverage Areas:
-Recommended: start with 3–5 strongest real areas served.
+Direct Local Coverage Areas:
+Zonas con proximidad directa al NAP y coherencia GEO confirmada.
 1.
 2.
 3.
-4.
-5.
 
-Additional Local Coverage Areas:
-Optional.
+Candidate Local Coverage Areas:
+Zonas candidatas pendientes de validar con el test de coherencia GEO del Paso 1.
 1.
 2.
 3.
@@ -134,13 +132,19 @@ Servicios principales:
 4. Cambio de bombines
 5. Instalación de cerraduras de seguridad
 
-Primary Local Coverage Areas:
+Direct Local Coverage Areas:
 1. Almagro
 2. Chamberí
-3. Salamanca
 
-Additional Local Coverage Areas:
-1. Retiro
+Candidate Local Coverage Areas:
+1. Salamanca
+2. Retiro
+3. Centro
+4. Tetuán
+5. Chamartín
+6. Arganzuela
+7. Moncloa
+8. Prosperidad
 
 Should Local Coverage Areas generate pages?
 No, not in the base build.
@@ -181,7 +185,7 @@ Trust Signals:
 - Servicio móvil en el mismo día
 
 Can the page mention physical office in this area?
-Only for Madrid, not for Local Coverage Areas unless true.
+Solo para Madrid, no para Local Coverage Areas salvo que sea cierto.
 ```
 
 # Cuerpo operativo del Paso 6
@@ -224,7 +228,7 @@ La arquitectura base pertenece a una sola Main City.
 
 ### Explicación
 
-Las Local Coverage Areas son zonas reales atendidas que se usan para contexto, FAQs, ejemplos, cobertura y schema areaServed.
+Las Local Coverage Areas son zonas seleccionadas por proximidad al NAP, coherencia GEO y lógica GMB Crush. Se usan para contexto, FAQs, ejemplos, señales locales y schema areaServed.
 
 ### Patrón o fórmula
 
@@ -249,7 +253,7 @@ Almagro, Chamberí, Salamanca y Retiro se mencionan en secciones de cobertura
 ### Regla final
 
 ```text
-Las Local Coverage Areas refuerzan contenido, no crean URLs por defecto.
+Las Local Coverage Areas refuerzan contenido como señales GEO, no crean URLs por defecto.
 ```
 
 ## Principio 3 — Approved Expansion Areas crean URLs solo si se aprueban
@@ -288,7 +292,7 @@ Solo las zonas aprobadas generan URLs.
 
 ### Explicación
 
-Este principio evita confundir cobertura real con arquitectura.
+Este principio evita confundir señales GEO de contenido con arquitectura de URLs.
 
 ### Patrón o fórmula
 
@@ -428,8 +432,8 @@ No se usan Local Coverage Areas. Esta página no debe mencionar Madrid, Almagro,
 
 ```text
 URL: /cerrajero/cerrajero-urgente/
-Intro: Cerrajeros Madrid 24h provides professional urgente servicios de cerrajería for urgente aperturas urgentes, llaves rotas and access problems.
-No local targeting.
+Intro: Cerrajeros Madrid 24h ofrece servicios profesionales de cerrajería urgente: aperturas urgentes, llaves rotas y problemas de acceso.
+Sin segmentación local.
 Internal link to local version: /cerrajero/madrid/cerrajero-urgente/
 ```
 
@@ -489,7 +493,7 @@ Respuesta: Sí, atendemos esas zonas según disponibilidad, mientras esta págin
 
 ```text
 - H1: Cerrajero urgente en Almagro, Madrid y Salamanca
-- Create one paragraph for each area with duplicated text
+- Crear un párrafo por cada zona con texto duplicado
 - Claim office in Retiro
 - Link to /almagro/ when that URL does not exist
 ```
@@ -579,7 +583,7 @@ El GeoHub es el lugar más natural para una sección explícita de Local Coverag
 ```text
 URL: /madrid/
 H2: Zonas de cobertura de cerrajería en Madrid
-Texto: Cerrajeros Madrid 24h provides servicios de cerrajería en Madrid and local coverage areas such as Almagro, Chamberí, Salamanca and Retiro. Estas áreas representan cobertura real y ayudan al usuario a entender dónde puede estar disponible el servicio.
+Texto: Cerrajeros Madrid 24h ofrece servicios de cerrajería en Madrid con cobertura en zonas como Almagro, Chamberí, Salamanca y Retiro. Estas áreas son señales GEO seleccionadas por proximidad y coherencia, y ayudan al usuario a entender dónde puede estar disponible el servicio.
 Menú de servicios: urgente, apertura de puertas, cambio de cerraduras, cambio de bombines, instalación de cerraduras de seguridad.
 ```
 
@@ -666,20 +670,20 @@ Madrid
 Service:
 Cerrajero urgente
 
-Primary Local Coverage Areas:
-Almagro, Chamberí, Salamanca
+Direct Local Coverage Areas:
+Almagro, Chamberí
 
-Additional Local Coverage Areas:
-Retiro
+Candidate Local Coverage Areas:
+Salamanca, Retiro, Centro, Tetuán, Chamartín, Arganzuela, Moncloa, Prosperidad
 
 URL:
 /cerrajero/madrid/cerrajero-urgente/
 
 Sección:
-H2: Cerrajero urgente en Madrid and Nearby Coverage Areas
+H2: Cerrajero urgente en Madrid y zonas de cobertura cercanas
 
 Texto:
-Cerrajeros Madrid 24h ayuda a clientes en Madrid con aperturas urgentes, llaves rotas, cambios de bombín y problemas de acceso. También atendemos zonas de cobertura como Almagro, Chamberí, Salamanca y Retiro según disponibilidad. Estas zonas ayudan a aclarar la cobertura real mientras la página sigue enfocada en el servicio de cerrajero urgente en Madrid.
+Cerrajeros Madrid 24h ayuda a clientes en Madrid con aperturas urgentes, llaves rotas, cambios de bombín y problemas de acceso. También cubrimos zonas de posicionamiento local como Almagro, Chamberí, Salamanca y Retiro según disponibilidad. Estas zonas son señales GEO de proximidad que refuerzan la relevancia local mientras la página sigue enfocada en el servicio de cerrajero urgente en Madrid.
 ```
 
 ## FAQ ejemplo
@@ -792,7 +796,7 @@ La intro local debe reforzar la Main City y el problema real del usuario.
 
 ### Explicación
 
-Las páginas locales pueden incluir una sección específica de cobertura. Esta sección permite mencionar barrios, distritos o municipios atendidos sin crear páginas propias ni URLs artificiales.
+Las páginas locales pueden incluir una sección específica de cobertura. Esta sección permite mencionar barrios, distritos o municipios seleccionados como señales GEO sin crear páginas propias ni URLs artificiales.
 
 ### Patrón o fórmula
 
@@ -817,7 +821,7 @@ Cerrajeros Madrid 24h incluye un H2: Soporte de cerrajería en Madrid y zonas de
 ### Regla final
 
 ```text
-Las áreas de cobertura se mencionan como cobertura real, no como páginas implícitas.
+Las áreas de cobertura se mencionan como señales GEO de proximidad, no como páginas implícitas.
 ```
 
 ## Additional Category con caso local — Regla operativa 5
@@ -835,7 +839,7 @@ Additional Category → problema local → cobertura como ejemplo
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-En /cerrajero/madrid/duplicado-llaves/, Cerrajeros Madrid 24h menciona spare llaves para hogares y negocios en Madrid y zonas de cobertura cercanas.
+En /cerrajero/madrid/duplicado-llaves/, Cerrajeros Madrid 24h menciona llaves de repuesto para hogares y negocios en Madrid y zonas de cobertura cercanas.
 ```
 
 ### Ejemplos incorrectos
@@ -856,7 +860,7 @@ La cobertura local debe contextualizar, no multiplicar páginas.
 
 ### Explicación
 
-El GeoHub es el mejor lugar para explicar la cobertura local. Debe tener una sección clara de áreas atendidas, conectada con servicios y sin transformar cada zona en URL si no está aprobada.
+El GeoHub es el mejor lugar para explicar la cobertura local. Debe tener una sección clara de áreas de posicionamiento local (Direct y Candidate LCA), conectada con servicios y sin transformar cada zona en URL si no está aprobada.
 
 ### Patrón o fórmula
 
@@ -881,7 +885,7 @@ En /madrid/, Cerrajeros Madrid 24h lista servicios en Madrid y una sección de c
 ### Regla final
 
 ```text
-El GeoHub debe organizar ciudad, servicios y cobertura real.
+El GeoHub debe organizar ciudad, servicios y señales GEO locales (Direct + Candidate LCA).
 ```
 
 ## GeoArticles con ejemplos locales — Regla operativa 7
@@ -1081,7 +1085,7 @@ La expansión necesita justificación, no solo cobertura.
 | Check | Pregunta | Estado |
 |---|---|---|
 | Main City | ¿La página mantiene clara la Main City? | ✅ / ⬜ |
-| Local Coverage Areas | ¿Las zonas mencionadas representan cobertura real? | ✅ / ⬜ |
+| Local Coverage Areas | ¿Las zonas mencionadas son Direct o Candidate LCA validadas por el test GEO del Paso 1? | ✅ / ⬜ |
 | Uso natural | ¿Las áreas aparecen de forma natural y no forzada? | ✅ / ⬜ |
 | No URLs innecesarias | ¿No se crearon páginas para áreas no aprobadas? | ✅ / ⬜ |
 | No fake office | ¿No se afirma oficina donde no existe? | ✅ / ⬜ |

@@ -63,6 +63,7 @@ Full NAP:
 - ZIP / Postal Code:
 - Country:
 - Phone:
+- Email:
 
 GBP URL:
 
@@ -82,19 +83,26 @@ Servicios principales:
 4.
 5.
 
-Primary Local Coverage Areas:
+Direct Local Coverage Areas:
+Zonas que salen directamente de la dirección física / NAP.
+Ejemplo: barrio, distrito o ciudad mencionados en la dirección.
 1.
 2.
 3.
-4.
-5.
 
-Additional Local Coverage Areas:
+Candidate Local Coverage Areas:
+Zonas cercanas o relevantes que deben pasar el test de coherencia GEO antes de usarse como señales activas.
 1.
 2.
 3.
-4.
-5.
+
+Approved Expansion Areas:
+Zonas que sí tendrán URLs propias. Default: None in Phase 1.
+1.
+2.
+3.
+
+> **Regla**: Direct = sale del ancla física. Candidate = se evalúa. Approved Expansion = genera URL.
 
 Should Local Coverage Areas generate pages?
 Default: No.
@@ -153,6 +161,7 @@ Full NAP:
 - ZIP / Postal Code: 28010
 - Country: España
 - Phone: +34 600 000 000
+- Email: info@cerrajerosmadrid24h.com
 
 Planned Primary GBP Category:
 Cerrajero
@@ -174,13 +183,19 @@ Servicios principales:
 4. Cambio de bombines
 5. Instalación de cerraduras de seguridad
 
-Primary Local Coverage Areas:
+Direct Local Coverage Areas:
 1. Almagro
 2. Chamberí
-3. Salamanca
 
-Additional Local Coverage Areas:
-1. Retiro
+Candidate Local Coverage Areas:
+1. Salamanca
+2. Retiro
+3. Centro
+4. Tetuán
+5. Chamartín
+6. Arganzuela
+7. Moncloa
+8. Prosperidad
 
 Should Local Coverage Areas generate pages?
 No, not in the base build.

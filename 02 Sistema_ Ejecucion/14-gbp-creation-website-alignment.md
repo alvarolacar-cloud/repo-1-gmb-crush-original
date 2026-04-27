@@ -68,6 +68,7 @@ Final NAP:
 - ZIP / Postal Code:
 - Country:
 - Phone:
+- Email:
 
 Business Model:
 Option A: Storefront
@@ -200,6 +201,7 @@ Final NAP:
 - ZIP / Postal Code: 28010
 - Country: España
 - Phone: +34 600 000 000
+- Email: info@cerrajerosmadrid24h.com
 
 Business Model:
 Service Area Business
@@ -412,6 +414,7 @@ Address:
 Calle Rafael Calvo 12, Barrio Almagro, Distrito Chamberí, Madrid
 
 Phone:
+Email:
 +34 600 000 000
 ```
 
@@ -1260,3 +1263,6 @@ Finalmente, sincronización continua entre web, perfil y tracking.
 - GeoArticle Pages AI Framework
 - Additional Categories Pages AI Framework
 
+
+> **Nota importante — GBP Services ≠ core services del sitio web:**
+> Las categorías adicionales del Google Business Profile (como "Servicio de duplicado de llaves") pueden tener página propia en la web, pero **no forman parte de `core_services`**. La variable `core_services` define los 5 servicios principales que generan Service Overview, LBS y GeoArticles. Las Additional Categories con página propia se gestionan por separado mediante `additional_categories_with_page`. No mezclar ambos conjuntos.
