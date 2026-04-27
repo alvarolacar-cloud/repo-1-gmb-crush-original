@@ -34,3 +34,4 @@ No se asignan fuentes todavía.
 | 8.12 | Se decide asignar Priority Score a las 28 URLs SEO base | 28 URLs |
 | 8.13 | Se decide que `/contacto/` tenga prioridad operativa, no SEO | Página auxiliar |
 | 8.14 | Se decide que GeoArticles se prioricen después de sus páginas padre | GeoArticle después de LBS |
+| 8.15 | Se decide que la matriz completa de scores de las 28 URLs está documentada en el paso del sistema | Ver `08-priority-score.md` — tabla completa con score y prioridad por URL |
