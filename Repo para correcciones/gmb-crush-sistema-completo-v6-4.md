@@ -840,7 +840,7 @@ Trust signal → página aplicable → bloque de confianza → revisión de vera
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Cerrajeros Madrid 24h registra 10+ años de experiencia, reseñas iniciales pendientes de recopilar tras crear el GBP, licensed technicians y en el mismo día Servicio móvil en el mismo día como señales reutilizables.
+Cerrajeros Madrid 24h registra 10+ años de experiencia, reseñas iniciales pendientes de recopilar tras crear el GBP, técnicos cerrajeros cualificados y servicio móvil en el mismo día como señales reutilizables.
 ```
 
 ### Ejemplos incorrectos
@@ -1138,7 +1138,7 @@ La versión base no calcula páginas para múltiples ciudades. Calcula una arqui
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-1 + 5 + 1 + 5 + 1 + 15 = 27 páginas SEO base + /contacto/ como página auxiliar
+1 + 5 + 1 + 5 + 1 + 15 = 28 páginas SEO base. Adicionalmente, /contacto/ como página auxiliar fuera del inventario SEO base.
 ```
 
 ### Ejemplos incorrectos
@@ -1362,13 +1362,13 @@ Total pages ≠ publish all at once
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-27 páginas SEO base + /contacto/ como página auxiliar planificadas; se publican por fases
+28 páginas SEO base más /contacto/ como página auxiliar planificadas; se publican por fases
 ```
 
 ### Ejemplos incorrectos
 
 ```text
-- Publicar 27 páginas SEO base (28 con /contacto/ como página auxiliar) sin QA
+- Publicar 28 páginas SEO base (29 con /contacto/ como página auxiliar) sin QA
 - No priorizar
 - Confundir inventario con calendario
 ```
@@ -1560,7 +1560,7 @@ La fórmula debe devolver un inventario ejecutable, no un mapa teórico inmaneja
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Con S = 5, A = 1 y G = 3, Cerrajeros Madrid 24h produce 1 + 5 + 1 + 5 + 1 + 15 = 27 páginas SEO base + /contacto/ como página auxiliar.
+Con S = 5, A = 1 y G = 3, Cerrajeros Madrid 24h produce 1 + 5 + 1 + 5 + 1 + 15 = 28 páginas SEO base. Adicionalmente, /contacto/ como página auxiliar fuera del inventario SEO base..
 ```
 
 ### Ejemplos incorrectos
@@ -11295,7 +11295,7 @@ Prompt → validate → generate → link → score → QA → roadmap
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Cerrajeros Madrid 24h recibe un sistema completo de 27 páginas SEO base + /contacto/ como página auxiliar, no solo una lista de URLs
+Cerrajeros Madrid 24h recibe un sistema completo de 28 páginas SEO base más /contacto/ como página auxiliar, no solo una lista de URLs
 ```
 
 ### Ejemplos incorrectos
@@ -12505,7 +12505,7 @@ El prompt debe obligar a calcular la fórmula base antes de generar URLs. Así l
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Para Cerrajeros Madrid 24h, el prompt debe devolver 27 páginas SEO base + /contacto/ como página auxiliar con S=5, A=1, G=3.
+Para Cerrajeros Madrid 24h, el prompt debe devolver 28 páginas SEO base más /contacto/ como página auxiliar con S=5, A=1, G=3.
 ```
 
 ### Ejemplos incorrectos
@@ -13572,7 +13572,7 @@ G = 3
 + 5 Madrid Service Pages
 + 1 Madrid Additional Category Page
 + 15 Madrid GeoArticles
-= 27 páginas SEO base + /contacto/ como página auxiliar
+= 28 páginas SEO base + /contacto/ como página auxiliar
 ```
 
 ## URLs base finales para Cerrajeros Madrid 24h
@@ -15850,6 +15850,8 @@ Finalmente, sincronización continua entre web, perfil y tracking.
 > El calendario debe cubrir todo el inventario base o declararse como calendario parcial.
 
 ### GeoArticles completos (15)
+
+> **Aviso de trazabilidad:** estos 15 títulos son un primer borrador derivado de la fórmula G × S = 15 y de la lógica del servicio. **No vienen de keyword research real**. Antes de producirlos hay que validar volumen de búsqueda, dificultad y oportunidad competitiva por título. La fórmula garantiza la cantidad; los temas concretos requieren validación.
 
 **Cerrajero urgente (3):**
 1. /madrid/cuanto-cuesta-un-cerrajero-urgente/

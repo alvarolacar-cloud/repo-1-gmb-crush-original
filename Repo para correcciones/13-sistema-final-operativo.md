@@ -666,7 +666,7 @@ G = 3
 + 5 Madrid Service Pages
 + 1 Madrid Additional Category Page
 + 15 Madrid GeoArticles
-= 27 páginas SEO base + /contacto/ como página auxiliar
+= 28 páginas SEO base + /contacto/ como página auxiliar
 ```
 
 ## URLs base finales para Cerrajeros Madrid 24h
@@ -1624,6 +1624,8 @@ El sistema final coordina; los pasos individuales ejecutan.
 
 
 ### GeoArticles completos (15)
+
+> **Aviso de trazabilidad:** estos 15 títulos son un primer borrador derivado de la fórmula G × S = 15 y de la lógica del servicio. **No vienen de keyword research real**. Antes de producirlos hay que validar volumen de búsqueda, dificultad y oportunidad competitiva por título. La fórmula garantiza la cantidad; los temas concretos requieren validación.
 
 **Cerrajero urgente (3):**
 1. /madrid/cuanto-cuesta-un-cerrajero-urgente/

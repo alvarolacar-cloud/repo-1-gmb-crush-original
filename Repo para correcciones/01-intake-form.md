@@ -835,7 +835,7 @@ Trust signal → página aplicable → bloque de confianza → revisión de vera
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Cerrajeros Madrid 24h registra 10+ años de experiencia, reseñas iniciales pendientes de recopilar tras crear el GBP, licensed technicians y en el mismo día Servicio móvil en el mismo día como señales reutilizables.
+Cerrajeros Madrid 24h registra 10+ años de experiencia, reseñas iniciales pendientes de recopilar tras crear el GBP, técnicos cerrajeros cualificados y servicio móvil en el mismo día como señales reutilizables.
 ```
 
 ### Ejemplos incorrectos

@@ -219,7 +219,7 @@ La versión base no calcula páginas para múltiples ciudades. Calcula una arqui
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-1 + 5 + 1 + 5 + 1 + 15 = 27 páginas SEO base + /contacto/ como página auxiliar
+1 + 5 + 1 + 5 + 1 + 15 = 28 páginas SEO base. Adicionalmente, /contacto/ como página auxiliar fuera del inventario SEO base.
 ```
 
 ### Ejemplos incorrectos
@@ -443,13 +443,13 @@ Total pages ≠ publish all at once
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-27 páginas SEO base + /contacto/ como página auxiliar planificadas; se publican por fases
+28 páginas SEO base más /contacto/ como página auxiliar planificadas; se publican por fases
 ```
 
 ### Ejemplos incorrectos
 
 ```text
-- Publicar 27 páginas SEO base (28 con /contacto/ como página auxiliar) sin QA
+- Publicar 28 páginas SEO base (29 con /contacto/ como página auxiliar) sin QA
 - No priorizar
 - Confundir inventario con calendario
 ```
@@ -646,7 +646,7 @@ La fórmula debe devolver un inventario ejecutable, no un mapa teórico inmaneja
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Con S = 5, A = 1 y G = 3, Cerrajeros Madrid 24h produce 1 + 5 + 1 + 5 + 1 + 15 = 27 páginas SEO base + /contacto/ como página auxiliar.
+Con S = 5, A = 1 y G = 3, Cerrajeros Madrid 24h produce 1 + 5 + 1 + 5 + 1 + 15 = 28 páginas SEO base. Adicionalmente, /contacto/ como página auxiliar fuera del inventario SEO base..
 ```
 
 ### Ejemplos incorrectos
@@ -864,6 +864,8 @@ El conteo final debe ser transparente y auditable.
 
 
 ### GeoArticles completos (15)
+
+> **Aviso de trazabilidad:** estos 15 títulos son un primer borrador derivado de la fórmula G × S = 15 y de la lógica del servicio. **No vienen de keyword research real**. Antes de producirlos hay que validar volumen de búsqueda, dificultad y oportunidad competitiva por título. La fórmula garantiza la cantidad; los temas concretos requieren validación.
 
 **Cerrajero urgente (3):**
 1. /madrid/cuanto-cuesta-un-cerrajero-urgente/

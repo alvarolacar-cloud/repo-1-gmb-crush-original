@@ -1003,6 +1003,8 @@ La expansión se enlaza solo cuando sus URLs existen.
 
 ### GeoArticles completos (15)
 
+> **Aviso de trazabilidad:** estos 15 títulos son un primer borrador derivado de la fórmula G × S = 15 y de la lógica del servicio. **No vienen de keyword research real**. Antes de producirlos hay que validar volumen de búsqueda, dificultad y oportunidad competitiva por título. La fórmula garantiza la cantidad; los temas concretos requieren validación.
+
 **Cerrajero urgente (3):**
 1. /madrid/cuanto-cuesta-un-cerrajero-urgente/
 2. /madrid/que-hacer-si-no-puedes-entrar-casa/

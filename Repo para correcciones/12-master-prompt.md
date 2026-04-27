@@ -318,7 +318,7 @@ Prompt → validate → generate → link → score → QA → roadmap
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Cerrajeros Madrid 24h recibe un sistema completo de 27 páginas SEO base + /contacto/ como página auxiliar, no solo una lista de URLs
+Cerrajeros Madrid 24h recibe un sistema completo de 28 páginas SEO base más /contacto/ como página auxiliar, no solo una lista de URLs
 ```
 
 ### Ejemplos incorrectos
@@ -1531,7 +1531,7 @@ El prompt debe obligar a calcular la fórmula base antes de generar URLs. Así l
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Para Cerrajeros Madrid 24h, el prompt debe devolver 27 páginas SEO base + /contacto/ como página auxiliar con S=5, A=1, G=3.
+Para Cerrajeros Madrid 24h, el prompt debe devolver 28 páginas SEO base más /contacto/ como página auxiliar con S=5, A=1, G=3.
 ```
 
 ### Ejemplos incorrectos
@@ -1955,6 +1955,8 @@ El Master Prompt debe generar un sistema, no una respuesta suelta.
 
 
 ### GeoArticles completos (15)
+
+> **Aviso de trazabilidad:** estos 15 títulos son un primer borrador derivado de la fórmula G × S = 15 y de la lógica del servicio. **No vienen de keyword research real**. Antes de producirlos hay que validar volumen de búsqueda, dificultad y oportunidad competitiva por título. La fórmula garantiza la cantidad; los temas concretos requieren validación.
 
 **Cerrajero urgente (3):**
 1. /madrid/cuanto-cuesta-un-cerrajero-urgente/
