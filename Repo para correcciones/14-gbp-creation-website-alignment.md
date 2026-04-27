@@ -68,6 +68,7 @@ Final NAP:
 - ZIP / Postal Code:
 - Country:
 - Phone:
+- Email:
 
 Business Model:
 Option A: Storefront
@@ -200,6 +201,7 @@ Final NAP:
 - ZIP / Postal Code: 28010
 - Country: España
 - Phone: +34 600 000 000
+- Email: info@cerrajerosmadrid24h.com
 
 Business Model:
 Service Area Business
@@ -412,6 +414,7 @@ Address:
 Calle Rafael Calvo 12, Barrio Almagro, Distrito Chamberí, Madrid
 
 Phone:
+Email:
 +34 600 000 000
 ```
 

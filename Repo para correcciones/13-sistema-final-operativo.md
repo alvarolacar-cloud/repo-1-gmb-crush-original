@@ -63,6 +63,7 @@ Full NAP:
 - ZIP / Postal Code:
 - Country:
 - Phone:
+- Email:
 
 GBP URL:
 
@@ -160,6 +161,7 @@ Full NAP:
 - ZIP / Postal Code: 28010
 - Country: España
 - Phone: +34 600 000 000
+- Email: info@cerrajerosmadrid24h.com
 
 Planned Primary GBP Category:
 Cerrajero
