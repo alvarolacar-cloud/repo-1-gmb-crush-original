@@ -151,7 +151,7 @@ Required Enlaces internos:
 2. /madrid/
 3. /cerrajero/madrid/apertura-puertas/
 4. /cerrajero/madrid/cambio-cerraduras/
-5. /madrid/guia-precios-cerrajero-urgente/
+5. /madrid/cuanto-cuesta-un-cerrajero-urgente/
 
 Required Schema:
 LocalBusiness
@@ -164,6 +164,8 @@ This page supports the core Cerrajero urgente service, Madrid GeoHub, and Servic
 ```
 
 # Cuerpo operativo del Paso 9
+
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
 ## Regla 1 — URL QA
 
@@ -834,7 +836,7 @@ Intención principal → URL única
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-/madrid/guia-precios-cerrajero-urgente/ no compite con /cerrajero/madrid/cerrajero-urgente/ porque apunta a costes, no a landing comercial.
+/madrid/cuanto-cuesta-un-cerrajero-urgente/ no compite con /cerrajero/madrid/cerrajero-urgente/ porque apunta a costes, no a landing comercial.
 ```
 
 ### Ejemplos incorrectos
@@ -974,3 +976,26 @@ Antes del Paso 14, ninguna página debe afirmar señales de GBP que todavía no 
 - GeoArticle Pages AI Framework
 - Additional Categories Pages AI Framework
 
+
+
+### Inventario SEO base — Estado QA
+
+| # | URL | Tipo | QA Status |
+|---|-----|------|-----------|
+| 1 | / | Homepage | Pending |
+| 2 | /cerrajero/cerrajero-urgente/ | Service Overview | Pending |
+| 3 | /cerrajero/apertura-puertas/ | Service Overview | Pending |
+| 4 | /cerrajero/cambio-cerraduras/ | Service Overview | Pending |
+| 5 | /cerrajero/cambio-bombines/ | Service Overview | Pending |
+| 6 | /cerrajero/instalacion-cerraduras-seguridad/ | Service Overview | Pending |
+| 7 | /madrid/ | GeoHub | Pending |
+| 8 | /cerrajero/madrid/cerrajero-urgente/ | LBS | Pending |
+| 9 | /cerrajero/madrid/apertura-puertas/ | LBS | Pending |
+| 10 | /cerrajero/madrid/cambio-cerraduras/ | LBS | Pending |
+| 11 | /cerrajero/madrid/cambio-bombines/ | LBS | Pending |
+| 12 | /cerrajero/madrid/instalacion-cerraduras-seguridad/ | LBS | Pending |
+| 13 | /cerrajero/madrid/duplicado-llaves/ | Additional Category | Pending |
+| 14-28 | 15 GeoArticles | GeoArticle | Pending |
+| — | /contacto/ | Auxiliar | Pending |
+
+> Ninguna URL se publica sin QA, aunque el documento muestre solo un ejemplo desarrollado.

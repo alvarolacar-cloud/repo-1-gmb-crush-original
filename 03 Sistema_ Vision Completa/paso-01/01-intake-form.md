@@ -67,6 +67,7 @@ Full NAP:
 - ZIP / Postal Code:
 - Country:
 - Phone:
+- Email:
 
 Planned Primary GBP Category:
 
@@ -88,23 +89,23 @@ Servicios principales:
 4.
 5.
 
-Primary Local Coverage Areas:
-Recommended: start with 3–5 strongest real areas served.
+Direct Local Coverage Areas:
+Zonas que salen directamente de la dirección física.
 
 > **Nota para la IA:** Antes de decidir las zonas de posicionamiento local, consultar el módulo **Interpretación GMB Crush de la dirección física y zonas GEO** al final de este documento. Ese módulo explica cómo se interpreta la dirección física, cómo se eligen las zonas y qué criterios deben cumplir.
 1.
 2.
-3.
-4.
-5.
 
-Additional Local Coverage Areas:
-Optional.
+Candidate Local Coverage Areas:
+Zonas que no salen de la dirección pero pueden tener sentido por proximidad, búsqueda o competencia. Solo se usan como señales GEO activas si pasan el test de coherencia GEO.
 1.
 2.
 3.
 4.
 5.
+6.
+7.
+8.
 
 Should Local Coverage Areas generate pages?
 Default: No.
@@ -174,6 +175,7 @@ Full NAP:
 - ZIP / Postal Code: 28010
 - Country: España
 - Phone: +34 600 000 000
+- Email: info@cerrajerosmadrid24h.com
 
 Planned Primary GBP Category:
 Cerrajero
@@ -195,13 +197,21 @@ Servicios principales:
 4. Cambio de bombines
 5. Instalación de cerraduras de seguridad
 
-Primary Local Coverage Areas:
+Direct Local Coverage Areas:
 1. Almagro
 2. Chamberí
-3. Salamanca
 
-Additional Local Coverage Areas:
-1. Retiro
+Candidate Local Coverage Areas:
+1. Salamanca
+2. Retiro
+3. Centro
+4. Tetuán
+5. Chamartín
+6. Arganzuela
+7. Moncloa
+8. Prosperidad
+
+Las Candidate Local Coverage Areas solo se usan como señales GEO activas si pasan el test de coherencia GEO.
 
 Should Local Coverage Areas generate pages?
 No, not in the base build.
@@ -231,6 +241,8 @@ Trust Signals:
 ```
 
 # Cuerpo operativo del Paso 1
+
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
 ## Business Name
 
@@ -823,7 +835,7 @@ Trust signal → página aplicable → bloque de confianza → revisión de vera
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Cerrajeros Madrid 24h registra 10+ años de experiencia, reseñas iniciales pendientes de recopilar tras crear el GBP, licensed technicians y en el mismo día mobile support como señales reutilizables.
+Cerrajeros Madrid 24h registra 10+ años de experiencia, reseñas iniciales pendientes de recopilar tras crear el GBP, técnicos cerrajeros cualificados y servicio móvil en el mismo día como señales reutilizables.
 ```
 
 ### Ejemplos incorrectos

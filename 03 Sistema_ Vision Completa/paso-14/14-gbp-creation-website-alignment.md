@@ -81,12 +81,19 @@ Yes / No / Depends on business model
 
 Main City:
 
-Local Coverage Areas:
+Direct Local Coverage Areas:
+1.
+2.
+
+Candidate Local Coverage Areas:
 1.
 2.
 3.
 4.
 5.
+6.
+7.
+8.
 
 Approved Expansion Areas:
 1.
@@ -206,17 +213,21 @@ Depends on business model and eligibility.
 Main City:
 Madrid
 
-Local Coverage Areas:
+Direct Local Coverage Areas:
 1. Almagro
 2. Chamberí
-3. Salamanca
-4. Retiro
-5. Centro
-6. Tetuán
-7. Chamartín
-8. Arganzuela
-9. Moncloa
-10. Prosperidad
+
+Candidate Local Coverage Areas:
+1. Salamanca
+2. Retiro
+3. Centro
+4. Tetuán
+5. Chamartín
+6. Arganzuela
+7. Moncloa
+8. Prosperidad
+
+Las Candidate Local Coverage Areas solo se usan como señales GEO activas si pasan el test de coherencia GEO.
 
 Approved Expansion Areas:
 None in Phase 1.
@@ -230,7 +241,6 @@ Representa la intención principal del negocio: servicios de cerrajería en Madr
 Confirmed Additional GBP Categories:
 1. Servicio de cerrajería de urgencia
 2. Servicio de duplicado de llaves
-3. Proveedor de sistemas de seguridad
 
 Categories rejected or avoided:
 1. Tienda de llaves si no existe tienda física abierta al público
@@ -301,6 +311,8 @@ Tracking Setup:
 ```
 
 # Cuerpo operativo del Paso 14
+
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
 ## Regla operativa — Crear el GBP después de publicar la web base
 
@@ -584,7 +596,6 @@ Página de soporte:
 ### Ejemplos incorrectos
 
 ```text
-- Añadir “Proveedor de sistemas de seguridad” si no se instalan sistemas de seguridad.
 - Añadir una categoría por ranking sin página de soporte.
 - Duplicar una categoría adicional que ya está cubierta por un servicio core sin diferenciar intención.
 ```

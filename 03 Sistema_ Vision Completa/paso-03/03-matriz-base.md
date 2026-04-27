@@ -168,6 +168,8 @@ P3
 
 # Cuerpo operativo del Paso 3
 
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
+
 ## Regla 1 — Cada página tiene una fila
 
 ### Explicación
@@ -459,7 +461,7 @@ Ninguna página debe estar sin status.
 | GH-001 | GeoHub | `/madrid/` | Cerrajeros Madrid 24h – Servicios de cerrajería en Madrid | CollectionPage, BreadcrumbList | P1 | Phase 1 |
 | LBS-001 | Location-Based Service | `/cerrajero/madrid/cerrajero-urgente/` | Cerrajeros Madrid 24h – Cerrajero urgente en Madrid | LocalBusiness, BreadcrumbList | P1 | Phase 2 |
 | AC-001 | Additional Category | `/cerrajero/madrid/duplicado-llaves/` | Cerrajeros Madrid 24h – Duplicado de llaves experto en Madrid | Service, BreadcrumbList | P3 | Phase 2 |
-| GA-001 | GeoArticle | `/madrid/guia-precios-cerrajero-urgente/` | How Much Does an Precio de cerrajero urgente en Madrid? | Article, FAQPage, BreadcrumbList | P3 | Phase 3 |
+| GA-001 | GeoArticle | `/madrid/cuanto-cuesta-un-cerrajero-urgente/` | How Much Does an Precio de cerrajero urgente en Madrid? | Article, FAQPage, BreadcrumbList | P3 | Phase 3 |
 
 ## Filas que NO se generan en la base
 
@@ -468,7 +470,7 @@ Ninguna página debe estar sin status.
 /cerrajero/almagro/cerrajero-urgente/
 /chamberi/
 /cerrajero/salamanca/apertura-puertas/
-/retiro/guia-precios-cerrajero-urgente/
+/retiro/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
 Estas URLs solo se generarían si esas zonas pasan a Approved Expansion Areas.
@@ -520,7 +522,7 @@ HP / SO / GH / LBS / AC / GA + número correlativo
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-LBS-001 identifica /cerrajero/madrid/cerrajero-urgente/ y GA-001 identifica /madrid/guia-precios-cerrajero-urgente/.
+LBS-001 identifica /cerrajero/madrid/cerrajero-urgente/ y GA-001 identifica /madrid/cuanto-cuesta-un-cerrajero-urgente/.
 ```
 
 ### Ejemplos incorrectos
@@ -831,4 +833,35 @@ La matriz manda; el contenido sigue.
 - GeoHub Pages AI Framework
 - GeoArticle Pages AI Framework
 - Additional Categories Pages AI Framework
+
+
+
+### GeoArticles completos (15)
+
+> **Aviso de trazabilidad:** estos 15 títulos son un primer borrador derivado de la fórmula G × S = 15 y de la lógica del servicio. **No vienen de keyword research real**. Antes de producirlos hay que validar volumen de búsqueda, dificultad y oportunidad competitiva por título. La fórmula garantiza la cantidad; los temas concretos requieren validación.
+
+**Cerrajero urgente (3):**
+1. /madrid/cuanto-cuesta-un-cerrajero-urgente/
+2. /madrid/que-hacer-si-no-puedes-entrar-casa/
+3. /madrid/cuanto-tarda-un-cerrajero/
+
+**Apertura de puertas (3):**
+4. /madrid/cuanto-cuesta-abrir-una-puerta/
+5. /madrid/que-hacer-si-te-dejas-las-llaves-dentro/
+6. /madrid/apertura-de-puertas-sin-romper-cerradura/
+
+**Cambio de cerraduras (3):**
+7. /madrid/cuando-cambiar-la-cerradura-de-casa/
+8. /madrid/cambio-de-cerradura-tras-perder-llaves/
+9. /madrid/cerradura-nueva-o-reparacion/
+
+**Cambio de bombines (3):**
+10. /madrid/cuando-cambiar-el-bombin/
+11. /madrid/bombin-antibumping-madrid/
+12. /madrid/cambio-de-bombin-sin-cambiar-cerradura/
+
+**Instalación de cerraduras de seguridad (3):**
+13. /madrid/mejores-cerraduras-de-seguridad-para-viviendas/
+14. /madrid/cerraduras-de-seguridad-para-comunidades/
+15. /madrid/instalar-cerradura-de-seguridad-en-puerta-blindada/
 
