@@ -2,13 +2,13 @@ Versión literal del chat · Sistema GMB Crush para webs locales
 Documento regenerado siguiendo la estructura fija acordada en la conversación.
 Proveniencia: sistema construido paso a paso en el chat y alineado con los frameworks oficiales GMB Crush.
 
-# Paso 9 — QA Checklist
+# §1 Paso 9 — QA Checklist
 
-## Índice corto
+## §2 Índice corto
 
 **Paso 9 — QA Checklist**
 
-## Objetivo del Paso 9
+## §3 Objetivo del Paso 9
 
 Este paso existe para resolver un problema concreto dentro del sistema GMB Crush: validar cada página antes de publicarla para evitar errores técnicos, semánticos, locales y de canibalización.
 La web local no debe construirse desde la intuición, sino desde una secuencia operativa que conecta entidad, categoría GBP, servicios, ciudad principal, cobertura local, schema, contenido e interlinking.
@@ -36,7 +36,7 @@ Error que previene: usar Local Coverage Areas como falsas ubicaciones.
 Error que previene: publicar sin schema o sin enlaces internos.
 Error que previene: duplicar intención entre páginas.
 
-## Lo que tienes que rellenar
+## §4 Lo que tienes que rellenar
 
 ```text
 Page ID:
@@ -92,7 +92,7 @@ Required Schema:
 Notes:
 ```
 
-## Ejemplo rellenado
+## §5 Ejemplo rellenado
 
 ```text
 Page ID:
@@ -163,29 +163,29 @@ Notes:
 This page supports the core Cerrajero urgente service, Madrid GeoHub, and Servicio de cerrajería de urgencia category relevance.
 ```
 
-# Cuerpo operativo del Paso 9
+# §6 Cuerpo operativo del Paso 9
 
 > **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
-## Regla 1 — URL QA
+## §7 Regla 1 — URL QA
 
-### Explicación
+### §7.1 Explicación
 
 La URL debe coincidir con el tipo de página y las reglas del Paso 4.
 
-### Patrón o fórmula
+### §7.2 Patrón o fórmula
 
 ```text
 URL pattern by page type
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §7.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/cerrajero-urgente/ = Location-Based Service
 ```
 
-### Ejemplos incorrectos
+### §7.4 Ejemplos incorrectos
 
 ```text
 - URL con near-me
@@ -193,31 +193,31 @@ URL pattern by page type
 - URL duplicada
 ```
 
-### Regla final
+### §7.5 Regla final
 
 ```text
 No se publica una página con URL incorrecta.
 ```
 
-## Regla 2 — Page Type QA
+## §8 Regla 2 — Page Type QA
 
-### Explicación
+### §8.1 Explicación
 
 El contenido debe corresponder al tipo de página.
 
-### Patrón o fórmula
+### §8.2 Patrón o fórmula
 
 ```text
 Page type → structure
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §8.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 GeoArticle written as article, not landing
 ```
 
-### Ejemplos incorrectos
+### §8.4 Ejemplos incorrectos
 
 ```text
 - Service Overview geolocalizada
@@ -225,31 +225,31 @@ GeoArticle written as article, not landing
 - Article como landing
 ```
 
-### Regla final
+### §8.5 Regla final
 
 ```text
 Cada página debe comportarse como su tipo.
 ```
 
-## Regla 3 — One service only
+## §9 Regla 3 — One service only
 
-### Explicación
+### §9.1 Explicación
 
 Las páginas locales deben tener un servicio principal.
 
-### Patrón o fórmula
+### §9.2 Patrón o fórmula
 
 ```text
 one service per local page
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §9.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajero urgente en Madrid
 ```
 
-### Ejemplos incorrectos
+### §9.4 Ejemplos incorrectos
 
 ```text
 - Cerrajero urgente + apertura de puertas + cambio de cerraduras en un H1
@@ -257,31 +257,31 @@ Cerrajero urgente en Madrid
 - Categoría adicional mezclada sin claridad
 ```
 
-### Regla final
+### §9.5 Regla final
 
 ```text
 Una página local, un servicio principal.
 ```
 
-## Regla 4 — One Main City only
+## §10 Regla 4 — One Main City only
 
-### Explicación
+### §10.1 Explicación
 
 La página base debe apuntar a la Main City, no a varias zonas como objetivos equivalentes.
 
-### Patrón o fórmula
+### §10.2 Patrón o fórmula
 
 ```text
 one Main City target
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §10.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajero urgente en Madrid with coverage mentions
 ```
 
-### Ejemplos incorrectos
+### §10.4 Ejemplos incorrectos
 
 ```text
 - Cerrajero urgente en Madrid, Almagro, Salamanca and Retiro
@@ -289,31 +289,31 @@ Cerrajero urgente en Madrid with coverage mentions
 - Breadcrumb con área no aprobada
 ```
 
-### Regla final
+### §10.5 Regla final
 
 ```text
 La Main City debe ser clara.
 ```
 
-## Regla 5 — Local Coverage QA
+## §11 Regla 5 — Local Coverage QA
 
-### Explicación
+### §11.1 Explicación
 
 Las áreas de cobertura deben ser reales y usarse naturalmente.
 
-### Patrón o fórmula
+### §11.2 Patrón o fórmula
 
 ```text
 Local Coverage Areas = real service coverage
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §11.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Almagro, Chamberí, Salamanca, Retiro mentioned as served areas
 ```
 
-### Ejemplos incorrectos
+### §11.4 Ejemplos incorrectos
 
 ```text
 - Zonas no atendidas
@@ -321,31 +321,31 @@ Almagro, Chamberí, Salamanca, Retiro mentioned as served areas
 - Áreas usadas como oficinas
 ```
 
-### Regla final
+### §11.5 Regla final
 
 ```text
 La cobertura local debe ser real y natural.
 ```
 
-## Regla 6 — No fake location
+## §12 Regla 6 — No fake location
 
-### Explicación
+### §12.1 Explicación
 
 No afirmar oficina, storefront o dirección en zonas sin presencia real.
 
-### Patrón o fórmula
+### §12.2 Patrón o fórmula
 
 ```text
 no false physical presence
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §12.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Atendemos clientes en Salamanca
 ```
 
-### Ejemplos incorrectos
+### §12.4 Ejemplos incorrectos
 
 ```text
 - Nuestra oficina en Salamanca
@@ -353,31 +353,31 @@ Atendemos clientes en Salamanca
 - Schema address en Almagro
 ```
 
-### Regla final
+### §12.5 Regla final
 
 ```text
 Nunca se inventa ubicación física.
 ```
 
-## Regla 7 — Metadata QA
+## §13 Regla 7 — Metadata QA
 
-### Explicación
+### §13.1 Explicación
 
 H1, meta title y description deben coincidir con la intención.
 
-### Patrón o fórmula
+### §13.2 Patrón o fórmula
 
 ```text
 H1 + Meta + Description = service + Main City where applicable
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §13.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h – Cerrajero urgente en Madrid
 ```
 
-### Ejemplos incorrectos
+### §13.4 Ejemplos incorrectos
 
 ```text
 - H1 sin servicio
@@ -385,31 +385,31 @@ Cerrajeros Madrid 24h – Cerrajero urgente en Madrid
 - Meta duplicada en varias páginas
 ```
 
-### Regla final
+### §13.5 Regla final
 
 ```text
 La metadata debe reflejar la intención única.
 ```
 
-## Regla 8 — Word count QA
+## §14 Regla 8 — Word count QA
 
-### Explicación
+### §14.1 Explicación
 
 Cada tipo de página tiene profundidad mínima.
 
-### Patrón o fórmula
+### §14.2 Patrón o fórmula
 
 ```text
 Homepage 900–1300; Service 850–1000; LBS 800–1000; GeoArticle 1000–1500
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §14.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 GeoArticle 1250 words
 ```
 
-### Ejemplos incorrectos
+### §14.4 Ejemplos incorrectos
 
 ```text
 - 300 palabras
@@ -417,31 +417,31 @@ GeoArticle 1250 words
 - Misma longitud para todo
 ```
 
-### Regla final
+### §14.5 Regla final
 
 ```text
 La profundidad debe ajustarse al tipo de página.
 ```
 
-## Regla 9 — Schema QA
+## §15 Regla 9 — Schema QA
 
-### Explicación
+### §15.1 Explicación
 
 El schema debe coincidir con el tipo de página.
 
-### Patrón o fórmula
+### §15.2 Patrón o fórmula
 
 ```text
 Page type → schema
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §15.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 LBS → LocalBusiness + BreadcrumbList
 ```
 
-### Ejemplos incorrectos
+### §15.4 Ejemplos incorrectos
 
 ```text
 - Article schema en service page
@@ -449,31 +449,31 @@ LBS → LocalBusiness + BreadcrumbList
 - Schema sin URL canónica
 ```
 
-### Regla final
+### §15.5 Regla final
 
 ```text
 Schema correcto antes de publicar.
 ```
 
-## Regla 10 — Enlaces internos QA
+## §16 Regla 10 — Enlaces internos QA
 
-### Explicación
+### §16.1 Explicación
 
 La página debe incluir enlaces obligatorios del Paso 7.
 
-### Patrón o fórmula
+### §16.2 Patrón o fórmula
 
 ```text
 Required links exist
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §16.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 LBS links to parent service, GeoHub, related services, GeoArticle
 ```
 
-### Ejemplos incorrectos
+### §16.4 Ejemplos incorrectos
 
 ```text
 - Solo footer
@@ -481,31 +481,31 @@ LBS links to parent service, GeoHub, related services, GeoArticle
 - Enlaces a URLs inexistentes
 ```
 
-### Regla final
+### §16.5 Regla final
 
 ```text
 Sin enlaces obligatorios no se publica.
 ```
 
-## Regla 11 — Canibalización QA
+## §17 Regla 11 — Canibalización QA
 
-### Explicación
+### §17.1 Explicación
 
 No debe existir otra página atacando la misma intención.
 
-### Patrón o fórmula
+### §17.2 Patrón o fórmula
 
 ```text
 one intent = one URL
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §17.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/cerrajero-urgente/ is primary for cerrajero urgente en Madrid
 ```
 
-### Ejemplos incorrectos
+### §17.4 Ejemplos incorrectos
 
 ```text
 - /madrid/cerrajero-urgente/
@@ -513,31 +513,31 @@ one intent = one URL
 - /cerrajero-urgente-madrid/
 ```
 
-### Regla final
+### §17.5 Regla final
 
 ```text
 Una intención tiene una página principal.
 ```
 
-## Regla 12 — CTA QA
+## §18 Regla 12 — CTA QA
 
-### Explicación
+### §18.1 Explicación
 
 Cada página debe cerrar con una acción clara.
 
-### Patrón o fórmula
+### §18.2 Patrón o fórmula
 
 ```text
 CTA exists and matches intent
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §18.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Llama a Cerrajeros Madrid 24h hoy
 ```
 
-### Ejemplos incorrectos
+### §18.4 Ejemplos incorrectos
 
 ```text
 - Sin CTA
@@ -545,14 +545,14 @@ Llama a Cerrajeros Madrid 24h hoy
 - CTA que no menciona servicio o ciudad cuando aplica
 ```
 
-### Regla final
+### §18.5 Regla final
 
 ```text
 Toda página debe tener CTA.
 ```
 
 
-## QA por tipo de página
+## §19 QA por tipo de página
 
 | Page Type | Checks críticos |
 |---|---|
@@ -563,7 +563,7 @@ Toda página debe tener CTA.
 | GeoHub | Lists all Main City services, categories, articles and coverage areas |
 | GeoArticle | One service, one Main City, one long-tail intent, links to landing and GeoHub |
 
-## Final Publish Gate
+## §20 Final Publish Gate
 
 ```text
 URL approved:
@@ -597,25 +597,25 @@ Ready to publish:
 Yes / No
 ```
 
-## URL y page type correctos — Regla operativa 1
+## §21 URL y page type correctos — Regla operativa 1
 
-### Explicación
+### §21.1 Explicación
 
 El QA empieza confirmando que la URL coincide con el tipo de página. Una buena página con URL incorrecta puede crear canibalización o romper la matriz.
 
-### Patrón o fórmula
+### §21.2 Patrón o fórmula
 
 ```text
 URL pattern + Page Type → aprobado o revisión
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §21.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/cerrajero-urgente/ se valida como Location-Based Service Page.
 ```
 
-### Ejemplos incorrectos
+### §21.4 Ejemplos incorrectos
 
 ```text
 - /madrid/cerrajero-urgente/ usada como landing comercial si el patrón aprobado es /category/city/service/
@@ -623,31 +623,31 @@ URL pattern + Page Type → aprobado o revisión
 - Service Overview con ciudad en slug
 ```
 
-### Regla final
+### §21.5 Regla final
 
 ```text
 La URL debe confirmar la función de la página.
 ```
 
-## H1 y metadata alineados — Regla operativa 2
+## §22 H1 y metadata alineados — Regla operativa 2
 
-### Explicación
+### §22.1 Explicación
 
 El H1, meta title y meta description deben reflejar el page type, servicio y Main City cuando aplique. No deben perseguir otra intención.
 
-### Patrón o fórmula
+### §22.2 Patrón o fórmula
 
 ```text
 Page Type → H1 formula → meta formula
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §22.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 LBS-001 usa H1: Cerrajeros Madrid 24h – Cerrajero urgente en Madrid y meta title con Cerrajero urgente en Madrid.
 ```
 
-### Ejemplos incorrectos
+### §22.4 Ejemplos incorrectos
 
 ```text
 - H1 genérico Our Services
@@ -655,31 +655,31 @@ LBS-001 usa H1: Cerrajeros Madrid 24h – Cerrajero urgente en Madrid y meta tit
 - Meta description que menciona varias ciudades como target
 ```
 
-### Regla final
+### §22.5 Regla final
 
 ```text
 Metadata y H1 deben apuntar a la misma intención que la URL.
 ```
 
-## Word count y profundidad — Regla operativa 3
+## §23 Word count y profundidad — Regla operativa 3
 
-### Explicación
+### §23.1 Explicación
 
 El QA debe revisar que el contenido no sea thin y que la longitud cumpla su función: explicación, proceso, FAQs, CTA, enlaces y contexto local.
 
-### Patrón o fórmula
+### §23.2 Patrón o fórmula
 
 ```text
 Page Type → word count objetivo → contenido útil
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §23.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Una página local de Cerrajeros Madrid 24h tiene 800–1.000 palabras con H2s, FAQs y CTA.
 ```
 
-### Ejemplos incorrectos
+### §23.4 Ejemplos incorrectos
 
 ```text
 - Publicar 300 palabras para una landing local
@@ -687,31 +687,31 @@ Una página local de Cerrajeros Madrid 24h tiene 800–1.000 palabras con H2s, F
 - No cubrir proceso ni problemas resueltos
 ```
 
-### Regla final
+### §23.5 Regla final
 
 ```text
 La página debe tener profundidad real, no relleno.
 ```
 
-## Schema correcto — Regla operativa 4
+## §24 Schema correcto — Regla operativa 4
 
-### Explicación
+### §24.1 Explicación
 
 El schema debe coincidir con el page type y con los datos reales del negocio. Es un error usar LocalBusiness con dirección falsa o Article schema en páginas comerciales.
 
-### Patrón o fórmula
+### §24.2 Patrón o fórmula
 
 ```text
 Page Type → schema required → validación JSON-LD
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §24.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 GeoArticle usa Article + FAQPage; Location-Based Service usa LocalBusiness con areaServed real.
 ```
 
-### Ejemplos incorrectos
+### §24.4 Ejemplos incorrectos
 
 ```text
 - LocalBusiness address en área sin oficina
@@ -719,31 +719,31 @@ GeoArticle usa Article + FAQPage; Location-Based Service usa LocalBusiness con a
 - Datos NAP diferentes del footer
 ```
 
-### Regla final
+### §24.5 Regla final
 
 ```text
 Schema debe ser válido, coherente y verdadero.
 ```
 
-## Internal links completos — Regla operativa 5
+## §25 Internal links completos — Regla operativa 5
 
-### Explicación
+### §25.1 Explicación
 
 El QA debe comprobar enlaces obligatorios y anchors. Una página sin enlaces al padre, GeoHub o artículos no cumple el sistema.
 
-### Patrón o fórmula
+### §25.2 Patrón o fórmula
 
 ```text
 Required Links → presentes → anchors naturales
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §25.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 LBS-001 enlaza a /cerrajero/cerrajero-urgente/, /madrid/, servicios relacionados y GeoArticles.
 ```
 
-### Ejemplos incorrectos
+### §25.4 Ejemplos incorrectos
 
 ```text
 - Publicar sin enlaces internos
@@ -751,31 +751,31 @@ LBS-001 enlaza a /cerrajero/cerrajero-urgente/, /madrid/, servicios relacionados
 - Usar anchors repetidos exact-match
 ```
 
-### Regla final
+### §25.5 Regla final
 
 ```text
 Cada página debe cumplir su mapa de enlaces.
 ```
 
-## NAP consistente — Regla operativa 6
+## §26 NAP consistente — Regla operativa 6
 
-### Explicación
+### §26.1 Explicación
 
 El NAP en página, schema, footer y contacto debe coincidir. Las páginas locales no deben modificar teléfono o dirección para simular proximidad.
 
-### Patrón o fórmula
+### §26.2 Patrón o fórmula
 
 ```text
 NAP canónico → página → schema → footer
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §26.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h mantiene +34 600 000 000 en homepage, contact page y schema.
 ```
 
-### Ejemplos incorrectos
+### §26.4 Ejemplos incorrectos
 
 ```text
 - Cambiar teléfono por página
@@ -783,31 +783,31 @@ Cerrajeros Madrid 24h mantiene +34 600 000 000 en homepage, contact page y schem
 - Omitir NAP en páginas donde es obligatorio
 ```
 
-### Regla final
+### §26.5 Regla final
 
 ```text
 El NAP debe ser consistente en todo el sitio.
 ```
 
-## Local Coverage Areas reales — Regla operativa 7
+## §27 Local Coverage Areas reales — Regla operativa 7
 
-### Explicación
+### §27.1 Explicación
 
 El QA debe revisar que las áreas mencionadas sean zonas atendidas y que no se usen como si fueran ubicaciones físicas. Esta regla es clave para el nuevo Paso 6.
 
-### Patrón o fórmula
+### §27.2 Patrón o fórmula
 
 ```text
 Coverage mentioned → real service coverage → no fake office
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §27.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h menciona Almagro como área atendida, no como oficina.
 ```
 
-### Ejemplos incorrectos
+### §27.4 Ejemplos incorrectos
 
 ```text
 - Our Chamberí location sin sede
@@ -815,31 +815,31 @@ Cerrajeros Madrid 24h menciona Almagro como área atendida, no como oficina.
 - Crear enlaces a URLs no aprobadas
 ```
 
-### Regla final
+### §27.5 Regla final
 
 ```text
 La cobertura local debe ser real y no inventar presencia.
 ```
 
-## Canibalización revisada — Regla operativa 8
+## §28 Canibalización revisada — Regla operativa 8
 
-### Explicación
+### §28.1 Explicación
 
 Antes de publicar, debe verificarse que no exista otra URL con la misma intención. Esto aplica a servicios, categorías adicionales, GeoArticles y expansiones.
 
-### Patrón o fórmula
+### §28.2 Patrón o fórmula
 
 ```text
 Intención principal → URL única
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §28.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /madrid/cuanto-cuesta-un-cerrajero-urgente/ no compite con /cerrajero/madrid/cerrajero-urgente/ porque apunta a costes, no a landing comercial.
 ```
 
-### Ejemplos incorrectos
+### §28.4 Ejemplos incorrectos
 
 ```text
 - Crear /madrid/cerrajero-urgente/ y /cerrajero/madrid/cerrajero-urgente/
@@ -847,31 +847,31 @@ Intención principal → URL única
 - Duplicar categoría adicional ya cubierta
 ```
 
-### Regla final
+### §28.5 Regla final
 
 ```text
 Una intención principal debe tener una URL principal.
 ```
 
-## Estructura de contenido completa — Regla operativa 9
+## §29 Estructura de contenido completa — Regla operativa 9
 
-### Explicación
+### §29.1 Explicación
 
 El QA debe confirmar que la página tiene las secciones necesarias: intro, H2s, bullets, FAQs, CTA y enlaces según page type. Esto evita publicar páginas técnicamente correctas pero incompletas.
 
-### Patrón o fórmula
+### §29.2 Patrón o fórmula
 
 ```text
 Page Type Structure → secciones presentes → QA aprobado
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §29.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 La página local de Cerrajero urgente incluye intro, Authority, Uniqueness, Depth, Intent, Local Coverage, FAQs y CTA.
 ```
 
-### Ejemplos incorrectos
+### §29.4 Ejemplos incorrectos
 
 ```text
 - Sin FAQs
@@ -879,31 +879,31 @@ La página local de Cerrajero urgente incluye intro, Authority, Uniqueness, Dept
 - Sin sección de cobertura cuando es necesaria
 ```
 
-### Regla final
+### §29.5 Regla final
 
 ```text
 La estructura de contenido debe coincidir con el tipo de página.
 ```
 
-## Final Approval documentado — Regla operativa 10
+## §30 Final Approval documentado — Regla operativa 10
 
-### Explicación
+### §30.1 Explicación
 
 La publicación no debe depender de memoria. El QA debe dejar constancia de estado, reviewer, fecha y notas de revisión.
 
-### Patrón o fórmula
+### §30.2 Patrón o fórmula
 
 ```text
 Ready for QA → Approved / Needs Revision → Published
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §30.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 LBS-001 queda Approved por SEO Manager antes de publicarse.
 ```
 
-### Ejemplos incorrectos
+### §30.4 Ejemplos incorrectos
 
 ```text
 - Publicar sin estado final
@@ -911,13 +911,13 @@ LBS-001 queda Approved por SEO Manager antes de publicarse.
 - No actualizar la matriz tras QA
 ```
 
-### Regla final
+### §30.5 Regla final
 
 ```text
 Ninguna página se publica sin aprobación final registrada.
 ```
 
-## Checklist final del Paso 9
+## §31 Checklist final del Paso 9
 
 | Check | Pregunta | Estado |
 |---|---|---|
@@ -934,7 +934,7 @@ Ninguna página se publica sin aprobación final registrada.
 | Canibalización | ¿No compite con otra URL? | ✅ / ⬜ |
 | CTA | ¿Tiene CTA claro? | ✅ / ⬜ |
 
-## Outputs del Paso 9
+## §32 Outputs del Paso 9
 
 - Checklist QA general
 - Checklist por tipo de página
@@ -943,7 +943,7 @@ Ninguna página se publica sin aprobación final registrada.
 - Validación anti-canibalización
 - Validación de schema e internal links
 - Estado final Approved / Needs Revision / Blocked
-## GBP Not Created QA Checklist
+## §33 GBP Not Created QA Checklist
 
 | Check | Pregunta | Estado |
 |---|---|---|
@@ -955,7 +955,7 @@ Ninguna página se publica sin aprobación final registrada.
 | sameAs deferred | ¿El campo sameAs queda pendiente hasta Paso 14? | ⬜ |
 | Paso 14 dependency | ¿La página está marcada para actualización posterior cuando el GBP exista? | ⬜ |
 
-### Regla final
+### §33.1 Regla final
 
 ```text
 Antes del Paso 14, ninguna página debe afirmar señales de GBP que todavía no existen.
@@ -965,7 +965,7 @@ Antes del Paso 14, ninguna página debe afirmar señales de GBP que todavía no 
 
 ---
 
-# Fuentes internas GMB Crush usadas
+# §34 Fuentes internas GMB Crush usadas
 
 - Analysis Framework.pdf
 - GMB CRUSH Universal AI Local SEO Framework Template
@@ -978,7 +978,7 @@ Antes del Paso 14, ninguna página debe afirmar señales de GBP que todavía no 
 
 
 
-### Inventario SEO base — Estado QA
+### §34.1 Inventario SEO base — Estado QA
 
 | # | URL | Tipo | QA Status |
 |---|-----|------|-----------|

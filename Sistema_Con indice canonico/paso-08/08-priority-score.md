@@ -2,13 +2,13 @@ Versión literal del chat · Sistema GMB Crush para webs locales
 Documento regenerado siguiendo la estructura fija acordada en la conversación.
 Proveniencia: sistema construido paso a paso en el chat y alineado con los frameworks oficiales GMB Crush.
 
-# Paso 8 — Priority Score
+# §1 Paso 8 — Priority Score
 
-## Índice corto
+## §2 Índice corto
 
 **Paso 8 — Priority Score**
 
-## Objetivo del Paso 8
+## §3 Objetivo del Paso 8
 
 Este paso existe para resolver un problema concreto dentro del sistema GMB Crush: decidir qué páginas se producen primero usando criterios comerciales, GBP, intención y relevancia local.
 La web local no debe construirse desde la intuición, sino desde una secuencia operativa que conecta entidad, categoría GBP, servicios, ciudad principal, cobertura local, schema, contenido e interlinking.
@@ -36,7 +36,7 @@ Error que previene: usar City Priority cuando la base ya trabaja con una sola Ma
 Error que previene: crear páginas sin relación con la categoría GBP.
 Error que previene: producir todo sin fases.
 
-## Lo que tienes que rellenar
+## §4 Lo que tienes que rellenar
 
 ```text
 Business Name:
@@ -81,7 +81,7 @@ None / Low / Medium / High
 Notes:
 ```
 
-## Ejemplo rellenado
+## §5 Ejemplo rellenado
 
 ```text
 Business Name:
@@ -133,29 +133,29 @@ Notes:
 Urgentee cerrajero is high-value, urgente, directly aligned with cerrajero intent, and important for Madrid Local Pack visibility.
 ```
 
-# Cuerpo operativo del Paso 8
+# §6 Cuerpo operativo del Paso 8
 
 > **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
-## Regla 1 — Fórmula de prioridad
+## §7 Regla 1 — Fórmula de prioridad
 
-### Explicación
+### §7.1 Explicación
 
 El score sustituye la intuición por una fórmula. Como la base usa una Main City, no usamos City Priority; usamos Local Relevance.
 
-### Patrón o fórmula
+### §7.2 Patrón o fórmula
 
 ```text
 Revenue Value + Search Intent + GBP Category Relevance + Local Relevance + Competition Gap + Conversion Urgency
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §7.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 5 + 5 + 5 + 5 + 4 + 5 = 29
 ```
 
-### Ejemplos incorrectos
+### §7.4 Ejemplos incorrectos
 
 ```text
 - Usar City Priority con una sola ciudad
@@ -163,31 +163,31 @@ Revenue Value + Search Intent + GBP Category Relevance + Local Relevance + Compe
 - No considerar conversión
 ```
 
-### Regla final
+### §7.5 Regla final
 
 ```text
 La prioridad se calcula con seis factores.
 ```
 
-## Regla 2 — Revenue Value
+## §8 Regla 2 — Revenue Value
 
-### Explicación
+### §8.1 Explicación
 
 Mide el valor económico del servicio o página.
 
-### Patrón o fórmula
+### §8.2 Patrón o fórmula
 
 ```text
 1 low value → 5 high value
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §8.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajero urgente = 5; Duplicado de llaves = 2
 ```
 
-### Ejemplos incorrectos
+### §8.4 Ejemplos incorrectos
 
 ```text
 - Asignar 5 a todos
@@ -195,31 +195,31 @@ Cerrajero urgente = 5; Duplicado de llaves = 2
 - Priorizar páginas de bajo margen
 ```
 
-### Regla final
+### §8.5 Regla final
 
 ```text
 Los servicios más rentables pesan más.
 ```
 
-## Regla 3 — Search Intent
+## §9 Regla 3 — Search Intent
 
-### Explicación
+### §9.1 Explicación
 
 Mide si la búsqueda indica compra o urgencia.
 
-### Patrón o fórmula
+### §9.2 Patrón o fórmula
 
 ```text
 1 informational → 5 urgente buying intent
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §9.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 cerrajero urgente en Madrid = 5
 ```
 
-### Ejemplos incorrectos
+### §9.4 Ejemplos incorrectos
 
 ```text
 - how locks work = 1 pero producirlo primero
@@ -227,31 +227,31 @@ cerrajero urgente en Madrid = 5
 - No diferenciar intención
 ```
 
-### Regla final
+### §9.5 Regla final
 
 ```text
 La intención comercial manda sobre contenido informativo.
 ```
 
-## Regla 4 — GBP Category Relevance
+## §10 Regla 4 — GBP Category Relevance
 
-### Explicación
+### §10.1 Explicación
 
 Mide cuánto apoya la página a la categoría principal o adicional del GBP.
 
-### Patrón o fórmula
+### §10.2 Patrón o fórmula
 
 ```text
 1 weak → 5 direct GBP support
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §10.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajero urgente = 5; Duplicado de llaves = 4
 ```
 
-### Ejemplos incorrectos
+### §10.4 Ejemplos incorrectos
 
 ```text
 - Página genérica de seguridad = P1
@@ -259,31 +259,31 @@ Cerrajero urgente = 5; Duplicado de llaves = 4
 - Crear servicios no GBP
 ```
 
-### Regla final
+### §10.5 Regla final
 
 ```text
 La web debe respaldar el GBP.
 ```
 
-## Regla 5 — Local Relevance
+## §11 Regla 5 — Local Relevance
 
-### Explicación
+### §11.1 Explicación
 
 Mide cuánto refuerza la Main City, la ubicación real, el NAP, el GeoHub y las Local Coverage Areas.
 
-### Patrón o fórmula
+### §11.2 Patrón o fórmula
 
 ```text
 1 weak local signal → 5 strong Main City relevance
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §11.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/cerrajero-urgente/ = 5
 ```
 
-### Ejemplos incorrectos
+### §11.4 Ejemplos incorrectos
 
 ```text
 - Artículo genérico sin Madrid
@@ -291,31 +291,31 @@ Mide cuánto refuerza la Main City, la ubicación real, el NAP, el GeoHub y las 
 - No usar Main City
 ```
 
-### Regla final
+### §11.5 Regla final
 
 ```text
 La relevancia local sustituye a City Priority en la base.
 ```
 
-## Regla 6 — Competition Gap
+## §12 Regla 6 — Competition Gap
 
-### Explicación
+### §12.1 Explicación
 
 Mide la oportunidad frente a competidores.
 
-### Patrón o fórmula
+### §12.2 Patrón o fórmula
 
 ```text
 1 hard → 5 weak competitor gap
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §12.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Competidores con pages genéricas = 4
 ```
 
-### Ejemplos incorrectos
+### §12.4 Ejemplos incorrectos
 
 ```text
 - No mirar gaps
@@ -323,31 +323,31 @@ Competidores con pages genéricas = 4
 - Copiar competidores
 ```
 
-### Regla final
+### §12.5 Regla final
 
 ```text
 Donde la competencia es débil, se acelera.
 ```
 
-## Regla 7 — Conversion Urgency
+## §13 Regla 7 — Conversion Urgency
 
-### Explicación
+### §13.1 Explicación
 
 Mide si el usuario necesita resolver ahora.
 
-### Patrón o fórmula
+### §13.2 Patrón o fórmula
 
 ```text
 1 sin urgencia → 5 llamada inmediata
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §13.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Apertura urgente de puerta = 5
 ```
 
-### Ejemplos incorrectos
+### §13.4 Ejemplos incorrectos
 
 ```text
 - Key duplication antes de urgente
@@ -355,31 +355,31 @@ Apertura urgente de puerta = 5
 - No diferenciar urgencia
 ```
 
-### Regla final
+### §13.5 Regla final
 
 ```text
 La urgencia acelera publicación.
 ```
 
-## Regla 8 — Priority Tiers
+## §14 Regla 8 — Priority Tiers
 
-### Explicación
+### §14.1 Explicación
 
 El score se convierte en una prioridad operativa.
 
-### Patrón o fórmula
+### §14.2 Patrón o fórmula
 
 ```text
 26–30 P1; 21–25 P2; 16–20 P3; 10–15 P4; 0–9 Hold
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §14.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 29 = P1
 ```
 
-### Ejemplos incorrectos
+### §14.4 Ejemplos incorrectos
 
 ```text
 - Score sin tier
@@ -387,31 +387,31 @@ El score se convierte en una prioridad operativa.
 - Hold ignorado
 ```
 
-### Regla final
+### §14.5 Regla final
 
 ```text
 Cada página debe tener score y tier.
 ```
 
-## Regla 9 — Páginas comerciales antes que semánticas
+## §15 Regla 9 — Páginas comerciales antes que semánticas
 
-### Explicación
+### §15.1 Explicación
 
 Las páginas comerciales preceden a los GeoArticles que las apoyan.
 
-### Patrón o fórmula
+### §15.2 Patrón o fórmula
 
 ```text
 Landing first → article second
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §15.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/cerrajero-urgente/ antes de /madrid/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §15.4 Ejemplos incorrectos
 
 ```text
 - Artículo P1 sin landing
@@ -419,31 +419,31 @@ Landing first → article second
 - Cluster sin destino
 ```
 
-### Regla final
+### §15.5 Regla final
 
 ```text
 Los boosters se publican después de sus landings.
 ```
 
-## Regla 10 — Homepage siempre P1
+## §16 Regla 10 — Homepage siempre P1
 
-### Explicación
+### §16.1 Explicación
 
 La homepage es el Root Entity Anchor y siempre se prioriza.
 
-### Patrón o fórmula
+### §16.2 Patrón o fórmula
 
 ```text
 Homepage = P1
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §16.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 / = P1
 ```
 
-### Ejemplos incorrectos
+### §16.4 Ejemplos incorrectos
 
 ```text
 - Homepage después de artículos
@@ -451,14 +451,14 @@ Homepage = P1
 - Homepage P3
 ```
 
-### Regla final
+### §16.5 Regla final
 
 ```text
 La homepage va primero.
 ```
 
 
-## Tabla de prioridad para Cerrajeros Madrid 24h
+## §17 Tabla de prioridad para Cerrajeros Madrid 24h
 
 | Page Type | URL | Revenue | Intent | GBP | Local | Gap | Urgency | Score | Priority |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---|
@@ -473,7 +473,7 @@ La homepage va primero.
 | Additional Category | `/cerrajero/madrid/duplicado-llaves/` | 2 | 3 | 4 | 5 | 3 | 2 | 19 | P3 |
 | GeoArticle | `/madrid/cuanto-cuesta-un-cerrajero-urgente/` | 3 | 3 | 4 | 5 | 4 | 3 | 22 | P2 after landing |
 
-## Orden recomendado
+## §18 Orden recomendado
 
 ```text
 1. Homepage
@@ -486,25 +486,25 @@ La homepage va primero.
 8. Optimización y revisión de expansión
 ```
 
-## Revenue Value — Regla operativa 1
+## §19 Revenue Value — Regla operativa 1
 
-### Explicación
+### §19.1 Explicación
 
 El valor económico del servicio debe influir en el orden de producción. Servicios de alto ticket o alto margen deben avanzar antes que páginas de bajo retorno, siempre que estén alineados con GBP.
 
-### Patrón o fórmula
+### §19.2 Patrón o fórmula
 
 ```text
 Revenue Value 1–5 → parte del score total
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §19.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajero urgente obtiene 5 por urgencia y valor; Duplicado de llaves obtiene 2 o 3 según margen.
 ```
 
-### Ejemplos incorrectos
+### §19.4 Ejemplos incorrectos
 
 ```text
 - Priorizar contenido informativo antes que servicios rentables
@@ -512,31 +512,31 @@ Cerrajero urgente obtiene 5 por urgencia y valor; Duplicado de llaves obtiene 2 
 - No diferenciar ticket bajo y alto
 ```
 
-### Regla final
+### §19.5 Regla final
 
 ```text
 La prioridad debe reflejar valor económico real.
 ```
 
-## Search Intent — Regla operativa 2
+## §20 Search Intent — Regla operativa 2
 
-### Explicación
+### §20.1 Explicación
 
 La intención de búsqueda mide qué tan cerca está el usuario de convertirse en lead. Las búsquedas urgentes y transaccionales deben tener puntuación alta.
 
-### Patrón o fórmula
+### §20.2 Patrón o fórmula
 
 ```text
 Informacional 1–2 | Comercial 3–4 | Urgentee 5
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §20.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 cerrajero urgente en Madrid obtiene 5; qué es cambiar un bombín obtiene 2.
 ```
 
-### Ejemplos incorrectos
+### §20.4 Ejemplos incorrectos
 
 ```text
 - Tratar todos los contenidos como intención 5
@@ -544,31 +544,31 @@ cerrajero urgente en Madrid obtiene 5; qué es cambiar un bombín obtiene 2.
 - No distinguir investigación de urgencia
 ```
 
-### Regla final
+### §20.5 Regla final
 
 ```text
 La intención de compra guía el orden de publicación.
 ```
 
-## GBP Category Relevance — Regla operativa 3
+## §21 GBP Category Relevance — Regla operativa 3
 
-### Explicación
+### §21.1 Explicación
 
 Las páginas que soportan la categoría principal o categorías adicionales del GBP deben tener más prioridad. Esto conecta web y perfil de negocio.
 
-### Patrón o fórmula
+### §21.2 Patrón o fórmula
 
 ```text
 Primary category support = 5 | Additional category support = 4
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §21.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajero urgente y Apertura de puertas refuerzan Cerrajero; Duplicado de llaves refuerza una categoría adicional.
 ```
 
-### Ejemplos incorrectos
+### §21.4 Ejemplos incorrectos
 
 ```text
 - Priorizar servicios fuera de categoría
@@ -576,31 +576,31 @@ Cerrajero urgente y Apertura de puertas refuerzan Cerrajero; Duplicado de llaves
 - Crear contenido que no soporta GBP
 ```
 
-### Regla final
+### §21.5 Regla final
 
 ```text
 La web debe reforzar lo que el GBP intenta posicionar.
 ```
 
-## Local Relevance — Regla operativa 4
+## §22 Local Relevance — Regla operativa 4
 
-### Explicación
+### §22.1 Explicación
 
 En la versión simplificada, City Priority se reemplaza por Local Relevance. Este factor mide cuánto una página refuerza Main City, cobertura local real y señales de proximidad sin crear URLs innecesarias.
 
-### Patrón o fórmula
+### §22.2 Patrón o fórmula
 
 ```text
 Main City + coverage fit + NAP alignment → Local Relevance 1–5
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §22.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/cerrajero-urgente/ obtiene 5 porque conecta servicio urgente con Main City y cobertura local real.
 ```
 
-### Ejemplos incorrectos
+### §22.4 Ejemplos incorrectos
 
 ```text
 - Usar City Priority cuando solo hay una Main City
@@ -608,31 +608,31 @@ Main City + coverage fit + NAP alignment → Local Relevance 1–5
 - Dar relevancia alta a zonas no atendidas
 ```
 
-### Regla final
+### §22.5 Regla final
 
 ```text
 Local Relevance mide encaje local, no número de ciudades.
 ```
 
-## Competition Gap — Regla operativa 5
+## §23 Competition Gap — Regla operativa 5
 
-### Explicación
+### §23.1 Explicación
 
 La oportunidad competitiva valora si los competidores tienen páginas débiles, genéricas o sin estructura. Un gap alto justifica publicar antes.
 
-### Patrón o fórmula
+### §23.2 Patrón o fórmula
 
 ```text
 Competidores débiles → 4–5 | competidores fuertes → 1–2
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §23.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Si competidores en Madrid solo tienen /services/, Cerrajeros Madrid 24h da 4 a /cerrajero/madrid/cerrajero-urgente/.
 ```
 
-### Ejemplos incorrectos
+### §23.4 Ejemplos incorrectos
 
 ```text
 - Asumir gap sin revisar SERP
@@ -640,31 +640,31 @@ Si competidores en Madrid solo tienen /services/, Cerrajeros Madrid 24h da 4 a /
 - Usar gap alto para todas las páginas
 ```
 
-### Regla final
+### §23.5 Regla final
 
 ```text
 El gap competitivo debe basarse en oportunidad real.
 ```
 
-## Conversion Urgency — Regla operativa 6
+## §24 Conversion Urgency — Regla operativa 6
 
-### Explicación
+### §24.1 Explicación
 
 La urgencia mide si el usuario necesita resolver ahora. Servicios de emergencia, bloqueo o pérdida de acceso suelen puntuar alto.
 
-### Patrón o fórmula
+### §24.2 Patrón o fórmula
 
 ```text
 No urgente 1–2 | moderado 3 | urgente 4–5
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §24.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajero urgente obtiene 5; Duplicado de llaves puede obtener 2.
 ```
 
-### Ejemplos incorrectos
+### §24.4 Ejemplos incorrectos
 
 ```text
 - Dar urgencia alta a guías informativas
@@ -672,31 +672,31 @@ Cerrajero urgente obtiene 5; Duplicado de llaves puede obtener 2.
 - Confundir frecuencia con urgencia
 ```
 
-### Regla final
+### §24.5 Regla final
 
 ```text
 La urgencia aumenta prioridad de páginas comerciales.
 ```
 
-## Page Type Adjustment — Regla operativa 7
+## §25 Page Type Adjustment — Regla operativa 7
 
-### Explicación
+### §25.1 Explicación
 
 El score debe interpretarse según el tipo de página. Homepage y páginas core son P1 por dependencia aunque no se calculen como un servicio específico. GeoArticles normalmente se publican después de landings.
 
-### Patrón o fórmula
+### §25.2 Patrón o fórmula
 
 ```text
 Page Type + Score + Dependency → Priority final
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §25.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Homepage es P1; /madrid/cuanto-cuesta-un-cerrajero-urgente/ puede ser P3 aunque su tema sea importante.
 ```
 
-### Ejemplos incorrectos
+### §25.4 Ejemplos incorrectos
 
 ```text
 - Publicar artículos antes de landings por score temático
@@ -704,31 +704,31 @@ Homepage es P1; /madrid/cuanto-cuesta-un-cerrajero-urgente/ puede ser P3 aunque 
 - Ignorar dependencias de page type
 ```
 
-### Regla final
+### §25.5 Regla final
 
 ```text
 El score se ajusta por función dentro del sistema.
 ```
 
-## Local Coverage Areas sin score propio — Regla operativa 8
+## §26 Local Coverage Areas sin score propio — Regla operativa 8
 
-### Explicación
+### §26.1 Explicación
 
 Las Local Coverage Areas no reciben score en la base porque no generan URLs. Solo se puntúan si pasan a Approved Expansion Areas.
 
-### Patrón o fórmula
+### §26.2 Patrón o fórmula
 
 ```text
 Coverage area → sin score | Approved Expansion Area → score
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §26.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Almagro no recibe score como página en Phase 1; si se aprueba expansión, se evalúa con la fórmula.
 ```
 
-### Ejemplos incorrectos
+### §26.4 Ejemplos incorrectos
 
 ```text
 - Asignar score a zonas sin URL
@@ -736,31 +736,31 @@ Almagro no recibe score como página en Phase 1; si se aprueba expansión, se ev
 - Confundir menciones de contenido con páginas
 ```
 
-### Regla final
+### §26.5 Regla final
 
 ```text
 Solo se puntúan URLs o expansiones aprobadas.
 ```
 
-## Publish Phase derivada — Regla operativa 9
+## §27 Publish Phase derivada — Regla operativa 9
 
-### Explicación
+### §27.1 Explicación
 
 La prioridad no basta; también hay que ubicar la página en una fase. Las fases protegen dependencias y evitan publicar soporte antes de la base.
 
-### Patrón o fórmula
+### §27.2 Patrón o fórmula
 
 ```text
 Priority + dependencies → Phase
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §27.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/cerrajero-urgente/ puede ser P1/P2 y Phase 2; el artículo relacionado es Phase 3.
 ```
 
-### Ejemplos incorrectos
+### §27.4 Ejemplos incorrectos
 
 ```text
 - Publicar Phase 3 antes de Phase 2
@@ -768,31 +768,31 @@ Priority + dependencies → Phase
 - No revisar si existe el parent
 ```
 
-### Regla final
+### §27.5 Regla final
 
 ```text
 La fase convierte prioridad en ejecución ordenada.
 ```
 
-## Revisión periódica del score — Regla operativa 10
+## §28 Revisión periódica del score — Regla operativa 10
 
-### Explicación
+### §28.1 Explicación
 
 Los scores no son eternos. Después de publicar y medir, Search Console, leads y geo-grid pueden cambiar prioridades futuras, especialmente para GeoArticles o expansión.
 
-### Patrón o fórmula
+### §28.2 Patrón o fórmula
 
 ```text
 Datos reales → revisar score → actualizar plan
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §28.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Si /cerrajero/madrid/apertura-puertas/ genera más leads que expected, Cerrajeros Madrid 24h puede subir prioridad de sus GeoArticles.
 ```
 
-### Ejemplos incorrectos
+### §28.4 Ejemplos incorrectos
 
 ```text
 - Mantener scores sin revisar
@@ -800,13 +800,13 @@ Si /cerrajero/madrid/apertura-puertas/ genera más leads que expected, Cerrajero
 - No actualizar competencia o intención
 ```
 
-### Regla final
+### §28.5 Regla final
 
 ```text
 El score es operativo y debe revisarse con datos.
 ```
 
-## Checklist final del Paso 8
+## §29 Checklist final del Paso 8
 
 | Check | Pregunta | Estado |
 |---|---|---|
@@ -820,7 +820,7 @@ El score es operativo y debe revisarse con datos.
 | Tier | ¿Cada página tiene P1/P2/P3/P4/Hold? | ✅ / ⬜ |
 | Dependencies | ¿Los artículos no van antes de landings? | ✅ / ⬜ |
 
-## Outputs del Paso 8
+## §30 Outputs del Paso 8
 
 - Fórmula de prioridad definida
 - Scores por página
@@ -831,7 +831,7 @@ El score es operativo y debe revisarse con datos.
 
 ---
 
-# Fuentes internas GMB Crush usadas
+# §31 Fuentes internas GMB Crush usadas
 
 - Analysis Framework.pdf
 - GMB CRUSH Universal AI Local SEO Framework Template
@@ -844,7 +844,7 @@ El score es operativo y debe revisarse con datos.
 
 
 
-### Inventario SEO base — Priority Score completo
+### §31.1 Inventario SEO base — Priority Score completo
 
 | # | URL | Tipo | Priority Score |
 |---|-----|------|----------------|

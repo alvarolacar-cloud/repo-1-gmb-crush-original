@@ -2,13 +2,13 @@ Versión literal del chat · Sistema GMB Crush para webs locales
 Documento regenerado siguiendo la estructura fija acordada en la conversación.
 Proveniencia: sistema construido paso a paso en el chat y alineado con los frameworks oficiales GMB Crush.
 
-# Paso 2 — Fórmula Maestra de Arquitectura
+# §1 Paso 2 — Fórmula Maestra de Arquitectura
 
-## Índice corto
+## §2 Índice corto
 
 **Paso 2 — Fórmula Maestra de Arquitectura**
 
-## Objetivo del Paso 2
+## §3 Objetivo del Paso 2
 
 Este paso existe para resolver un problema concreto dentro del sistema GMB Crush: calcular el tamaño real de la web antes de crear URLs, contenido o calendario de publicación.
 La web local no debe construirse desde la intuición, sino desde una secuencia operativa que conecta entidad, categoría GBP, servicios, ciudad principal, cobertura local, schema, contenido e interlinking.
@@ -36,7 +36,7 @@ Error que previene: confundir Approved Expansion Areas con cobertura local menci
 Error que previene: duplicar categorías adicionales ya cubiertas por servicios core.
 Error que previene: publicar GeoArticles antes de tener las páginas comerciales que apoyan.
 
-## Lo que tienes que rellenar
+## §4 Lo que tienes que rellenar
 
 ```text
 Business Name:
@@ -102,7 +102,7 @@ If no, specify exclusions:
 - Reason:
 ```
 
-## Ejemplo rellenado
+## §5 Ejemplo rellenado
 
 ```text
 Business Name:
@@ -163,17 +163,17 @@ Does every service apply to the Main City?
 Yes
 ```
 
-# Cuerpo operativo del Paso 2
+# §6 Cuerpo operativo del Paso 2
 
 > **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
-## Planned GBP Categories Before GBP Creation
+## §7 Planned GBP Categories Before GBP Creation
 
-### Explicación
+### §7.1 Explicación
 
 En esta versión el GBP se crea después de la web. Por eso la fórmula usa categorías planificadas, no categorías confirmadas. La arquitectura debe preparar soporte para la categoría principal prevista y para las categorías adicionales previstas, pero la confirmación final se realiza en el Paso 14.
 
-### Patrón o fórmula
+### §7.2 Patrón o fórmula
 
 ```text
 Planned Primary GBP Category → define primary category slug and core architecture
@@ -181,7 +181,7 @@ Planned Additional GBP Categories → define additional category support pages w
 Confirmed GBP Categories → updated after Paso 14
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §7.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Planned Primary GBP Category: Cerrajero
@@ -189,7 +189,7 @@ Planned Additional Category that needs page: Servicio de duplicado de llaves
 Base page: /cerrajero/madrid/duplicado-llaves/
 ```
 
-### Ejemplos incorrectos
+### §7.4 Ejemplos incorrectos
 
 ```text
 - Crear la web sin decidir la categoría principal prevista.
@@ -197,32 +197,32 @@ Base page: /cerrajero/madrid/duplicado-llaves/
 - Añadir sameAs del GBP antes de que el perfil exista.
 ```
 
-### Regla final
+### §7.5 Regla final
 
 ```text
 Antes del GBP, la web soporta categorías planificadas; después del Paso 14, se validan y sincronizan con categorías confirmadas.
 ```
 
 
-## Regla 1 — Fórmula base de una Main City
+## §8 Regla 1 — Fórmula base de una Main City
 
-### Explicación
+### §8.1 Explicación
 
 La versión base no calcula páginas para múltiples ciudades. Calcula una arquitectura sólida para la Main City, que es la ciudad principal del negocio.
 
-### Patrón o fórmula
+### §8.2 Patrón o fórmula
 
 ```text
 1 Homepage + S Service Overview Pages + 1 Main City GeoHub + S Main City Location-Based Service Pages + A Páginas de categoría adicional en la Main City + G × S GeoArticles de la Main City
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §8.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 1 + 5 + 1 + 5 + 1 + 15 = 28 páginas SEO base. Adicionalmente, /contacto/ como página auxiliar fuera del inventario SEO base.
 ```
 
-### Ejemplos incorrectos
+### §8.4 Ejemplos incorrectos
 
 ```text
 - 1 + 5 ciudades + 25 city-service pages sin validación
@@ -230,31 +230,31 @@ La versión base no calcula páginas para múltiples ciudades. Calcula una arqui
 - Crear artículos para áreas sin página comercial
 ```
 
-### Regla final
+### §8.5 Regla final
 
 ```text
 La base se calcula con C = 1 Main City.
 ```
 
-## Regla 2 — Variable S
+## §9 Regla 2 — Variable S
 
-### Explicación
+### §9.1 Explicación
 
 S representa los servicios principales. Cada servicio core genera una Service Overview Page y una Main City Location-Based Service Page.
 
-### Patrón o fórmula
+### §9.2 Patrón o fórmula
 
 ```text
 S = número de core services
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §9.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 S = 5 para Cerrajero urgente, apertura de puertas, cambio de cerraduras, cambio de bombines e instalación de cerraduras de seguridad
 ```
 
-### Ejemplos incorrectos
+### §9.4 Ejemplos incorrectos
 
 ```text
 - Contar categorías adicionales como servicios core duplicados
@@ -262,31 +262,31 @@ S = 5 para Cerrajero urgente, apertura de puertas, cambio de cerraduras, cambio 
 - Crear un servicio para cada sinónimo
 ```
 
-### Regla final
+### §9.5 Regla final
 
 ```text
 S solo incluye servicios reales y principales.
 ```
 
-## Regla 3 — Variable A
+## §10 Regla 3 — Variable A
 
-### Explicación
+### §10.1 Explicación
 
 A representa categorías adicionales que necesitan página separada. Si una categoría adicional ya está cubierta por un core service, no entra en A.
 
-### Patrón o fórmula
+### §10.2 Patrón o fórmula
 
 ```text
 A = additional categories not covered by core services
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §10.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 A = 1 porque Duplicado de llaves necesita página y Servicio de cerrajería de urgencia ya está cubierta
 ```
 
-### Ejemplos incorrectos
+### §10.4 Ejemplos incorrectos
 
 ```text
 - A = 2 contando Servicio de cerrajería de urgencia dos veces
@@ -294,31 +294,31 @@ A = 1 porque Duplicado de llaves necesita página y Servicio de cerrajería de u
 - Crear páginas sin relación con GBP
 ```
 
-### Regla final
+### §10.5 Regla final
 
 ```text
 A solo cuenta categorías adicionales efectivas.
 ```
 
-## Regla 4 — Variable G
+## §11 Regla 4 — Variable G
 
-### Explicación
+### §11.1 Explicación
 
 G representa cuántos GeoArticles se crean por servicio dentro de la Main City.
 
-### Patrón o fórmula
+### §11.2 Patrón o fórmula
 
 ```text
 G = GeoArticles per Service
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §11.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 G = 3 → 3 × 5 = 15 GeoArticles para Madrid
 ```
 
-### Ejemplos incorrectos
+### §11.4 Ejemplos incorrectos
 
 ```text
 - G × S × C con C = varias ciudades en base
@@ -326,31 +326,31 @@ G = 3 → 3 × 5 = 15 GeoArticles para Madrid
 - Crear artículos sin destino interno
 ```
 
-### Regla final
+### §11.5 Regla final
 
 ```text
 Los GeoArticles de base solo apoyan la Main City.
 ```
 
-## Regla 5 — Local Coverage Areas no entran en la fórmula
+## §12 Regla 5 — Local Coverage Areas no entran en la fórmula
 
-### Explicación
+### §12.1 Explicación
 
 Las áreas de cobertura local se usan dentro del contenido, FAQs, ejemplos locales y schema areaServed. No crean filas ni URLs por defecto.
 
-### Patrón o fórmula
+### §12.2 Patrón o fórmula
 
 ```text
 Local Coverage Areas = content signals, not page-count units
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §12.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Almagro, Chamberí, Salamanca y Retiro se mencionan como cobertura en contenido de Madrid
 ```
 
-### Ejemplos incorrectos
+### §12.4 Ejemplos incorrectos
 
 ```text
 - Crear /almagro/ por defecto
@@ -358,31 +358,31 @@ Almagro, Chamberí, Salamanca y Retiro se mencionan como cobertura en contenido 
 - Contar Local Coverage Areas como C
 ```
 
-### Regla final
+### §12.5 Regla final
 
 ```text
 Mencionar una zona no significa crear una página para esa zona.
 ```
 
-## Regla 6 — Approved Expansion Areas sí pueden tener fórmula opcional
+## §13 Regla 6 — Approved Expansion Areas sí pueden tener fórmula opcional
 
-### Explicación
+### §13.1 Explicación
 
 Si una Local Coverage Area se aprueba como expansión, entonces puede generar su propio hub, service pages y articles.
 
-### Patrón o fórmula
+### §13.2 Patrón o fórmula
 
 ```text
 Optional Expansion = E GeoHubs + S × E Service Pages + A × E Additional Pages + G × S × E Articles
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §13.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Phase 1 no tiene expansión; si Almagro se aprueba después, se calcula aparte
 ```
 
-### Ejemplos incorrectos
+### §13.4 Ejemplos incorrectos
 
 ```text
 - Mezclar expansión con base
@@ -390,31 +390,31 @@ Phase 1 no tiene expansión; si Almagro se aprueba después, se calcula aparte
 - Expandir antes de terminar Madrid
 ```
 
-### Regla final
+### §13.5 Regla final
 
 ```text
 La expansión se calcula separada de la base.
 ```
 
-## Regla 7 — Páginas comerciales antes que artículos
+## §14 Regla 7 — Páginas comerciales antes que artículos
 
-### Explicación
+### §14.1 Explicación
 
 El cálculo debe reflejar dependencias. Un GeoArticle necesita una página comercial que apoyar.
 
-### Patrón o fórmula
+### §14.2 Patrón o fórmula
 
 ```text
 Service Page exists → GeoArticle can be published
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §14.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /madrid/cuanto-cuesta-un-cerrajero-urgente/ apoya /cerrajero/madrid/cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §14.4 Ejemplos incorrectos
 
 ```text
 - Publicar artículo sin landing
@@ -422,31 +422,31 @@ Service Page exists → GeoArticle can be published
 - Crear artículos antes del GeoHub
 ```
 
-### Regla final
+### §14.5 Regla final
 
 ```text
 Ningún artículo va antes de su landing destino.
 ```
 
-## Regla 8 — Resultado total como inventario, no calendario
+## §15 Regla 8 — Resultado total como inventario, no calendario
 
-### Explicación
+### §15.1 Explicación
 
 La fórmula calcula la cantidad potencial. No obliga a publicar todo a la vez.
 
-### Patrón o fórmula
+### §15.2 Patrón o fórmula
 
 ```text
 Total pages ≠ publish all at once
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §15.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 28 páginas SEO base más /contacto/ como página auxiliar planificadas; se publican por fases
 ```
 
-### Ejemplos incorrectos
+### §15.4 Ejemplos incorrectos
 
 ```text
 - Publicar 28 páginas SEO base (29 con /contacto/ como página auxiliar) sin QA
@@ -454,14 +454,14 @@ Total pages ≠ publish all at once
 - Confundir inventario con calendario
 ```
 
-### Regla final
+### §15.5 Regla final
 
 ```text
 La fórmula crea mapa, no orden final.
 ```
 
 
-## Tabla de inventario base
+## §16 Tabla de inventario base
 
 | Tipo de página | Fórmula | Ejemplo Cerrajeros Madrid 24h |
 |---|---:|---:|
@@ -473,7 +473,7 @@ La fórmula crea mapa, no orden final.
 | GeoArticles de la Main City | G × S | 15 |
 | **Total base** | — | **28** |
 
-## Optional Expansion Formula
+## §17 Optional Expansion Formula
 
 ```text
 Solo si una Local Coverage Area pasa a Approved Expansion Area:
@@ -484,7 +484,7 @@ Solo si una Local Coverage Area pasa a Approved Expansion Area:
 + G × S × E Expansion GeoArticles
 ```
 
-## Ejemplo de expansión opcional
+## §18 Ejemplo de expansión opcional
 
 ```text
 Approved Expansion Area:
@@ -503,25 +503,25 @@ Extra pages:
 = 22 páginas extra
 ```
 
-## Conteo de servicios core — Regla operativa 1
+## §19 Conteo de servicios core — Regla operativa 1
 
-### Explicación
+### §19.1 Explicación
 
 La variable S solo cuenta servicios principales reales. Esta regla evita que sinónimos, modificadores o subcasos inflen la fórmula. Si un servicio no merece una página general y una página local, probablemente no debe entrar como servicio core en la fórmula base.
 
-### Patrón o fórmula
+### §19.2 Patrón o fórmula
 
 ```text
 S = número de servicios core aprobados
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §19.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h tiene S = 5: Cerrajero urgente, Apertura de puertas, Cambio de cerraduras, Cambio de bombines y Instalación de cerraduras de seguridad.
 ```
 
-### Ejemplos incorrectos
+### §19.4 Ejemplos incorrectos
 
 ```text
 - Contar urgente cerrajero y urgente cerrajero como servicios separados
@@ -529,31 +529,31 @@ Cerrajeros Madrid 24h tiene S = 5: Cerrajero urgente, Apertura de puertas, Cambi
 - Contar servicios que no tienen valor comercial suficiente
 ```
 
-### Regla final
+### §19.5 Regla final
 
 ```text
 S solo incluye servicios core que merecen página propia.
 ```
 
-## Conteo de categorías adicionales efectivas — Regla operativa 2
+## §20 Conteo de categorías adicionales efectivas — Regla operativa 2
 
-### Explicación
+### §20.1 Explicación
 
 La variable A no es igual al número total de categorías adicionales del GBP. Solo cuenta las que no están cubiertas por un servicio core. Esto evita duplicaciones y mantiene la fórmula realista.
 
-### Patrón o fórmula
+### §20.2 Patrón o fórmula
 
 ```text
 A = categorías adicionales no cubiertas por servicios core
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §20.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h tiene dos categorías adicionales, pero A = 1 porque Servicio de cerrajería de urgencia queda cubierta y Servicio de duplicado de llaves sí necesita página.
 ```
 
-### Ejemplos incorrectos
+### §20.4 Ejemplos incorrectos
 
 ```text
 - A = 2 aunque una categoría sea duplicada
@@ -561,31 +561,31 @@ Cerrajeros Madrid 24h tiene dos categorías adicionales, pero A = 1 porque Servi
 - Ignorar categorías adicionales que sí necesitan soporte
 ```
 
-### Regla final
+### §20.5 Regla final
 
 ```text
 A cuenta categorías adicionales efectivas, no etiquetas repetidas.
 ```
 
-## Main City como único multiplicador base — Regla operativa 3
+## §21 Main City como único multiplicador base — Regla operativa 3
 
-### Explicación
+### §21.1 Explicación
 
 La versión base del sistema usa una sola Main City. Esto simplifica la arquitectura y evita que el conteo se dispare por áreas de cobertura. La Main City genera el GeoHub, las páginas servicio+ciudad, páginas adicionales y GeoArticles base.
 
-### Patrón o fórmula
+### §21.2 Patrón o fórmula
 
 ```text
 C base = 1 Main City
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §21.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h usa Madrid como C = 1. Almagro, Chamberí, Salamanca y Retiro no multiplican páginas en la fase base.
 ```
 
-### Ejemplos incorrectos
+### §21.4 Ejemplos incorrectos
 
 ```text
 - Usar C = 5 porque hay cuatro áreas de cobertura
@@ -593,31 +593,31 @@ Cerrajeros Madrid 24h usa Madrid como C = 1. Almagro, Chamberí, Salamanca y Ret
 - Calcular artículos por cada Local Coverage Area
 ```
 
-### Regla final
+### §21.5 Regla final
 
 ```text
 La fórmula base se multiplica por una Main City, no por toda la cobertura.
 ```
 
-## GeoArticles por servicio — Regla operativa 4
+## §22 GeoArticles por servicio — Regla operativa 4
 
-### Explicación
+### §22.1 Explicación
 
 La variable G representa cuántos GeoArticles se crean por servicio en la Main City. No debe multiplicarse por áreas de cobertura en la base. Esto permite tener profundidad semántica sin producir decenas de artículos antes de tener landings comerciales sólidas.
 
-### Patrón o fórmula
+### §22.2 Patrón o fórmula
 
 ```text
 G × S = GeoArticles base de la Main City
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §22.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Con G = 3 y S = 5, Cerrajeros Madrid 24h genera 15 GeoArticles para Madrid.
 ```
 
-### Ejemplos incorrectos
+### §22.4 Ejemplos incorrectos
 
 ```text
 - Crear 3 artículos por servicio y por cada cobertura local
@@ -625,31 +625,31 @@ Con G = 3 y S = 5, Cerrajeros Madrid 24h genera 15 GeoArticles para Madrid.
 - Usar G = 10 sin capacidad de producción o refresh
 ```
 
-### Regla final
+### §22.5 Regla final
 
 ```text
 Los GeoArticles base refuerzan Main City + servicio.
 ```
 
-## Fórmula base completa — Regla operativa 5
+## §23 Fórmula base completa — Regla operativa 5
 
-### Explicación
+### §23.1 Explicación
 
 La fórmula debe devolver un inventario ejecutable, no un mapa teórico inmanejable. En una web local base, el resultado debe contener homepage, service overview pages, Main City GeoHub, Main City service pages, additional category pages y GeoArticles.
 
-### Patrón o fórmula
+### §23.2 Patrón o fórmula
 
 ```text
 1 + S + 1 + S + A + (G × S)
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §23.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Con S = 5, A = 1 y G = 3, Cerrajeros Madrid 24h produce 1 + 5 + 1 + 5 + 1 + 15 = 28 páginas SEO base. Adicionalmente, /contacto/ como página auxiliar fuera del inventario SEO base.
 ```
 
-### Ejemplos incorrectos
+### §23.4 Ejemplos incorrectos
 
 ```text
 - Seguir usando la fórmula multi-ciudad de 111 páginas en la base
@@ -657,31 +657,31 @@ Con S = 5, A = 1 y G = 3, Cerrajeros Madrid 24h produce 1 + 5 + 1 + 5 + 1 + 15 =
 - Contar Local Coverage Areas como páginas obligatorias
 ```
 
-### Regla final
+### §23.5 Regla final
 
 ```text
 La fórmula base debe ser simple, completa y publicable.
 ```
 
-## Local Coverage Areas fuera de la fórmula — Regla operativa 6
+## §24 Local Coverage Areas fuera de la fórmula — Regla operativa 6
 
-### Explicación
+### §24.1 Explicación
 
 Las áreas de cobertura local son importantes, pero no son multiplicadores de páginas. Se usan en contenido, FAQs, ejemplos, schema areaServed y secciones de cobertura. Esta regla evita que cobertura real se convierta automáticamente en arquitectura.
 
-### Patrón o fórmula
+### §24.2 Patrón o fórmula
 
 ```text
 Local Coverage Areas → contenido + schema | no → filas de URL
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §24.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h menciona Almagro, Chamberí, Salamanca y Retiro en contenido y schema areaServed, pero no las cuenta como GeoHubs base.
 ```
 
-### Ejemplos incorrectos
+### §24.4 Ejemplos incorrectos
 
 ```text
 - Crear páginas para cada zona mencionada
@@ -689,31 +689,31 @@ Cerrajeros Madrid 24h menciona Almagro, Chamberí, Salamanca y Retiro en conteni
 - Usar áreas de cobertura como slugs en páginas base
 ```
 
-### Regla final
+### §24.5 Regla final
 
 ```text
 Una zona puede reforzar contenido sin crear una URL.
 ```
 
-## Expansion Formula separada — Regla operativa 7
+## §25 Expansion Formula separada — Regla operativa 7
 
-### Explicación
+### §25.1 Explicación
 
 Si una zona de cobertura se aprueba para expansión, se calcula con un módulo separado. Esto mantiene la base limpia y permite escalar con control. Las Expansion Areas no deben mezclarse con la fórmula base.
 
-### Patrón o fórmula
+### §25.2 Patrón o fórmula
 
 ```text
 Approved Expansion Area → fórmula adicional separada
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §25.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Si Almagro se aprueba después, Cerrajeros Madrid 24h puede crear /almagro/ y /cerrajero/almagro/cerrajero-urgente/ como expansión, no como base.
 ```
 
-### Ejemplos incorrectos
+### §25.4 Ejemplos incorrectos
 
 ```text
 - Añadir expansión dentro del conteo base
@@ -721,31 +721,31 @@ Si Almagro se aprueba después, Cerrajeros Madrid 24h puede crear /almagro/ y /c
 - No exigir página padre antes de una expansión
 ```
 
-### Regla final
+### §25.5 Regla final
 
 ```text
 La expansión se calcula aparte y solo con zonas aprobadas.
 ```
 
-## Control anti-duplicación — Regla operativa 8
+## §26 Control anti-duplicación — Regla operativa 8
 
-### Explicación
+### §26.1 Explicación
 
 Antes de cerrar el conteo, la fórmula debe detectar duplicados entre servicios core y categorías adicionales. Si no se hace, el total parece completo pero incluye páginas que compiten entre sí.
 
-### Patrón o fórmula
+### §26.2 Patrón o fórmula
 
 ```text
 Servicio + intención + ciudad → una sola URL
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §26.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Servicio de cerrajería de urgencia no suma una página adicional porque /cerrajero/madrid/cerrajero-urgente/ ya cubre esa intención.
 ```
 
-### Ejemplos incorrectos
+### §26.4 Ejemplos incorrectos
 
 ```text
 - Sumar cerrajero-urgente como página adicional
@@ -753,31 +753,31 @@ Servicio de cerrajería de urgencia no suma una página adicional porque /cerraj
 - Contar duplicados como oportunidades nuevas
 ```
 
-### Regla final
+### §26.5 Regla final
 
 ```text
 Una intención local debe tener una URL principal.
 ```
 
-## Dependencias de página — Regla operativa 9
+## §27 Dependencias de página — Regla operativa 9
 
-### Explicación
+### §27.1 Explicación
 
 El conteo no solo mide cantidad; también debe prever dependencias. Una GeoArticle no debería existir si no existe la página local que apoya. Una Location-Based Service Page necesita Service Overview y GeoHub.
 
-### Patrón o fórmula
+### §27.2 Patrón o fórmula
 
 ```text
 Página hija → página padre existente → enlace interno posible
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §27.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 El artículo /madrid/cuanto-cuesta-un-cerrajero-urgente/ se programa después de /cerrajero/madrid/cerrajero-urgente/ y /madrid/.
 ```
 
-### Ejemplos incorrectos
+### §27.4 Ejemplos incorrectos
 
 ```text
 - Contar artículos sin landings de destino
@@ -785,31 +785,31 @@ El artículo /madrid/cuanto-cuesta-un-cerrajero-urgente/ se programa después de
 - Publicar GeoHub sin enlazar a servicios
 ```
 
-### Regla final
+### §27.5 Regla final
 
 ```text
 Cada página contada debe tener padre y destino de enlace.
 ```
 
-## Resultado final verificable — Regla operativa 10
+## §28 Resultado final verificable — Regla operativa 10
 
-### Explicación
+### §28.1 Explicación
 
 La fórmula debe terminar con una tabla clara de cantidades por tipo de página. Si el número total no se puede explicar por componentes, no está listo para producción.
 
-### Patrón o fórmula
+### §28.2 Patrón o fórmula
 
 ```text
 Tipo de página → fórmula → cantidad → total
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §28.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h muestra 1 Homepage, 5 Service Overview, 1 GeoHub, 5 Páginas de servicio en la Main City, 1 Additional Category Page y 15 GeoArticles.
 ```
 
-### Ejemplos incorrectos
+### §28.4 Ejemplos incorrectos
 
 ```text
 - Dar un total sin desglose
@@ -817,13 +817,13 @@ Cerrajeros Madrid 24h muestra 1 Homepage, 5 Service Overview, 1 GeoHub, 5 Págin
 - No separar base de expansión
 ```
 
-### Regla final
+### §28.5 Regla final
 
 ```text
 El conteo final debe ser transparente y auditable.
 ```
 
-## Checklist final del Paso 2
+## §29 Checklist final del Paso 2
 
 | Check | Pregunta | Estado |
 |---|---|---|
@@ -837,7 +837,7 @@ El conteo final debe ser transparente y auditable.
 | Total base | ¿El total de páginas está claro? | ✅ / ⬜ |
 | No duplicación | ¿Se evitaron duplicados de intención? | ✅ / ⬜ |
 
-## Outputs del Paso 2
+## §30 Outputs del Paso 2
 
 - Fórmula base calculada
 - Variables S, A y G definidas
@@ -850,7 +850,7 @@ El conteo final debe ser transparente y auditable.
 
 ---
 
-# Fuentes internas GMB Crush usadas
+# §31 Fuentes internas GMB Crush usadas
 
 - Analysis Framework.pdf
 - GMB CRUSH Universal AI Local SEO Framework Template
@@ -863,7 +863,7 @@ El conteo final debe ser transparente y auditable.
 
 
 
-### GeoArticles completos (15)
+### §31.1 GeoArticles completos (15)
 
 > **Aviso de trazabilidad:** estos 15 títulos son un primer borrador derivado de la fórmula G × S = 15 y de la lógica del servicio. **No vienen de keyword research real**. Antes de producirlos hay que validar volumen de búsqueda, dificultad y oportunidad competitiva por título. La fórmula garantiza la cantidad; los temas concretos requieren validación.
 

@@ -2,13 +2,13 @@ Versión literal del chat · Sistema GMB Crush para webs locales
 Documento regenerado siguiendo la estructura fija acordada en la conversación.
 Proveniencia: sistema construido paso a paso en el chat y alineado con los frameworks oficiales GMB Crush.
 
-# Paso 13 — Sistema Final Operativo
+# §1 Paso 13 — Sistema Final Operativo
 
-## Índice corto
+## §2 Índice corto
 
 **Paso 13 — Sistema Final Operativo**
 
-## Objetivo del Paso 13
+## §3 Objetivo del Paso 13
 
 Este paso existe para resolver un problema concreto dentro del sistema GMB Crush: unir los pasos web-first anteriores y dejar preparado el Paso 14 de creación del GBP en un SOP completo, coherente y listo para usar en cualquier web local.
 La web local no debe construirse desde la intuición, sino desde una secuencia operativa que conecta entidad, categoría GBP, servicios, ciudad principal, cobertura local, schema, contenido e interlinking.
@@ -36,7 +36,7 @@ Error que previene: crear páginas sin fórmula, matriz, contenido, enlaces, QA 
 Error que previene: olvidar que Local Coverage Areas son señales de contenido antes que URLs.
 Error que previene: no saber qué output debe producir cada paso.
 
-## Lo que tienes que rellenar
+## §4 Lo que tienes que rellenar
 
 ```text
 Business Name:
@@ -141,7 +141,7 @@ Yes / No
 Tracking Tools:
 ```
 
-## Ejemplo rellenado
+## §5 Ejemplo rellenado
 
 ```text
 Business Name:
@@ -241,29 +241,29 @@ Tracking Tools:
 GMB Crush Geo Grid, Google Search Console, GA4
 ```
 
-# Cuerpo operativo del Paso 13
+# §6 Cuerpo operativo del Paso 13
 
 > **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
-## Sistema 1 — Intake
+## §7 Sistema 1 — Intake
 
-### Explicación
+### §7.1 Explicación
 
 Recoge entidad, NAP, GBP, Main City, servicios, cobertura local y expansión aprobada.
 
-### Patrón o fórmula
+### §7.2 Patrón o fórmula
 
 ```text
 Inputs complete before architecture
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §7.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h + Madrid + Almagro/Chamberí/Salamanca/Retiro as coverage
 ```
 
-### Ejemplos incorrectos
+### §7.4 Ejemplos incorrectos
 
 ```text
 - Empezar sin NAP
@@ -271,31 +271,31 @@ Cerrajeros Madrid 24h + Madrid + Almagro/Chamberí/Salamanca/Retiro as coverage
 - No clasificar cobertura
 ```
 
-### Regla final
+### §7.5 Regla final
 
 ```text
 El sistema empieza con inputs limpios.
 ```
 
-## Sistema 2 — Fórmula
+## §8 Sistema 2 — Fórmula
 
-### Explicación
+### §8.1 Explicación
 
 Calcula páginas base con una Main City.
 
-### Patrón o fórmula
+### §8.2 Patrón o fórmula
 
 ```text
 1 + S + 1 + S + A + G×S
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §8.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 1 + 5 + 1 + 5 + 1 + 15 = 28
 ```
 
-### Ejemplos incorrectos
+### §8.4 Ejemplos incorrectos
 
 ```text
 - 111 páginas en base
@@ -303,31 +303,31 @@ Calcula páginas base con una Main City.
 - Coverage areas en fórmula
 ```
 
-### Regla final
+### §8.5 Regla final
 
 ```text
 La base usa C = 1 Main City.
 ```
 
-## Sistema 3 — Matriz Base
+## §9 Sistema 3 — Matriz Base
 
-### Explicación
+### §9.1 Explicación
 
 Convierte la fórmula en filas accionables.
 
-### Patrón o fórmula
+### §9.2 Patrón o fórmula
 
 ```text
 URL Matrix with IDs
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §9.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 HP-001, SO-001, GH-001, LBS-001, AC-001, GA-001
 ```
 
-### Ejemplos incorrectos
+### §9.4 Ejemplos incorrectos
 
 ```text
 - URLs sin ID
@@ -335,31 +335,31 @@ HP-001, SO-001, GH-001, LBS-001, AC-001, GA-001
 - Sin schema
 ```
 
-### Regla final
+### §9.5 Regla final
 
 ```text
 Lo que no está en matriz no entra en producción.
 ```
 
-## Sistema 4 — URL Rules
+## §10 Sistema 4 — URL Rules
 
-### Explicación
+### §10.1 Explicación
 
 Fija patrones limpios y evita canibalización.
 
-### Patrón o fórmula
+### §10.2 Patrón o fórmula
 
 ```text
 /category/main-city/service/
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §10.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §10.4 Ejemplos incorrectos
 
 ```text
 - near-me URLs
@@ -367,31 +367,31 @@ Fija patrones limpios y evita canibalización.
 - Local Coverage URLs sin aprobación
 ```
 
-### Regla final
+### §10.5 Regla final
 
 ```text
 Una URL = una intención.
 ```
 
-## Sistema 5 — Page Type Rules
+## §11 Sistema 5 — Page Type Rules
 
-### Explicación
+### §11.1 Explicación
 
 Define la función de cada tipo de página.
 
-### Patrón o fórmula
+### §11.2 Patrón o fórmula
 
 ```text
 Homepage, Service Overview, LBS, AC, GeoHub, GeoArticle
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §11.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 GeoArticle = booster, not landing
 ```
 
-### Ejemplos incorrectos
+### §11.4 Ejemplos incorrectos
 
 ```text
 - Confundir service overview con LBS
@@ -399,31 +399,31 @@ GeoArticle = booster, not landing
 - Article como landing
 ```
 
-### Regla final
+### §11.5 Regla final
 
 ```text
 Cada tipo cumple un rol.
 ```
 
-## Sistema 6 — Content Architecture
+## §12 Sistema 6 — Content Architecture
 
-### Explicación
+### §12.1 Explicación
 
 Define cómo se escribe cada página por dentro y cómo se usan Local Coverage Areas.
 
-### Patrón o fórmula
+### §12.2 Patrón o fórmula
 
 ```text
 Content blocks + coverage usage
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §12.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 H2 Local Coverage Areas Served in /cerrajero/madrid/cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §12.4 Ejemplos incorrectos
 
 ```text
 - Solo formulario
@@ -431,31 +431,31 @@ H2 Local Coverage Areas Served in /cerrajero/madrid/cerrajero-urgente/
 - Zonas como falsas oficinas
 ```
 
-### Regla final
+### §12.5 Regla final
 
 ```text
 El contenido debe tener estructura, no solo campos.
 ```
 
-## Sistema 7 — Internal Linking
+## §13 Sistema 7 — Internal Linking
 
-### Explicación
+### §13.1 Explicación
 
 Conecta páginas por jerarquía local.
 
-### Patrón o fórmula
+### §13.2 Patrón o fórmula
 
 ```text
 Homepage → Services → GeoHub → LBS → Articles
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §13.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /madrid/cuanto-cuesta-un-cerrajero-urgente/ links to /cerrajero/madrid/cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §13.4 Ejemplos incorrectos
 
 ```text
 - Páginas huérfanas
@@ -463,31 +463,31 @@ Homepage → Services → GeoHub → LBS → Articles
 - Solo footer
 ```
 
-### Regla final
+### §13.5 Regla final
 
 ```text
 Los enlaces sostienen el silo.
 ```
 
-## Sistema 8 — Priority Score
+## §14 Sistema 8 — Priority Score
 
-### Explicación
+### §14.1 Explicación
 
 Decide qué se publica primero.
 
-### Patrón o fórmula
+### §14.2 Patrón o fórmula
 
 ```text
 Revenue + Intent + GBP + Local + Gap + Urgency
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §14.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajero urgente Madrid = P1
 ```
 
-### Ejemplos incorrectos
+### §14.4 Ejemplos incorrectos
 
 ```text
 - Todo P1
@@ -495,31 +495,31 @@ Cerrajero urgente Madrid = P1
 - City Priority en base
 ```
 
-### Regla final
+### §14.5 Regla final
 
 ```text
 La prioridad sigue negocio + intención + local.
 ```
 
-## Sistema 9 — QA
+## §15 Sistema 9 — QA
 
-### Explicación
+### §15.1 Explicación
 
 Valida cada página antes de publicar.
 
-### Patrón o fórmula
+### §15.2 Patrón o fórmula
 
 ```text
 URL + metadata + schema + links + no false location
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §15.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 LBS-001 approved after QA
 ```
 
-### Ejemplos incorrectos
+### §15.4 Ejemplos incorrectos
 
 ```text
 - Sin QA
@@ -527,31 +527,31 @@ LBS-001 approved after QA
 - Fake office
 ```
 
-### Regla final
+### §15.5 Regla final
 
 ```text
 Sin QA no se publica.
 ```
 
-## Sistema 10 — Producción en fases
+## §16 Sistema 10 — Producción en fases
 
-### Explicación
+### §16.1 Explicación
 
 Organiza publicación en lotes.
 
-### Patrón o fórmula
+### §16.2 Patrón o fórmula
 
 ```text
 Entity → Main City Conversion → Articles → Optimization → Expansion
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §16.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Semana 1 entity; semana 2 Main City landings
 ```
 
-### Ejemplos incorrectos
+### §16.4 Ejemplos incorrectos
 
 ```text
 - Expansion first
@@ -559,31 +559,31 @@ Semana 1 entity; semana 2 Main City landings
 - No dependencies
 ```
 
-### Regla final
+### §16.5 Regla final
 
 ```text
 Publicar por fases evita caos.
 ```
 
-## Sistema 11 — Pseudocódigo
+## §17 Sistema 11 — Pseudocódigo
 
-### Explicación
+### §17.1 Explicación
 
 Convierte el sistema en lógica repetible.
 
-### Patrón o fórmula
+### §17.2 Patrón o fórmula
 
 ```text
 Input → Generate → Link → Score → QA → Output
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §17.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Local Coverage Areas injected into content, no URLs
 ```
 
-### Ejemplos incorrectos
+### §17.4 Ejemplos incorrectos
 
 ```text
 - Generar todo manualmente
@@ -591,31 +591,31 @@ Local Coverage Areas injected into content, no URLs
 - Sin outputs
 ```
 
-### Regla final
+### §17.5 Regla final
 
 ```text
 El sistema debe poder repetirse.
 ```
 
-## Sistema 12 — Master Prompt
+## §18 Sistema 12 — Master Prompt
 
-### Explicación
+### §18.1 Explicación
 
 Permite ejecutar todo el sistema con un prompt maestro.
 
-### Patrón o fórmula
+### §18.2 Patrón o fórmula
 
 ```text
 Master Prompt with full outputs
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §18.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Prompt returns URL Matrix, content architecture, links, QA
 ```
 
-### Ejemplos incorrectos
+### §18.4 Ejemplos incorrectos
 
 ```text
 - Prompt solo de URLs
@@ -623,14 +623,14 @@ Prompt returns URL Matrix, content architecture, links, QA
 - Sin QA
 ```
 
-### Regla final
+### §18.5 Regla final
 
 ```text
 El prompt maestro debe generar el sistema completo.
 ```
 
 
-## Índice final del sistema de 13 pasos
+## §19 Índice final del sistema de 13 pasos
 
 ```text
 1. Intake Form
@@ -649,7 +649,7 @@ El prompt maestro debe generar el sistema completo.
 14. GBP Creation & Website Alignment
 ```
 
-## Principio final de arquitectura
+## §20 Principio final de arquitectura
 
 ```text
 Main City = crea la arquitectura base.
@@ -657,7 +657,7 @@ Local Coverage Areas = enriquecen contenido, FAQs, ejemplos locales y schema are
 Approved Expansion Areas = generan URLs propias solo cuando se aprueban.
 ```
 
-## Fórmula final base
+## §21 Fórmula final base
 
 ```text
 1 Homepage
@@ -668,7 +668,7 @@ Approved Expansion Areas = generan URLs propias solo cuando se aprueban.
 + G × S GeoArticles de la Main City
 ```
 
-## Fórmula aplicada a Cerrajeros Madrid 24h
+## §22 Fórmula aplicada a Cerrajeros Madrid 24h
 
 ```text
 S = 5
@@ -684,7 +684,7 @@ G = 3
 = 28 páginas SEO base. Adicionalmente, /contacto/ como página auxiliar fuera del inventario SEO base.
 ```
 
-## URLs base finales para Cerrajeros Madrid 24h
+## §23 URLs base finales para Cerrajeros Madrid 24h
 
 ```text
 Homepage:
@@ -717,7 +717,7 @@ GeoArticles:
 ... plus 3 articles per service
 ```
 
-## Local Coverage Areas en contenido
+## §24 Local Coverage Areas en contenido
 
 ```text
 Almagro
@@ -747,7 +747,7 @@ No generan por defecto:
 /retiro/
 ```
 
-## Operating workflow completo
+## §25 Operating workflow completo
 
 ```text
 1. Recoger inputs
@@ -773,7 +773,7 @@ No generan por defecto:
 21. Considerar expansión opcional
 ```
 
-## Carpetas recomendadas del repo
+## §26 Carpetas recomendadas del repo
 
 ```text
 docs/
@@ -795,20 +795,20 @@ docs/
 ```
 
 #
-## Relación con el Paso 14
+## §27 Relación con el Paso 14
 
-### Explicación
+### §27.1 Explicación
 
 El Paso 13 cierra el sistema web. No crea el GBP todavía. Su función es comprobar que la web está lista para servir como fuente de verdad antes de crear el perfil. El Paso 14 ejecuta la creación y sincronización del GBP.
 
-### Patrón o fórmula
+### §27.2 Patrón o fórmula
 
 ```text
 Paso 13 = website operating system complete
 Paso 14 = GBP creation and website alignment
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §27.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Paso 13 entrega:
@@ -826,7 +826,7 @@ Paso 14 ejecuta:
 - actualización de sameAs
 ```
 
-### Ejemplos incorrectos
+### §27.4 Ejemplos incorrectos
 
 ```text
 - Tratar el Paso 13 como si ya existiera GBP.
@@ -834,13 +834,13 @@ Paso 14 ejecuta:
 - Añadir Google reviews o GBP URL antes del Paso 14.
 ```
 
-### Regla final
+### §27.5 Regla final
 
 ```text
 El sistema web termina en el Paso 13; la entidad GBP se crea y sincroniza en el Paso 14.
 ```
 
-# Output final que debe producir el sistema
+# §28 Output final que debe producir el sistema
 
 ```text
 1. Ficha completa del negocio
@@ -858,25 +858,25 @@ El sistema web termina en el Paso 13; la entidad GBP se crea y sincroniza en el 
 13. Optional Expansion Plan
 ```
 
-## Módulo A — Entidad y GBP
+## §29 Módulo A — Entidad y GBP
 
-### Explicación
+### §29.1 Explicación
 
 La entidad debe estar clara antes de crear cualquier página. El GBP define categoría principal, NAP, ubicación física y señales de confianza.
 
-### Patrón o fórmula
+### §29.2 Patrón o fórmula
 
 ```text
 Business + GBP + NAP → entity base
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §29.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h + Cerrajero + Madrid + Calle Rafael Calvo 12
 ```
 
-### Ejemplos incorrectos
+### §29.4 Ejemplos incorrectos
 
 ```text
 - Crear páginas sin GBP category
@@ -884,31 +884,31 @@ Cerrajeros Madrid 24h + Cerrajero + Madrid + Calle Rafael Calvo 12
 - Marca distinta en schema
 ```
 
-### Regla final
+### §29.5 Regla final
 
 ```text
 La entidad se valida antes de la arquitectura.
 ```
 
-## Módulo B — Servicios core
+## §30 Módulo B — Servicios core
 
-### Explicación
+### §30.1 Explicación
 
 Los servicios core generan Service Overview Pages y Location-Based Service Pages.
 
-### Patrón o fórmula
+### §30.2 Patrón o fórmula
 
 ```text
 Core Service → SO + LBS
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §30.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajero urgente → /cerrajero/cerrajero-urgente/ + /cerrajero/madrid/cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §30.4 Ejemplos incorrectos
 
 ```text
 - Servicio sin página
@@ -916,31 +916,31 @@ Cerrajero urgente → /cerrajero/cerrajero-urgente/ + /cerrajero/madrid/cerrajer
 - Servicio inventado
 ```
 
-### Regla final
+### §30.5 Regla final
 
 ```text
 Cada servicio core importante tiene estructura completa.
 ```
 
-## Módulo C — Categorías adicionales
+## §31 Módulo C — Categorías adicionales
 
-### Explicación
+### §31.1 Explicación
 
 Las categorías adicionales se consolidan o se convierten en página.
 
-### Patrón o fórmula
+### §31.2 Patrón o fórmula
 
 ```text
 Additional Category → covered or AC page
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §31.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Duplicado de llaves → /cerrajero/madrid/duplicado-llaves/
 ```
 
-### Ejemplos incorrectos
+### §31.4 Ejemplos incorrectos
 
 ```text
 - Duplicate urgente page
@@ -948,31 +948,31 @@ Duplicado de llaves → /cerrajero/madrid/duplicado-llaves/
 - Category with no GBP relation
 ```
 
-### Regla final
+### §31.5 Regla final
 
 ```text
 Cada categoría GBP tiene soporte sin duplicación.
 ```
 
-## Módulo D — Cobertura local
+## §32 Módulo D — Cobertura local
 
-### Explicación
+### §32.1 Explicación
 
 Las Local Coverage Areas son cobertura real y contexto GEO.
 
-### Patrón o fórmula
+### §32.2 Patrón o fórmula
 
 ```text
 Coverage → content + areaServed
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §32.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Almagro, Chamberí, Salamanca, Retiro mencionadas de forma natural
 ```
 
-### Ejemplos incorrectos
+### §32.4 Ejemplos incorrectos
 
 ```text
 - Coverage URLs by default
@@ -980,31 +980,31 @@ Almagro, Chamberí, Salamanca, Retiro mencionadas de forma natural
 - Unnatural lists
 ```
 
-### Regla final
+### §32.5 Regla final
 
 ```text
 Cobertura local primero en contenido.
 ```
 
-## Módulo E — Expansión aprobada
+## §33 Módulo E — Expansión aprobada
 
-### Explicación
+### §33.1 Explicación
 
 La expansión se activa solo cuando una zona lo merece.
 
-### Patrón o fórmula
+### §33.2 Patrón o fórmula
 
 ```text
 Approved Expansion → optional URLs
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §33.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Almagro expansion later if approved
 ```
 
-### Ejemplos incorrectos
+### §33.4 Ejemplos incorrectos
 
 ```text
 - All zones expanded
@@ -1012,31 +1012,31 @@ Almagro expansion later if approved
 - No demand
 ```
 
-### Regla final
+### §33.5 Regla final
 
 ```text
 La expansión es posterior y justificada.
 ```
 
-## Módulo F — Schema
+## §34 Módulo F — Schema
 
-### Explicación
+### §34.1 Explicación
 
 Schema ayuda a estructurar entidad, servicios, ciudad, cobertura y artículos.
 
-### Patrón o fórmula
+### §34.2 Patrón o fórmula
 
 ```text
 Page Type → Schema Type
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §34.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 LBS → LocalBusiness with areaServed
 ```
 
-### Ejemplos incorrectos
+### §34.4 Ejemplos incorrectos
 
 ```text
 - Same schema everywhere
@@ -1044,31 +1044,31 @@ LBS → LocalBusiness with areaServed
 - No schema
 ```
 
-### Regla final
+### §34.5 Regla final
 
 ```text
 Schema debe coincidir con tipo de página.
 ```
 
-## Módulo G — Tracking
+## §35 Módulo G — Tracking
 
-### Explicación
+### §35.1 Explicación
 
 El sistema se mide después de publicar.
 
-### Patrón o fórmula
+### §35.2 Patrón o fórmula
 
 ```text
 GMB Crush + GSC + GA4
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §35.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Track urgente cerrajero Madrid and page performance
 ```
 
-### Ejemplos incorrectos
+### §35.4 Ejemplos incorrectos
 
 ```text
 - No tracking
@@ -1076,31 +1076,31 @@ Track urgente cerrajero Madrid and page performance
 - No grid review
 ```
 
-### Regla final
+### §35.5 Regla final
 
 ```text
 Sin medición no hay optimización.
 ```
 
-## Sistema empieza por entidad — Regla operativa 1
+## §36 Sistema empieza por entidad — Regla operativa 1
 
-### Explicación
+### §36.1 Explicación
 
 El SOP final debe dejar claro que todo empieza con la entidad: negocio, NAP, GBP, categoría, Main City, servicios y cobertura real. Sin entidad, no hay arquitectura confiable.
 
-### Patrón o fórmula
+### §36.2 Patrón o fórmula
 
 ```text
 Entity inputs → architecture → content → links → QA
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §36.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h define nombre, NAP, Cerrajero como categoría, Madrid como Main City y servicios core antes de crear URLs.
 ```
 
-### Ejemplos incorrectos
+### §36.4 Ejemplos incorrectos
 
 ```text
 - Crear URLs antes del intake
@@ -1108,31 +1108,31 @@ Cerrajeros Madrid 24h define nombre, NAP, Cerrajero como categoría, Madrid como
 - No definir ubicación física
 ```
 
-### Regla final
+### §36.5 Regla final
 
 ```text
 La entidad manda sobre la arquitectura.
 ```
 
-## Arquitectura base de una Main City — Regla operativa 2
+## §37 Arquitectura base de una Main City — Regla operativa 2
 
-### Explicación
+### §37.1 Explicación
 
 El sistema final debe consagrar la versión simplificada: una Main City crea la base, Local Coverage Areas enriquecen contenido y Approved Expansion Areas crean URLs solo después.
 
-### Patrón o fórmula
+### §37.2 Patrón o fórmula
 
 ```text
 Main City base | Coverage content | Expansion optional
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §37.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h crea base en Madrid y usa Almagro, Chamberí, Salamanca y Retiro como cobertura textual.
 ```
 
-### Ejemplos incorrectos
+### §37.4 Ejemplos incorrectos
 
 ```text
 - Volver a target cities como base
@@ -1140,31 +1140,31 @@ Cerrajeros Madrid 24h crea base en Madrid y usa Almagro, Chamberí, Salamanca y 
 - No diferenciar expansión
 ```
 
-### Regla final
+### §37.5 Regla final
 
 ```text
 La base local se construye alrededor de una Main City.
 ```
 
-## Matriz como centro operativo — Regla operativa 3
+## §38 Matriz como centro operativo — Regla operativa 3
 
-### Explicación
+### §38.1 Explicación
 
 El sistema final debe tratar la URL Matrix como fuente de verdad. Todas las decisiones de contenido, links, schema, prioridad y QA deben referirse a ella.
 
-### Patrón o fórmula
+### §38.2 Patrón o fórmula
 
 ```text
 URL Matrix → briefs → production → QA
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §38.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 LBS-001 en la matriz define URL, H1, schema, links, priority y status antes de redactar.
 ```
 
-### Ejemplos incorrectos
+### §38.4 Ejemplos incorrectos
 
 ```text
 - Crear contenido fuera de la matriz
@@ -1172,31 +1172,31 @@ LBS-001 en la matriz define URL, H1, schema, links, priority y status antes de r
 - No registrar status
 ```
 
-### Regla final
+### §38.5 Regla final
 
 ```text
 Si no está en la matriz, no existe en producción.
 ```
 
-## Contenido por page type — Regla operativa 4
+## §39 Contenido por page type — Regla operativa 4
 
-### Explicación
+### §39.1 Explicación
 
 El SOP final debe mantener que cada page type tiene estructura propia. Esto impide escribir todas las páginas con el mismo molde.
 
-### Patrón o fórmula
+### §39.2 Patrón o fórmula
 
 ```text
 Page Type → content architecture → QA
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §39.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 GeoHub de Madrid lista servicios y cobertura; GeoArticle de coste explica un tema long-tail; Service Overview no menciona cobertura.
 ```
 
-### Ejemplos incorrectos
+### §39.4 Ejemplos incorrectos
 
 ```text
 - Usar el mismo texto para todos los tipos
@@ -1204,31 +1204,31 @@ GeoHub de Madrid lista servicios y cobertura; GeoArticle de coste explica un tem
 - Usar Service Overview como página local
 ```
 
-### Regla final
+### §39.5 Regla final
 
 ```text
 La forma del contenido depende de la función de la página.
 ```
 
-## Local Coverage Areas como contexto — Regla operativa 5
+## §40 Local Coverage Areas como contexto — Regla operativa 5
 
-### Explicación
+### §40.1 Explicación
 
 Las áreas de cobertura local deben quedar integradas en contenido, FAQs, ejemplos y schema areaServed. No son un apéndice ni un motor automático de URLs.
 
-### Patrón o fórmula
+### §40.2 Patrón o fórmula
 
 ```text
 Coverage real → content blocks + schema | no URLs base
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §40.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h usa Almagro y Chamberí en secciones de cobertura y FAQs, no como GeoHubs base.
 ```
 
-### Ejemplos incorrectos
+### §40.4 Ejemplos incorrectos
 
 ```text
 - No mencionar cobertura real
@@ -1236,31 +1236,31 @@ Cerrajeros Madrid 24h usa Almagro y Chamberí en secciones de cobertura y FAQs, 
 - Afirmar oficina en coverage areas
 ```
 
-### Regla final
+### §40.5 Regla final
 
 ```text
 La cobertura local refuerza, no multiplica por defecto.
 ```
 
-## Internal linking como distribución de autoridad — Regla operativa 6
+## §41 Internal linking como distribución de autoridad — Regla operativa 6
 
-### Explicación
+### §41.1 Explicación
 
 El sistema final debe dejar claro que el enlazado no es decoración. Define cómo fluye autoridad desde homepage hasta servicios, GeoHub, landings y artículos.
 
-### Patrón o fórmula
+### §41.2 Patrón o fórmula
 
 ```text
 Homepage → Services / GeoHub → LBS → GeoArticles → back
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §41.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h enlaza /madrid/cuanto-cuesta-un-cerrajero-urgente/ hacia /cerrajero/madrid/cerrajero-urgente/ y /madrid/.
 ```
 
-### Ejemplos incorrectos
+### §41.4 Ejemplos incorrectos
 
 ```text
 - Páginas huérfanas
@@ -1268,31 +1268,31 @@ Cerrajeros Madrid 24h enlaza /madrid/cuanto-cuesta-un-cerrajero-urgente/ hacia /
 - Anchors repetidos o genéricos
 ```
 
-### Regla final
+### §41.5 Regla final
 
 ```text
 Cada página debe tener enlaces entrantes y salientes útiles.
 ```
 
-## Schema como claridad de entidad — Regla operativa 7
+## §42 Schema como claridad de entidad — Regla operativa 7
 
-### Explicación
+### §42.1 Explicación
 
 El schema final debe explicar entidad, servicio, ubicación, cobertura y contenido. Debe ser coherente con NAP y no simular ubicaciones.
 
-### Patrón o fórmula
+### §42.2 Patrón o fórmula
 
 ```text
 Page Type → schema → NAP/areaServed validation
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §42.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 LocalBusiness usa address de Madrid y areaServed para cobertura real.
 ```
 
-### Ejemplos incorrectos
+### §42.4 Ejemplos incorrectos
 
 ```text
 - Schema con dirección falsa
@@ -1300,31 +1300,31 @@ LocalBusiness usa address de Madrid y areaServed para cobertura real.
 - No usar Article schema en GeoArticles
 ```
 
-### Regla final
+### §42.5 Regla final
 
 ```text
 Schema debe ser coherente, válido y verdadero.
 ```
 
-## Priority Score como decisión de producción — Regla operativa 8
+## §43 Priority Score como decisión de producción — Regla operativa 8
 
-### Explicación
+### §43.1 Explicación
 
 El score debe ordenar producción, no reemplazar criterio. Se combina con dependencias y fases para evitar publicar páginas fuera de orden.
 
-### Patrón o fórmula
+### §43.2 Patrón o fórmula
 
 ```text
 Score + dependencies + phase → publish order
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §43.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajero urgente Madrid se prioriza antes que un artículo informativo de bajo valor.
 ```
 
-### Ejemplos incorrectos
+### §43.4 Ejemplos incorrectos
 
 ```text
 - Publicar por score sin parent
@@ -1332,31 +1332,31 @@ Cerrajero urgente Madrid se prioriza antes que un artículo informativo de bajo 
 - Dar prioridad a zonas no aprobadas
 ```
 
-### Regla final
+### §43.5 Regla final
 
 ```text
 La prioridad debe convertirse en calendario, no en caos.
 ```
 
-## QA como puerta de publicación — Regla operativa 9
+## §44 QA como puerta de publicación — Regla operativa 9
 
-### Explicación
+### §44.1 Explicación
 
 El SOP final debe exigir QA antes de publicar. Esta puerta detecta errores de URL, contenido, schema, links, NAP, canibalización y ubicación falsa.
 
-### Patrón o fórmula
+### §44.2 Patrón o fórmula
 
 ```text
 Ready for QA → checklist → Approved → Published
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §44.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h no publica /cerrajero/madrid/duplicado-llaves/ hasta validar schema Service, links y no duplicación.
 ```
 
-### Ejemplos incorrectos
+### §44.4 Ejemplos incorrectos
 
 ```text
 - Publicar sin revisión
@@ -1364,31 +1364,31 @@ Cerrajeros Madrid 24h no publica /cerrajero/madrid/duplicado-llaves/ hasta valid
 - No revisar canibalización
 ```
 
-### Regla final
+### §44.5 Regla final
 
 ```text
 No hay publicación sin QA.
 ```
 
-## Producción en fases — Regla operativa 10
+## §45 Producción en fases — Regla operativa 10
 
-### Explicación
+### §45.1 Explicación
 
 Las fases protegen el orden lógico: entidad, conversión, semántica, optimización y expansión opcional. Sin fases, el sistema puede construir artículos antes de las páginas que deben apoyar.
 
-### Patrón o fórmula
+### §45.2 Patrón o fórmula
 
 ```text
 Phase 1 → Phase 2 → Phase 3 → Phase 4 → Phase 5 optional
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §45.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h publica primero homepage y servicios, luego Madrid landings, luego GeoArticles.
 ```
 
-### Ejemplos incorrectos
+### §45.4 Ejemplos incorrectos
 
 ```text
 - Empezar por expansión
@@ -1396,31 +1396,31 @@ Cerrajeros Madrid 24h publica primero homepage y servicios, luego Madrid landing
 - No cerrar Phase 1 antes de Phase 2
 ```
 
-### Regla final
+### §45.5 Regla final
 
 ```text
 Las fases convierten arquitectura en ejecución controlada.
 ```
 
-## Tracking como ciclo de mejora — Regla operativa 11
+## §46 Tracking como ciclo de mejora — Regla operativa 11
 
-### Explicación
+### §46.1 Explicación
 
 El sistema no termina al publicar. GSC, geo-grid, leads y comportamiento deben alimentar mejoras de contenido, metadata, links y expansión.
 
-### Patrón o fórmula
+### §46.2 Patrón o fórmula
 
 ```text
 Publish → measure → optimize → refresh
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §46.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Si /cerrajero/madrid/apertura-puertas/ tiene impresiones pero bajo CTR, Cerrajeros Madrid 24h ajusta title y meta.
 ```
 
-### Ejemplos incorrectos
+### §46.4 Ejemplos incorrectos
 
 ```text
 - No medir después de publicar
@@ -1428,31 +1428,31 @@ Si /cerrajero/madrid/apertura-puertas/ tiene impresiones pero bajo CTR, Cerrajer
 - No refrescar artículos
 ```
 
-### Regla final
+### §46.5 Regla final
 
 ```text
 Publicar es el inicio del ciclo de optimización.
 ```
 
-## Expansion Areas con gobernanza — Regla operativa 12
+## §47 Expansion Areas con gobernanza — Regla operativa 12
 
-### Explicación
+### §47.1 Explicación
 
 La expansión debe tener criterios y aprobación. Esto evita crear páginas por ambición territorial antes de que la Main City esté sólida.
 
-### Patrón o fórmula
+### §47.2 Patrón o fórmula
 
 ```text
 Coverage → evidence → approval → expansion pages
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §47.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Almagro solo genera URLs si se aprueba por demanda, valor y capacidad de contenido único.
 ```
 
-### Ejemplos incorrectos
+### §47.4 Ejemplos incorrectos
 
 ```text
 - Expandir por intuición
@@ -1460,31 +1460,31 @@ Almagro solo genera URLs si se aprueba por demanda, valor y capacidad de conteni
 - No medir la base antes de expandir
 ```
 
-### Regla final
+### §47.5 Regla final
 
 ```text
 La expansión requiere evidencia y control.
 ```
 
-## IA como operador del sistema — Regla operativa 13
+## §48 IA como operador del sistema — Regla operativa 13
 
-### Explicación
+### §48.1 Explicación
 
 Si una IA usa estos documentos, debe operar con matrices, reglas y QA, no improvisar. El SOP final debe ser suficientemente explícito para generar outputs repetibles.
 
-### Patrón o fórmula
+### §48.2 Patrón o fórmula
 
 ```text
 Prompt → inputs → matrices → QA → outputs
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §48.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 El Master Prompt genera URL Matrix, Schema Map, Internal Linking Map y Publishing Plan para Cerrajeros Madrid 24h.
 ```
 
-### Ejemplos incorrectos
+### §48.4 Ejemplos incorrectos
 
 ```text
 - Pedir contenido suelto sin matriz
@@ -1492,31 +1492,31 @@ El Master Prompt genera URL Matrix, Schema Map, Internal Linking Map y Publishin
 - Permitir que la IA cree URLs no aprobadas
 ```
 
-### Regla final
+### §48.5 Regla final
 
 ```text
 La IA debe seguir el sistema, no inventarlo.
 ```
 
-## No negociables finales — Regla operativa 14
+## §49 No negociables finales — Regla operativa 14
 
-### Explicación
+### §49.1 Explicación
 
 El SOP final debe cerrar con reglas que nunca se rompen: no mezclar servicios, no mezclar ciudades, no false locations, no páginas huérfanas, no artículos sin destino y no duplicación.
 
-### Patrón o fórmula
+### §49.2 Patrón o fórmula
 
 ```text
 Non-negotiables → QA → governance
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §49.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h mantiene una página para Cerrajero urgente en Madrid y un artículo de costes separado que la apoya.
 ```
 
-### Ejemplos incorrectos
+### §49.4 Ejemplos incorrectos
 
 ```text
 - Una landing con 5 servicios
@@ -1524,31 +1524,31 @@ Cerrajeros Madrid 24h mantiene una página para Cerrajero urgente en Madrid y un
 - GeoArticle que compite con la landing
 ```
 
-### Regla final
+### §49.5 Regla final
 
 ```text
 Las reglas no negociables protegen el sistema completo.
 ```
 
-## Documentación del cambio — Regla operativa 15
+## §50 Documentación del cambio — Regla operativa 15
 
-### Explicación
+### §50.1 Explicación
 
 Cada cambio importante debe registrarse: nuevas páginas, expansión aprobada, actualización de fórmula, cambios de schema o nuevos enlaces. Esto hace que el sistema sea mantenible.
 
-### Patrón o fórmula
+### §50.2 Patrón o fórmula
 
 ```text
 Change → reason → matrix update → QA
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §50.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Si Cerrajeros Madrid 24h aprueba Almagro como expansión, se registra en matriz, fórmula y publishing plan.
 ```
 
-### Ejemplos incorrectos
+### §50.4 Ejemplos incorrectos
 
 ```text
 - Crear páginas nuevas sin registro
@@ -1556,31 +1556,31 @@ Si Cerrajeros Madrid 24h aprueba Almagro como expansión, se registra en matriz,
 - No actualizar enlaces tras expansión
 ```
 
-### Regla final
+### §50.5 Regla final
 
 ```text
 Todo cambio debe quedar documentado en la matriz y el plan.
 ```
 
-## Sistema final como fuente única — Regla operativa 16
+## §51 Sistema final como fuente única — Regla operativa 16
 
-### Explicación
+### §51.1 Explicación
 
 El documento final debe reunir los pasos, pero no sustituye los archivos individuales. Sirve como mapa global y fuente de consulta para entender cómo se conectan las piezas.
 
-### Patrón o fórmula
+### §51.2 Patrón o fórmula
 
 ```text
 13 pasos → sistema completo → ejecución por documentos
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §51.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h usa el sistema final para entender el flujo y los pasos individuales para ejecutar cada parte.
 ```
 
-### Ejemplos incorrectos
+### §51.4 Ejemplos incorrectos
 
 ```text
 - Usar solo el resumen final para producir páginas
@@ -1588,13 +1588,13 @@ Cerrajeros Madrid 24h usa el sistema final para entender el flujo y los pasos in
 - No consultar QA antes de publicar
 ```
 
-### Regla final
+### §51.5 Regla final
 
 ```text
 El sistema final coordina; los pasos individuales ejecutan.
 ```
 
-## Checklist final del Paso 13
+## §52 Checklist final del Paso 13
 
 | Check | Pregunta | Estado |
 |---|---|---|
@@ -1612,7 +1612,7 @@ El sistema final coordina; los pasos individuales ejecutan.
 | Prompt | ¿El Paso 12 genera todo el sistema? | ✅ / ⬜ |
 | Output | ¿El sistema final produce matrices, briefs, QA y roadmap? | ✅ / ⬜ |
 
-## Outputs del Paso 13
+## §53 Outputs del Paso 13
 
 - SOP final de 13 pasos
 - Índice definitivo
@@ -1625,7 +1625,7 @@ El sistema final coordina; los pasos individuales ejecutan.
 
 ---
 
-# Fuentes internas GMB Crush usadas
+# §54 Fuentes internas GMB Crush usadas
 
 - Analysis Framework.pdf
 - GMB CRUSH Universal AI Local SEO Framework Template
@@ -1638,7 +1638,7 @@ El sistema final coordina; los pasos individuales ejecutan.
 
 
 
-### GeoArticles completos (15)
+### §54.1 GeoArticles completos (15)
 
 > **Aviso de trazabilidad:** estos 15 títulos son un primer borrador derivado de la fórmula G × S = 15 y de la lógica del servicio. **No vienen de keyword research real**. Antes de producirlos hay que validar volumen de búsqueda, dificultad y oportunidad competitiva por título. La fórmula garantiza la cantidad; los temas concretos requieren validación.
 
@@ -1669,7 +1669,7 @@ El sistema final coordina; los pasos individuales ejecutan.
 
 
 
-### Inventario SEO base — Priority Score completo
+### §54.2 Inventario SEO base — Priority Score completo
 
 | # | URL | Tipo | Priority Score |
 |---|-----|------|----------------|
@@ -1706,7 +1706,7 @@ El sistema final coordina; los pasos individuales ejecutan.
 > Cada URL SEO del inventario base debe tener prioridad asignada.
 
 
-### Inventario SEO base — Estado QA
+### §54.3 Inventario SEO base — Estado QA
 
 | # | URL | Tipo | QA Status |
 |---|-----|------|-----------|
@@ -1729,7 +1729,7 @@ El sistema final coordina; los pasos individuales ejecutan.
 > Ninguna URL se publica sin QA, aunque el documento muestre solo un ejemplo desarrollado.
 
 
-### Calendario de producción completo
+### §54.4 Calendario de producción completo
 
 **Fase 1 — Estructura base (Semana 1-2):**
 - / (Homepage)

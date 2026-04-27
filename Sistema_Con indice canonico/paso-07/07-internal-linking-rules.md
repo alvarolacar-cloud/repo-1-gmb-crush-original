@@ -2,13 +2,13 @@ Versión literal del chat · Sistema GMB Crush para webs locales
 Documento regenerado siguiendo la estructura fija acordada en la conversación.
 Proveniencia: sistema construido paso a paso en el chat y alineado con los frameworks oficiales GMB Crush.
 
-# Paso 7 — Internal Linking Rules
+# §1 Paso 7 — Internal Linking Rules
 
-## Índice corto
+## §2 Índice corto
 
 **Paso 7 — Internal Linking Rules**
 
-## Objetivo del Paso 7
+## §3 Objetivo del Paso 7
 
 Este paso existe para resolver un problema concreto dentro del sistema GMB Crush: definir cómo se conectan las páginas para crear un silo local claro, sin enlaces caóticos ni páginas huérfanas.
 La web local no debe construirse desde la intuición, sino desde una secuencia operativa que conecta entidad, categoría GBP, servicios, ciudad principal, cobertura local, schema, contenido e interlinking.
@@ -36,7 +36,7 @@ Error que previene: usar solo enlaces de footer.
 Error que previene: no variar anchor text.
 Error que previene: dejar GeoArticles sin enlace a la landing comercial.
 
-## Lo que tienes que rellenar
+## §4 Lo que tienes que rellenar
 
 ```text
 Business Name:
@@ -110,7 +110,7 @@ Preferred Informational Anchor:
 Preferred Local Anchor:
 ```
 
-## Ejemplo rellenado
+## §5 Ejemplo rellenado
 
 ```text
 Business Name:
@@ -189,29 +189,29 @@ Preferred Local Anchor:
 servicios de cerrajería en Madrid
 ```
 
-# Cuerpo operativo del Paso 7
+# §6 Cuerpo operativo del Paso 7
 
 > **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
-## Regla 1 — Enlazar hacia arriba, abajo y lateralmente
+## §7 Regla 1 — Enlazar hacia arriba, abajo y lateralmente
 
-### Explicación
+### §7.1 Explicación
 
 Cada página debe tener un enlace hacia su padre, hacia páginas hijas o de soporte, y hacia páginas relacionadas del mismo silo.
 
-### Patrón o fórmula
+### §7.2 Patrón o fórmula
 
 ```text
 up + down + lateral links
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §7.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 LBS /cerrajero/madrid/cerrajero-urgente/ enlaza a /cerrajero/cerrajero-urgente/, /madrid/, servicios relacionados y artículos
 ```
 
-### Ejemplos incorrectos
+### §7.4 Ejemplos incorrectos
 
 ```text
 - Página local sin link al servicio padre
@@ -219,31 +219,31 @@ LBS /cerrajero/madrid/cerrajero-urgente/ enlaza a /cerrajero/cerrajero-urgente/,
 - GeoHub sin links a servicios
 ```
 
-### Regla final
+### §7.5 Regla final
 
 ```text
 Cada página debe tener padre, soporte y relación lateral.
 ```
 
-## Regla 2 — Homepage distribuye autoridad
+## §8 Regla 2 — Homepage distribuye autoridad
 
-### Explicación
+### §8.1 Explicación
 
 La homepage enlaza a servicios core, GeoHub de Main City, additional category principal y contacto.
 
-### Patrón o fórmula
+### §8.2 Patrón o fórmula
 
 ```text
 Homepage → Service Overview + Main City GeoHub + Contacto
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §8.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 / → /cerrajero/cerrajero-urgente/, /cerrajero/apertura-puertas/, /madrid/, /contacto/
 ```
 
-### Ejemplos incorrectos
+### §8.4 Ejemplos incorrectos
 
 ```text
 - Homepage enlaza a 100 zonas
@@ -251,31 +251,31 @@ Homepage → Service Overview + Main City GeoHub + Contacto
 - Homepage solo usa enlaces en footer
 ```
 
-### Regla final
+### §8.5 Regla final
 
 ```text
 La homepage reparte autoridad a las páginas base.
 ```
 
-## Regla 3 — Service Overview empuja la versión local
+## §9 Regla 3 — Service Overview empuja la versión local
 
-### Explicación
+### §9.1 Explicación
 
 Cada Service Overview debe enlazar a la versión Main City del servicio.
 
-### Patrón o fórmula
+### §9.2 Patrón o fórmula
 
 ```text
 Service Overview → Main City LBS
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §9.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/cerrajero-urgente/ → /cerrajero/madrid/cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §9.4 Ejemplos incorrectos
 
 ```text
 - Service Overview sin versión local
@@ -283,31 +283,31 @@ Service Overview → Main City LBS
 - Enlazar solo a blog
 ```
 
-### Regla final
+### §9.5 Regla final
 
 ```text
 El pilar temático empuja la landing local.
 ```
 
-## Regla 4 — GeoHub organiza la Main City
+## §10 Regla 4 — GeoHub organiza la Main City
 
-### Explicación
+### §10.1 Explicación
 
 El GeoHub debe enlazar a todas las páginas de servicio, categoría adicional y artículos de la Main City.
 
-### Patrón o fórmula
+### §10.2 Patrón o fórmula
 
 ```text
 GeoHub → all Main City pages
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §10.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /madrid/ → all /cerrajero/madrid/service/ + /madrid/articles/
 ```
 
-### Ejemplos incorrectos
+### §10.4 Ejemplos incorrectos
 
 ```text
 - GeoHub sin service menu
@@ -315,31 +315,31 @@ GeoHub → all Main City pages
 - GeoHub con solo texto
 ```
 
-### Regla final
+### §10.5 Regla final
 
 ```text
 El GeoHub es el índice interno de la Main City.
 ```
 
-## Regla 5 — Location-Based Service conecta servicio y ciudad
+## §11 Regla 5 — Location-Based Service conecta servicio y ciudad
 
-### Explicación
+### §11.1 Explicación
 
 La landing local conecta el servicio padre, el GeoHub, servicios relacionados y artículos.
 
-### Patrón o fórmula
+### §11.2 Patrón o fórmula
 
 ```text
 LBS → parent service + GeoHub + same-city services + articles
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §11.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/cerrajero-urgente/ → /cerrajero/cerrajero-urgente/ + /madrid/ + /madrid/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §11.4 Ejemplos incorrectos
 
 ```text
 - Landing sin GeoHub
@@ -347,31 +347,31 @@ LBS → parent service + GeoHub + same-city services + articles
 - Landing con enlaces a áreas inexistentes
 ```
 
-### Regla final
+### §11.5 Regla final
 
 ```text
 La landing local no puede quedar aislada.
 ```
 
-## Regla 6 — Additional Category se integra en el silo local
+## §12 Regla 6 — Additional Category se integra en el silo local
 
-### Explicación
+### §12.1 Explicación
 
 La categoría adicional debe enlazar al GeoHub, servicios relacionados y contenido útil.
 
-### Patrón o fórmula
+### §12.2 Patrón o fórmula
 
 ```text
 AC → GeoHub + related services + article
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §12.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/duplicado-llaves/ → /madrid/ + /cerrajero/madrid/instalacion-cerraduras-seguridad/
 ```
 
-### Ejemplos incorrectos
+### §12.4 Ejemplos incorrectos
 
 ```text
 - Categoría adicional huérfana
@@ -379,31 +379,31 @@ AC → GeoHub + related services + article
 - Duplicada con servicio core
 ```
 
-### Regla final
+### §12.5 Regla final
 
 ```text
 La categoría adicional complementa el cluster, no compite con él.
 ```
 
-## Regla 7 — GeoArticle pasa relevancia a la landing
+## §13 Regla 7 — GeoArticle pasa relevancia a la landing
 
-### Explicación
+### §13.1 Explicación
 
 Cada GeoArticle debe enlazar a su landing comercial y al GeoHub.
 
-### Patrón o fórmula
+### §13.2 Patrón o fórmula
 
 ```text
 GeoArticle → LBS + GeoHub + related article
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §13.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /madrid/cuanto-cuesta-un-cerrajero-urgente/ → /cerrajero/madrid/cerrajero-urgente/ + /madrid/
 ```
 
-### Ejemplos incorrectos
+### §13.4 Ejemplos incorrectos
 
 ```text
 - Artículo sin CTA interno
@@ -411,31 +411,31 @@ GeoArticle → LBS + GeoHub + related article
 - Artículo enlazando a área sin URL
 ```
 
-### Regla final
+### §13.5 Regla final
 
 ```text
 El artículo es booster, no destino final.
 ```
 
-## Regla 8 — Local Coverage Areas no reciben enlaces si no tienen URLs
+## §14 Regla 8 — Local Coverage Areas no reciben enlaces si no tienen URLs
 
-### Explicación
+### §14.1 Explicación
 
 Las áreas de cobertura se mencionan en texto, pero no se enlazan si no existe página aprobada.
 
-### Patrón o fórmula
+### §14.2 Patrón o fórmula
 
 ```text
 Mention only unless Approved Expansion URL exists
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §14.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Almagro se menciona, pero no se enlaza a /almagro/
 ```
 
-### Ejemplos incorrectos
+### §14.4 Ejemplos incorrectos
 
 ```text
 - Anchor a /almagro/ inexistente
@@ -443,31 +443,31 @@ Almagro se menciona, pero no se enlaza a /almagro/
 - Footer con enlaces a áreas sin página
 ```
 
-### Regla final
+### §14.5 Regla final
 
 ```text
 No enlaces a URLs que no existen.
 ```
 
-## Regla 9 — Anchor text variado
+## §15 Regla 9 — Anchor text variado
 
-### Explicación
+### §15.1 Explicación
 
 Los anchors deben variar entre exact match, partial, branded, CTA, local entity e informacional.
 
-### Patrón o fórmula
+### §15.2 Patrón o fórmula
 
 ```text
 Exact + partial + branded + CTA + informational
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §15.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 cerrajero urgente en Madrid; ayuda de cerrajero urgente en Madrid; Cerrajeros Madrid 24h; llama hoy a Cerrajeros Madrid 24h
 ```
 
-### Ejemplos incorrectos
+### §15.4 Ejemplos incorrectos
 
 ```text
 - Mismo anchor 20 veces
@@ -475,31 +475,31 @@ cerrajero urgente en Madrid; ayuda de cerrajero urgente en Madrid; Cerrajeros Ma
 - Anchors genéricos como haz clic aquí
 ```
 
-### Regla final
+### §15.5 Regla final
 
 ```text
 Anchor text natural y variado.
 ```
 
-## Regla 10 — Enlaces contextuales primero
+## §16 Regla 10 — Enlaces contextuales primero
 
-### Explicación
+### §16.1 Explicación
 
 Los enlaces en cuerpo tienen más sentido que repetirlo todo en footer.
 
-### Patrón o fórmula
+### §16.2 Patrón o fórmula
 
 ```text
 Intro/body/service blocks/FAQs/related resources/CTA
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §16.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Enlace a /madrid/ dentro de la intro local
 ```
 
-### Ejemplos incorrectos
+### §16.4 Ejemplos incorrectos
 
 ```text
 - Solo footer
@@ -507,14 +507,14 @@ Enlace a /madrid/ dentro de la intro local
 - Bloques de enlaces sin contexto
 ```
 
-### Regla final
+### §16.5 Regla final
 
 ```text
 Los enlaces deben vivir dentro del contenido.
 ```
 
 
-## Matriz de enlaces obligatorios por tipo de página
+## §17 Matriz de enlaces obligatorios por tipo de página
 
 | Source Page | Debe enlazar a | Objetivo |
 |---|---|---|
@@ -533,7 +533,7 @@ Los enlaces deben vivir dentro del contenido.
 | GeoArticle | Matching Location-Based Service Page | Pasar autoridad |
 | GeoArticle | Main City GeoHub | Reforzar ciudad |
 
-## Ejemplo completo de enlaces
+## §18 Ejemplo completo de enlaces
 
 ```text
 Source:
@@ -556,7 +556,7 @@ Anchor suggestions:
 - llama hoy a Cerrajeros Madrid 24h
 ```
 
-## Breadcrumbs recomendados
+## §19 Breadcrumbs recomendados
 
 ```text
 Homepage:
@@ -578,25 +578,25 @@ GeoArticle:
 Home > Madrid > Cerrajero urgente Cost Guide
 ```
 
-## Homepage distribuye autoridad inicial — Regla operativa 1
+## §20 Homepage distribuye autoridad inicial — Regla operativa 1
 
-### Explicación
+### §20.1 Explicación
 
 La homepage debe enlazar a las páginas más importantes de la arquitectura base: Service Overview Pages, Main City GeoHub, Additional Category principal y contacto. No debe enlazar a todas las áreas de cobertura si no tienen URL.
 
-### Patrón o fórmula
+### §20.2 Patrón o fórmula
 
 ```text
 Homepage → Service Overviews + Main GeoHub + Contacto
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §20.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h enlaza desde / a /cerrajero/cerrajero-urgente/, /cerrajero/apertura-puertas/, /madrid/ y /contacto/.
 ```
 
-### Ejemplos incorrectos
+### §20.4 Ejemplos incorrectos
 
 ```text
 - Homepage enlaza a zonas sin página
@@ -604,31 +604,31 @@ Cerrajeros Madrid 24h enlaza desde / a /cerrajero/cerrajero-urgente/, /cerrajero
 - Homepage solo enlaza al contacto
 ```
 
-### Regla final
+### §20.5 Regla final
 
 ```text
 La homepage debe distribuir autoridad hacia servicios y Main City.
 ```
 
-## Service Overview enlaza a su versión local — Regla operativa 2
+## §21 Service Overview enlaza a su versión local — Regla operativa 2
 
-### Explicación
+### §21.1 Explicación
 
 Cada Service Overview debe enlazar a la Location-Based Service Page de la Main City para transferir autoridad temática a la página comercial local.
 
-### Patrón o fórmula
+### §21.2 Patrón o fórmula
 
 ```text
 /category/service/ → /category/main-city/service/
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §21.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 La página /cerrajero/cerrajero-urgente/ enlaza a /cerrajero/madrid/cerrajero-urgente/ con anchor cerrajero urgente en Madrid.
 ```
 
-### Ejemplos incorrectos
+### §21.4 Ejemplos incorrectos
 
 ```text
 - No enlazar a la versión local
@@ -636,31 +636,31 @@ La página /cerrajero/cerrajero-urgente/ enlaza a /cerrajero/madrid/cerrajero-ur
 - Usar solo anchors genéricos como haz clic aquí
 ```
 
-### Regla final
+### §21.5 Regla final
 
 ```text
 El pilar de servicio debe empujar su versión local principal.
 ```
 
-## GeoHub enlaza a todo el cluster de Main City — Regla operativa 3
+## §22 GeoHub enlaza a todo el cluster de Main City — Regla operativa 3
 
-### Explicación
+### §22.1 Explicación
 
 El GeoHub debe ser el índice de la Main City. Debe enlazar a todas las páginas servicio+ciudad, categorías adicionales y GeoArticles de esa ciudad.
 
-### Patrón o fórmula
+### §22.2 Patrón o fórmula
 
 ```text
 /main-city/ → all Main City service pages + articles
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §22.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /madrid/ enlaza a /cerrajero/madrid/cerrajero-urgente/, /cerrajero/madrid/apertura-puertas/ y /madrid/cuanto-cuesta-un-cerrajero-urgente/.
 ```
 
-### Ejemplos incorrectos
+### §22.4 Ejemplos incorrectos
 
 ```text
 - GeoHub sin enlaces a servicios
@@ -668,31 +668,31 @@ El GeoHub debe ser el índice de la Main City. Debe enlazar a todas las páginas
 - GeoHub solo tiene texto de ciudad
 ```
 
-### Regla final
+### §22.5 Regla final
 
 ```text
 El GeoHub debe organizar todas las URLs de la Main City.
 ```
 
-## Location-Based Service enlaza hacia arriba — Regla operativa 4
+## §23 Location-Based Service enlaza hacia arriba — Regla operativa 4
 
-### Explicación
+### §23.1 Explicación
 
 Una página local debe enlazar a su Service Overview padre y al GeoHub. Esto conecta tópico y geografía, evitando que la landing quede aislada.
 
-### Patrón o fórmula
+### §23.2 Patrón o fórmula
 
 ```text
 LBS → Parent Service Overview + Main GeoHub
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §23.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/cerrajero-urgente/ enlaza a /cerrajero/cerrajero-urgente/ y /madrid/.
 ```
 
-### Ejemplos incorrectos
+### §23.4 Ejemplos incorrectos
 
 ```text
 - No enlazar al padre
@@ -700,31 +700,31 @@ LBS → Parent Service Overview + Main GeoHub
 - Enlazar solo a contacto
 ```
 
-### Regla final
+### §23.5 Regla final
 
 ```text
 La página local necesita conexión temática y geográfica.
 ```
 
-## Location-Based Service enlaza lateralmente — Regla operativa 5
+## §24 Location-Based Service enlaza lateralmente — Regla operativa 5
 
-### Explicación
+### §24.1 Explicación
 
 Las páginas locales deben enlazar a servicios relacionados en la misma Main City para crear cluster comercial. Estos enlaces ayudan al usuario y refuerzan co-ocurrencias de servicio local.
 
-### Patrón o fórmula
+### §24.2 Patrón o fórmula
 
 ```text
 LBS → related Main City services
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §24.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/cerrajero-urgente/ enlaza a /cerrajero/madrid/apertura-puertas/ y /cerrajero/madrid/instalacion-cerraduras-seguridad/.
 ```
 
-### Ejemplos incorrectos
+### §24.4 Ejemplos incorrectos
 
 ```text
 - Enlazar a servicios no relacionados
@@ -732,31 +732,31 @@ LBS → related Main City services
 - No usar anchors semánticos
 ```
 
-### Regla final
+### §24.5 Regla final
 
 ```text
 El enlace lateral debe ser útil y del mismo cluster local.
 ```
 
-## Additional Category integrada en el silo — Regla operativa 6
+## §25 Additional Category integrada en el silo — Regla operativa 6
 
-### Explicación
+### §25.1 Explicación
 
 La página de categoría adicional debe enlazar al GeoHub y a servicios relacionados para no quedar como página secundaria aislada.
 
-### Patrón o fórmula
+### §25.2 Patrón o fórmula
 
 ```text
 Additional Category → GeoHub + related local services
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §25.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/duplicado-llaves/ enlaza a /madrid/, /cerrajero/madrid/cambio-cerraduras/ y /cerrajero/madrid/instalacion-cerraduras-seguridad/.
 ```
 
-### Ejemplos incorrectos
+### §25.4 Ejemplos incorrectos
 
 ```text
 - Página adicional sin enlaces internos
@@ -764,31 +764,31 @@ Additional Category → GeoHub + related local services
 - No conectarla con servicios relacionados
 ```
 
-### Regla final
+### §25.5 Regla final
 
 ```text
 Una categoría adicional debe integrarse en el silo de Main City.
 ```
 
-## GeoArticle enlaza a la landing que apoya — Regla operativa 7
+## §26 GeoArticle enlaza a la landing que apoya — Regla operativa 7
 
-### Explicación
+### §26.1 Explicación
 
 Cada GeoArticle debe enlazar a la página comercial servicio+Main City que quiere reforzar. Sin ese enlace, el artículo no cumple su función de booster.
 
-### Patrón o fórmula
+### §26.2 Patrón o fórmula
 
 ```text
 GeoArticle → matching LBS + GeoHub + related article
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §26.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /madrid/cuanto-cuesta-un-cerrajero-urgente/ enlaza a /cerrajero/madrid/cerrajero-urgente/ y /madrid/.
 ```
 
-### Ejemplos incorrectos
+### §26.4 Ejemplos incorrectos
 
 ```text
 - Artículo sin enlace a landing
@@ -796,31 +796,31 @@ GeoArticle → matching LBS + GeoHub + related article
 - Artículo apunta a una URL inexistente
 ```
 
-### Regla final
+### §26.5 Regla final
 
 ```text
 El artículo debe pasar relevancia a la página comercial.
 ```
 
-## No enlaces a coverage areas sin URL — Regla operativa 8
+## §27 No enlaces a coverage areas sin URL — Regla operativa 8
 
-### Explicación
+### §27.1 Explicación
 
 Si una Local Coverage Area no es Approved Expansion Area, no debe recibir enlaces internos. Puede mencionarse en texto, pero no como anchor hacia una página inexistente.
 
-### Patrón o fórmula
+### §27.2 Patrón o fórmula
 
 ```text
 Local Coverage Area sin URL → mención textual | no link
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §27.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h menciona Almagro en contenido, pero no crea anchor a /almagro/ hasta que esa URL sea aprobada.
 ```
 
-### Ejemplos incorrectos
+### §27.4 Ejemplos incorrectos
 
 ```text
 - Crear anchors rotos hacia /almagro/
@@ -828,31 +828,31 @@ Cerrajeros Madrid 24h menciona Almagro en contenido, pero no crea anchor a /alma
 - Enlazar a búsquedas externas en vez de URLs propias
 ```
 
-### Regla final
+### §27.5 Regla final
 
 ```text
 Solo se enlaza a URLs reales y aprobadas.
 ```
 
-## Anchor text variado — Regla operativa 9
+## §28 Anchor text variado — Regla operativa 9
 
-### Explicación
+### §28.1 Explicación
 
 Los anchors deben ser naturales y variados. Usar siempre el exact match puede parecer mecánico y reduce calidad editorial.
 
-### Patrón o fórmula
+### §28.2 Patrón o fórmula
 
 ```text
 Exact match + partial match + branded + CTA + informational
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §28.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Usar cerrajero urgente en Madrid, ayuda urgente de apertura de puertas en Madrid, Cerrajeros Madrid 24h y consulta precios de cerrajero urgente.
 ```
 
-### Ejemplos incorrectos
+### §28.4 Ejemplos incorrectos
 
 ```text
 - Repetir urgente cerrajero Madrid en todos los enlaces
@@ -860,31 +860,31 @@ Usar cerrajero urgente en Madrid, ayuda urgente de apertura de puertas en Madrid
 - Usar anchors irrelevantes
 ```
 
-### Regla final
+### §28.5 Regla final
 
 ```text
 El anchor debe reflejar intención y contexto.
 ```
 
-## Breadcrumbs como enlace estructural — Regla operativa 10
+## §29 Breadcrumbs como enlace estructural — Regla operativa 10
 
-### Explicación
+### §29.1 Explicación
 
 Los breadcrumbs ayudan a usuarios y motores a entender jerarquía. Deben reflejar el page type y no inventar niveles de cobertura inexistentes.
 
-### Patrón o fórmula
+### §29.2 Patrón o fórmula
 
 ```text
 Home → Main City / Category → Service
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §29.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Para /cerrajero/madrid/cerrajero-urgente/: Home > Cerrajero > Madrid > Cerrajero urgente.
 ```
 
-### Ejemplos incorrectos
+### §29.4 Ejemplos incorrectos
 
 ```text
 - Home > Almagro si la página es de Madrid
@@ -892,31 +892,31 @@ Para /cerrajero/madrid/cerrajero-urgente/: Home > Cerrajero > Madrid > Cerrajero
 - Usar breadcrumbs que no coinciden con URLs
 ```
 
-### Regla final
+### §29.5 Regla final
 
 ```text
 Breadcrumbs deben reflejar jerarquía real.
 ```
 
-## Inbound links esperados — Regla operativa 11
+## §30 Inbound links esperados — Regla operativa 11
 
-### Explicación
+### §30.1 Explicación
 
 La matriz debe prever desde qué páginas recibirá enlaces cada URL importante. Esto evita páginas huérfanas y permite QA de silo.
 
-### Patrón o fórmula
+### §30.2 Patrón o fórmula
 
 ```text
 Target URL → inbound sources mínimas
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §30.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/cerrajero-urgente/ recibe enlaces desde homepage, Service Overview, GeoHub y GeoArticles.
 ```
 
-### Ejemplos incorrectos
+### §30.4 Ejemplos incorrectos
 
 ```text
 - Crear páginas sin inbound links
@@ -924,31 +924,31 @@ Target URL → inbound sources mínimas
 - No revisar enlaces entrantes en QA
 ```
 
-### Regla final
+### §30.5 Regla final
 
 ```text
 Toda página clave debe tener enlaces entrantes planificados.
 ```
 
-## Expansion linking separado — Regla operativa 12
+## §31 Expansion linking separado — Regla operativa 12
 
-### Explicación
+### §31.1 Explicación
 
 Cuando una Approved Expansion Area genera URLs, se añade una capa de linking propia. No debe contaminar la base hasta que exista el cluster.
 
-### Patrón o fórmula
+### §31.2 Patrón o fórmula
 
 ```text
 Approved Expansion GeoHub → expansion service pages → related articles
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §31.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Si Almagro se aprueba, /almagro/ enlaza a /cerrajero/almagro/cerrajero-urgente/ y esa página vuelve a /cerrajero/cerrajero-urgente/.
 ```
 
-### Ejemplos incorrectos
+### §31.4 Ejemplos incorrectos
 
 ```text
 - Enlazar expansión antes de publicar páginas
@@ -956,13 +956,13 @@ Si Almagro se aprueba, /almagro/ enlaza a /cerrajero/almagro/cerrajero-urgente/ 
 - No enlazar la expansión al servicio padre
 ```
 
-### Regla final
+### §31.5 Regla final
 
 ```text
 La expansión se enlaza solo cuando sus URLs existen.
 ```
 
-## Checklist final del Paso 7
+## §32 Checklist final del Paso 7
 
 | Check | Pregunta | Estado |
 |---|---|---|
@@ -976,7 +976,7 @@ La expansión se enlaza solo cuando sus URLs existen.
 | Placement | ¿Los enlaces están en contenido contextual? | ✅ / ⬜ |
 | Breadcrumbs | ¿La ruta de navegación es lógica? | ✅ / ⬜ |
 
-## Outputs del Paso 7
+## §33 Outputs del Paso 7
 
 - Mapa de enlaces internos por tipo de página
 - Anchors sugeridos
@@ -988,7 +988,7 @@ La expansión se enlaza solo cuando sus URLs existen.
 
 ---
 
-# Fuentes internas GMB Crush usadas
+# §34 Fuentes internas GMB Crush usadas
 
 - Analysis Framework.pdf
 - GMB CRUSH Universal AI Local SEO Framework Template
@@ -1001,7 +1001,7 @@ La expansión se enlaza solo cuando sus URLs existen.
 
 
 
-### GeoArticles completos (15)
+### §34.1 GeoArticles completos (15)
 
 > **Aviso de trazabilidad:** estos 15 títulos son un primer borrador derivado de la fórmula G × S = 15 y de la lógica del servicio. **No vienen de keyword research real**. Antes de producirlos hay que validar volumen de búsqueda, dificultad y oportunidad competitiva por título. La fórmula garantiza la cantidad; los temas concretos requieren validación.
 

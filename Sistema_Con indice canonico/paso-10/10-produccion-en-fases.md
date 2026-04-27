@@ -2,13 +2,13 @@ Versión literal del chat · Sistema GMB Crush para webs locales
 Documento regenerado siguiendo la estructura fija acordada en la conversación.
 Proveniencia: sistema construido paso a paso en el chat y alineado con los frameworks oficiales GMB Crush.
 
-# Paso 10 — Producción en Fases
+# §1 Paso 10 — Producción en Fases
 
-## Índice corto
+## §2 Índice corto
 
 **Paso 10 — Producción en Fases**
 
-## Objetivo del Paso 10
+## §3 Objetivo del Paso 10
 
 Este paso existe para resolver un problema concreto dentro del sistema GMB Crush: convertir la matriz y las prioridades en un calendario de construcción realista con dependencias claras.
 La web local no debe construirse desde la intuición, sino desde una secuencia operativa que conecta entidad, categoría GBP, servicios, ciudad principal, cobertura local, schema, contenido e interlinking.
@@ -36,7 +36,7 @@ Error que previene: activar expansión antes de terminar la Main City.
 Error que previene: olvidar QA entre producción y publicación.
 Error que previene: crear contenido sin enlaces internos preparados.
 
-## Lo que tienes que rellenar
+## §4 Lo que tienes que rellenar
 
 ```text
 Business Name:
@@ -122,7 +122,7 @@ Tracking Available:
 GMB Crush Geo Grid / Google Search Console / GA4 / Rank Tracker / None
 ```
 
-## Ejemplo rellenado
+## §5 Ejemplo rellenado
 
 ```text
 Business Name:
@@ -195,29 +195,29 @@ Tracking Available:
 GMB Crush Geo Grid, Google Search Console, GA4
 ```
 
-# Cuerpo operativo del Paso 10
+# §6 Cuerpo operativo del Paso 10
 
 > **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
-## Fase 1 — Entity Foundation
+## §7 Fase 1 — Entity Foundation
 
-### Explicación
+### §7.1 Explicación
 
 Construye la entidad base: homepage, contacto, about, top service overview pages y Main City GeoHub.
 
-### Patrón o fórmula
+### §7.2 Patrón o fórmula
 
 ```text
 Homepage + Contacto + About + Top Service Overview + Main City GeoHub
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §7.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /, /contacto/, /cerrajero/cerrajero-urgente/, /cerrajero/apertura-puertas/, /madrid/
 ```
 
-### Ejemplos incorrectos
+### §7.4 Ejemplos incorrectos
 
 ```text
 - Empezar por artículos
@@ -225,31 +225,31 @@ Homepage + Contacto + About + Top Service Overview + Main City GeoHub
 - Publicar páginas sin NAP
 ```
 
-### Regla final
+### §7.5 Regla final
 
 ```text
 Primero se construye la entidad.
 ```
 
-## Fase 2 — Main City Conversion Layer
+## §8 Fase 2 — Main City Conversion Layer
 
-### Explicación
+### §8.1 Explicación
 
 Construye las páginas comerciales de la Main City.
 
-### Patrón o fórmula
+### §8.2 Patrón o fórmula
 
 ```text
 Main City Location-Based Service Pages + Additional Category
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §8.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/cerrajero-urgente/, /cerrajero/madrid/apertura-puertas/, /cerrajero/madrid/duplicado-llaves/
 ```
 
-### Ejemplos incorrectos
+### §8.4 Ejemplos incorrectos
 
 ```text
 - Crear /almagro/ sin aprobación
@@ -257,31 +257,31 @@ Main City Location-Based Service Pages + Additional Category
 - No enlazar al GeoHub
 ```
 
-### Regla final
+### §8.5 Regla final
 
 ```text
 Después de la entidad van las landings comerciales.
 ```
 
-## Fase 3 — Main City Semantic Expansion
+## §9 Fase 3 — Main City Semantic Expansion
 
-### Explicación
+### §9.1 Explicación
 
 Construye GeoArticles que apoyan las landings ya publicadas.
 
-### Patrón o fórmula
+### §9.2 Patrón o fórmula
 
 ```text
 GeoArticles for Main City
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §9.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /madrid/cuanto-cuesta-un-cerrajero-urgente/, /madrid/que-hacer-si-no-puedes-entrar-casa/
 ```
 
-### Ejemplos incorrectos
+### §9.4 Ejemplos incorrectos
 
 ```text
 - Artículo sin landing
@@ -289,31 +289,31 @@ GeoArticles for Main City
 - Artículo para cobertura no aprobada
 ```
 
-### Regla final
+### §9.5 Regla final
 
 ```text
 Los artículos apoyan landings existentes.
 ```
 
-## Fase 4 — Optimization Loop
+## §10 Fase 4 — Optimization Loop
 
-### Explicación
+### §10.1 Explicación
 
 Usa datos para mejorar enlaces, metadatos, FAQs, schema y contenidos.
 
-### Patrón o fórmula
+### §10.2 Patrón o fórmula
 
 ```text
 Geo-grid + GSC + QA + refresh
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §10.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Actualizar /cerrajero/madrid/cerrajero-urgente/ si tiene impresiones sin leads
 ```
 
-### Ejemplos incorrectos
+### §10.4 Ejemplos incorrectos
 
 ```text
 - No medir
@@ -321,31 +321,31 @@ Actualizar /cerrajero/madrid/cerrajero-urgente/ si tiene impresiones sin leads
 - No revisar canibalización
 ```
 
-### Regla final
+### §10.5 Regla final
 
 ```text
 Publicar no es el final.
 ```
 
-## Fase 5 — Optional Expansion Module
+## §11 Fase 5 — Optional Expansion Module
 
-### Explicación
+### §11.1 Explicación
 
 Solo si una Local Coverage Area se aprueba, se crean páginas de expansión.
 
-### Patrón o fórmula
+### §11.2 Patrón o fórmula
 
 ```text
 Approved Expansion Area URLs
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §11.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Almagro expansion only if approved
 ```
 
-### Ejemplos incorrectos
+### §11.4 Ejemplos incorrectos
 
 ```text
 - Activar todas las zonas
@@ -353,16 +353,16 @@ Almagro expansion only if approved
 - Expansión antes de Main City
 ```
 
-### Regla final
+### §11.5 Regla final
 
 ```text
 La expansión es opcional y posterior.
 ```
 
 
-## Calendario ejemplo con 5 páginas por semana
+## §12 Calendario ejemplo con 5 páginas por semana
 
-### Semana 1 — Entity Foundation
+### §12.1 Semana 1 — Entity Foundation
 
 | Día | Página |
 |---|---|
@@ -372,7 +372,7 @@ La expansión es opcional y posterior.
 | 4 | `/cerrajero/apertura-puertas/` |
 | 5 | `/cerrajero/cambio-bombines/` |
 
-### Semana 2 — Main City Foundation
+### §12.2 Semana 2 — Main City Foundation
 
 | Día | Página |
 |---|---|
@@ -382,7 +382,7 @@ La expansión es opcional y posterior.
 | 4 | `/cerrajero/madrid/cambio-bombines/` |
 | 5 | `/cerrajero/cambio-cerraduras/` |
 
-### Semana 3 — Main City Completion
+### §12.3 Semana 3 — Main City Completion
 
 | Día | Página |
 |---|---|
@@ -392,7 +392,7 @@ La expansión es opcional y posterior.
 | 4 | `/cerrajero/madrid/duplicado-llaves/` |
 | 5 | Internal linking QA |
 
-### Semana 4 — First GeoArticle Cluster
+### §12.4 Semana 4 — First GeoArticle Cluster
 
 | Día | Página |
 |---|---|
@@ -402,7 +402,7 @@ La expansión es opcional y posterior.
 | 4 | Schema QA |
 | 5 | Geo-grid baseline |
 
-## Dependencias de publicación
+## §13 Dependencias de publicación
 
 | Página | Debe existir antes |
 |---|---|
@@ -413,25 +413,25 @@ La expansión es opcional y posterior.
 | GeoArticle | Matching Location-Based Service + GeoHub |
 | Expansion Page | Approved Expansion Area + base system published |
 
-## Phase 1 Entity Foundation — Regla operativa 1
+## §14 Phase 1 Entity Foundation — Regla operativa 1
 
-### Explicación
+### §14.1 Explicación
 
 La primera fase construye la entidad: homepage, contacto, about, servicios core y Main City GeoHub. Sin esta base, las páginas locales y artículos no tienen soporte.
 
-### Patrón o fórmula
+### §14.2 Patrón o fórmula
 
 ```text
 Homepage + Contacto + About + Service Overviews + Main GeoHub
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §14.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h publica /, /contacto/, /about/, /cerrajero/cerrajero-urgente/ y /madrid/ en la primera base.
 ```
 
-### Ejemplos incorrectos
+### §14.4 Ejemplos incorrectos
 
 ```text
 - Empezar por GeoArticles
@@ -439,31 +439,31 @@ Cerrajeros Madrid 24h publica /, /contacto/, /about/, /cerrajero/cerrajero-urgen
 - No crear contact page con NAP
 ```
 
-### Regla final
+### §14.5 Regla final
 
 ```text
 Primero se construye la entidad y los pilares.
 ```
 
-## Phase 2 Main City Conversion — Regla operativa 2
+## §15 Phase 2 Main City Conversion — Regla operativa 2
 
-### Explicación
+### §15.1 Explicación
 
 La segunda fase publica las páginas comerciales de la Main City. Estas son las que captan intención servicio+ciudad y sostienen Local Pack y GBP support.
 
-### Patrón o fórmula
+### §15.2 Patrón o fórmula
 
 ```text
 Páginas de servicio en la Main City + Additional Category Pages
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §15.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h publica /cerrajero/madrid/cerrajero-urgente/, /cerrajero/madrid/apertura-puertas/ y /cerrajero/madrid/duplicado-llaves/.
 ```
 
-### Ejemplos incorrectos
+### §15.4 Ejemplos incorrectos
 
 ```text
 - Publicar expansión antes de Madrid
@@ -471,31 +471,31 @@ Cerrajeros Madrid 24h publica /cerrajero/madrid/cerrajero-urgente/, /cerrajero/m
 - Dejar páginas P1 sin CTA
 ```
 
-### Regla final
+### §15.5 Regla final
 
 ```text
 La conversión local de Main City va antes que expansión.
 ```
 
-## Phase 3 Semantic Expansion — Regla operativa 3
+## §16 Phase 3 Semantic Expansion — Regla operativa 3
 
-### Explicación
+### §16.1 Explicación
 
 La tercera fase crea GeoArticles que apoyan landings ya publicadas. Esta fase refuerza AI Overview, long-tail y enlaces internos.
 
-### Patrón o fórmula
+### §16.2 Patrón o fórmula
 
 ```text
 GeoArticles → matching LBS + GeoHub
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §16.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Después de /cerrajero/madrid/cerrajero-urgente/, Cerrajeros Madrid 24h publica /madrid/cuanto-cuesta-un-cerrajero-urgente/.
 ```
 
-### Ejemplos incorrectos
+### §16.4 Ejemplos incorrectos
 
 ```text
 - Artículo sin landing de destino
@@ -503,31 +503,31 @@ Después de /cerrajero/madrid/cerrajero-urgente/, Cerrajeros Madrid 24h publica 
 - Publicar 15 artículos antes de las páginas comerciales
 ```
 
-### Regla final
+### §16.5 Regla final
 
 ```text
 Los GeoArticles apoyan páginas ya existentes.
 ```
 
-## Phase 4 Optimization Loop — Regla operativa 4
+## §17 Phase 4 Optimization Loop — Regla operativa 4
 
-### Explicación
+### §17.1 Explicación
 
 Después de publicar, el sistema entra en optimización. Se revisan rankings, GSC, leads, CTR, schema, enlaces y contenido.
 
-### Patrón o fórmula
+### §17.2 Patrón o fórmula
 
 ```text
 Publicación → medición → ajustes → refresh
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §17.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h revisa Search Console y añade FAQs si /cerrajero/madrid/apertura-puertas/ tiene impresiones pero bajo CTR.
 ```
 
-### Ejemplos incorrectos
+### §17.4 Ejemplos incorrectos
 
 ```text
 - Publicar y no medir
@@ -535,31 +535,31 @@ Cerrajeros Madrid 24h revisa Search Console y añade FAQs si /cerrajero/madrid/a
 - No revisar schema
 ```
 
-### Regla final
+### §17.5 Regla final
 
 ```text
 La implementación se optimiza con datos.
 ```
 
-## Phase 5 Optional Expansion — Regla operativa 5
+## §18 Phase 5 Optional Expansion — Regla operativa 5
 
-### Explicación
+### §18.1 Explicación
 
 La expansión territorial solo se activa si una Local Coverage Area pasa a Approved Expansion Area. Esta fase no pertenece a la base.
 
-### Patrón o fórmula
+### §18.2 Patrón o fórmula
 
 ```text
 Approved Expansion Area → GeoHub + service pages + articles
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §18.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Si Almagro se aprueba, Cerrajeros Madrid 24h crea /almagro/ y /cerrajero/almagro/cerrajero-urgente/ como Phase 5.
 ```
 
-### Ejemplos incorrectos
+### §18.4 Ejemplos incorrectos
 
 ```text
 - Crear todas las áreas como fase inicial
@@ -567,31 +567,31 @@ Si Almagro se aprueba, Cerrajeros Madrid 24h crea /almagro/ y /cerrajero/almagro
 - No justificar expansión
 ```
 
-### Regla final
+### §18.5 Regla final
 
 ```text
 La expansión es opcional y aprobada.
 ```
 
-## Dependencias por lote — Regla operativa 6
+## §19 Dependencias por lote — Regla operativa 6
 
-### Explicación
+### §19.1 Explicación
 
 Cada lote debe respetar dependencias. Una página hija no se publica si su padre, GeoHub o destino de enlace no existe.
 
-### Patrón o fórmula
+### §19.2 Patrón o fórmula
 
 ```text
 Dependency check → lote aprobado → publicación
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §19.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 El artículo /madrid/cuanto-tarda-un-cerrajero/ espera a que existan /madrid/ y /cerrajero/madrid/cerrajero-urgente/.
 ```
 
-### Ejemplos incorrectos
+### §19.4 Ejemplos incorrectos
 
 ```text
 - Publicar artículos huérfanos
@@ -599,31 +599,31 @@ El artículo /madrid/cuanto-tarda-un-cerrajero/ espera a que existan /madrid/ y 
 - No actualizar links tras publicar el lote
 ```
 
-### Regla final
+### §19.5 Regla final
 
 ```text
 Cada lote debe ser publicable y enlazable.
 ```
 
-## QA por lote — Regla operativa 7
+## §20 QA por lote — Regla operativa 7
 
-### Explicación
+### §20.1 Explicación
 
 No basta con hacer QA página por página. Cada lote debe revisarse como conjunto: enlaces cruzados, breadcrumbs, status y coherencia de contenido.
 
-### Patrón o fórmula
+### §20.2 Patrón o fórmula
 
 ```text
 Batch complete → internal links → QA → publish
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §20.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 El lote de Páginas de servicio en la Main City de Cerrajeros Madrid 24h se revisa antes de publicar para asegurar enlaces entre servicios relacionados.
 ```
 
-### Ejemplos incorrectos
+### §20.4 Ejemplos incorrectos
 
 ```text
 - Publicar páginas individuales sin links laterales
@@ -631,31 +631,31 @@ El lote de Páginas de servicio en la Main City de Cerrajeros Madrid 24h se revi
 - No sincronizar status en matriz
 ```
 
-### Regla final
+### §20.5 Regla final
 
 ```text
 Cada lote debe salir como mini-cluster completo.
 ```
 
-## Capacidad de publicación realista — Regla operativa 8
+## §21 Capacidad de publicación realista — Regla operativa 8
 
-### Explicación
+### §21.1 Explicación
 
 El plan debe adaptarse a la capacidad del equipo. Producir más páginas de las que se pueden escribir, maquetar, enlazar y revisar aumenta errores.
 
-### Patrón o fórmula
+### §21.2 Patrón o fórmula
 
 ```text
 Publishing Capacity → calendario semanal → QA
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §21.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Si Cerrajeros Madrid 24h puede publicar 5 páginas por semana, no programa 20 páginas con QA completo en una semana.
 ```
 
-### Ejemplos incorrectos
+### §21.4 Ejemplos incorrectos
 
 ```text
 - Calendario irreal
@@ -663,31 +663,31 @@ Si Cerrajeros Madrid 24h puede publicar 5 páginas por semana, no programa 20 p�
 - No asignar responsables
 ```
 
-### Regla final
+### §21.5 Regla final
 
 ```text
 La velocidad debe respetar calidad y revisión.
 ```
 
-## Refresh de contenido — Regla operativa 9
+## §22 Refresh de contenido — Regla operativa 9
 
-### Explicación
+### §22.1 Explicación
 
 Los contenidos importantes deben revisarse periódicamente. GeoArticles, FAQs, metadatos y CTAs pueden mejorar con datos de búsqueda y conversión.
 
-### Patrón o fórmula
+### §22.2 Patrón o fórmula
 
 ```text
 3–6 meses → refresh → enlaces + FAQs + metadata
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §22.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h refresca /madrid/cuanto-cuesta-un-cerrajero-urgente/ a los 6 meses con nuevas FAQs y enlaces.
 ```
 
-### Ejemplos incorrectos
+### §22.4 Ejemplos incorrectos
 
 ```text
 - No actualizar artículos
@@ -695,31 +695,31 @@ Cerrajeros Madrid 24h refresca /madrid/cuanto-cuesta-un-cerrajero-urgente/ a los
 - No añadir enlaces a nuevas páginas publicadas
 ```
 
-### Regla final
+### §22.5 Regla final
 
 ```text
 El contenido local debe mantenerse vivo.
 ```
 
-## No expansión prematura — Regla operativa 10
+## §23 No expansión prematura — Regla operativa 10
 
-### Explicación
+### §23.1 Explicación
 
 La presión por cubrir más zonas no debe romper la base. La expansión solo llega cuando Main City, servicios core, GeoHub, artículos iniciales y tracking están funcionando.
 
-### Patrón o fórmula
+### §23.2 Patrón o fórmula
 
 ```text
 Base completa → datos → expansión aprobada
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §23.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h no crea /almagro/ hasta tener el cluster de Madrid publicado y datos que justifiquen Almagro.
 ```
 
-### Ejemplos incorrectos
+### §23.4 Ejemplos incorrectos
 
 ```text
 - Expandir antes de terminar Main City
@@ -727,13 +727,13 @@ Cerrajeros Madrid 24h no crea /almagro/ hasta tener el cluster de Madrid publica
 - Abandonar el GeoHub principal
 ```
 
-### Regla final
+### §23.5 Regla final
 
 ```text
 Primero dominio local central; después expansión.
 ```
 
-## Checklist final del Paso 10
+## §24 Checklist final del Paso 10
 
 | Check | Pregunta | Estado |
 |---|---|---|
@@ -746,7 +746,7 @@ Primero dominio local central; después expansión.
 | QA | ¿Cada lote pasa QA antes de publicar? | ✅ / ⬜ |
 | Internal links | ¿Los enlaces están listos antes de publicar? | ✅ / ⬜ |
 
-## Outputs del Paso 10
+## §25 Outputs del Paso 10
 
 - Plan de producción por fases
 - Calendario ejemplo
@@ -754,20 +754,20 @@ Primero dominio local central; después expansión.
 - Reglas de expansión opcional
 - Orden de publicación recomendado
 - QA por lote
-## Fase 5 — GBP Creation & Website Alignment
+## §26 Fase 5 — GBP Creation & Website Alignment
 
-### Explicación
+### §26.1 Explicación
 
 Esta fase se ejecuta después de publicar la web base. El objetivo es crear el Google Business Profile usando la web como fuente de verdad, confirmar las categorías, conectar la URL correcta, añadir servicios, preparar fotos, solicitar reseñas reales y actualizar schema, sameAs y bloques de confianza.
 
-### Patrón o fórmula
+### §26.2 Patrón o fórmula
 
 ```text
 Phase 1–4 = build, publish, QA and optimize website base
 Phase 5 = create GBP and synchronize website signals
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §26.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Antes de crear el GBP:
@@ -783,7 +783,7 @@ Después:
 - Actualizar schema sameAs
 ```
 
-### Ejemplos incorrectos
+### §26.4 Ejemplos incorrectos
 
 ```text
 - Crear el GBP con una web vacía.
@@ -791,7 +791,7 @@ Después:
 - Usar categorías del GBP que no tienen soporte en la web.
 ```
 
-### Regla final
+### §26.5 Regla final
 
 ```text
 La web base se publica primero; el GBP se crea y se sincroniza después.
@@ -801,7 +801,7 @@ La web base se publica primero; el GBP se crea y se sincroniza después.
 
 ---
 
-# Fuentes internas GMB Crush usadas
+# §27 Fuentes internas GMB Crush usadas
 
 - Analysis Framework.pdf
 - GMB CRUSH Universal AI Local SEO Framework Template
@@ -814,7 +814,7 @@ La web base se publica primero; el GBP se crea y se sincroniza después.
 
 
 
-### GeoArticles completos (15)
+### §27.1 GeoArticles completos (15)
 
 > **Aviso de trazabilidad:** estos 15 títulos son un primer borrador derivado de la fórmula G × S = 15 y de la lógica del servicio. **No vienen de keyword research real**. Antes de producirlos hay que validar volumen de búsqueda, dificultad y oportunidad competitiva por título. La fórmula garantiza la cantidad; los temas concretos requieren validación.
 
@@ -845,7 +845,7 @@ La web base se publica primero; el GBP se crea y se sincroniza después.
 
 
 
-### Calendario de producción completo
+### §27.2 Calendario de producción completo
 
 **Fase 1 — Estructura base (Semana 1-2):**
 - / (Homepage)

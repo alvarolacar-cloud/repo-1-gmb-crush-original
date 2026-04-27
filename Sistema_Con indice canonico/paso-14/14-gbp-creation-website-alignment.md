@@ -2,13 +2,13 @@ Versión literal del chat · Sistema GMB Crush para webs locales
 Documento regenerado siguiendo la estructura fija acordada en la conversación.
 Proveniencia: sistema construido paso a paso en el chat y alineado con los frameworks oficiales GMB Crush.
 
-# Paso 14 — GBP Creation & Website Alignment
+# §1 Paso 14 — GBP Creation & Website Alignment
 
-## Índice corto
+## §2 Índice corto
 
 **Paso 14 — GBP Creation & Website Alignment**
 
-## Objetivo del Paso 14
+## §3 Objetivo del Paso 14
 
 Este paso existe para resolver un problema concreto dentro del sistema GMB Crush: crear y alinear el Google Business Profile después de haber construido la web base.
 En esta versión del sistema, el GBP no existe al principio.
@@ -44,7 +44,7 @@ Error que previene: crear un GBP duplicado o con nombre sobreoptimizado.
 Error que previene: conectar el GBP a una URL incorrecta.
 Error que previene: olvidar actualizar la web después de crear el GBP.
 
-## Lo que tienes que rellenar
+## §4 Lo que tienes que rellenar
 
 ```text
 Business Name:
@@ -174,7 +174,7 @@ Tracking Setup:
 - GBP performance:
 ```
 
-## Ejemplo rellenado
+## §5 Ejemplo rellenado
 
 ```text
 Business Name:
@@ -312,23 +312,23 @@ Tracking Setup:
 - GBP performance: Revisar tras creación
 ```
 
-# Cuerpo operativo del Paso 14
+# §6 Cuerpo operativo del Paso 14
 
 > **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
-## Regla operativa — Crear el GBP después de publicar la web base
+## §7 Regla operativa — Crear el GBP después de publicar la web base
 
-### Explicación
+### §7.1 Explicación
 
 El GBP debe crearse cuando la web ya tenga una entidad mínima sólida. La homepage, la página de contacto, el GeoHub de la Main City y las páginas comerciales principales deben existir antes de conectar el perfil. Esto permite que Google encuentre una web coherente, con NAP, servicios, contenido local, schema y arquitectura interna. Crear el perfil antes de tener web puede funcionar, pero en este sistema web-first no es la opción preferida.
 
-### Patrón o fórmula
+### §7.2 Patrón o fórmula
 
 ```text
 Website base published → GBP creation → GBP verification → website synchronization
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §7.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Antes de crear el GBP:
@@ -339,7 +339,7 @@ Antes de crear el GBP:
 - /cerrajero/madrid/apertura-puertas/ publicada
 ```
 
-### Ejemplos incorrectos
+### §7.4 Ejemplos incorrectos
 
 ```text
 - Crear el GBP con una web sin páginas de servicio.
@@ -347,25 +347,25 @@ Antes de crear el GBP:
 - Crear el GBP y después decidir qué categoría o servicios tendrá la web.
 ```
 
-### Regla final
+### §7.5 Regla final
 
 ```text
 El GBP debe apuntar a una web que ya explique quién eres, qué haces y dónde operas.
 ```
 
-## Regla operativa — Convertir categorías planificadas en categorías confirmadas
+## §8 Regla operativa — Convertir categorías planificadas en categorías confirmadas
 
-### Explicación
+### §8.1 Explicación
 
 Durante los pasos 1–13 se trabaja con Planned Primary GBP Category y Planned Additional GBP Categories. En el Paso 14 esas categorías se revisan y se convierten en categorías confirmadas. Si una categoría no está disponible, no representa el negocio o no tiene soporte en la web, no debe usarse.
 
-### Patrón o fórmula
+### §8.2 Patrón o fórmula
 
 ```text
 Planned Category → availability check → relevance check → website support check → Confirmed GBP Category
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §8.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Planned Primary GBP Category:
@@ -378,7 +378,7 @@ Motivo:
 La web tiene homepage, servicios core, páginas en Madrid y contenido de soporte para cerrajería.
 ```
 
-### Ejemplos incorrectos
+### §8.4 Ejemplos incorrectos
 
 ```text
 - Confirmar una categoría porque parece más amplia pero no representa el negocio.
@@ -386,25 +386,25 @@ La web tiene homepage, servicios core, páginas en Madrid y contenido de soporte
 - Elegir una categoría por volumen de búsqueda aunque no coincida con los servicios reales.
 ```
 
-### Regla final
+### §8.5 Regla final
 
 ```text
 La categoría confirmada del GBP debe estar soportada por la intención real del negocio y por la arquitectura web.
 ```
 
-## Regla operativa — Validar el NAP final antes de crear el perfil
+## §9 Regla operativa — Validar el NAP final antes de crear el perfil
 
-### Explicación
+### §9.1 Explicación
 
 El NAP final debe coincidir en la web, schema, página de contacto, footer y GBP. Si el GBP se crea con un teléfono o dirección distinta, la entidad queda debilitada. La dirección debe tratarse con cuidado si el negocio es service area business. No se debe publicar una dirección falsa ni usar una ubicación donde no exista elegibilidad real.
 
-### Patrón o fórmula
+### §9.2 Patrón o fórmula
 
 ```text
 Final NAP = Website NAP = Schema NAP = Contact Page NAP = GBP NAP
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §9.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Name:
@@ -418,7 +418,7 @@ Email:
 +34 600 000 000
 ```
 
-### Ejemplos incorrectos
+### §9.4 Ejemplos incorrectos
 
 ```text
 - Usar un teléfono diferente en el GBP.
@@ -426,19 +426,19 @@ Email:
 - Usar una dirección donde el negocio no puede recibir verificación o no opera realmente.
 ```
 
-### Regla final
+### §9.5 Regla final
 
 ```text
 El NAP del GBP no debe contradecir el NAP de la web.
 ```
 
-## Regla operativa — Elegir el modelo de negocio correcto
+## §10 Regla operativa — Elegir el modelo de negocio correcto
 
-### Explicación
+### §10.1 Explicación
 
 El modelo del GBP afecta a dirección visible, áreas de servicio, fotos y expectativas del usuario. Un cerrajero móvil suele funcionar como service area business o híbrido si también tiene atención física real. El modelo no debe elegirse por SEO, sino por realidad operativa.
 
-### Patrón o fórmula
+### §10.2 Patrón o fórmula
 
 ```text
 Storefront = clientes visitan la ubicación
@@ -446,7 +446,7 @@ Service Area Business = el negocio atiende en ubicaciones del cliente
 Hybrid = ambas situaciones son reales
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §10.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Business Model:
@@ -456,7 +456,7 @@ Motivo:
 El servicio se presta principalmente en viviendas, locales, oficinas y comunidades de clientes en Madrid.
 ```
 
-### Ejemplos incorrectos
+### §10.4 Ejemplos incorrectos
 
 ```text
 - Usar Storefront si no hay atención al público.
@@ -464,32 +464,32 @@ El servicio se presta principalmente en viviendas, locales, oficinas y comunidad
 - Crear varias fichas para zonas de cobertura sin sedes reales.
 ```
 
-### Regla final
+### §10.5 Regla final
 
 ```text
 El modelo de GBP debe reflejar cómo el negocio atiende realmente a sus clientes.
 ```
 
-## Regla operativa — Conectar el GBP a la URL correcta
+## §11 Regla operativa — Conectar el GBP a la URL correcta
 
-### Explicación
+### §11.1 Explicación
 
 El GBP debe apuntar a la URL que mejor representa la entidad. Para la mayoría de negocios locales, esa URL será la homepage. Si el negocio es muy específico y la homepage ya actúa como Root Entity Anchor, se conecta al dominio raíz. No se debe conectar a una página débil, temporal, sin NAP o sin contenido local.
 
-### Patrón o fórmula
+### §11.2 Patrón o fórmula
 
 ```text
 GBP Website URL = homepage or strongest local entity page
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §11.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 GBP Website URL:
 https://www.cerrajerosmadrid24h.com/
 ```
 
-### Ejemplos incorrectos
+### §11.4 Ejemplos incorrectos
 
 ```text
 - Conectar a /blog/.
@@ -497,33 +497,33 @@ https://www.cerrajerosmadrid24h.com/
 - Conectar a una página de servicio que no representa toda la entidad.
 ```
 
-### Regla final
+### §11.5 Regla final
 
 ```text
 El GBP debe enlazar a la URL que mejor resume la entidad local.
 ```
 
-## Regla operativa — Usar UTM sin romper canonical ni NAP
+## §12 Regla operativa — Usar UTM sin romper canonical ni NAP
 
-### Explicación
+### §12.1 Explicación
 
 El tracking UTM permite medir clics desde GBP, pero no debe sustituir la URL canónica del sitio. La URL con UTM se puede usar en el campo website del GBP si se controla correctamente, pero las páginas de la web siguen usando canonicals limpios.
 
-### Patrón o fórmula
+### §12.2 Patrón o fórmula
 
 ```text
 Canonical URL = https://www.domain.com/
 GBP tracked URL = https://www.domain.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §12.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 GBP UTM URL:
 https://www.cerrajerosmadrid24h.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp
 ```
 
-### Ejemplos incorrectos
+### §12.4 Ejemplos incorrectos
 
 ```text
 - Usar parámetros distintos cada mes sin control.
@@ -531,25 +531,25 @@ https://www.cerrajerosmadrid24h.com/?utm_source=google&utm_medium=organic&utm_ca
 - Usar una URL acortada que oculta el dominio.
 ```
 
-### Regla final
+### §12.5 Regla final
 
 ```text
 El tracking GBP debe medir sin alterar la arquitectura canónica de la web.
 ```
 
-## Regla operativa — Añadir servicios del GBP alineados con páginas web
+## §13 Regla operativa — Añadir servicios del GBP alineados con páginas web
 
-### Explicación
+### §13.1 Explicación
 
 Los servicios del GBP deben reflejar los core services de la web. Si el GBP lista “Cambio de cerraduras”, la web debe tener una Service Overview Page o una página local que lo soporte. Si la web tiene “Apertura de puertas en Madrid”, ese servicio debe estar representado dentro del perfil.
 
-### Patrón o fórmula
+### §13.2 Patrón o fórmula
 
 ```text
 GBP Service → supported by Service Overview or Main City Service Page
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §13.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 GBP Service:
@@ -560,7 +560,7 @@ Páginas de soporte:
 /cerrajero/madrid/apertura-puertas/
 ```
 
-### Ejemplos incorrectos
+### §13.4 Ejemplos incorrectos
 
 ```text
 - Añadir servicios al GBP que la web no menciona.
@@ -568,25 +568,25 @@ Páginas de soporte:
 - Usar nombres de servicios totalmente diferentes entre web y GBP.
 ```
 
-### Regla final
+### §13.5 Regla final
 
 ```text
 Los servicios del GBP deben tener soporte web y consistencia semántica.
 ```
 
-## Regla operativa — Usar categorías adicionales solo si tienen soporte real
+## §14 Regla operativa — Usar categorías adicionales solo si tienen soporte real
 
-### Explicación
+### §14.1 Explicación
 
 Las categorías adicionales aumentan profundidad de entidad, pero también pueden generar ruido si no están soportadas. Una categoría adicional debe tener un servicio real, intención comercial y contenido de soporte. Si no hay soporte, se marca como pendiente o se evita.
 
-### Patrón o fórmula
+### §14.2 Patrón o fórmula
 
 ```text
 Additional Category = real service + website support + local relevance
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §14.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Additional GBP Category:
@@ -596,33 +596,33 @@ Página de soporte:
 /cerrajero/madrid/duplicado-llaves/
 ```
 
-### Ejemplos incorrectos
+### §14.4 Ejemplos incorrectos
 
 ```text
 - Añadir una categoría por ranking sin página de soporte.
 - Duplicar una categoría adicional que ya está cubierta por un servicio core sin diferenciar intención.
 ```
 
-### Regla final
+### §14.5 Regla final
 
 ```text
 Cada categoría adicional confirmada debe estar respaldada por contenido web real.
 ```
 
-## Regla operativa — No reclamar reseñas antes de tenerlas
+## §15 Regla operativa — No reclamar reseñas antes de tenerlas
 
-### Explicación
+### §15.1 Explicación
 
 Antes de crear el GBP, la web no debe afirmar “250 reseñas en Google” ni mostrar estrellas que no existen. Después de crear el perfil, se puede iniciar una estrategia de reseñas reales. Las reseñas deben proceder de clientes reales y no deben inventarse.
 
-### Patrón o fórmula
+### §15.2 Patrón o fórmula
 
 ```text
 Before GBP = trust signals without Google review claims
 After GBP = real review collection and review blocks
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §15.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Antes del GBP:
@@ -635,7 +635,7 @@ Después del GBP:
 - Añadir reseñas reales cuando existan
 ```
 
-### Ejemplos incorrectos
+### §15.4 Ejemplos incorrectos
 
 ```text
 - Mostrar estrellas de Google sin perfil creado.
@@ -643,25 +643,25 @@ Después del GBP:
 - Copiar reseñas de otros negocios.
 ```
 
-### Regla final
+### §15.5 Regla final
 
 ```text
 Las reseñas del GBP solo se usan cuando existen y son reales.
 ```
 
-## Regla operativa — Preparar fotos antes de crear el GBP
+## §16 Regla operativa — Preparar fotos antes de crear el GBP
 
-### Explicación
+### §16.1 Explicación
 
 Las fotos del GBP ayudan a reforzar confianza, identidad y contexto operativo. Deben representar el negocio real: logo, vehículo, herramientas, trabajos, equipo y contexto local. No deben fingir oficina física si el negocio es service area business.
 
-### Patrón o fórmula
+### §16.2 Patrón o fórmula
 
 ```text
 GBP Photo Pack = logo + cover + team/vehicle/tools/work examples + local context
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §16.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Fotos:
@@ -672,7 +672,7 @@ Fotos:
 - Equipo técnico si aplica
 ```
 
-### Ejemplos incorrectos
+### §16.4 Ejemplos incorrectos
 
 ```text
 - Fotos stock que no representan el negocio.
@@ -680,31 +680,31 @@ Fotos:
 - Fotos de cerraduras o equipos que no se usan.
 ```
 
-### Regla final
+### §16.5 Regla final
 
 ```text
 Las fotos del GBP deben reforzar la entidad real, no fabricar una identidad falsa.
 ```
 
-## Regla operativa — Redactar una descripción GBP alineada con la web
+## §17 Regla operativa — Redactar una descripción GBP alineada con la web
 
-### Explicación
+### §17.1 Explicación
 
 La descripción del GBP debe resumir servicios, ciudad, cobertura local y propuesta de valor sin keyword stuffing. Debe reflejar lo que ya aparece en la homepage y páginas core. No debe incluir afirmaciones falsas de ubicación, reseñas o certificaciones.
 
-### Patrón o fórmula
+### §17.2 Patrón o fórmula
 
 ```text
 Description = brand + primary category + Main City + core services + local coverage + CTA soft
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §17.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h ofrece servicios de cerrajería en Madrid, incluyendo cerrajero urgente, apertura de puertas, cambio de cerraduras, cambio de bombines, duplicado de llaves e instalación de cerraduras de seguridad.
 ```
 
-### Ejemplos incorrectos
+### §17.4 Ejemplos incorrectos
 
 ```text
 - Repetir “cerrajero Madrid barato 24h” de forma artificial.
@@ -712,25 +712,25 @@ Cerrajeros Madrid 24h ofrece servicios de cerrajería en Madrid, incluyendo cerr
 - Prometer tiempos garantizados si no están operativamente confirmados.
 ```
 
-### Regla final
+### §17.5 Regla final
 
 ```text
 La descripción GBP debe ser coherente con la homepage y no sobreoptimizada.
 ```
 
-## Regla operativa — Definir horarios sin contradicción
+## §18 Regla operativa — Definir horarios sin contradicción
 
-### Explicación
+### §18.1 Explicación
 
 Si el negocio se presenta como 24h, el GBP, la web y las páginas de servicio deben reflejarlo de forma consistente. Si hay atención de urgencia 24h pero administración en horario limitado, debe explicarse correctamente. La contradicción de horarios crea mala experiencia y señales débiles.
 
-### Patrón o fórmula
+### §18.2 Patrón o fórmula
 
 ```text
 Website Hours = GBP Hours = Service Promise
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §18.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Opening Hours:
@@ -740,7 +740,7 @@ Páginas de servicio:
 Cerrajero urgente 24h en Madrid
 ```
 
-### Ejemplos incorrectos
+### §18.4 Ejemplos incorrectos
 
 ```text
 - Web dice 24h y GBP dice 9:00–18:00.
@@ -748,32 +748,32 @@ Cerrajero urgente 24h en Madrid
 - Usar “24h” solo como keyword sin capacidad operativa.
 ```
 
-### Regla final
+### §18.5 Regla final
 
 ```text
 Los horarios del GBP deben coincidir con la promesa real de servicio.
 ```
 
-## Regla operativa — Alinear Local Coverage Areas con el GBP
+## §19 Regla operativa — Alinear Local Coverage Areas con el GBP
 
-### Explicación
+### §19.1 Explicación
 
 Las Local Coverage Areas se usan en la web como cobertura real y señales GEO. En el GBP se deben configurar de forma coherente si el modelo lo permite. No se debe añadir cobertura en zonas donde el negocio no atiende realmente, ni convertir automáticamente cada zona en una ficha o URL.
 
-### Patrón o fórmula
+### §19.2 Patrón o fórmula
 
 ```text
 Local Coverage Areas in website → GBP service areas if accurate → no automatic URLs
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §19.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Local Coverage Areas:
 Almagro, Chamberí, Salamanca, Retiro, Centro, Tetuán, Chamartín, Arganzuela
 ```
 
-### Ejemplos incorrectos
+### §19.4 Ejemplos incorrectos
 
 ```text
 - Añadir toda la Comunidad de Madrid si no hay capacidad real.
@@ -781,19 +781,19 @@ Almagro, Chamberí, Salamanca, Retiro, Centro, Tetuán, Chamartín, Arganzuela
 - Usar Local Coverage Areas como si fueran sedes físicas.
 ```
 
-### Regla final
+### §19.5 Regla final
 
 ```text
 Las áreas del GBP deben representar cobertura real, no expansión artificial.
 ```
 
-## Regla operativa — Actualizar schema después de crear el GBP
+## §20 Regla operativa — Actualizar schema después de crear el GBP
 
-### Explicación
+### §20.1 Explicación
 
 Antes del GBP, el schema puede incluir Organization, WebSite, LocalBusiness, Service y areaServed si los datos son reales. Pero no debe incluir un enlace GBP inexistente. Después de crear y verificar el perfil, se actualiza `sameAs` con la URL real del GBP y se revisa NAP.
 
-### Patrón o fórmula
+### §20.2 Patrón o fórmula
 
 ```text
 Before Paso 14:
@@ -803,7 +803,7 @@ After Paso 14:
 sameAs += GBP URL
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §20.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Después de crear GBP:
@@ -812,7 +812,7 @@ Después de crear GBP:
 ]
 ```
 
-### Ejemplos incorrectos
+### §20.4 Ejemplos incorrectos
 
 ```text
 - Inventar una GBP URL.
@@ -820,25 +820,25 @@ Después de crear GBP:
 - No actualizar schema después de crear el GBP.
 ```
 
-### Regla final
+### §20.5 Regla final
 
 ```text
 El enlace GBP en schema solo se añade cuando el perfil existe y es verificable.
 ```
 
-## Regla operativa — Actualizar la homepage después de verificar el perfil
+## §21 Regla operativa — Actualizar la homepage después de verificar el perfil
 
-### Explicación
+### §21.1 Explicación
 
 La homepage es el Root Entity Anchor. Después de crear el GBP, debe reflejar señales reales: enlace al perfil, reseñas si ya existen, mapa si procede, NAP sincronizado y trust blocks actualizados. Antes de ese momento no debe fingir señales de Google.
 
-### Patrón o fórmula
+### §21.2 Patrón o fórmula
 
 ```text
 Verified GBP → homepage trust section update
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §21.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Actualizar homepage:
@@ -848,7 +848,7 @@ Actualizar homepage:
 - Añadir mapa si procede
 ```
 
-### Ejemplos incorrectos
+### §21.4 Ejemplos incorrectos
 
 ```text
 - Añadir un mapa de una ubicación incorrecta.
@@ -856,25 +856,25 @@ Actualizar homepage:
 - Dejar la homepage sin actualizar después de crear el GBP.
 ```
 
-### Regla final
+### §21.5 Regla final
 
 ```text
 La homepage debe sincronizarse con el GBP después de verificarlo.
 ```
 
-## Regla operativa — Actualizar la página de contacto
+## §22 Regla operativa — Actualizar la página de contacto
 
-### Explicación
+### §22.1 Explicación
 
 La página de contacto debe ser la fuente más clara para NAP, teléfono, dirección, modelo de servicio y URLs de contacto. Después de crear el GBP, debe reflejar el mismo NAP y puede incluir mapa o enlace al perfil si procede.
 
-### Patrón o fórmula
+### §22.2 Patrón o fórmula
 
 ```text
 Contact Page = final NAP + contact options + verified GBP reference
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §22.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /contacto/
@@ -885,7 +885,7 @@ Contact Page = final NAP + contact options + verified GBP reference
 - Enlace al GBP después de verificación
 ```
 
-### Ejemplos incorrectos
+### §22.4 Ejemplos incorrectos
 
 ```text
 - Página de contacto sin dirección ni teléfono.
@@ -893,25 +893,25 @@ Contact Page = final NAP + contact options + verified GBP reference
 - Mapa de una ubicación no relacionada.
 ```
 
-### Regla final
+### §22.5 Regla final
 
 ```text
 La página de contacto debe coincidir con el GBP y con el schema.
 ```
 
-## Regla operativa — Preparar Q&A del GBP con preguntas reales
+## §23 Regla operativa — Preparar Q&A del GBP con preguntas reales
 
-### Explicación
+### §23.1 Explicación
 
 Las preguntas y respuestas ayudan a resolver dudas locales y comerciales. Deben estar alineadas con servicios reales y con el contenido de la web. No deben ser spam ni repetir keywords de forma artificial.
 
-### Patrón o fórmula
+### §23.2 Patrón o fórmula
 
 ```text
 Q&A = real local objection + clear answer + service alignment
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §23.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Pregunta:
@@ -921,7 +921,7 @@ Respuesta:
 Sí, atendemos servicios de cerrajería urgente en Madrid y zonas de cobertura local como Chamberí, Almagro, Salamanca y Centro, según disponibilidad.
 ```
 
-### Ejemplos incorrectos
+### §23.4 Ejemplos incorrectos
 
 ```text
 - Crear preguntas falsas solo para repetir keywords.
@@ -929,25 +929,25 @@ Sí, atendemos servicios de cerrajería urgente en Madrid y zonas de cobertura l
 - Mencionar zonas donde no se atiende.
 ```
 
-### Regla final
+### §23.5 Regla final
 
 ```text
 El Q&A del GBP debe reforzar servicio real, cobertura real y confianza.
 ```
 
-## Regla operativa — Planificar Google Posts conectados con páginas web
+## §24 Regla operativa — Planificar Google Posts conectados con páginas web
 
-### Explicación
+### §24.1 Explicación
 
 Los posts del GBP pueden reforzar servicios y páginas recién publicadas. No deben ser contenido aislado. Cada post importante debe poder apuntar a una página de servicio, homepage o página de contacto.
 
-### Patrón o fórmula
+### §24.2 Patrón o fórmula
 
 ```text
 GBP Post → relevant website page → conversion action
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §24.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Post:
@@ -957,7 +957,7 @@ URL:
 https://www.cerrajerosmadrid24h.com/cerrajero/madrid/cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §24.4 Ejemplos incorrectos
 
 ```text
 - Publicar posts sin enlace ni objetivo.
@@ -965,25 +965,25 @@ https://www.cerrajerosmadrid24h.com/cerrajero/madrid/cerrajero-urgente/
 - Crear posts sobre servicios que no tienen página de soporte.
 ```
 
-### Regla final
+### §24.5 Regla final
 
 ```text
 Los posts del GBP deben apoyar páginas web reales y objetivos comerciales claros.
 ```
 
-## Regla operativa — Evitar duplicados de GBP
+## §25 Regla operativa — Evitar duplicados de GBP
 
-### Explicación
+### §25.1 Explicación
 
 Crear perfiles duplicados puede causar problemas de visibilidad, confianza y suspensión. Antes de crear el nuevo GBP se debe comprobar que no exista un perfil previo para el mismo negocio, dirección o teléfono. Si existe, hay que gestionarlo antes de crear otro.
 
-### Patrón o fórmula
+### §25.2 Patrón o fórmula
 
 ```text
 Check existing GBP → claim/update if exists → create only if no valid profile exists
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §25.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Antes de crear:
@@ -993,7 +993,7 @@ Antes de crear:
 - Comprobar si hay ficha antigua o duplicada
 ```
 
-### Ejemplos incorrectos
+### §25.4 Ejemplos incorrectos
 
 ```text
 - Crear otra ficha porque no se recuerda el acceso.
@@ -1001,31 +1001,31 @@ Antes de crear:
 - Crear fichas por cada servicio.
 ```
 
-### Regla final
+### §25.5 Regla final
 
 ```text
 Un negocio local debe evitar perfiles duplicados salvo que existan ubicaciones reales y elegibles.
 ```
 
-## Regla operativa — No usar keyword stuffing en el nombre del GBP
+## §26 Regla operativa — No usar keyword stuffing en el nombre del GBP
 
-### Explicación
+### §26.1 Explicación
 
 El nombre del GBP debe reflejar el nombre real del negocio. Añadir palabras clave, ciudades, “barato”, “mejor” o “24h” solo es correcto si forman parte real del nombre comercial. El sistema debe proteger la entidad, no sobreoptimizarla.
 
-### Patrón o fórmula
+### §26.2 Patrón o fórmula
 
 ```text
 GBP Name = real business name
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §26.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h
 ```
 
-### Ejemplos incorrectos
+### §26.4 Ejemplos incorrectos
 
 ```text
 - Cerrajeros Madrid 24h Baratos Urgentes Chamberí
@@ -1033,25 +1033,25 @@ Cerrajeros Madrid 24h
 - Cerrajeros Madrid 24h Salamanca Retiro Chamberí
 ```
 
-### Regla final
+### §26.5 Regla final
 
 ```text
 El nombre del GBP debe ser el nombre real del negocio, no una cadena de keywords.
 ```
 
-## Regla operativa — Sincronizar páginas de categoría adicional
+## §27 Regla operativa — Sincronizar páginas de categoría adicional
 
-### Explicación
+### §27.1 Explicación
 
 Si en el GBP se confirma una categoría adicional, la web debe tener soporte. Si el soporte ya existe, se marca como sincronizado. Si no existe, se añade a la cola de producción. El objetivo es que el GBP no tenga categorías huérfanas.
 
-### Patrón o fórmula
+### §27.2 Patrón o fórmula
 
 ```text
 Confirmed Additional Category → existing support page or production queue
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §27.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Categoría adicional:
@@ -1061,7 +1061,7 @@ Página:
  /cerrajero/madrid/duplicado-llaves/
 ```
 
-### Ejemplos incorrectos
+### §27.4 Ejemplos incorrectos
 
 ```text
 - Confirmar la categoría y no revisar la web.
@@ -1069,25 +1069,25 @@ Página:
 - Usar una URL genérica como /servicios/ para soportar todas las categorías.
 ```
 
-### Regla final
+### §27.5 Regla final
 
 ```text
 Las categorías adicionales del GBP no deben quedar sin soporte web.
 ```
 
-## Regla operativa — Revisar LocalBusiness schema tras verificación
+## §28 Regla operativa — Revisar LocalBusiness schema tras verificación
 
-### Explicación
+### §28.1 Explicación
 
 El schema LocalBusiness debe reflejar la información real del negocio. Después de crear el GBP, se revisan nombre, teléfono, dirección, área servida, URL, email y sameAs. Si el negocio oculta dirección por ser service area business, la implementación debe revisarse con cuidado.
 
-### Patrón o fórmula
+### §28.2 Patrón o fórmula
 
 ```text
 LocalBusiness schema = final NAP + main service + areaServed + verified sameAs
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §28.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 "@type": "LocalBusiness",
@@ -1097,7 +1097,7 @@ LocalBusiness schema = final NAP + main service + areaServed + verified sameAs
 "sameAs": ["GBP URL verificada"]
 ```
 
-### Ejemplos incorrectos
+### §28.4 Ejemplos incorrectos
 
 ```text
 - Usar dirección distinta a la del GBP.
@@ -1105,25 +1105,25 @@ LocalBusiness schema = final NAP + main service + areaServed + verified sameAs
 - Omitir sameAs después de tener GBP verificado.
 ```
 
-### Regla final
+### §28.5 Regla final
 
 ```text
 El schema debe reflejar el GBP verificado y la cobertura real del negocio.
 ```
 
-## Regla operativa — Crear una cola de actualización post-GBP
+## §29 Regla operativa — Crear una cola de actualización post-GBP
 
-### Explicación
+### §29.1 Explicación
 
 Después de crear el GBP no basta con decir “perfil creado”. Hay que actualizar páginas y elementos de la web. Esta cola evita que se olviden cambios importantes como enlaces, schema, bloques de confianza o CTAs.
 
-### Patrón o fórmula
+### §29.2 Patrón o fórmula
 
 ```text
 Verified GBP → update queue → QA → publish updates → tracking
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §29.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Update queue:
@@ -1134,7 +1134,7 @@ Update queue:
 5. Preparar primer bloque de reseñas cuando existan
 ```
 
-### Ejemplos incorrectos
+### §29.4 Ejemplos incorrectos
 
 ```text
 - Crear el GBP y no tocar la web.
@@ -1142,25 +1142,25 @@ Update queue:
 - Añadir reseñas o mapas sin QA.
 ```
 
-### Regla final
+### §29.5 Regla final
 
 ```text
 El Paso 14 termina cuando el GBP y la web quedan sincronizados, no cuando se crea el perfil.
 ```
 
-## Regla operativa — Medir la visibilidad después de crear el GBP
+## §30 Regla operativa — Medir la visibilidad después de crear el GBP
 
-### Explicación
+### §30.1 Explicación
 
 La creación del GBP permite empezar a medir señales locales con más claridad. Se deben revisar geo-grid, búsquedas de marca, consultas servicio + ciudad, clics desde GBP, llamadas, formularios y páginas de destino. La medición ayuda a decidir qué mejorar después.
 
-### Patrón o fórmula
+### §30.2 Patrón o fórmula
 
 ```text
 GBP created → baseline geo-grid → monitor → optimize website and GBP
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §30.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Keywords iniciales:
@@ -1170,7 +1170,7 @@ Keywords iniciales:
 - cambio de cerraduras madrid
 ```
 
-### Ejemplos incorrectos
+### §30.4 Ejemplos incorrectos
 
 ```text
 - Crear GBP y no medir nada.
@@ -1178,13 +1178,13 @@ Keywords iniciales:
 - Optimizar posts o fotos sin mirar rendimiento local.
 ```
 
-### Regla final
+### §30.5 Regla final
 
 ```text
 Después del GBP, la optimización se basa en datos de perfil, web y geo-grid.
 ```
 
-# Checklist final del Paso 14
+# §31 Checklist final del Paso 14
 
 | Check | Pregunta | Estado |
 |---|---|---|
@@ -1209,7 +1209,7 @@ Después del GBP, la optimización se basa en datos de perfil, web y geo-grid.
 | Contact page update queued | ¿La página de contacto queda marcada para actualización post-GBP? | ⬜ |
 | Tracking ready | ¿Se preparó geo-grid, GSC, GA4 y seguimiento de GBP? | ⬜ |
 
-# Outputs del Paso 14
+# §32 Outputs del Paso 14
 
 Al terminar este paso debes tener:
 
@@ -1236,7 +1236,7 @@ Tracking baseline plan
 Lista de riesgos
 ```
 
-# Cierre del Paso 14
+# §33 Cierre del Paso 14
 
 El Paso 14 convierte la web en una entidad local conectada al ecosistema GBP.
 Los pasos 1–13 construyen la base web.
@@ -1252,7 +1252,7 @@ Finalmente, sincronización continua entre web, perfil y tracking.
 
 ---
 
-# Fuentes internas GMB Crush usadas
+# §34 Fuentes internas GMB Crush usadas
 
 - Analysis Framework.pdf
 - GMB CRUSH Universal AI Local SEO Framework Template

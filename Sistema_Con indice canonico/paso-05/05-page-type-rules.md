@@ -2,13 +2,13 @@ Versión literal del chat · Sistema GMB Crush para webs locales
 Documento regenerado siguiendo la estructura fija acordada en la conversación.
 Proveniencia: sistema construido paso a paso en el chat y alineado con los frameworks oficiales GMB Crush.
 
-# Paso 5 — Page Type Rules
+# §1 Paso 5 — Page Type Rules
 
-## Índice corto
+## §2 Índice corto
 
 **Paso 5 — Page Type Rules**
 
-## Objetivo del Paso 5
+## §3 Objetivo del Paso 5
 
 Este paso existe para resolver un problema concreto dentro del sistema GMB Crush: definir qué función cumple cada tipo de página antes de escribir contenido o enlazar páginas.
 La web local no debe construirse desde la intuición, sino desde una secuencia operativa que conecta entidad, categoría GBP, servicios, ciudad principal, cobertura local, schema, contenido e interlinking.
@@ -36,7 +36,7 @@ Error que previene: crear Additional Category Pages duplicadas.
 Error que previene: usar el mismo schema en todos los tipos de página.
 Error que previene: escribir páginas sin word count, CTA, FAQs o estructura AUDIO.
 
-## Lo que tienes que rellenar
+## §4 Lo que tienes que rellenar
 
 ```text
 Business Name:
@@ -110,7 +110,7 @@ Option D: Urgente / urgente
 Option E: Local and conversational
 ```
 
-## Ejemplo rellenado
+## §5 Ejemplo rellenado
 
 ```text
 Business Name:
@@ -203,47 +203,47 @@ Brand tone:
 Friendly, professional, local and urgente when needed
 ```
 
-# Cuerpo operativo del Paso 5
+# §6 Cuerpo operativo del Paso 5
 
 > **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
-## 1. Homepage — Root Entity Anchor
+## §7 1. Homepage — Root Entity Anchor
 
-### Función
+### §7.1 Función
 
 La homepage es la raíz de entidad del negocio. Debe establecer quién es la marca, qué categoría GBP soporta, cuál es la Main City, qué servicios ofrece, qué cobertura local tiene y cómo contactar. No es una página decorativa ni un simple escaparate.
 
-### Patrón URL
+### §7.2 Patrón URL
 
 ```text
 /
 ```
 
-### H1
+### §7.3 H1
 
 ```text
 [Brand Name] – [Primary Service] de confianza en [Main City]
 ```
 
-### Meta Title
+### §7.4 Meta Title
 
 ```text
 [Primary Service] en [Main City] | [Brand Name]
 ```
 
-### Meta Description
+### §7.5 Meta Description
 
 ```text
 ¿Necesitas [Primary Service] en [Main City]? [Brand Name] ofrece servicio local, soporte experto y respuesta rápida. Llama hoy.
 ```
 
-### Word count recomendado
+### §7.6 Word count recomendado
 
 ```text
 900–1,300 words
 ```
 
-### Estructura completa
+### §7.7 Estructura completa
 
 ```text
 H1
@@ -258,7 +258,7 @@ CTA
 Enlaces internos
 ```
 
-### Schema requerido
+### §7.8 Schema requerido
 
 ```text
 Organization
@@ -268,7 +268,7 @@ FAQPage
 Speakable
 ```
 
-### Enlaces internos requeridos
+### §7.9 Enlaces internos requeridos
 
 ```text
 Service Overview Pages
@@ -277,7 +277,7 @@ Páginas de categoría adicional en la Main City
 Página de contacto
 ```
 
-### Ejemplo rellenado con Cerrajeros Madrid 24h
+### §7.10 Ejemplo rellenado con Cerrajeros Madrid 24h
 
 ```text
 URL: /
@@ -288,7 +288,7 @@ Vista previa de cobertura local: Almagro, Chamberí, Salamanca, Retiro
 Schema: Organization, WebSite, LocalBusiness, FAQPage, Speakable
 ```
 
-### Ejemplos incorrectos
+### §7.11 Ejemplos incorrectos
 
 ```text
 - Homepage with no services
@@ -297,48 +297,48 @@ Schema: Organization, WebSite, LocalBusiness, FAQPage, Speakable
 - Homepage without links to service pages
 ```
 
-### Regla final
+### §7.12 Regla final
 
 ```text
 1. Homepage — Root Entity Anchor debe cumplir su función específica y no debe mezclarse con otro tipo de página.
 ```
-## 2. Service Overview Page — Topical Authority Pillar
+## §8 2. Service Overview Page — Topical Authority Pillar
 
-### Función
+### §8.1 Función
 
 Esta página educa sobre un servicio sin geolocalización. Es el pilar temático que soporta la versión local del servicio en la Main City y cualquier futura expansión aprobada.
 
-### Patrón URL
+### §8.2 Patrón URL
 
 ```text
 /[primary-category-slug]/[service-slug]/
 ```
 
-### H1
+### §8.3 H1
 
 ```text
 Servicios profesionales de [Service] por [Brand Name]
 ```
 
-### Meta Title
+### §8.4 Meta Title
 
 ```text
 [Service] por [Brand Name] | Expertos en [Primary Category]
 ```
 
-### Meta Description
+### §8.5 Meta Description
 
 ```text
 ¿Necesitas [Service] de confianza? [Brand Name] ofrece soluciones expertas, rápidas y cuidadosas. Consulta el proceso completo y sus beneficios.
 ```
 
-### Word count recomendado
+### §8.6 Word count recomendado
 
 ```text
 850–1,000 words
 ```
 
-### Estructura completa
+### §8.7 Estructura completa
 
 ```text
 H1
@@ -354,7 +354,7 @@ CTA
 Enlaces internos
 ```
 
-### Schema requerido
+### §8.8 Schema requerido
 
 ```text
 Service
@@ -363,7 +363,7 @@ BreadcrumbList
 Speakable
 ```
 
-### Enlaces internos requeridos
+### §8.9 Enlaces internos requeridos
 
 ```text
 Homepage
@@ -372,7 +372,7 @@ Main City Location-Based Service Page
 Relevant GeoArticle
 ```
 
-### Ejemplo rellenado con Cerrajeros Madrid 24h
+### §8.10 Ejemplo rellenado con Cerrajeros Madrid 24h
 
 ```text
 URL: /cerrajero/cerrajero-urgente/
@@ -381,7 +381,7 @@ Meta Title: Cerrajero urgente por Cerrajeros Madrid 24h | Expertos en cerrajerí
 Enlaces internos: /, /cerrajero/apertura-puertas/, /cerrajero/madrid/cerrajero-urgente/, /madrid/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §8.11 Ejemplos incorrectos
 
 ```text
 - Mentioning Madrid as the primary target
@@ -390,48 +390,48 @@ Enlaces internos: /, /cerrajero/apertura-puertas/, /cerrajero/madrid/cerrajero-u
 - Thin content under 400 words
 ```
 
-### Regla final
+### §8.12 Regla final
 
 ```text
 2. Service Overview Page — Topical Authority Pillar debe cumplir su función específica y no debe mezclarse con otro tipo de página.
 ```
-## 3. Location-Based Service Page — Main City Converter
+## §9 3. Location-Based Service Page — Main City Converter
 
-### Función
+### §9.1 Función
 
 Esta página convierte búsquedas locales de alta intención para una combinación exacta: servicio + Main City. Es una de las páginas más importantes para soporte GBP y Local Pack.
 
-### Patrón URL
+### §9.2 Patrón URL
 
 ```text
 /[primary-category-slug]/[main-city-slug]/[service-slug]/
 ```
 
-### H1
+### §9.3 H1
 
 ```text
 [Brand Name] – [Service] en [Main City]
 ```
 
-### Meta Title
+### §9.4 Meta Title
 
 ```text
 Top [Service] en [Main City] | [Brand Name]
 ```
 
-### Meta Description
+### §9.5 Meta Description
 
 ```text
 ¿Necesitas [Service] en [Main City]? [Brand Name] ayuda con [problema], [problema] y [problema]. Llama para recibir soporte local.
 ```
 
-### Word count recomendado
+### §9.6 Word count recomendado
 
 ```text
 800–1,000 words
 ```
 
-### Estructura completa
+### §9.7 Estructura completa
 
 ```text
 H1
@@ -448,7 +448,7 @@ CTA
 Enlaces internos
 ```
 
-### Schema requerido
+### §9.8 Schema requerido
 
 ```text
 LocalBusiness
@@ -457,7 +457,7 @@ FAQPage optional
 Speakable optional
 ```
 
-### Enlaces internos requeridos
+### §9.9 Enlaces internos requeridos
 
 ```text
 Parent Service Overview
@@ -467,7 +467,7 @@ Related GeoArticles
 Contacto
 ```
 
-### Ejemplo rellenado con Cerrajeros Madrid 24h
+### §9.10 Ejemplo rellenado con Cerrajeros Madrid 24h
 
 ```text
 URL: /cerrajero/madrid/cerrajero-urgente/
@@ -476,7 +476,7 @@ Local Coverage Areas: Almagro, Chamberí, Salamanca, Retiro mencionadas de forma
 Enlaces: /cerrajero/cerrajero-urgente/, /madrid/, /cerrajero/madrid/apertura-puertas/, /madrid/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §9.11 Ejemplos incorrectos
 
 ```text
 - Mezclar Madrid and Almagro as equal targets
@@ -485,48 +485,48 @@ Enlaces: /cerrajero/cerrajero-urgente/, /madrid/, /cerrajero/madrid/apertura-pue
 - Combinar apertura de puertas y cambio de cerraduras en una sola landing local
 ```
 
-### Regla final
+### §9.12 Regla final
 
 ```text
 3. Location-Based Service Page — Main City Converter debe cumplir su función específica y no debe mezclarse con otro tipo de página.
 ```
-## 4. Additional Category Page — GBP Additional Category Support
+## §10 4. Additional Category Page — GBP Additional Category Support
 
-### Función
+### §10.1 Función
 
 Esta página soporta una categoría adicional real del GBP que no está cubierta por un servicio core. Refuerza la profundidad de entidad y la relevancia semántica.
 
-### Patrón URL
+### §10.2 Patrón URL
 
 ```text
 /[primary-category-slug]/[main-city-slug]/[additional-category-slug]/
 ```
 
-### H1
+### §10.3 H1
 
 ```text
 [Brand Name] – Expert [Service] en [Main City]
 ```
 
-### Meta Title
+### §10.4 Meta Title
 
 ```text
 [Service] en [Main City] | [Brand Name]
 ```
 
-### Meta Description
+### §10.5 Meta Description
 
 ```text
 ¿Necesitas [Service] en [Main City]? [Brand Name] ofrece ayuda fiable para [problema], [caso de uso] y [caso de uso]. Llama hoy.
 ```
 
-### Word count recomendado
+### §10.6 Word count recomendado
 
 ```text
 800–1,000 words
 ```
 
-### Estructura completa
+### §10.7 Estructura completa
 
 ```text
 H1
@@ -542,7 +542,7 @@ CTA
 Enlaces internos
 ```
 
-### Schema requerido
+### §10.8 Schema requerido
 
 ```text
 Service with areaServed
@@ -551,7 +551,7 @@ FAQPage optional
 Speakable optional
 ```
 
-### Enlaces internos requeridos
+### §10.9 Enlaces internos requeridos
 
 ```text
 Main City GeoHub
@@ -560,7 +560,7 @@ Related GeoArticles
 Contacto
 ```
 
-### Ejemplo rellenado con Cerrajeros Madrid 24h
+### §10.10 Ejemplo rellenado con Cerrajeros Madrid 24h
 
 ```text
 URL: /cerrajero/madrid/duplicado-llaves/
@@ -569,7 +569,7 @@ Meta Title: Duplicado de llaves en Madrid | Cerrajeros Madrid 24h
 Enlaces: /madrid/, /cerrajero/madrid/cambio-cerraduras/, /cerrajero/madrid/instalacion-cerraduras-seguridad/
 ```
 
-### Ejemplos incorrectos
+### §10.11 Ejemplos incorrectos
 
 ```text
 - Crear /cerrajero/madrid/cerrajero-urgente/ when urgente is already covered
@@ -578,48 +578,48 @@ Enlaces: /madrid/, /cerrajero/madrid/cambio-cerraduras/, /cerrajero/madrid/insta
 - Category page with no relation to GBP
 ```
 
-### Regla final
+### §10.12 Regla final
 
 ```text
 4. Additional Category Page — GBP Additional Category Support debe cumplir su función específica y no debe mezclarse con otro tipo de página.
 ```
-## 5. GeoHub Page — Main City Silo Container
+## §11 5. GeoHub Page — Main City Silo Container
 
-### Función
+### §11.1 Función
 
 El GeoHub agrupa todas las señales de la Main City. Es el índice local del sitio: servicios, categorías adicionales, artículos, cobertura local, confianza y contacto.
 
-### Patrón URL
+### §11.2 Patrón URL
 
 ```text
 /[main-city-slug]/ OR /[primary-category-slug]/[main-city-slug]/
 ```
 
-### H1
+### §11.3 H1
 
 ```text
 [Brand Name] – [Industry] Services in [Main City]
 ```
 
-### Meta Title
+### §11.4 Meta Title
 
 ```text
 [Industry] Services in [Main City] | [Brand Name]
 ```
 
-### Meta Description
+### §11.5 Meta Description
 
 ```text
 Explore trusted [Industry] services in [Main City] from [Brand Name]. View local services, helpful resources, coverage areas, and ways to contact our team.
 ```
 
-### Word count recomendado
+### §11.6 Word count recomendado
 
 ```text
 700–1,100 words
 ```
 
-### Estructura completa
+### §11.7 Estructura completa
 
 ```text
 H1
@@ -633,7 +633,7 @@ CTA
 Enlaces internos
 ```
 
-### Schema requerido
+### §11.8 Schema requerido
 
 ```text
 CollectionPage
@@ -641,7 +641,7 @@ BreadcrumbList
 LocalBusiness optional if physical presence exists
 ```
 
-### Enlaces internos requeridos
+### §11.9 Enlaces internos requeridos
 
 ```text
 Homepage
@@ -651,7 +651,7 @@ GeoArticles de la Main City
 Página de contacto
 ```
 
-### Ejemplo rellenado con Cerrajeros Madrid 24h
+### §11.10 Ejemplo rellenado con Cerrajeros Madrid 24h
 
 ```text
 URL: /madrid/
@@ -661,7 +661,7 @@ Sección de cobertura: Almagro, Chamberí, Salamanca, Retiro
 Enlaces: /cerrajero/madrid/cerrajero-urgente/, /cerrajero/madrid/duplicado-llaves/, /madrid/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §11.11 Ejemplos incorrectos
 
 ```text
 - GeoHub with only generic city text
@@ -670,48 +670,48 @@ Enlaces: /cerrajero/madrid/cerrajero-urgente/, /cerrajero/madrid/duplicado-llave
 - No CTA
 ```
 
-### Regla final
+### §11.12 Regla final
 
 ```text
 5. GeoHub Page — Main City Silo Container debe cumplir su función específica y no debe mezclarse con otro tipo de página.
 ```
-## 6. GeoArticle Page — Semantic Booster
+## §12 6. GeoArticle Page — Semantic Booster
 
-### Función
+### §12.1 Función
 
 El GeoArticle no es una landing comercial. Es un booster semántico para un servicio, una Main City y una intención long-tail. Su misión es apoyar la página comercial y el GeoHub.
 
-### Patrón URL
+### §12.2 Patrón URL
 
 ```text
 /[main-city-slug]/[article-topic-slug]/
 ```
 
-### H1
+### §12.3 H1
 
 ```text
 [Article Topic] in [Main City]
 ```
 
-### Meta Title
+### §12.4 Meta Title
 
 ```text
 [Article Topic] in [Main City] | [Brand Name]
 ```
 
-### Meta Description
+### §12.5 Meta Description
 
 ```text
 Learn about [Article Topic] in [Main City], including what to expect, common mistakes, local factors, and when to call [Brand Name].
 ```
 
-### Word count recomendado
+### §12.6 Word count recomendado
 
 ```text
 1,000–1,500 words
 ```
 
-### Estructura completa
+### §12.7 Estructura completa
 
 ```text
 H1
@@ -726,7 +726,7 @@ CTA
 Enlaces internos
 ```
 
-### Schema requerido
+### §12.8 Schema requerido
 
 ```text
 Article
@@ -735,7 +735,7 @@ BreadcrumbList
 Speakable
 ```
 
-### Enlaces internos requeridos
+### §12.9 Enlaces internos requeridos
 
 ```text
 Matching Main City Service Page
@@ -744,7 +744,7 @@ Related GeoArticle
 Contacto
 ```
 
-### Ejemplo rellenado con Cerrajeros Madrid 24h
+### §12.10 Ejemplo rellenado con Cerrajeros Madrid 24h
 
 ```text
 URL: /madrid/cuanto-cuesta-un-cerrajero-urgente/
@@ -752,7 +752,7 @@ H1: Precio de cerrajero urgente en Madrid
 Enlaces: /cerrajero/madrid/cerrajero-urgente/, /madrid/, /madrid/que-hacer-si-no-puedes-entrar-casa/
 ```
 
-### Ejemplos incorrectos
+### §12.11 Ejemplos incorrectos
 
 ```text
 - Writing as a generic landing page
@@ -761,30 +761,30 @@ Enlaces: /cerrajero/madrid/cerrajero-urgente/, /madrid/, /madrid/que-hacer-si-no
 - Pretending physical location in every coverage area
 ```
 
-### Regla final
+### §12.12 Regla final
 
 ```text
 6. GeoArticle Page — Semantic Booster debe cumplir su función específica y no debe mezclarse con otro tipo de página.
 ```
-## Homepage como Root Entity Anchor — Regla operativa 1
+## §13 Homepage como Root Entity Anchor — Regla operativa 1
 
-### Explicación
+### §13.1 Explicación
 
 La homepage no es una página decorativa. Es el contenedor principal de la entidad local y debe establecer marca, categoría GBP, servicio principal, Main City, NAP, señales de confianza y enlaces a las páginas clave.
 
-### Patrón o fórmula
+### §13.2 Patrón o fórmula
 
 ```text
 Brand + Primary Service + Main City → servicios core → NAP → enlaces internos
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §13.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h usa / con H1 orientado a Servicios de cerrajería en Madrid, lista servicios core y enlaza a /madrid/ y páginas Service Overview.
 ```
 
-### Ejemplos incorrectos
+### §13.4 Ejemplos incorrectos
 
 ```text
 - Homepage solo con un slider y una frase genérica
@@ -792,31 +792,31 @@ Cerrajeros Madrid 24h usa / con H1 orientado a Servicios de cerrajería en Madri
 - No enlazar a servicios core
 ```
 
-### Regla final
+### §13.5 Regla final
 
 ```text
 La homepage debe explicar quién es el negocio, qué hace y dónde opera.
 ```
 
-## Service Overview como pilar no local — Regla operativa 2
+## §14 Service Overview como pilar no local — Regla operativa 2
 
-### Explicación
+### §14.1 Explicación
 
 La Service Overview Page crea autoridad temática sobre un servicio sin enfocarse en ciudad. Debe explicar el servicio, proceso, problemas resueltos, FAQs y enlaces a su versión Main City.
 
-### Patrón o fórmula
+### §14.2 Patrón o fórmula
 
 ```text
 /category/service/ → topical authority → link a Main City service page
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §14.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 La página /cerrajero/cerrajero-urgente/ explica Cerrajero urgente sin apuntar a Madrid como llaveword principal.
 ```
 
-### Ejemplos incorrectos
+### §14.4 Ejemplos incorrectos
 
 ```text
 - Usar /cerrajero/cerrajero-urgente/ como landing de Madrid
@@ -824,31 +824,31 @@ La página /cerrajero/cerrajero-urgente/ explica Cerrajero urgente sin apuntar a
 - No enlazar a /cerrajero/madrid/cerrajero-urgente/
 ```
 
-### Regla final
+### §14.5 Regla final
 
 ```text
 Service Overview educa; no reemplaza la página servicio+ciudad.
 ```
 
-## Location-Based Service como convertidor local — Regla operativa 3
+## §15 Location-Based Service como convertidor local — Regla operativa 3
 
-### Explicación
+### §15.1 Explicación
 
 La Location-Based Service Page es la página comercial más importante para una combinación servicio + Main City. Debe tener intención local, CTA, reviews, contenido GEO y enlaces a padre, GeoHub y artículos.
 
-### Patrón o fórmula
+### §15.2 Patrón o fórmula
 
 ```text
 /category/main-city/service/ → servicio + ciudad → conversión
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §15.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h usa /cerrajero/madrid/cerrajero-urgente/ para captar búsquedas de cerrajero urgente en Madrid.
 ```
 
-### Ejemplos incorrectos
+### §15.4 Ejemplos incorrectos
 
 ```text
 - Mezclar cerrajero urgente, apertura de puertas y cambio de cerraduras en una sola landing
@@ -856,31 +856,31 @@ Cerrajeros Madrid 24h usa /cerrajero/madrid/cerrajero-urgente/ para captar búsq
 - Escribir contenido genérico sin contexto de Madrid
 ```
 
-### Regla final
+### §15.5 Regla final
 
 ```text
 Una página local comercial debe cubrir un servicio y una ciudad.
 ```
 
-## Additional Category como soporte GBP — Regla operativa 4
+## §16 Additional Category como soporte GBP — Regla operativa 4
 
-### Explicación
+### §16.1 Explicación
 
 Las Additional Category Pages existen para soportar categorías adicionales reales del GBP que no estén ya cubiertas por servicios core. Su formato es local porque refuerzan relevancia de categoría en la Main City.
 
-### Patrón o fórmula
+### §16.2 Patrón o fórmula
 
 ```text
 Effective Additional Category + Main City → página local de soporte
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §16.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Servicio de duplicado de llaves genera /cerrajero/madrid/duplicado-llaves/ porque no está cubierto por los servicios core.
 ```
 
-### Ejemplos incorrectos
+### §16.4 Ejemplos incorrectos
 
 ```text
 - Crear página duplicada para Servicio de cerrajería de urgencia
@@ -888,31 +888,31 @@ Servicio de duplicado de llaves genera /cerrajero/madrid/duplicado-llaves/ porqu
 - Usar una página genérica sin Main City
 ```
 
-### Regla final
+### §16.5 Regla final
 
 ```text
 Una categoría adicional efectiva debe tener soporte local propio.
 ```
 
-## GeoHub como contenedor de ciudad — Regla operativa 5
+## §17 GeoHub como contenedor de ciudad — Regla operativa 5
 
-### Explicación
+### §17.1 Explicación
 
 El GeoHub organiza todas las señales de la Main City: servicios, categorías adicionales, GeoArticles, cobertura local, confianza y contacto. No es una landing de un servicio concreto.
 
-### Patrón o fórmula
+### §17.2 Patrón o fórmula
 
 ```text
 /main-city/ → índice local → servicios + artículos + cobertura
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §17.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h usa /madrid/ como hub de Servicios de cerrajería en Madrid y lista páginas locales de urgente, apertura de puertas, cambio de cerraduras, cambio de bombines y cambio de bombines.
 ```
 
-### Ejemplos incorrectos
+### §17.4 Ejemplos incorrectos
 
 ```text
 - Crear /madrid/ con texto turístico sin servicios
@@ -920,31 +920,31 @@ Cerrajeros Madrid 24h usa /madrid/ como hub de Servicios de cerrajería en Madri
 - No enlazar a las páginas locales
 ```
 
-### Regla final
+### §17.5 Regla final
 
 ```text
 El GeoHub es el índice de la Main City.
 ```
 
-## GeoArticle como booster semántico — Regla operativa 6
+## §18 GeoArticle como booster semántico — Regla operativa 6
 
-### Explicación
+### §18.1 Explicación
 
 El GeoArticle no es una landing comercial. Debe cubrir un tema long-tail de servicio + Main City y enlazar a la página comercial correspondiente y al GeoHub.
 
-### Patrón o fórmula
+### §18.2 Patrón o fórmula
 
 ```text
 /main-city/topic/ → artículo → soporte a /category/main-city/service/
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §18.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 El artículo /madrid/cuanto-cuesta-un-cerrajero-urgente/ explica costes y enlaza a /cerrajero/madrid/cerrajero-urgente/.
 ```
 
-### Ejemplos incorrectos
+### §18.4 Ejemplos incorrectos
 
 ```text
 - Escribir un artículo como página de venta directa
@@ -952,31 +952,31 @@ El artículo /madrid/cuanto-cuesta-un-cerrajero-urgente/ explica costes y enlaza
 - Crear el artículo antes de la página que debe apoyar
 ```
 
-### Regla final
+### §18.5 Regla final
 
 ```text
 Un GeoArticle debe empujar relevancia hacia una página local.
 ```
 
-## Schema por tipo de página — Regla operativa 7
+## §19 Schema por tipo de página — Regla operativa 7
 
-### Explicación
+### §19.1 Explicación
 
 Cada tipo de página tiene un schema esperado. La homepage usa Organization y WebSite; servicios usan Service; landings locales usan LocalBusiness; artículos usan Article y FAQPage.
 
-### Patrón o fórmula
+### §19.2 Patrón o fórmula
 
 ```text
 Page Type → Schema Required → QA
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §19.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 LBS-001 usa LocalBusiness + BreadcrumbList; GA-001 usa Article + FAQPage + BreadcrumbList + Speakable.
 ```
 
-### Ejemplos incorrectos
+### §19.4 Ejemplos incorrectos
 
 ```text
 - Usar Article schema en una landing
@@ -984,31 +984,31 @@ LBS-001 usa LocalBusiness + BreadcrumbList; GA-001 usa Article + FAQPage + Bread
 - No añadir BreadcrumbList
 ```
 
-### Regla final
+### §19.5 Regla final
 
 ```text
 El schema debe coincidir con la función de la página.
 ```
 
-## Word count por intención — Regla operativa 8
+## §20 Word count por intención — Regla operativa 8
 
-### Explicación
+### §20.1 Explicación
 
 El contenido debe tener suficiente profundidad según el tipo de página. No se trata de inflar palabras, sino de cubrir intención, proceso, beneficios, FAQs, enlaces y contexto local.
 
-### Patrón o fórmula
+### §20.2 Patrón o fórmula
 
 ```text
 Page Type → word count objetivo → contenido completo
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §20.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Una Location-Based Service Page de Cerrajeros Madrid 24h tiene 800–1.000 palabras; un GeoArticle tiene 1.000–1.500.
 ```
 
-### Ejemplos incorrectos
+### §20.4 Ejemplos incorrectos
 
 ```text
 - Publicar landings de 250 palabras
@@ -1016,31 +1016,31 @@ Una Location-Based Service Page de Cerrajeros Madrid 24h tiene 800–1.000 palab
 - Repetir bloques para llegar al word count
 ```
 
-### Regla final
+### §20.5 Regla final
 
 ```text
 La longitud debe permitir profundidad, no relleno.
 ```
 
-## CTA adaptado al page type — Regla operativa 9
+## §21 CTA adaptado al page type — Regla operativa 9
 
-### Explicación
+### §21.1 Explicación
 
 Cada página debe tener un CTA, pero no todos los CTAs cumplen la misma función. Homepage y landings deben convertir; Service Overview puede ser más consultivo; GeoArticle debe enlazar contextual y suavemente al servicio.
 
-### Patrón o fórmula
+### §21.2 Patrón o fórmula
 
 ```text
 Page Type → CTA intent → enlace o acción
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §21.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 En /cerrajero/madrid/cerrajero-urgente/ el CTA es llamar ahora; en /madrid/cuanto-cuesta-un-cerrajero-urgente/ el CTA invita a consultar la página de Cerrajero urgente en Madrid.
 ```
 
-### Ejemplos incorrectos
+### §21.4 Ejemplos incorrectos
 
 ```text
 - Usar el mismo CTA genérico en todo el sitio
@@ -1048,31 +1048,31 @@ En /cerrajero/madrid/cerrajero-urgente/ el CTA es llamar ahora; en /madrid/cuant
 - Hacer CTAs agresivos en contenido informativo
 ```
 
-### Regla final
+### §21.5 Regla final
 
 ```text
 El CTA debe coincidir con la intención de la página.
 ```
 
-## No false location claims — Regla operativa 10
+## §22 No false location claims — Regla operativa 10
 
-### Explicación
+### §22.1 Explicación
 
 Cualquier page type puede mencionar cobertura local, pero ninguno debe inventar oficina física. Esta regla protege la confianza local y evita contradicciones con GBP, NAP y schema.
 
-### Patrón o fórmula
+### §22.2 Patrón o fórmula
 
 ```text
 Local Coverage Area → servir clientes | no → oficina ficticia
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §22.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h puede decir que atiende Almagro, pero no que tiene oficina en Almagro si su ubicación física es Madrid.
 ```
 
-### Ejemplos incorrectos
+### §22.4 Ejemplos incorrectos
 
 ```text
 - Nuestra oficina en Almagro si no existe
@@ -1080,13 +1080,13 @@ Cerrajeros Madrid 24h puede decir que atiende Almagro, pero no que tiene oficina
 - LocalBusiness address en zona de cobertura sin sede
 ```
 
-### Regla final
+### §22.5 Regla final
 
 ```text
 Cobertura no equivale a presencia física.
 ```
 
-## Checklist final del Paso 5
+## §23 Checklist final del Paso 5
 
 | Check | Pregunta | Estado |
 |---|---|---|
@@ -1101,7 +1101,7 @@ Cobertura no equivale a presencia física.
 | Enlaces internos | ¿Cada tipo tiene enlaces obligatorios? | ✅ / ⬜ |
 | No mezcla | ¿No se mezclan servicios ni zonas sin aprobación? | ✅ / ⬜ |
 
-## Outputs del Paso 5
+## §24 Outputs del Paso 5
 
 - Reglas de tipo de página definidas
 - URLs por tipo de página confirmadas
@@ -1113,7 +1113,7 @@ Cobertura no equivale a presencia física.
 
 ---
 
-# Fuentes internas GMB Crush usadas
+# §25 Fuentes internas GMB Crush usadas
 
 - Analysis Framework.pdf
 - GMB CRUSH Universal AI Local SEO Framework Template

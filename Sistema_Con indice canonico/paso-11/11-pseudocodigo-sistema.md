@@ -2,13 +2,13 @@ Versión literal del chat · Sistema GMB Crush para webs locales
 Documento regenerado siguiendo la estructura fija acordada en la conversación.
 Proveniencia: sistema construido paso a paso en el chat y alineado con los frameworks oficiales GMB Crush.
 
-# Paso 11 — Pseudocódigo del Sistema
+# §1 Paso 11 — Pseudocódigo del Sistema
 
-## Índice corto
+## §2 Índice corto
 
 **Paso 11 — Pseudocódigo del Sistema**
 
-## Objetivo del Paso 11
+## §3 Objetivo del Paso 11
 
 Este paso existe para resolver un problema concreto dentro del sistema GMB Crush: convertir el proceso en una lógica repetible que pueda generar matriz, contenidos, links, schema, prioridad, QA y fases.
 La web local no debe construirse desde la intuición, sino desde una secuencia operativa que conecta entidad, categoría GBP, servicios, ciudad principal, cobertura local, schema, contenido e interlinking.
@@ -36,7 +36,7 @@ Error que previene: no validar duplicados de categorías adicionales.
 Error que previene: no bloquear artículos sin landing.
 Error que previene: crear outputs incompletos.
 
-## Lo que tienes que rellenar
+## §4 Lo que tienes que rellenar
 
 ```text
 Business Name:
@@ -134,7 +134,7 @@ Tracking Tools:
 GMB Crush / GSC / GA4 / Other
 ```
 
-## Ejemplo rellenado
+## §5 Ejemplo rellenado
 
 ```text
 Business Name:
@@ -219,19 +219,19 @@ N/A — GBP not created yet
 
 ```
 
-# Cuerpo operativo del Paso 11
+# §6 Cuerpo operativo del Paso 11
 
 > **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
-## 1. Load inputs
+## §7 1. Load inputs
 
-### Explicación
+### §7.1 Explicación
 
 Este bloque carga los datos base que el sistema necesita antes de generar cualquier URL, matriz o página. Su función es convertir el intake del negocio en variables operativas: nombre, dominio, Main City, categoría planificada, servicios, slugs, Local Coverage Areas, estado del GBP y datos NAP.
 
 Si aquí falta un dato crítico, el resto del pseudocódigo puede generar páginas incompletas, URLs mal formadas, schema incoherente o una arquitectura que no soporte la categoría planificada. Este bloque no crea páginas; prepara la materia prima del sistema.
 
-### Pseudocódigo
+### §7.2 Pseudocódigo
 
 ```text
 INPUT business_name
@@ -253,7 +253,7 @@ INPUT nap
 INPUT gbp_url
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §7.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Inputs cargados:
@@ -317,7 +317,7 @@ Resultado:
 Blocked — no Main City available for GeoHub, LBS pages or GeoArticles.
 ```
 
-### Ejemplos incorrectos
+### §7.4 Ejemplos incorrectos
 
 ```text
 - Ejecutar la generación sin Main City.
@@ -327,20 +327,20 @@ Blocked — no Main City available for GeoHub, LBS pages or GeoArticles.
 - Cargar servicios sin slugs ni posibilidad de normalización.
 ```
 
-### Regla final
+### §7.5 Regla final
 
 ```text
 El sistema solo puede generar arquitectura fiable si los inputs base están completos, diferenciando datos confirmados de datos planificados.
 ```
-## 2. Normalize slugs
+## §8 2. Normalize slugs
 
-### Explicación
+### §8.1 Explicación
 
 Este bloque normaliza todos los nombres que se usarán en URLs, IDs y matrices. Su función es transformar servicios, ciudad principal, categorías y posibles áreas aprobadas en slugs limpios, consistentes y escalables.
 
 La normalización evita URLs con mayúsculas, acentos, espacios, símbolos, guiones inconsistentes o mezclas entre servicio y ciudad. Sin esta capa, la matriz puede crear rutas distintas para la misma intención.
 
-### Pseudocódigo
+### §8.2 Pseudocódigo
 
 ```text
 FUNCTION generate_slug(text):
@@ -352,7 +352,7 @@ FUNCTION generate_slug(text):
     RETURN slug
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §8.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Texto original:
@@ -380,7 +380,7 @@ Slug correcto:
 madrid
 ```
 
-### Ejemplos incorrectos
+### §8.4 Ejemplos incorrectos
 
 ```text
 - /Cerrajero Urgente/
@@ -391,20 +391,20 @@ madrid
 - /madrid!!/
 ```
 
-### Regla final
+### §8.5 Regla final
 
 ```text
 Todo nombre que vaya a formar parte de una URL debe convertirse primero en un slug limpio, estable y sin ambigüedad.
 ```
-## 3. Validate categories
+## §9 3. Validate categories
 
-### Explicación
+### §9.1 Explicación
 
 Este bloque valida las categorías planificadas antes de convertirlas en páginas. Su función es separar categorías adicionales reales de categorías que ya están cubiertas por un servicio core.
 
 Como el GBP todavía no existe, trabajamos con Planned Primary GBP Category y Planned Additional GBP Categories. La validación evita crear páginas duplicadas para la misma intención y asegura que cada categoría adicional que sí se mantenga tenga soporte web real.
 
-### Pseudocódigo
+### §9.2 Pseudocódigo
 
 ```text
 effective_additional_categories = []
@@ -415,7 +415,7 @@ FOR each additional_category:
         add to effective_additional_categories
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §9.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Planned Additional Category:
@@ -448,7 +448,7 @@ URL:
 /cerrajero/madrid/duplicado-llaves/
 ```
 
-### Ejemplos incorrectos
+### §9.4 Ejemplos incorrectos
 
 ```text
 - Crear /cerrajero/madrid/servicio-de-cerrajeria-de-urgencia/ y también /cerrajero/madrid/cerrajero-urgente/.
@@ -457,20 +457,20 @@ URL:
 - Usar categorías planificadas como si ya estuvieran confirmadas por un GBP creado.
 ```
 
-### Regla final
+### §9.5 Regla final
 
 ```text
 Una categoría adicional solo genera página propia si no está ya cubierta por un servicio core y representa un servicio real del negocio.
 ```
-## 4. Generate homepage
+## §10 4. Generate homepage
 
-### Explicación
+### §10.1 Explicación
 
 Este bloque genera la homepage como Root Entity Anchor. Su función es crear la fila base de la arquitectura: la URL raíz, el H1 principal, la metadata inicial, el schema base, la prioridad y la fase de publicación.
 
 La homepage debe establecer marca, servicio principal, Main City, NAP, servicios core y señales de confianza. No debe convertirse en una URL local alternativa ni en una página genérica sin conexión con la arquitectura.
 
-### Pseudocódigo
+### §10.2 Pseudocódigo
 
 ```text
 CREATE HP-001
@@ -482,7 +482,7 @@ priority = P1
 phase = Phase 1
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §10.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 ID:
@@ -514,7 +514,7 @@ Publish Phase:
 Phase 1 — Entity Foundation
 ```
 
-### Ejemplos incorrectos
+### §10.4 Ejemplos incorrectos
 
 ```text
 - Usar /home/ o /inicio/ como homepage canónica.
@@ -525,20 +525,20 @@ Phase 1 — Entity Foundation
 - No enlazar desde la homepage a Service Overview Pages ni al GeoHub de Madrid.
 ```
 
-### Regla final
+### §10.5 Regla final
 
 ```text
 La homepage debe ser la raíz de entidad del negocio, no una landing improvisada ni una página decorativa.
 ```
-## 5. Generate Service Overview Pages
+## §11 5. Generate Service Overview Pages
 
-### Explicación
+### §11.1 Explicación
 
 Este bloque genera las Service Overview Pages para cada servicio core. Su función es crear pilares temáticos no geolocalizados que explican cada servicio sin apuntar a Madrid ni a ninguna zona de cobertura.
 
 Estas páginas soportan a las Location-Based Service Pages. Por eso deben vivir en /category/service/ y actuar como autoridad temática antes de que las páginas /category/main-city/service/ conviertan tráfico local.
 
-### Pseudocódigo
+### §11.2 Pseudocódigo
 
 ```text
 FOR each service IN core_services:
@@ -549,7 +549,7 @@ FOR each service IN core_services:
     links = homepage + related services + Main City service page
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §11.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Service:
@@ -580,7 +580,7 @@ Otros ejemplos:
 /cerrajero/instalacion-cerraduras-seguridad/
 ```
 
-### Ejemplos incorrectos
+### §11.4 Ejemplos incorrectos
 
 ```text
 - /cerrajero/madrid/apertura-puertas/ como Service Overview.
@@ -590,20 +590,20 @@ Otros ejemplos:
 - Crear una sola página “servicios” para todos los servicios core.
 ```
 
-### Regla final
+### §11.5 Regla final
 
 ```text
 Cada servicio core necesita una Service Overview Page no geolocalizada que funcione como pilar temático.
 ```
-## 6. Generate Main City GeoHub
+## §12 6. Generate Main City GeoHub
 
-### Explicación
+### §12.1 Explicación
 
 Este bloque genera el GeoHub de la Main City. Su función es crear el contenedor de ciudad que organiza todos los servicios, categorías adicionales, GeoArticles y Local Coverage Areas relacionadas con Madrid.
 
 El GeoHub no es una página de un servicio concreto. Es el índice local de la ciudad principal y debe ayudar a Google, usuarios y sistemas de IA a entender que la marca opera en Madrid con varios servicios conectados.
 
-### Pseudocódigo
+### §12.2 Pseudocódigo
 
 ```text
 CREATE GH-001
@@ -616,7 +616,7 @@ include GeoArticles
 schema = CollectionPage + BreadcrumbList
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §12.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 ID:
@@ -640,7 +640,7 @@ Includes:
 - CollectionPage / BreadcrumbList schema
 ```
 
-### Ejemplos incorrectos
+### §12.4 Ejemplos incorrectos
 
 ```text
 - /areas-served/
@@ -651,20 +651,20 @@ Includes:
 - GeoHub que solo habla de la ciudad y no lista servicios
 ```
 
-### Regla final
+### §12.5 Regla final
 
 ```text
 El GeoHub de la Main City debe concentrar las señales de ciudad y conectar servicios, categorías, artículos y cobertura local.
 ```
-## 7. Generate Páginas de servicio en la Main City
+## §13 7. Generate Páginas de servicio en la Main City
 
-### Explicación
+### §13.1 Explicación
 
 Este bloque genera las Location-Based Service Pages de la Main City. Su función es crear una página comercial por cada combinación servicio core + Madrid.
 
 Estas páginas son las páginas de conversión local. Deben usar el patrón /category/main-city/service/, mantener un solo servicio y una sola Main City, y enlazar de vuelta al Service Overview y al GeoHub.
 
-### Pseudocódigo
+### §13.2 Pseudocódigo
 
 ```text
 FOR each service IN core_services:
@@ -676,7 +676,7 @@ FOR each service IN core_services:
     schema = LocalBusiness + BreadcrumbList
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §13.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Service:
@@ -706,7 +706,7 @@ Más ejemplos:
 /cerrajero/madrid/duplicado-llaves/
 ```
 
-### Ejemplos incorrectos
+### §13.4 Ejemplos incorrectos
 
 ```text
 - /madrid/apertura-puertas/
@@ -716,20 +716,20 @@ Más ejemplos:
 - Una página que cubre Madrid, Chamberí, Salamanca y Retiro como si fueran URLs separadas.
 ```
 
-### Regla final
+### §13.5 Regla final
 
 ```text
 Cada Location-Based Service Page debe cubrir un servicio aprobado y una Main City, sin mezclar servicios ni generar URLs para zonas de cobertura no aprobadas.
 ```
-## 8. Generate Páginas de categoría adicional en la Main City
+## §14 8. Generate Páginas de categoría adicional en la Main City
 
-### Explicación
+### §14.1 Explicación
 
 Este bloque genera páginas de categoría adicional para la Main City cuando una categoría planificada necesita soporte propio. Su función es convertir una categoría adicional real y no duplicada en una página local de soporte.
 
 Estas páginas son importantes porque ayudan a que la web respalde la profundidad de entidad del futuro GBP, pero no deben duplicar servicios core ya existentes.
 
-### Pseudocódigo
+### §14.2 Pseudocódigo
 
 ```text
 FOR each category IN effective_additional_categories:
@@ -740,7 +740,7 @@ FOR each category IN effective_additional_categories:
     schema = Service with areaServed
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §14.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Planned Additional Category:
@@ -761,7 +761,7 @@ Related pages:
 /cerrajero/madrid/apertura-puertas/
 ```
 
-### Ejemplos incorrectos
+### §14.4 Ejemplos incorrectos
 
 ```text
 - Crear una página adicional para “Servicio de cerrajería de urgencia” si ya existe /cerrajero/madrid/cerrajero-urgente/.
@@ -770,20 +770,20 @@ Related pages:
 - Crear páginas de categorías adicionales para Local Coverage Areas sin aprobación.
 ```
 
-### Regla final
+### §14.5 Regla final
 
 ```text
 Las Additional Category Pages solo se generan para categorías adicionales reales, útiles y no duplicadas dentro de la Main City.
 ```
-## 9. Generate GeoArticles de la Main City
+## §15 9. Generate GeoArticles de la Main City
 
-### Explicación
+### §15.1 Explicación
 
 Este bloque genera ideas de GeoArticles para la Main City. Su función es crear activos semánticos que apoyen páginas comerciales existentes, no reemplazarlas.
 
 Cada GeoArticle debe estar ligado a un servicio, una Main City, una intención long-tail y una Location-Based Service Page padre. Si no existe la landing comercial que debe apoyar, el artículo queda bloqueado por dependencias.
 
-### Pseudocódigo
+### §15.2 Pseudocódigo
 
 ```text
 FOR each service IN core_services:
@@ -795,7 +795,7 @@ FOR each service IN core_services:
         schema = Article + FAQPage + BreadcrumbList + Speakable
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §15.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 GeoArticle:
@@ -820,7 +820,7 @@ BreadcrumbList
 Speakable
 ```
 
-### Ejemplos incorrectos
+### §15.4 Ejemplos incorrectos
 
 ```text
 - Crear /madrid/cuanto-cuesta-un-cerrajero-urgente/ sin que exista /cerrajero/madrid/cerrajero-urgente/.
@@ -829,20 +829,20 @@ Speakable
 - Crear artículos sin enlace al GeoHub ni a la página servicio + ciudad.
 ```
 
-### Regla final
+### §15.5 Regla final
 
 ```text
 Cada GeoArticle debe apoyar una LBS existente, reforzar una intención long-tail y enlazar al GeoHub de la Main City.
 ```
-## 10. Use Local Coverage Areas
+## §16 10. Use Local Coverage Areas
 
-### Explicación
+### §16.1 Explicación
 
 Este bloque usa las Local Coverage Areas dentro del contenido sin convertirlas en URLs. Su función es inyectar cobertura local real en introducciones, FAQs, ejemplos, secciones de cobertura y schema areaServed.
 
 Las Local Coverage Areas ayudan a contextualizar la cobertura del negocio, pero no deben comportarse como ciudades objetivo ni generar páginas por defecto.
 
-### Pseudocódigo
+### §16.2 Pseudocódigo
 
 ```text
 FOR each content page:
@@ -852,7 +852,7 @@ FOR each content page:
     DO NOT generate URLs for any local_coverage_areas
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §16.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Direct Local Coverage Areas:
@@ -881,7 +881,7 @@ Schema:
 areaServed includes Madrid and selected real coverage areas when appropriate.
 ```
 
-### Ejemplos incorrectos
+### §16.4 Ejemplos incorrectos
 
 ```text
 - Crear /almagro/ sin aprobación.
@@ -891,20 +891,20 @@ areaServed includes Madrid and selected real coverage areas when appropriate.
 - Decir “oficina en Retiro” si no existe oficina allí.
 ```
 
-### Regla final
+### §16.5 Regla final
 
 ```text
 Las Local Coverage Areas enriquecen contenido, FAQs y schema; no generan URLs salvo que pasen a Approved Expansion Areas.
 ```
-## 11. Generate expansion only if approved
+## §17 11. Generate expansion only if approved
 
-### Explicación
+### §17.1 Explicación
 
 Este bloque genera páginas de expansión solo cuando una zona ha sido aprobada explícitamente como Approved Expansion Area. Su función es mantener separada la arquitectura base de Madrid de cualquier expansión futura.
 
 La expansión no debe activarse por el simple hecho de que una zona aparezca como cobertura local. Debe existir una decisión estratégica, demanda, valor comercial y capacidad de crear contenido único.
 
-### Pseudocódigo
+### §17.2 Pseudocódigo
 
 ```text
 IF approved_expansion_areas is not empty:
@@ -916,7 +916,7 @@ ELSE:
     skip expansion URLs
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §17.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Approved Expansion Areas:
@@ -940,7 +940,7 @@ Generated:
 /alcobendas/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §17.4 Ejemplos incorrectos
 
 ```text
 - Crear páginas para todas las Local Coverage Areas.
@@ -950,20 +950,20 @@ Generated:
 - Crear una página de expansión que afirma oficina física falsa.
 ```
 
-### Regla final
+### §17.5 Regla final
 
 ```text
 Una zona de cobertura solo genera URLs cuando está aprobada como Expansion Area y puede sostener contenido único.
 ```
-## 12. Assign internal links
+## §18 12. Assign internal links
 
-### Explicación
+### §18.1 Explicación
 
 Este bloque asigna enlaces internos obligatorios según el tipo de página. Su función es conectar homepage, Service Overview Pages, GeoHub, Location-Based Service Pages, Additional Category Pages y GeoArticles sin romper el silo.
 
 También evita enlaces a Local Coverage Areas sin URL aprobada. El objetivo no es enlazar todo con todo, sino crear rutas lógicas entre páginas padre, páginas comerciales, hubs y artículos de soporte.
 
-### Pseudocódigo
+### §18.2 Pseudocódigo
 
 ```text
 IF homepage:
@@ -976,7 +976,7 @@ IF GeoArticle:
     link to matching LBS + GeoHub + related article
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §18.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Source:
@@ -996,7 +996,7 @@ Anchor examples:
 - apertura de puertas en Madrid
 ```
 
-### Ejemplos incorrectos
+### §18.4 Ejemplos incorrectos
 
 ```text
 - Enlazar a /almagro/ si no existe.
@@ -1006,20 +1006,20 @@ Anchor examples:
 - Usar siempre el mismo anchor exact match.
 ```
 
-### Regla final
+### §18.5 Regla final
 
 ```text
 Cada página debe recibir y emitir enlaces internos según su función, sin apuntar a URLs no aprobadas ni crear enlaces huérfanos.
 ```
-## 13. Score priority
+## §19 13. Score priority
 
-### Explicación
+### §19.1 Explicación
 
 Este bloque calcula la prioridad de cada página para ordenar la producción. Su función es convertir criterios estratégicos en un score operativo que indique qué se publica primero.
 
 Como la base trabaja con una sola Main City, el factor City Priority se sustituye por Local Relevance. El score debe reflejar valor económico, intención, relevancia para la categoría planificada, oportunidad competitiva y urgencia de conversión.
 
-### Pseudocódigo
+### §19.2 Pseudocódigo
 
 ```text
 score = revenue + intent + gbp_relevance + local_relevance + gap + urgency
@@ -1030,7 +1030,7 @@ ELSE IF score >= 10: P4
 ELSE: Hold
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §19.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Page:
@@ -1064,7 +1064,7 @@ Publish Phase:
 Phase 2 — Main City Conversion Layer
 ```
 
-### Ejemplos incorrectos
+### §19.4 Ejemplos incorrectos
 
 ```text
 - Priorizar /madrid/cuanto-cuesta-un-cerrajero-urgente/ antes de /cerrajero/madrid/cerrajero-urgente/.
@@ -1074,14 +1074,14 @@ Phase 2 — Main City Conversion Layer
 - Ignorar servicios urgentes de alta conversión.
 ```
 
-### Regla final
+### §19.5 Regla final
 
 ```text
 La prioridad debe ordenar la producción según valor comercial, intención local, relevancia de categoría planificada y capacidad de conversión.
 ```
-## 14. Check dependencies
+## §20 14. Check dependencies
 
-### Explicación
+### §20.1 Explicación
 
 Este bloque no valida la calidad del contenido; valida si la página puede existir dentro del sistema. Su función es comprobar que cada URL tenga sus páginas padre, páginas destino y condiciones previas antes de pasar a producción o QA.
 
@@ -1089,7 +1089,7 @@ En una arquitectura GMB Crush, una Location-Based Service Page no debe crearse s
 
 Este bloque evita páginas huérfanas, artículos sin destino comercial, landings sin padre semántico y URLs que rompen la lógica Main City → Service Page → GeoHub → GeoArticle.
 
-### Pseudocódigo
+### §20.2 Pseudocódigo
 
 ```text
 IF LBS:
@@ -1100,7 +1100,7 @@ IF expansion:
     require approved_expansion_area == true
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §20.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Página solicitada:
@@ -1149,7 +1149,7 @@ Resultado:
 Blocked — Missing Main City GeoHub
 ```
 
-### Ejemplos incorrectos
+### §20.4 Ejemplos incorrectos
 
 ```text
 - Crear /cerrajero/madrid/apertura-puertas/ sin que exista /cerrajero/apertura-puertas/.
@@ -1159,21 +1159,21 @@ Blocked — Missing Main City GeoHub
 - Crear enlaces internos hacia URLs que todavía no están aprobadas ni planificadas.
 ```
 
-### Regla final
+### §20.5 Regla final
 
 ```text
 Ninguna página pasa a producción, QA o publicación si no tiene sus dependencias obligatorias creadas o aprobadas.
 ```
 
-## 15. Run QA
+## §21 15. Run QA
 
-### Explicación
+### §21.1 Explicación
 
 Este bloque valida si una página ya generada cumple las reglas mínimas para poder publicarse. A diferencia del bloque de dependencias, aquí no se pregunta si la página puede existir; se comprueba si está bien construida.
 
 El QA revisa URL, page type, H1, metadata, schema, CTA, enlaces internos, NAP, uso correcto de Local Coverage Areas, ausencia de falsas ubicaciones y ausencia de canibalización. Si una página falla en un elemento crítico, no debe publicarse aunque tenga buenas keywords o sea prioritaria.
 
-### Pseudocódigo
+### §21.2 Pseudocódigo
 
 ```text
 CHECK url
@@ -1188,7 +1188,7 @@ CHECK no canibalization
 CHECK CTA
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §21.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Página revisada:
@@ -1232,7 +1232,7 @@ QA result:
 Approved
 ```
 
-### Ejemplos incorrectos
+### §21.4 Ejemplos incorrectos
 
 ```text
 - Aprobar una página solo porque el H1 contiene “Madrid”.
@@ -1243,21 +1243,21 @@ Approved
 - Añadir reseñas de Google o GBP URL antes de que el GBP exista.
 ```
 
-### Regla final
+### §21.5 Regla final
 
 ```text
 El QA es la puerta de publicación: cualquier fallo crítico en URL, schema, CTA, enlaces, NAP o ubicación bloquea la página.
 ```
 
-## 16. Output matrices
+## §22 16. Output matrices
 
-### Explicación
+### §22.1 Explicación
 
 Este bloque define qué entrega el sistema al terminar. El resultado no debe ser una lista suelta de ideas, títulos o páginas. El output debe ser un conjunto de matrices operativas que permitan producir, enlazar, revisar, publicar y optimizar la web.
 
 Cada matriz cumple una función distinta: la URL Matrix organiza las páginas, la Internal Linking Matrix define conexiones, el Schema Map asigna marcado, el Priority Score ordena ejecución, el Publishing Plan marca fases y la QA Matrix controla aprobación. Sin estas matrices, el sistema no es operativo; solo sería una recomendación editorial.
 
-### Pseudocódigo
+### §22.2 Pseudocódigo
 
 ```text
 OUTPUT URL Matrix
@@ -1268,7 +1268,7 @@ OUTPUT Publishing Plan
 OUTPUT QA Matrix
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §22.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Output 1 — URL Matrix:
@@ -1305,7 +1305,7 @@ URL: /cerrajero/madrid/cerrajero-urgente/
 QA Status: Approved / Needs Revision / Blocked
 ```
 
-### Ejemplos incorrectos
+### §22.4 Ejemplos incorrectos
 
 ```text
 - Entregar solo una lista de URLs sin prioridades, fases ni estado.
@@ -1316,30 +1316,30 @@ QA Status: Approved / Needs Revision / Blocked
 - Tratar Local Coverage Areas como filas URL cuando no son Approved Expansion Areas.
 ```
 
-### Regla final
+### §22.5 Regla final
 
 ```text
 El output del sistema son matrices operativas listas para producción, no contenido suelto ni listas aisladas de ideas.
 ```
 
-## Regla operativa — Normalización de inputs
-### Explicación
+## §23 Regla operativa — Normalización de inputs
+### §23.1 Explicación
 
 El pseudocódigo debe convertir nombres, servicios y zonas en slugs limpios antes de generar URLs. Sin normalización, la matriz puede terminar con inconsistencias.
 
-### Patrón o fórmula
+### §23.2 Patrón o fórmula
 
 ```text
 raw input → normalize → approved slug
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §23.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajero urgente se normaliza como cerrajero-urgente y Madrid como madrid.
 ```
 
-### Ejemplos incorrectos
+### §23.4 Ejemplos incorrectos
 
 ```text
 - Usar mayúsculas en slugs
@@ -1347,30 +1347,30 @@ Cerrajero urgente se normaliza como cerrajero-urgente y Madrid como madrid.
 - Crear dos slugs para el mismo servicio
 ```
 
-### Regla final
+### §23.5 Regla final
 
 ```text
 Todo input que genera URL debe normalizarse primero.
 ```
 
-## Regla operativa — Dedupe de categorías
-### Explicación
+## §24 Regla operativa — Dedupe de categorías
+### §24.1 Explicación
 
 La lógica debe detectar categorías adicionales ya cubiertas por servicios core. Esto evita crear URLs redundantes.
 
-### Patrón o fórmula
+### §24.2 Patrón o fórmula
 
 ```text
 additional_category → matches core_service intent → covered
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §24.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Servicio de cerrajería de urgencia se marca covered; Servicio de duplicado de llaves entra como effective additional category.
 ```
 
-### Ejemplos incorrectos
+### §24.4 Ejemplos incorrectos
 
 ```text
 - Generar páginas duplicadas
@@ -1378,30 +1378,30 @@ Servicio de cerrajería de urgencia se marca covered; Servicio de duplicado de l
 - No registrar la decisión de consolidación
 ```
 
-### Regla final
+### §24.5 Regla final
 
 ```text
 La deduplicación ocurre antes de la fórmula.
 ```
 
-## Regla operativa — Generación base Main City
-### Explicación
+## §25 Regla operativa — Generación base Main City
+### §25.1 Explicación
 
 El algoritmo base genera páginas solo para la Main City. Local Coverage Areas no entran en loops de URL salvo que estén aprobadas como expansión.
 
-### Patrón o fórmula
+### §25.2 Patrón o fórmula
 
 ```text
 generate_base(main_city, services, effective_categories, G)
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §25.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h genera /madrid/ y /cerrajero/madrid/service/ para sus servicios core.
 ```
 
-### Ejemplos incorrectos
+### §25.4 Ejemplos incorrectos
 
 ```text
 - for area in local_coverage_areas: create pages
@@ -1409,30 +1409,30 @@ Cerrajeros Madrid 24h genera /madrid/ y /cerrajero/madrid/service/ para sus serv
 - Multiplicar G por zonas no aprobadas
 ```
 
-### Regla final
+### §25.5 Regla final
 
 ```text
 La base se genera con Main City, no con todas las áreas.
 ```
 
-## Regla operativa — Inyección de Local Coverage Areas en contenido
-### Explicación
+## §26 Regla operativa — Inyección de Local Coverage Areas en contenido
+### §26.1 Explicación
 
 Aunque no generen URLs, las áreas de cobertura sí deben entrar en briefs de contenido, FAQs, ejemplos y schema areaServed.
 
-### Patrón o fórmula
+### §26.2 Patrón o fórmula
 
 ```text
 coverage_areas[] → content_blocks + FAQs + areaServed
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §26.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Almagro, Chamberí, Salamanca y Retiro se pasan al brief de /madrid/ y a páginas locales de Madrid.
 ```
 
-### Ejemplos incorrectos
+### §26.4 Ejemplos incorrectos
 
 ```text
 - No usar cobertura en contenido
@@ -1440,30 +1440,30 @@ Almagro, Chamberí, Salamanca y Retiro se pasan al brief de /madrid/ y a página
 - Añadir zonas falsas en schema
 ```
 
-### Regla final
+### §26.5 Regla final
 
 ```text
 La cobertura entra en contenido, no en URL loops base.
 ```
 
-## Regla operativa — Asignación de schema y links
-### Explicación
+## §27 Regla operativa — Asignación de schema y links
+### §27.1 Explicación
 
 El pseudocódigo debe asignar schema e internal links por page type de forma automática. Esto reduce decisiones manuales y errores.
 
-### Patrón o fórmula
+### §27.2 Patrón o fórmula
 
 ```text
 page.type → schema + required_links
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §27.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 GeoArticle recibe Article + FAQPage y enlaces a matching LBS y GeoHub.
 ```
 
-### Ejemplos incorrectos
+### §27.4 Ejemplos incorrectos
 
 ```text
 - Dejar schema manual sin reglas
@@ -1471,30 +1471,30 @@ GeoArticle recibe Article + FAQPage y enlaces a matching LBS y GeoHub.
 - Usar el mismo schema en todas las páginas
 ```
 
-### Regla final
+### §27.5 Regla final
 
 ```text
 Schema y enlaces se derivan del page type.
 ```
 
-## Regla operativa — Scoring y fase
-### Explicación
+## §28 Regla operativa — Scoring y fase
+### §28.1 Explicación
 
 El algoritmo debe calcular prioridad y fase por separado. El score define importancia; la fase define cuándo se puede publicar según dependencias.
 
-### Patrón o fórmula
+### §28.2 Patrón o fórmula
 
 ```text
 score(page) → priority | dependencies(page) → phase/status
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §28.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajero urgente Madrid puede ser P1 y Phase 2; su GeoArticle es Phase 3.
 ```
 
-### Ejemplos incorrectos
+### §28.4 Ejemplos incorrectos
 
 ```text
 - Publicar por score sin dependencia
@@ -1502,30 +1502,30 @@ Cerrajero urgente Madrid puede ser P1 y Phase 2; su GeoArticle es Phase 3.
 - Asignar Phase 1 a todo lo urgente
 ```
 
-### Regla final
+### §28.5 Regla final
 
 ```text
 Priority y phase cumplen funciones distintas.
 ```
 
-## Regla operativa — QA automático
-### Explicación
+## §29 Regla operativa — QA automático
+### §29.1 Explicación
 
 El sistema debe ejecutar checks mínimos antes de marcar una página como Ready for QA o Approved: URL, H1, metadata, schema, links, NAP, canibalización y ubicación.
 
-### Patrón o fórmula
+### §29.2 Patrón o fórmula
 
 ```text
 page → run_qa_checks → Approved / Needs Revision / Blocked
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §29.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 LBS-001 pasa QA solo si tiene URL correcta, H1 de servicio+Madrid, LocalBusiness schema y enlaces obligatorios.
 ```
 
-### Ejemplos incorrectos
+### §29.4 Ejemplos incorrectos
 
 ```text
 - Marcar Published sin QA
@@ -1533,30 +1533,30 @@ LBS-001 pasa QA solo si tiene URL correcta, H1 de servicio+Madrid, LocalBusiness
 - No revisar false location claims
 ```
 
-### Regla final
+### §29.5 Regla final
 
 ```text
 El algoritmo debe poder bloquear páginas incompletas.
 ```
 
-## Regla operativa — Branch de expansión separado
-### Explicación
+## §30 Regla operativa — Branch de expansión separado
+### §30.1 Explicación
 
 El pseudocódigo debe tener una rama opcional para Approved Expansion Areas. Si la lista está vacía, no genera nada. Si contiene zonas aprobadas, genera URLs con sus propias dependencias.
 
-### Patrón o fórmula
+### §30.2 Patrón o fórmula
 
 ```text
 if approved_expansion_areas: generate_expansion(area)
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §30.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Si Almagro se aprueba, el sistema genera /almagro/ y páginas /cerrajero/almagro/service/ después de la base.
 ```
 
-### Ejemplos incorrectos
+### §30.4 Ejemplos incorrectos
 
 ```text
 - Generar expansión cuando la lista está vacía
@@ -1564,13 +1564,13 @@ Si Almagro se aprueba, el sistema genera /almagro/ y páginas /cerrajero/almagro
 - No exigir contenido único en expansión
 ```
 
-### Regla final
+### §30.5 Regla final
 
 ```text
 La expansión es un branch opcional, no parte del loop base.
 ```
 
-## Checklist final del Paso 11
+## §31 Checklist final del Paso 11
 
 | Check | Pregunta | Estado |
 |---|---|---|
@@ -1585,7 +1585,7 @@ La expansión es un branch opcional, no parte del loop base.
 | Dependencies | ¿Las dependencias bloquean páginas inmaduras? | ✅ / ⬜ |
 | QA | ¿Se ejecuta QA antes de publish? | ✅ / ⬜ |
 
-## Outputs del Paso 11
+## §32 Outputs del Paso 11
 
 - Pseudocódigo completo
 - Lógica de generación base
@@ -1598,7 +1598,7 @@ La expansión es un branch opcional, no parte del loop base.
 
 ---
 
-# Fuentes internas GMB Crush usadas
+# §33 Fuentes internas GMB Crush usadas
 
 - Analysis Framework.pdf
 - GMB CRUSH Universal AI Local SEO Framework Template

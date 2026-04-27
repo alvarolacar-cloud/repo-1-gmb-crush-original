@@ -2,13 +2,13 @@ Versión literal del chat · Sistema GMB Crush para webs locales
 Documento regenerado siguiendo la estructura fija acordada en la conversación.
 Proveniencia: sistema construido paso a paso en el chat y alineado con los frameworks oficiales GMB Crush.
 
-# Paso 3 — Matriz Base
+# §1 Paso 3 — Matriz Base
 
-## Índice corto
+## §2 Índice corto
 
 **Paso 3 — Matriz Base**
 
-## Objetivo del Paso 3
+## §3 Objetivo del Paso 3
 
 Este paso existe para resolver un problema concreto dentro del sistema GMB Crush: convertir la fórmula del Paso 2 en una tabla operativa donde cada URL tenga función, tipo de página, estado, prioridad y dependencias.
 La web local no debe construirse desde la intuición, sino desde una secuencia operativa que conecta entidad, categoría GBP, servicios, ciudad principal, cobertura local, schema, contenido e interlinking.
@@ -36,7 +36,7 @@ Error que previene: generar filas para Local Coverage Areas sin aprobación.
 Error que previene: olvidar schema o enlaces internos en la planificación.
 Error que previene: publicar páginas sin saber qué función cumplen.
 
-## Lo que tienes que rellenar
+## §4 Lo que tienes que rellenar
 
 ```text
 Spreadsheet Name:
@@ -100,7 +100,7 @@ Default Priority:
 P1 / P2 / P3 / P4
 ```
 
-## Ejemplo rellenado
+## §5 Ejemplo rellenado
 
 ```text
 Spreadsheet Name:
@@ -166,29 +166,29 @@ Default Priority:
 P3
 ```
 
-# Cuerpo operativo del Paso 3
+# §6 Cuerpo operativo del Paso 3
 
 > **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
-## Regla 1 — Cada página tiene una fila
+## §7 Regla 1 — Cada página tiene una fila
 
-### Explicación
+### §7.1 Explicación
 
 La matriz base convierte arquitectura en producción. Si una página no tiene fila, no existe dentro del sistema operativo.
 
-### Patrón o fórmula
+### §7.2 Patrón o fórmula
 
 ```text
 One URL = one row = one page type = one function
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §7.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 HP-001 | Homepage | / | P1 | Phase 1
 ```
 
-### Ejemplos incorrectos
+### §7.4 Ejemplos incorrectos
 
 ```text
 - Crear contenido sin fila
@@ -196,31 +196,31 @@ HP-001 | Homepage | / | P1 | Phase 1
 - Publicar sin ID
 ```
 
-### Regla final
+### §7.5 Regla final
 
 ```text
 Toda página publicada debe existir primero en la matriz.
 ```
 
-## Regla 2 — Local Coverage Areas no tienen filas base
+## §8 Regla 2 — Local Coverage Areas no tienen filas base
 
-### Explicación
+### §8.1 Explicación
 
 Almagro, Chamberí, Salamanca y Retiro son zonas de cobertura en el ejemplo, pero no generan filas mientras no sean Approved Expansion Areas.
 
-### Patrón o fórmula
+### §8.2 Patrón o fórmula
 
 ```text
 Local Coverage Area → content field, not URL row
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §8.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Almagro aparece en la columna Content Notes o Local Coverage Areas, no como /almagro/
 ```
 
-### Ejemplos incorrectos
+### §8.4 Ejemplos incorrectos
 
 ```text
 - GH-002 /almagro/ sin aprobación
@@ -228,31 +228,31 @@ Almagro aparece en la columna Content Notes o Local Coverage Areas, no como /alm
 - GeoArticle de Retiro sin landing
 ```
 
-### Regla final
+### §8.5 Regla final
 
 ```text
 Las áreas de cobertura se documentan, no se convierten en filas por defecto.
 ```
 
-## Regla 3 — ID por tipo de página
+## §9 Regla 3 — ID por tipo de página
 
-### Explicación
+### §9.1 Explicación
 
 Los IDs permiten filtrar, auditar y producir por lotes.
 
-### Patrón o fórmula
+### §9.2 Patrón o fórmula
 
 ```text
 HP, SO, GH, LBS, AC, GA
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §9.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 LBS-001 = /cerrajero/madrid/cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §9.4 Ejemplos incorrectos
 
 ```text
 - IDs aleatorios
@@ -260,31 +260,31 @@ LBS-001 = /cerrajero/madrid/cerrajero-urgente/
 - Mismo ID para varias URLs
 ```
 
-### Regla final
+### §9.5 Regla final
 
 ```text
 Cada fila debe tener un ID único.
 ```
 
-## Regla 4 — Parent Page obligatorio
+## §10 Regla 4 — Parent Page obligatorio
 
-### Explicación
+### §10.1 Explicación
 
 Cada página debe tener una relación de dependencia. Esto evita páginas huérfanas.
 
-### Patrón o fórmula
+### §10.2 Patrón o fórmula
 
 ```text
 Child page → parent page
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §10.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 LBS-001 parent = /cerrajero/cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §10.4 Ejemplos incorrectos
 
 ```text
 - GeoArticle sin service page
@@ -292,31 +292,31 @@ LBS-001 parent = /cerrajero/cerrajero-urgente/
 - Service Overview sin homepage
 ```
 
-### Regla final
+### §10.5 Regla final
 
 ```text
 Cada página debe saber de qué depende y a qué apoya.
 ```
 
-## Regla 5 — Schema asignado desde matriz
+## §11 Regla 5 — Schema asignado desde matriz
 
-### Explicación
+### §11.1 Explicación
 
 La matriz debe definir el schema antes de producir contenido.
 
-### Patrón o fórmula
+### §11.2 Patrón o fórmula
 
 ```text
 Page Type → Schema Type
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §11.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Location-Based Service → LocalBusiness + BreadcrumbList
 ```
 
-### Ejemplos incorrectos
+### §11.4 Ejemplos incorrectos
 
 ```text
 - Schema decidido al final
@@ -324,31 +324,31 @@ Location-Based Service → LocalBusiness + BreadcrumbList
 - Sin schema en GeoArticles
 ```
 
-### Regla final
+### §11.5 Regla final
 
 ```text
 El schema se planifica en la matriz.
 ```
 
-## Regla 6 — Enlaces internos Required
+## §12 Regla 6 — Enlaces internos Required
 
-### Explicación
+### §12.1 Explicación
 
 La matriz debe listar enlaces obligatorios para evitar páginas aisladas.
 
-### Patrón o fórmula
+### §12.2 Patrón o fórmula
 
 ```text
 URL → required links
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §12.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/cerrajero-urgente/ → parent service + /madrid/ + related services + articles
 ```
 
-### Ejemplos incorrectos
+### §12.4 Ejemplos incorrectos
 
 ```text
 - Solo footer links
@@ -356,31 +356,31 @@ URL → required links
 - Sin enlace al servicio padre
 ```
 
-### Regla final
+### §12.5 Regla final
 
 ```text
 Los enlaces internos se planifican antes del contenido.
 ```
 
-## Regla 7 — Priority y Phase
+## §13 Regla 7 — Priority y Phase
 
-### Explicación
+### §13.1 Explicación
 
 Cada fila debe tener prioridad y fase. La matriz no es solo inventario, también es cola de producción.
 
-### Patrón o fórmula
+### §13.2 Patrón o fórmula
 
 ```text
 Priority + Publish Phase
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §13.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/cerrajero-urgente/ → P1 / Phase 2
 ```
 
-### Ejemplos incorrectos
+### §13.4 Ejemplos incorrectos
 
 ```text
 - Todas P1
@@ -388,31 +388,31 @@ Priority + Publish Phase
 - Publicar según intuición
 ```
 
-### Regla final
+### §13.5 Regla final
 
 ```text
 La producción se decide en la matriz.
 ```
 
-## Regla 8 — Status
+## §14 Regla 8 — Status
 
-### Explicación
+### §14.1 Explicación
 
 El estado permite saber si una página está planificada, en borrador, en QA o publicada.
 
-### Patrón o fórmula
+### §14.2 Patrón o fórmula
 
 ```text
 Planned → Draft → Ready for QA → Approved → Published
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §14.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 GA-001 status = Bloqueado hasta que exista la página LBS
 ```
 
-### Ejemplos incorrectos
+### §14.4 Ejemplos incorrectos
 
 ```text
 - Publicada sin QA
@@ -420,14 +420,14 @@ GA-001 status = Bloqueado hasta que exista la página LBS
 - Estado vacío
 ```
 
-### Regla final
+### §14.5 Regla final
 
 ```text
 Ninguna página debe estar sin status.
 ```
 
 
-## Columnas obligatorias de la URL Matrix
+## §15 Columnas obligatorias de la URL Matrix
 
 | Columna | Nombre | Función |
 |---|---|---|
@@ -452,7 +452,7 @@ Ninguna página debe estar sin status.
 | S | Status | Estado |
 | T | Notes | Notas estratégicas |
 
-## Ejemplo de URL Matrix base
+## §16 Ejemplo de URL Matrix base
 
 | ID | Page Type | URL | H1 | Schema | Priority | Phase |
 |---|---|---|---|---|---|---|
@@ -463,7 +463,7 @@ Ninguna página debe estar sin status.
 | AC-001 | Additional Category | `/cerrajero/madrid/duplicado-llaves/` | Cerrajeros Madrid 24h – Duplicado de llaves experto en Madrid | Service, BreadcrumbList | P3 | Phase 2 |
 | GA-001 | GeoArticle | `/madrid/cuanto-cuesta-un-cerrajero-urgente/` | Precio de cerrajero urgente en Madrid | Article, FAQPage, BreadcrumbList | P3 | Phase 3 |
 
-## Filas que NO se generan en la base
+## §17 Filas que NO se generan en la base
 
 ```text
 /almagro/
@@ -475,25 +475,25 @@ Ninguna página debe estar sin status.
 
 Estas URLs solo se generarían si esas zonas pasan a Approved Expansion Areas.
 
-## Una fila por URL real — Regla operativa 1
+## §18 Una fila por URL real — Regla operativa 1
 
-### Explicación
+### §18.1 Explicación
 
 La matriz base no es una lista de ideas; es una tabla de producción. Cada fila debe corresponder a una URL real que se va a crear o mantener. Si una zona solo se menciona dentro del contenido, no debe aparecer como fila.
 
-### Patrón o fórmula
+### §18.2 Patrón o fórmula
 
 ```text
 URL aprobada → fila única → page type → estado
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §18.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h tiene una fila para /cerrajero/madrid/cerrajero-urgente/ y no tiene filas para /almagro/ en la fase base.
 ```
 
-### Ejemplos incorrectos
+### §18.4 Ejemplos incorrectos
 
 ```text
 - Crear filas para Almagro, Salamanca y Retiro como cobertura sin aprobación
@@ -501,31 +501,31 @@ Cerrajeros Madrid 24h tiene una fila para /cerrajero/madrid/cerrajero-urgente/ y
 - Duplicar una misma URL con dos IDs
 ```
 
-### Regla final
+### §18.5 Regla final
 
 ```text
 La matriz solo contiene URLs aprobadas.
 ```
 
-## ID por tipo de página — Regla operativa 2
+## §19 ID por tipo de página — Regla operativa 2
 
-### Explicación
+### §19.1 Explicación
 
 Cada fila necesita un ID legible para controlar producción, QA y enlaces. El ID debe indicar el tipo de página y su orden, sin depender de títulos largos o slugs complejos.
 
-### Patrón o fórmula
+### §19.2 Patrón o fórmula
 
 ```text
 HP / SO / GH / LBS / AC / GA + número correlativo
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §19.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 LBS-001 identifica /cerrajero/madrid/cerrajero-urgente/ y GA-001 identifica /madrid/cuanto-cuesta-un-cerrajero-urgente/.
 ```
 
-### Ejemplos incorrectos
+### §19.4 Ejemplos incorrectos
 
 ```text
 - Usar IDs aleatorios
@@ -533,31 +533,31 @@ LBS-001 identifica /cerrajero/madrid/cerrajero-urgente/ y GA-001 identifica /mad
 - No diferenciar artículos de páginas comerciales
 ```
 
-### Regla final
+### §19.5 Regla final
 
 ```text
 El ID debe identificar el tipo de página sin ambigüedad.
 ```
 
-## Parent Page obligatorio — Regla operativa 3
+## §20 Parent Page obligatorio — Regla operativa 3
 
-### Explicación
+### §20.1 Explicación
 
 Cada página que no sea homepage necesita una página padre o una página de soporte. Esto ayuda a construir el silo y a saber desde dónde se enlazará cada URL.
 
-### Patrón o fórmula
+### §20.2 Patrón o fórmula
 
 ```text
 Page Type → Parent Page → Internal Link Required
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §20.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 La página /cerrajero/madrid/cerrajero-urgente/ tiene como parent /cerrajero/cerrajero-urgente/ y como GeoHub /madrid/.
 ```
 
-### Ejemplos incorrectos
+### §20.4 Ejemplos incorrectos
 
 ```text
 - Dejar Parent Page vacío en páginas locales
@@ -565,31 +565,31 @@ La página /cerrajero/madrid/cerrajero-urgente/ tiene como parent /cerrajero/cer
 - Usar una página inexistente como parent
 ```
 
-### Regla final
+### §20.5 Regla final
 
 ```text
 Toda URL debe saber de qué página depende.
 ```
 
-## Main City como campo geográfico base — Regla operativa 4
+## §21 Main City como campo geográfico base — Regla operativa 4
 
-### Explicación
+### §21.1 Explicación
 
 En la matriz base, el campo City debe corresponder a la Main City. Las Local Coverage Areas pueden aparecer en notas o contenido, pero no como city rows.
 
-### Patrón o fórmula
+### §21.2 Patrón o fórmula
 
 ```text
 Main City → City column | Local Coverage Areas → Notes / Content Brief
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §21.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Las filas comerciales de Cerrajeros Madrid 24h usan City = Madrid; Almagro, Chamberí, Salamanca y Retiro quedan en Notes como Local Coverage Areas.
 ```
 
-### Ejemplos incorrectos
+### §21.4 Ejemplos incorrectos
 
 ```text
 - Poner Almagro en la columna City sin URL aprobada
@@ -597,31 +597,31 @@ Las filas comerciales de Cerrajeros Madrid 24h usan City = Madrid; Almagro, Cham
 - Mezclar ciudad principal y zonas de cobertura en el mismo campo
 ```
 
-### Regla final
+### §21.5 Regla final
 
 ```text
 La columna City representa la ciudad de la URL, no una lista de cobertura.
 ```
 
-## Schema Type asignado desde la matriz — Regla operativa 5
+## §22 Schema Type asignado desde la matriz — Regla operativa 5
 
-### Explicación
+### §22.1 Explicación
 
 La matriz debe incluir schema requerido por tipo de página para que el equipo no lo decida al final. Esto evita que páginas locales salgan sin LocalBusiness, Service, Article o BreadcrumbList.
 
-### Patrón o fórmula
+### §22.2 Patrón o fórmula
 
 ```text
 Page Type → Schema Required → QA Schema
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §22.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 LBS-001 usa LocalBusiness y BreadcrumbList; GA-001 usa Article, FAQPage, BreadcrumbList y Speakable.
 ```
 
-### Ejemplos incorrectos
+### §22.4 Ejemplos incorrectos
 
 ```text
 - Dejar schema vacío hasta el final
@@ -629,31 +629,31 @@ LBS-001 usa LocalBusiness y BreadcrumbList; GA-001 usa Article, FAQPage, Breadcr
 - Usar LocalBusiness con dirección falsa en una zona de cobertura
 ```
 
-### Regla final
+### §22.5 Regla final
 
 ```text
 El schema se decide en la matriz, no después de publicar.
 ```
 
-## Enlaces internos Required como columna crítica — Regla operativa 6
+## §23 Enlaces internos Required como columna crítica — Regla operativa 6
 
-### Explicación
+### §23.1 Explicación
 
 La matriz debe listar enlaces obligatorios para cada URL. Sin esta columna, las páginas pueden publicarse aisladas y el sistema pierde fuerza de silo.
 
-### Patrón o fórmula
+### §23.2 Patrón o fórmula
 
 ```text
 Source URL → Required Links → QA de enlaces
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §23.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 LBS-001 requiere enlaces a /cerrajero/cerrajero-urgente/, /madrid/, páginas relacionadas en Madrid y GeoArticles.
 ```
 
-### Ejemplos incorrectos
+### §23.4 Ejemplos incorrectos
 
 ```text
 - Publicar páginas sin enlaces obligatorios
@@ -661,31 +661,31 @@ LBS-001 requiere enlaces a /cerrajero/cerrajero-urgente/, /madrid/, páginas rel
 - Usar solo enlaces de footer
 ```
 
-### Regla final
+### §23.5 Regla final
 
 ```text
 Toda fila debe llevar enlaces internos mínimos antes de QA.
 ```
 
-## Priority y Publish Phase separados — Regla operativa 7
+## §24 Priority y Publish Phase separados — Regla operativa 7
 
-### Explicación
+### §24.1 Explicación
 
 La prioridad mide importancia estratégica; la fase mide cuándo se publica. Una página P1 puede estar bloqueada si su padre no existe. La matriz debe incluir ambos campos para evitar publicar por impulso.
 
-### Patrón o fórmula
+### §24.2 Patrón o fórmula
 
 ```text
 Priority Tier + Dependency → Publish Phase
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §24.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 GA-001 puede ser P3, pero queda en Phase 3 porque primero deben existir /madrid/ y /cerrajero/madrid/cerrajero-urgente/.
 ```
 
-### Ejemplos incorrectos
+### §24.4 Ejemplos incorrectos
 
 ```text
 - Publicar GeoArticles P3 antes de landings P1
@@ -693,31 +693,31 @@ GA-001 puede ser P3, pero queda en Phase 3 porque primero deben existir /madrid/
 - No marcar páginas bloqueadas por dependencia
 ```
 
-### Regla final
+### §24.5 Regla final
 
 ```text
 Prioridad no elimina dependencias.
 ```
 
-## Status operativo — Regla operativa 8
+## §25 Status operativo — Regla operativa 8
 
-### Explicación
+### §25.1 Explicación
 
 Cada URL necesita un estado para controlar el flujo de producción. Planned, Draft, Ready for QA, Approved y Published son estados suficientes para saber qué hacer con cada fila.
 
-### Patrón o fórmula
+### §25.2 Patrón o fórmula
 
 ```text
 Planned → Draft → Ready for QA → Approved → Published
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §25.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h marca /cerrajero/madrid/cerrajero-urgente/ como Planned hasta que el contenido y links estén listos.
 ```
 
-### Ejemplos incorrectos
+### §25.4 Ejemplos incorrectos
 
 ```text
 - Usar estados vagos como “en proceso”
@@ -725,31 +725,31 @@ Cerrajeros Madrid 24h marca /cerrajero/madrid/cerrajero-urgente/ como Planned ha
 - No actualizar estado después de QA
 ```
 
-### Regla final
+### §25.5 Regla final
 
 ```text
 La matriz debe mostrar el estado real de cada página.
 ```
 
-## Notes para decisiones estratégicas — Regla operativa 9
+## §26 Notes para decisiones estratégicas — Regla operativa 9
 
-### Explicación
+### §26.1 Explicación
 
 La columna Notes debe registrar por qué una página existe, qué categoría soporta, si consolida una categoría adicional o qué cobertura local debe mencionarse. Esto ayuda a evitar repetir discusiones.
 
-### Patrón o fórmula
+### §26.2 Patrón o fórmula
 
 ```text
 Decisión estratégica → Notes → trazabilidad
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §26.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 La fila /cerrajero/madrid/cerrajero-urgente/ indica que soporta Primary Category Cerrajero y Additional Category Servicio de cerrajería de urgencia.
 ```
 
-### Ejemplos incorrectos
+### §26.4 Ejemplos incorrectos
 
 ```text
 - Dejar notas vacías en páginas complejas
@@ -757,31 +757,31 @@ La fila /cerrajero/madrid/cerrajero-urgente/ indica que soporta Primary Category
 - No indicar Local Coverage Areas relevantes
 ```
 
-### Regla final
+### §26.5 Regla final
 
 ```text
 Las notas deben explicar decisiones que podrían confundirse.
 ```
 
-## Matriz base antes de contenido — Regla operativa 10
+## §27 Matriz base antes de contenido — Regla operativa 10
 
-### Explicación
+### §27.1 Explicación
 
 No se debe escribir contenido página por página sin haber cerrado la matriz. La matriz es el contrato operativo entre arquitectura, contenido, schema, enlaces y publicación.
 
-### Patrón o fórmula
+### §27.2 Patrón o fórmula
 
 ```text
 URL Matrix aprobada → briefs → contenido → QA
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §27.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h aprueba primero sus 28 URLs base antes de redactar los textos de homepage, servicios, GeoHub y GeoArticles.
 ```
 
-### Ejemplos incorrectos
+### §27.4 Ejemplos incorrectos
 
 ```text
 - Redactar páginas sin saber si existen en la matriz
@@ -789,13 +789,13 @@ Cerrajeros Madrid 24h aprueba primero sus 28 URLs base antes de redactar los tex
 - Cambiar page type sin actualizar matriz
 ```
 
-### Regla final
+### §27.5 Regla final
 
 ```text
 La matriz manda; el contenido sigue.
 ```
 
-## Checklist final del Paso 3
+## §28 Checklist final del Paso 3
 
 | Check | Pregunta | Estado |
 |---|---|---|
@@ -810,7 +810,7 @@ La matriz manda; el contenido sigue.
 | Priority | ¿La prioridad está definida? | ✅ / ⬜ |
 | Status | ¿El estado de producción está claro? | ✅ / ⬜ |
 
-## Outputs del Paso 3
+## §29 Outputs del Paso 3
 
 - URL Matrix creada
 - Filas base generadas
@@ -823,7 +823,7 @@ La matriz manda; el contenido sigue.
 
 ---
 
-# Fuentes internas GMB Crush usadas
+# §30 Fuentes internas GMB Crush usadas
 
 - Analysis Framework.pdf
 - GMB CRUSH Universal AI Local SEO Framework Template
@@ -836,7 +836,7 @@ La matriz manda; el contenido sigue.
 
 
 
-### GeoArticles completos (15)
+### §30.1 GeoArticles completos (15)
 
 > **Aviso de trazabilidad:** estos 15 títulos son un primer borrador derivado de la fórmula G × S = 15 y de la lógica del servicio. **No vienen de keyword research real**. Antes de producirlos hay que validar volumen de búsqueda, dificultad y oportunidad competitiva por título. La fórmula garantiza la cantidad; los temas concretos requieren validación.
 

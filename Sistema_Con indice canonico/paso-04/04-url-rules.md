@@ -2,13 +2,13 @@ Versión literal del chat · Sistema GMB Crush para webs locales
 Documento regenerado siguiendo la estructura fija acordada en la conversación.
 Proveniencia: sistema construido paso a paso en el chat y alineado con los frameworks oficiales GMB Crush.
 
-# Paso 4 — URL Rules
+# §1 Paso 4 — URL Rules
 
-## Índice corto
+## §2 Índice corto
 
 **Paso 4 — URL Rules**
 
-## Objetivo del Paso 4
+## §3 Objetivo del Paso 4
 
 Este paso existe para resolver un problema concreto dentro del sistema GMB Crush: fijar una estructura de URLs limpia, escalable y anti-canibalización antes de producir contenidos.
 La web local no debe construirse desde la intuición, sino desde una secuencia operativa que conecta entidad, categoría GBP, servicios, ciudad principal, cobertura local, schema, contenido e interlinking.
@@ -36,7 +36,7 @@ Error que previene: mezclar ciudad, servicio y artículo en el mismo patrón.
 Error que previene: crear slugs con near-me, best o cheap.
 Error que previene: tener versiones con y sin trailing slash.
 
-## Lo que tienes que rellenar
+## §4 Lo que tienes que rellenar
 
 ```text
 Website Root Domain:
@@ -99,7 +99,7 @@ Approved local coverage area names:
 Approved expansion slugs:
 ```
 
-## Ejemplo rellenado
+## §5 Ejemplo rellenado
 
 ```text
 Website Root Domain:
@@ -167,29 +167,29 @@ Approved additional category slugs:
 - duplicado-llaves
 ```
 
-# Cuerpo operativo del Paso 4
+# §6 Cuerpo operativo del Paso 4
 
 > **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
-## Regla 1 — Dominio canónico
+## §7 Regla 1 — Dominio canónico
 
-### Explicación
+### §7.1 Explicación
 
 Todas las URLs deben salir de una sola versión del dominio. Esto evita duplicación técnica y señales inconsistentes.
 
-### Patrón o fórmula
+### §7.2 Patrón o fórmula
 
 ```text
 https://www.domain.com OR https://domain.com
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §7.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 https://www.cerrajerosmadrid24h.com/cerrajero/madrid/cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §7.4 Ejemplos incorrectos
 
 ```text
 - https://cerrajerosmadrid24h.com mezclado con https://www.cerrajerosmadrid24h.com
@@ -197,31 +197,31 @@ https://www.cerrajerosmadrid24h.com/cerrajero/madrid/cerrajero-urgente/
 - URLs relativas sin canonical
 ```
 
-### Regla final
+### §7.5 Regla final
 
 ```text
 Una web local usa un solo dominio canónico.
 ```
 
-## Regla 2 — Trailing slash
+## §8 Regla 2 — Trailing slash
 
-### Explicación
+### §8.1 Explicación
 
 La regla del slash final debe ser consistente en todo el sitio.
 
-### Patrón o fórmula
+### §8.2 Patrón o fórmula
 
 ```text
 All URLs end with /
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §8.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §8.4 Ejemplos incorrectos
 
 ```text
 - /cerrajero/madrid/cerrajero-urgente
@@ -229,31 +229,31 @@ All URLs end with /
 - Canonical distinto al enlace interno
 ```
 
-### Regla final
+### §8.5 Regla final
 
 ```text
 Todas las URLs siguen la misma convención de slash.
 ```
 
-## Regla 3 — Homepage
+## §9 Regla 3 — Homepage
 
-### Explicación
+### §9.1 Explicación
 
 La homepage es la raíz de entidad y debe vivir en el root domain.
 
-### Patrón o fórmula
+### §9.2 Patrón o fórmula
 
 ```text
 /
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §9.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 https://www.cerrajerosmadrid24h.com/
 ```
 
-### Ejemplos incorrectos
+### §9.4 Ejemplos incorrectos
 
 ```text
 - /home/
@@ -262,31 +262,31 @@ https://www.cerrajerosmadrid24h.com/
 - /cerrajero-madrid/
 ```
 
-### Regla final
+### §9.5 Regla final
 
 ```text
 La homepage siempre es `/`.
 ```
 
-## Regla 4 — Service Overview
+## §10 Regla 4 — Service Overview
 
-### Explicación
+### §10.1 Explicación
 
 Las páginas de servicio general son no geolocalizadas y no llevan ciudad.
 
-### Patrón o fórmula
+### §10.2 Patrón o fórmula
 
 ```text
 /[category]/[service]/
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §10.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §10.4 Ejemplos incorrectos
 
 ```text
 - /cerrajero-urgente-madrid/
@@ -295,31 +295,31 @@ Las páginas de servicio general son no geolocalizadas y no llevan ciudad.
 - /cerrajero/madrid/cerrajero-urgente-overview/
 ```
 
-### Regla final
+### §10.5 Regla final
 
 ```text
 Service Overview = categoría + servicio, sin ciudad.
 ```
 
-## Regla 5 — Main City GeoHub
+## §11 Regla 5 — Main City GeoHub
 
-### Explicación
+### §11.1 Explicación
 
 El GeoHub de la Main City agrupa todo lo relacionado con la ciudad principal.
 
-### Patrón o fórmula
+### §11.2 Patrón o fórmula
 
 ```text
 /[main-city]/ OR /[category]/[main-city]/
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §11.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /madrid/
 ```
 
-### Ejemplos incorrectos
+### §11.4 Ejemplos incorrectos
 
 ```text
 - /areas-we-serve/madrid/
@@ -328,31 +328,31 @@ El GeoHub de la Main City agrupa todo lo relacionado con la ciudad principal.
 - /madrid-cerrajero-services/
 ```
 
-### Regla final
+### §11.5 Regla final
 
 ```text
 El GeoHub es un contenedor de ciudad, no una landing de servicio.
 ```
 
-## Regla 6 — Main City Location-Based Service
+## §12 Regla 6 — Main City Location-Based Service
 
-### Explicación
+### §12.1 Explicación
 
 Estas son las páginas comerciales para búsquedas service + city.
 
-### Patrón o fórmula
+### §12.2 Patrón o fórmula
 
 ```text
 /[category]/[main-city]/[service]/
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §12.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §12.4 Ejemplos incorrectos
 
 ```text
 - /madrid/cerrajero-urgente/
@@ -361,31 +361,31 @@ Estas son las páginas comerciales para búsquedas service + city.
 - /cerrajero/madrid/urgente-car-cambio-cerraduras/
 ```
 
-### Regla final
+### §12.5 Regla final
 
 ```text
 Una página local = un servicio + una Main City.
 ```
 
-## Regla 7 — Additional Category Page
+## §13 Regla 7 — Additional Category Page
 
-### Explicación
+### §13.1 Explicación
 
 Las categorías adicionales que no están cubiertas por un core service usan el mismo patrón local.
 
-### Patrón o fórmula
+### §13.2 Patrón o fórmula
 
 ```text
 /[category]/[main-city]/[additional-category]/
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §13.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/duplicado-llaves/
 ```
 
-### Ejemplos incorrectos
+### §13.4 Ejemplos incorrectos
 
 ```text
 - /duplicado-llaves-madrid/
@@ -394,31 +394,31 @@ Las categorías adicionales que no están cubiertas por un core service usan el 
 - /cerrajero/madrid/duplicado-llaves/
 ```
 
-### Regla final
+### §13.5 Regla final
 
 ```text
 Categoría adicional real = página local propia si no está cubierta.
 ```
 
-## Regla 8 — GeoArticle
+## §14 Regla 8 — GeoArticle
 
-### Explicación
+### §14.1 Explicación
 
 Los GeoArticles son boosters semánticos y viven bajo la Main City.
 
-### Patrón o fórmula
+### §14.2 Patrón o fórmula
 
 ```text
 /[main-city]/[article-topic]/
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §14.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /madrid/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §14.4 Ejemplos incorrectos
 
 ```text
 - /blog/cerrajero-urgente-cost-madrid/
@@ -427,31 +427,31 @@ Los GeoArticles son boosters semánticos y viven bajo la Main City.
 - /cuanto-cuesta-un-cerrajero-urgente-madrid/
 ```
 
-### Regla final
+### §14.5 Regla final
 
 ```text
 GeoArticle = Main City + intención long-tail.
 ```
 
-## Regla 9 — Local Coverage Areas no generan URLs
+## §15 Regla 9 — Local Coverage Areas no generan URLs
 
-### Explicación
+### §15.1 Explicación
 
 Las áreas de cobertura se mencionan en contenido y schema, pero no crean rutas.
 
-### Patrón o fórmula
+### §15.2 Patrón o fórmula
 
 ```text
 Local Coverage Area → no URL unless approved
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §15.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Almagro se menciona en la sección de cobertura, pero no existe /almagro/ en fase base
 ```
 
-### Ejemplos incorrectos
+### §15.4 Ejemplos incorrectos
 
 ```text
 - /almagro/ sin aprobación
@@ -459,31 +459,31 @@ Almagro se menciona en la sección de cobertura, pero no existe /almagro/ en fas
 - /retiro/cuanto-tarda-un-cerrajero/ sin landing
 ```
 
-### Regla final
+### §15.5 Regla final
 
 ```text
 Las áreas cubiertas no son carpetas por defecto.
 ```
 
-## Regla 10 — Approved Expansion URLs
+## §16 Regla 10 — Approved Expansion URLs
 
-### Explicación
+### §16.1 Explicación
 
 Una Approved Expansion Area puede usar los mismos patrones que la Main City, pero solo dentro del módulo de expansión.
 
-### Patrón o fórmula
+### §16.2 Patrón o fórmula
 
 ```text
 /[approved-area]/ + /[category]/[approved-area]/[service]/
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §16.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /almagro/ solo si Almagro pasa a Approved Expansion Area
 ```
 
-### Ejemplos incorrectos
+### §16.4 Ejemplos incorrectos
 
 ```text
 - Crear expansión sin demanda
@@ -491,31 +491,31 @@ Una Approved Expansion Area puede usar los mismos patrones que la Main City, per
 - No diferenciar base y expansión
 ```
 
-### Regla final
+### §16.5 Regla final
 
 ```text
 La expansión es opcional y aprobada.
 ```
 
-## Regla 11 — No near-me
+## §17 Regla 11 — No near-me
 
-### Explicación
+### §17.1 Explicación
 
 Near me puede aparecer en FAQs o contenido, pero no en slugs principales.
 
-### Patrón o fórmula
+### §17.2 Patrón o fórmula
 
 ```text
 No `near-me` in core URLs
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §17.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §17.4 Ejemplos incorrectos
 
 ```text
 - /cerrajero/madrid/cerrajero-urgente-near-me/
@@ -523,31 +523,31 @@ No `near-me` in core URLs
 - /madrid/cerrajero-near-me/
 ```
 
-### Regla final
+### §17.5 Regla final
 
 ```text
 No usar near-me en URLs principales.
 ```
 
-## Regla 12 — No adjetivos vacíos
+## §18 Regla 12 — No adjetivos vacíos
 
-### Explicación
+### §18.1 Explicación
 
 Best, cheap y top-rated son modifiers comerciales, no arquitectura.
 
-### Patrón o fórmula
+### §18.2 Patrón o fórmula
 
 ```text
 No best/cheap/top-rated in slugs
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §18.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/apertura-puertas/
 ```
 
-### Ejemplos incorrectos
+### §18.4 Ejemplos incorrectos
 
 ```text
 - /best-apertura-puertas-madrid/
@@ -555,31 +555,31 @@ No best/cheap/top-rated in slugs
 - /top-rated-cerrajero-urgente-madrid/
 ```
 
-### Regla final
+### §18.5 Regla final
 
 ```text
 La URL debe ser estable y objetiva.
 ```
 
-## Regla 13 — Slugs limpios
+## §19 Regla 13 — Slugs limpios
 
-### Explicación
+### §19.1 Explicación
 
 Los slugs deben ser humanos, minúsculos y sin símbolos.
 
-### Patrón o fórmula
+### §19.2 Patrón o fórmula
 
 ```text
 lowercase + hyphens + no accents + no symbols
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §19.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 chamberi, cerrajero-urgente, duplicado-llaves
 ```
 
-### Ejemplos incorrectos
+### §19.4 Ejemplos incorrectos
 
 ```text
 - CerrajeroUrgentee
@@ -588,31 +588,31 @@ chamberi, cerrajero-urgente, duplicado-llaves
 - cerrajería-urgente
 ```
 
-### Regla final
+### §19.5 Regla final
 
 ```text
 Slug limpio = URL escalable.
 ```
 
-## Regla 14 — No falsa ubicación
+## §20 Regla 14 — No falsa ubicación
 
-### Explicación
+### §20.1 Explicación
 
 Una URL o contenido no debe fingir oficina física.
 
-### Patrón o fórmula
+### §20.2 Patrón o fórmula
 
 ```text
 Service area ≠ physical office
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §20.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Atendemos clientes en Almagro
 ```
 
-### Ejemplos incorrectos
+### §20.4 Ejemplos incorrectos
 
 ```text
 - Nuestra oficina en Almagro si no existe
@@ -620,31 +620,31 @@ Atendemos clientes en Almagro
 - Schema address en Chamberí sin oficina
 ```
 
-### Regla final
+### §20.5 Regla final
 
 ```text
 Atender una zona no significa tener oficina allí.
 ```
 
-## Regla 15 — No duplicar intención
+## §21 Regla 15 — No duplicar intención
 
-### Explicación
+### §21.1 Explicación
 
 Cada URL debe atacar una intención única.
 
-### Patrón o fórmula
+### §21.2 Patrón o fórmula
 
 ```text
 One URL = one primary intent
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §21.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /cerrajero/madrid/cerrajero-urgente/ cubre cerrajero urgente en Madrid
 ```
 
-### Ejemplos incorrectos
+### §21.4 Ejemplos incorrectos
 
 ```text
 - /madrid/cerrajero-urgente/ compitiendo con la landing
@@ -652,14 +652,14 @@ One URL = one primary intent
 - /cerrajero-urgente-madrid/
 ```
 
-### Regla final
+### §21.5 Regla final
 
 ```text
 Una intención principal debe tener una URL principal.
 ```
 
 
-## Estructura final aprobada para Cerrajeros Madrid 24h
+## §22 Estructura final aprobada para Cerrajeros Madrid 24h
 
 ```text
 Homepage:
@@ -691,7 +691,7 @@ GeoArticles de la Main City:
 /madrid/cuanto-tarda-un-cerrajero/
 ```
 
-## URLs no aprobadas en la fase base
+## §23 URLs no aprobadas en la fase base
 
 ```text
 /almagro/
@@ -703,25 +703,25 @@ GeoArticles de la Main City:
 
 Estas URLs solo se crearían como Approved Expansion Areas.
 
-## Dominio canónico único — Regla operativa 1
+## §24 Dominio canónico único — Regla operativa 1
 
-### Explicación
+### §24.1 Explicación
 
 Todas las URLs deben salir de una única versión canónica del dominio. Mezclar www, non-www, HTTP y HTTPS crea duplicados técnicos y dificulta la consistencia del schema y la matriz.
 
-### Patrón o fórmula
+### §24.2 Patrón o fórmula
 
 ```text
 Canonical Domain → todas las URLs absolutas → redirección del resto
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §24.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h usa https://www.cerrajerosmadrid24h.com como dominio canónico para /cerrajero/madrid/cerrajero-urgente/.
 ```
 
-### Ejemplos incorrectos
+### §24.4 Ejemplos incorrectos
 
 ```text
 - Usar https://cerrajerosmadrid24h.com en schema y https://www.cerrajerosmadrid24h.com en la matriz
@@ -729,31 +729,31 @@ Cerrajeros Madrid 24h usa https://www.cerrajerosmadrid24h.com como dominio canó
 - Crear enlaces internos con dominios mezclados
 ```
 
-### Regla final
+### §24.5 Regla final
 
 ```text
 Una arquitectura local necesita un único dominio canónico.
 ```
 
-## Trailing slash consistente — Regla operativa 2
+## §25 Trailing slash consistente — Regla operativa 2
 
-### Explicación
+### §25.1 Explicación
 
 La regla de slash final debe ser uniforme. No importa tanto si se usa o no slash, sino que todas las URLs sigan la misma convención.
 
-### Patrón o fórmula
+### §25.2 Patrón o fórmula
 
 ```text
 URL pattern → trailing slash uniforme → canonical
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §25.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 La URL correcta es /cerrajero/madrid/cerrajero-urgente/ si el sistema usa trailing slash.
 ```
 
-### Ejemplos incorrectos
+### §25.4 Ejemplos incorrectos
 
 ```text
 - Publicar /cerrajero/madrid/cerrajero-urgente y /cerrajero/madrid/cerrajero-urgente/
@@ -761,31 +761,31 @@ La URL correcta es /cerrajero/madrid/cerrajero-urgente/ si el sistema usa traili
 - No canonicalizar variantes
 ```
 
-### Regla final
+### §25.5 Regla final
 
 ```text
 La consistencia de URL evita duplicados técnicos.
 ```
 
-## Homepage en raíz — Regla operativa 3
+## §26 Homepage en raíz — Regla operativa 3
 
-### Explicación
+### §26.1 Explicación
 
 La homepage debe ser la raíz del dominio. No debe moverse a /home/, /inicio/ o /cerrajero-madrid/ porque actúa como Root Entity Anchor del negocio.
 
-### Patrón o fórmula
+### §26.2 Patrón o fórmula
 
 ```text
 Homepage = /
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §26.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h usa / como homepage y desde ahí enlaza a servicios, GeoHub de Madrid y contacto.
 ```
 
-### Ejemplos incorrectos
+### §26.4 Ejemplos incorrectos
 
 ```text
 - Usar /home/ como homepage principal
@@ -793,31 +793,31 @@ Cerrajeros Madrid 24h usa / como homepage y desde ahí enlaza a servicios, GeoHu
 - Duplicar contenido de homepage en otra URL
 ```
 
-### Regla final
+### §26.5 Regla final
 
 ```text
 La homepage vive en la raíz del dominio.
 ```
 
-## Service Overview sin ciudad — Regla operativa 4
+## §27 Service Overview sin ciudad — Regla operativa 4
 
-### Explicación
+### §27.1 Explicación
 
 Las páginas de servicio general no deben incluir ciudad en la URL. Su función es construir autoridad temática y servir como padre de la página local.
 
-### Patrón o fórmula
+### §27.2 Patrón o fórmula
 
 ```text
 /[primary-category-slug]/[service-slug]/
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §27.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 La URL correcta para Cerrajero urgente general es /cerrajero/cerrajero-urgente/.
 ```
 
-### Ejemplos incorrectos
+### §27.4 Ejemplos incorrectos
 
 ```text
 - /cerrajero/madrid-cerrajero-urgente/
@@ -825,31 +825,31 @@ La URL correcta para Cerrajero urgente general es /cerrajero/cerrajero-urgente/.
 - /services/cerrajero-urgente/ si rompe la taxonomía aprobada
 ```
 
-### Regla final
+### §27.5 Regla final
 
 ```text
 Service Overview = categoría + servicio, sin ciudad.
 ```
 
-## Main City GeoHub limpio — Regla operativa 5
+## §28 Main City GeoHub limpio — Regla operativa 5
 
-### Explicación
+### §28.1 Explicación
 
 El GeoHub de la Main City debe ser corto, estable y fácil de enlazar. Puede usar /city/ o /category/city/, pero en la base simplificada se recomienda /city/.
 
-### Patrón o fórmula
+### §28.2 Patrón o fórmula
 
 ```text
 /[main-city-slug]/
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §28.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h usa /madrid/ como GeoHub de la Main City.
 ```
 
-### Ejemplos incorrectos
+### §28.4 Ejemplos incorrectos
 
 ```text
 - /areas-we-serve/madrid/
@@ -857,31 +857,31 @@ Cerrajeros Madrid 24h usa /madrid/ como GeoHub de la Main City.
 - /cerrajero-services-madrid/
 ```
 
-### Regla final
+### §28.5 Regla final
 
 ```text
 El GeoHub debe ser un contenedor de ciudad, no una landing de servicio.
 ```
 
-## Location-Based Service con patrón fijo — Regla operativa 6
+## §29 Location-Based Service con patrón fijo — Regla operativa 6
 
-### Explicación
+### §29.1 Explicación
 
 Las páginas comerciales locales deben seguir el patrón categoría + ciudad + servicio. Esto mantiene claro el silo y evita mezclar intención de servicio con artículo o hub.
 
-### Patrón o fórmula
+### §29.2 Patrón o fórmula
 
 ```text
 /[category]/[main-city]/[service]/
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §29.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 La URL correcta es /cerrajero/madrid/cerrajero-urgente/.
 ```
 
-### Ejemplos incorrectos
+### §29.4 Ejemplos incorrectos
 
 ```text
 - /madrid/cerrajero-urgente/ si se reserva /madrid/ para GeoHub y artículos
@@ -889,31 +889,31 @@ La URL correcta es /cerrajero/madrid/cerrajero-urgente/.
 - /cerrajero/madrid/urgente-car-cambio-cerraduras/
 ```
 
-### Regla final
+### §29.5 Regla final
 
 ```text
 Una página local comercial usa una ciudad y un servicio.
 ```
 
-## Additional Category con mismo patrón local — Regla operativa 7
+## §30 Additional Category con mismo patrón local — Regla operativa 7
 
-### Explicación
+### §30.1 Explicación
 
 Las categorías adicionales efectivas usan el mismo patrón que una página servicio+ciudad, porque su función es dar soporte local a una categoría GBP secundaria.
 
-### Patrón o fórmula
+### §30.2 Patrón o fórmula
 
 ```text
 /[category]/[main-city]/[additional-category-slug]/
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §30.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Duplicado de llaves usa /cerrajero/madrid/duplicado-llaves/.
 ```
 
-### Ejemplos incorrectos
+### §30.4 Ejemplos incorrectos
 
 ```text
 - /duplicado-llaves/
@@ -921,31 +921,31 @@ Duplicado de llaves usa /cerrajero/madrid/duplicado-llaves/.
 - /cerrajero/duplicado-llaves/ sin ciudad
 ```
 
-### Regla final
+### §30.5 Regla final
 
 ```text
 Una categoría adicional efectiva necesita soporte local en la Main City.
 ```
 
-## GeoArticle como ciudad + tema — Regla operativa 8
+## §31 GeoArticle como ciudad + tema — Regla operativa 8
 
-### Explicación
+### §31.1 Explicación
 
 Los GeoArticles son contenido de soporte, no landings comerciales. Su URL debe reflejar un tema long-tail asociado a la Main City, sin competir con la página servicio+ciudad.
 
-### Patrón o fórmula
+### §31.2 Patrón o fórmula
 
 ```text
 /[main-city]/[article-topic-slug]/
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §31.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 El artículo de coste usa /madrid/cuanto-cuesta-un-cerrajero-urgente/ y enlaza a /cerrajero/madrid/cerrajero-urgente/.
 ```
 
-### Ejemplos incorrectos
+### §31.4 Ejemplos incorrectos
 
 ```text
 - /cerrajero/madrid/cuanto-cuesta-un-cerrajero-urgente/ si complica la distinción de landing
@@ -953,31 +953,31 @@ El artículo de coste usa /madrid/cuanto-cuesta-un-cerrajero-urgente/ y enlaza a
 - /blog/random-post-123/
 ```
 
-### Regla final
+### §31.5 Regla final
 
 ```text
 GeoArticle = Main City + intención long-tail.
 ```
 
-## Slugs limpios — Regla operativa 9
+## §32 Slugs limpios — Regla operativa 9
 
-### Explicación
+### §32.1 Explicación
 
 Los slugs deben ser legibles, estables y sin adornos. Minúsculas, guiones medios y sin símbolos es suficiente. Evita acentos, underscores, mayúsculas o palabras vacías innecesarias.
 
-### Patrón o fórmula
+### §32.2 Patrón o fórmula
 
 ```text
 texto → lowercase → sin acentos → guiones medios → sin símbolos
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §32.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Chamberí se convierte en chamberi y Cerrajero urgente en cerrajero-urgente.
 ```
 
-### Ejemplos incorrectos
+### §32.4 Ejemplos incorrectos
 
 ```text
 - /CerrajeroUrgentee/
@@ -985,31 +985,31 @@ Chamberí se convierte en chamberi y Cerrajero urgente en cerrajero-urgente.
 - /cerrajero-urgente!!!
 ```
 
-### Regla final
+### §32.5 Regla final
 
 ```text
 Un slug limpio debe ser entendible para humanos y sistemas.
 ```
 
-## No near-me ni adjetivos vacíos — Regla operativa 10
+## §33 No near-me ni adjetivos vacíos — Regla operativa 10
 
-### Explicación
+### §33.1 Explicación
 
 Near me, best, cheap o top-rated pueden aparecer en contenido si encajan, pero no deben formar parte de la arquitectura base. Son modificadores inestables y pueden debilitar la URL.
 
-### Patrón o fórmula
+### §33.2 Patrón o fórmula
 
 ```text
 URL objetiva → servicio real → ciudad real
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §33.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Usar /cerrajero/madrid/cerrajero-urgente/ en vez de /best-cerrajero-urgente-near-me-madrid/.
 ```
 
-### Ejemplos incorrectos
+### §33.4 Ejemplos incorrectos
 
 ```text
 - /cerrajero/madrid/cerrajero-urgente-near-me/
@@ -1017,31 +1017,31 @@ Usar /cerrajero/madrid/cerrajero-urgente/ en vez de /best-cerrajero-urgente-near
 - /cheap-apertura-puertas-madrid/
 ```
 
-### Regla final
+### §33.5 Regla final
 
 ```text
 La URL base debe describir la entidad, no vender con adjetivos.
 ```
 
-## Local Coverage Areas sin URL por defecto — Regla operativa 11
+## §34 Local Coverage Areas sin URL por defecto — Regla operativa 11
 
-### Explicación
+### §34.1 Explicación
 
 Las áreas de cobertura local pueden ser barrios, distritos o municipios cercanos, pero no generan URLs por defecto. Esta regla evita que el sistema base vuelva a multiplicarse sin necesidad.
 
-### Patrón o fórmula
+### §34.2 Patrón o fórmula
 
 ```text
 Local Coverage Area → mención de contenido | no URL base
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §34.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Almagro, Chamberí, Salamanca y Retiro se mencionan en contenido de Cerrajeros Madrid 24h, pero no se crean /almagro/ ni /cerrajero/almagro/... en fase base.
 ```
 
-### Ejemplos incorrectos
+### §34.4 Ejemplos incorrectos
 
 ```text
 - Crear una URL por cada área mencionada
@@ -1049,31 +1049,31 @@ Almagro, Chamberí, Salamanca y Retiro se mencionan en contenido de Cerrajeros M
 - Usar áreas de cobertura como Main City
 ```
 
-### Regla final
+### §34.5 Regla final
 
 ```text
 Mencionar una zona no significa crear una página.
 ```
 
-## Expansion URLs solo aprobadas — Regla operativa 12
+## §35 Expansion URLs solo aprobadas — Regla operativa 12
 
-### Explicación
+### §35.1 Explicación
 
 Si una Local Coverage Area pasa a Approved Expansion Area, entonces sí puede generar GeoHub, páginas servicio+zona y artículos. Pero ese módulo debe quedar separado de la base.
 
-### Patrón o fórmula
+### §35.2 Patrón o fórmula
 
 ```text
 Approved Expansion Area → /area/ + /category/area/service/
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §35.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Si Almagro se aprueba después, Cerrajeros Madrid 24h puede crear /almagro/ y /cerrajero/almagro/cerrajero-urgente/ como expansión.
 ```
 
-### Ejemplos incorrectos
+### §35.4 Ejemplos incorrectos
 
 ```text
 - Crear expansión sin justificación
@@ -1081,13 +1081,13 @@ Si Almagro se aprueba después, Cerrajeros Madrid 24h puede crear /almagro/ y /c
 - Crear páginas de expansión sin contenido único
 ```
 
-### Regla final
+### §35.5 Regla final
 
 ```text
 Las URLs de expansión se aprueban antes de generarse.
 ```
 
-## Checklist final del Paso 4
+## §36 Checklist final del Paso 4
 
 | Check | Pregunta | Estado |
 |---|---|---|
@@ -1105,7 +1105,7 @@ Las URLs de expansión se aprueban antes de generarse.
 | No false location | ¿No se afirma ubicación física falsa? | ✅ / ⬜ |
 | No duplicate intent | ¿Cada intención tiene una sola URL principal? | ✅ / ⬜ |
 
-## Outputs del Paso 4
+## §37 Outputs del Paso 4
 
 - Dominio canónico definido
 - Trailing slash definido
@@ -1118,7 +1118,7 @@ Las URLs de expansión se aprueban antes de generarse.
 
 ---
 
-# Fuentes internas GMB Crush usadas
+# §38 Fuentes internas GMB Crush usadas
 
 - Analysis Framework.pdf
 - GMB CRUSH Universal AI Local SEO Framework Template
@@ -1131,7 +1131,7 @@ Las URLs de expansión se aprueban antes de generarse.
 
 
 
-### GeoArticles completos (15)
+### §38.1 GeoArticles completos (15)
 
 > **Aviso de trazabilidad:** estos 15 títulos son un primer borrador derivado de la fórmula G × S = 15 y de la lógica del servicio. **No vienen de keyword research real**. Antes de producirlos hay que validar volumen de búsqueda, dificultad y oportunidad competitiva por título. La fórmula garantiza la cantidad; los temas concretos requieren validación.
 

@@ -2,13 +2,13 @@ Versión literal del chat · Sistema GMB Crush para webs locales
 Documento regenerado siguiendo la estructura fija acordada en la conversación.
 Proveniencia: sistema construido paso a paso en el chat y alineado con los frameworks oficiales GMB Crush.
 
-# Paso 6 — Estructura de Contenido + Áreas de Cobertura Local
+# §1 Paso 6 — Estructura de Contenido + Áreas de Cobertura Local
 
-## Índice corto
+## §2 Índice corto
 
 **Paso 6 — Estructura de Contenido + Áreas de Cobertura Local**
 
-## Objetivo del Paso 6
+## §3 Objetivo del Paso 6
 
 Este paso existe para resolver un problema concreto dentro del sistema GMB Crush: definir cómo se escribe y organiza el contenido real de cada tipo de página, y cómo se usan las áreas de cobertura local sin convertirlas automáticamente en URLs.
 La web local no debe construirse desde la intuición, sino desde una secuencia operativa que conecta entidad, categoría GBP, servicios, ciudad principal, cobertura local, schema, contenido e interlinking.
@@ -36,7 +36,7 @@ Error que previene: crear páginas para cada área de cobertura sin aprobación.
 Error que previene: usar Local Coverage Areas como si fueran Main City.
 Error que previene: olvidar dónde van FAQs, CTAs, reviews, Local Coverage Areas y enlaces internos.
 
-## Lo que tienes que rellenar
+## §4 Lo que tienes que rellenar
 
 ```text
 Business Name:
@@ -104,7 +104,7 @@ Can the page mention physical office in this area?
 Yes / No
 ```
 
-## Ejemplo rellenado
+## §5 Ejemplo rellenado
 
 ```text
 Business Name:
@@ -188,29 +188,29 @@ Can the page mention physical office in this area?
 Solo para Madrid, no para Local Coverage Areas salvo que sea cierto.
 ```
 
-# Cuerpo operativo del Paso 6
+# §6 Cuerpo operativo del Paso 6
 
 > **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
-## Principio 1 — Main City crea arquitectura
+## §7 Principio 1 — Main City crea arquitectura
 
-### Explicación
+### §7.1 Explicación
 
 La Main City es la ciudad principal que genera URLs base. Todo el sistema base se organiza alrededor de esa ciudad.
 
-### Patrón o fórmula
+### §7.2 Patrón o fórmula
 
 ```text
 Main City → /city/ + /category/city/service/ + /city/article-topic/
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §7.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Madrid genera /madrid/ y /cerrajero/madrid/cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §7.4 Ejemplos incorrectos
 
 ```text
 - Almagro genera URL sin aprobación
@@ -218,31 +218,31 @@ Madrid genera /madrid/ y /cerrajero/madrid/cerrajero-urgente/
 - Cambiar Main City por cada bloque
 ```
 
-### Regla final
+### §7.5 Regla final
 
 ```text
 La arquitectura base pertenece a una sola Main City.
 ```
 
-## Principio 2 — Local Coverage Areas enriquecen contenido
+## §8 Principio 2 — Local Coverage Areas enriquecen contenido
 
-### Explicación
+### §8.1 Explicación
 
 Las Local Coverage Areas son zonas seleccionadas por proximidad al NAP, coherencia GEO y lógica GMB Crush. Se usan para contexto, FAQs, ejemplos, señales locales y schema areaServed.
 
-### Patrón o fórmula
+### §8.2 Patrón o fórmula
 
 ```text
 Local Coverage Areas → content, FAQs, examples, areaServed
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §8.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Almagro, Chamberí, Salamanca y Retiro se mencionan en secciones de cobertura
 ```
 
-### Ejemplos incorrectos
+### §8.4 Ejemplos incorrectos
 
 ```text
 - Crear páginas por cada zona
@@ -250,31 +250,31 @@ Almagro, Chamberí, Salamanca y Retiro se mencionan en secciones de cobertura
 - Usarlas como H1 principal
 ```
 
-### Regla final
+### §8.5 Regla final
 
 ```text
 Las Local Coverage Areas refuerzan contenido como señales GEO, no crean URLs por defecto.
 ```
 
-## Principio 3 — Approved Expansion Areas crean URLs solo si se aprueban
+## §9 Principio 3 — Approved Expansion Areas crean URLs solo si se aprueban
 
-### Explicación
+### §9.1 Explicación
 
 Cuando una zona tiene demanda, competencia o valor comercial, puede pasar a expansión.
 
-### Patrón o fórmula
+### §9.2 Patrón o fórmula
 
 ```text
 Local Coverage Area → Approved Expansion Area → URLs
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §9.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Almagro podría generar /almagro/ en una fase futura si se aprueba
 ```
 
-### Ejemplos incorrectos
+### §9.4 Ejemplos incorrectos
 
 ```text
 - Aprobar todas las zonas
@@ -282,31 +282,31 @@ Almagro podría generar /almagro/ en una fase futura si se aprueba
 - Crear expansión sin contenido único
 ```
 
-### Regla final
+### §9.5 Regla final
 
 ```text
 Solo las zonas aprobadas generan URLs.
 ```
 
-## Principio 4 — Mencionar una zona no es crear una página
+## §10 Principio 4 — Mencionar una zona no es crear una página
 
-### Explicación
+### §10.1 Explicación
 
 Este principio evita confundir señales GEO de contenido con arquitectura de URLs.
 
-### Patrón o fórmula
+### §10.2 Patrón o fórmula
 
 ```text
 Mention ≠ URL
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §10.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Se menciona Almagro dentro de /cerrajero/madrid/cerrajero-urgente/ sin enlazar a /almagro/
 ```
 
-### Ejemplos incorrectos
+### §10.4 Ejemplos incorrectos
 
 ```text
 - Crear enlaces a URLs inexistentes
@@ -314,31 +314,31 @@ Se menciona Almagro dentro de /cerrajero/madrid/cerrajero-urgente/ sin enlazar a
 - Crear páginas por presión de llaveword
 ```
 
-### Regla final
+### §10.5 Regla final
 
 ```text
 Mencionar una zona no significa crear una URL.
 ```
 
-## Principio 5 — No falsa ubicación
+## §11 Principio 5 — No falsa ubicación
 
-### Explicación
+### §11.1 Explicación
 
 Si la oficina física está en Madrid, no se afirma oficina en Almagro, Salamanca o Retiro.
 
-### Patrón o fórmula
+### §11.2 Patrón o fórmula
 
 ```text
 Service coverage ≠ physical presence
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §11.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Atendemos clientes en Salamanca
 ```
 
-### Ejemplos incorrectos
+### §11.4 Ejemplos incorrectos
 
 ```text
 - Nuestra oficina en Salamanca
@@ -346,19 +346,19 @@ Atendemos clientes en Salamanca
 - Schema address en Chamberí
 ```
 
-### Regla final
+### §11.5 Regla final
 
 ```text
 Atender una zona no equivale a estar físicamente allí.
 ```
 
-## 1. Homepage Content Architecture
+## §12 1. Homepage Content Architecture
 
-### Explicación
+### §12.1 Explicación
 
 Este bloque define la arquitectura interna de contenido para este tipo de página. No se limita a H1 y meta title. Incluye intro, H2s, bloques de apoyo, áreas de cobertura local, FAQs, CTA, enlaces internos y schema.
 
-### Estructura completa
+### §12.2 Estructura completa
 
 ```text
 H1
@@ -374,11 +374,11 @@ Enlaces internos
 Schema
 ```
 
-### Uso de Local Coverage Areas
+### §12.3 Uso de Local Coverage Areas
 
 La homepage puede mencionar 3–5 Local Coverage Areas de forma ligera, normalmente en un bloque de service area preview. No debe convertirse en una lista masiva de zonas ni usar las áreas de cobertura como sustituto de la Main City.
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §12.4 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 H1: Cerrajeros Madrid 24h – Servicios de cerrajería de confianza en Madrid
@@ -387,7 +387,7 @@ Enlaces a servicios principales: /cerrajero/cerrajero-urgente/, /cerrajero/apert
 Enlace al GeoHub: /madrid/
 ```
 
-### Ejemplos incorrectos
+### §12.5 Ejemplos incorrectos
 
 ```text
 - Homepage con 30 zonas listadas sin contexto
@@ -396,18 +396,18 @@ Enlace al GeoHub: /madrid/
 - Homepage sin NAP
 ```
 
-### Regla final
+### §12.6 Regla final
 
 ```text
 La homepage debe reforzar marca, categoría, Main City, servicios y cobertura real sin crear URLs innecesarias.
 ```
-## 2. Service Overview Content Architecture
+## §13 2. Service Overview Content Architecture
 
-### Explicación
+### §13.1 Explicación
 
 Este bloque define la arquitectura interna de contenido para este tipo de página. No se limita a H1 y meta title. Incluye intro, H2s, bloques de apoyo, áreas de cobertura local, FAQs, CTA, enlaces internos y schema.
 
-### Estructura completa
+### §13.2 Estructura completa
 
 ```text
 H1
@@ -424,11 +424,11 @@ Enlaces internos
 Schema
 ```
 
-### Uso de Local Coverage Areas
+### §13.3 Uso de Local Coverage Areas
 
 No se usan Local Coverage Areas. Esta página no debe mencionar Madrid, Almagro, Salamanca ni ninguna zona como target principal. Su función es ser pilar temático del servicio.
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §13.4 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 URL: /cerrajero/cerrajero-urgente/
@@ -437,7 +437,7 @@ Sin segmentación local.
 Internal link to local version: /cerrajero/madrid/cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §13.5 Ejemplos incorrectos
 
 ```text
 - Mencionar Almagro en el H1
@@ -446,18 +446,18 @@ Internal link to local version: /cerrajero/madrid/cerrajero-urgente/
 - No enlazar a la versión local
 ```
 
-### Regla final
+### §13.6 Regla final
 
 ```text
 Service Overview = servicio sin localización.
 ```
-## 3. Location-Based Service Content Architecture
+## §14 3. Location-Based Service Content Architecture
 
-### Explicación
+### §14.1 Explicación
 
 Este bloque define la arquitectura interna de contenido para este tipo de página. No se limita a H1 y meta title. Incluye intro, H2s, bloques de apoyo, áreas de cobertura local, FAQs, CTA, enlaces internos y schema.
 
-### Estructura completa
+### §14.2 Estructura completa
 
 ```text
 H1
@@ -475,11 +475,11 @@ Enlaces internos
 Schema
 ```
 
-### Uso de Local Coverage Areas
+### §14.3 Uso de Local Coverage Areas
 
 Sí se usan Local Coverage Areas. Deben aparecer de forma natural en la intro, en una sección de cobertura, en ejemplos locales y en FAQs. La página sigue siendo de Main City, no de cada área mencionada.
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §14.4 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 URL: /cerrajero/madrid/cerrajero-urgente/
@@ -489,7 +489,7 @@ FAQ: ¿Ofrecéis cerrajero urgente en Almagro y Chamberí?
 Respuesta: Sí, atendemos esas zonas según disponibilidad, mientras esta página sigue enfocada en el servicio de cerrajero urgente en Madrid.
 ```
 
-### Ejemplos incorrectos
+### §14.5 Ejemplos incorrectos
 
 ```text
 - H1: Cerrajero urgente en Almagro, Madrid y Salamanca
@@ -498,18 +498,18 @@ Respuesta: Sí, atendemos esas zonas según disponibilidad, mientras esta págin
 - Link to /almagro/ when that URL does not exist
 ```
 
-### Regla final
+### §14.6 Regla final
 
 ```text
 Una Location-Based Service Page menciona cobertura local sin dejar de ser service + Main City.
 ```
-## 4. Additional Category Content Architecture
+## §15 4. Additional Category Content Architecture
 
-### Explicación
+### §15.1 Explicación
 
 Este bloque define la arquitectura interna de contenido para este tipo de página. No se limita a H1 y meta title. Incluye intro, H2s, bloques de apoyo, áreas de cobertura local, FAQs, CTA, enlaces internos y schema.
 
-### Estructura completa
+### §15.2 Estructura completa
 
 ```text
 H1
@@ -526,11 +526,11 @@ Enlaces internos
 Schema
 ```
 
-### Uso de Local Coverage Areas
+### §15.3 Uso de Local Coverage Areas
 
 Las Local Coverage Areas se usan para explicar casos de uso locales relacionados con la categoría adicional. No deben crear páginas propias si no están aprobadas.
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §15.4 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 URL: /cerrajero/madrid/duplicado-llaves/
@@ -539,7 +539,7 @@ Texto: Clientes en Madrid y zonas como Almagro, Chamberí y Salamanca pueden nec
 Enlaces: /madrid/, /cerrajero/madrid/cambio-cerraduras/, /cerrajero/madrid/instalacion-cerraduras-seguridad/
 ```
 
-### Ejemplos incorrectos
+### §15.5 Ejemplos incorrectos
 
 ```text
 - Crear /cerrajero/almagro/duplicado-llaves/ sin aprobación
@@ -548,18 +548,18 @@ Enlaces: /madrid/, /cerrajero/madrid/cambio-cerraduras/, /cerrajero/madrid/insta
 - Copiar contenido de la página de cambio de bombines
 ```
 
-### Regla final
+### §15.6 Regla final
 
 ```text
 La categoría adicional se contextualiza localmente, pero no se multiplica por zonas no aprobadas.
 ```
-## 5. GeoHub Content Architecture
+## §16 5. GeoHub Content Architecture
 
-### Explicación
+### §16.1 Explicación
 
 Este bloque define la arquitectura interna de contenido para este tipo de página. No se limita a H1 y meta title. Incluye intro, H2s, bloques de apoyo, áreas de cobertura local, FAQs, CTA, enlaces internos y schema.
 
-### Estructura completa
+### §16.2 Estructura completa
 
 ```text
 H1
@@ -574,11 +574,11 @@ Enlaces internos
 Schema
 ```
 
-### Uso de Local Coverage Areas
+### §16.3 Uso de Local Coverage Areas
 
 El GeoHub es el lugar más natural para una sección explícita de Local Coverage Areas. Aquí se puede explicar la cobertura de la empresa sin crear URLs por cada zona.
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §16.4 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 URL: /madrid/
@@ -587,7 +587,7 @@ Texto: Cerrajeros Madrid 24h ofrece servicios de cerrajería en Madrid con cober
 Menú de servicios: urgente, apertura de puertas, cambio de cerraduras, cambio de bombines, instalación de cerraduras de seguridad.
 ```
 
-### Ejemplos incorrectos
+### §16.5 Ejemplos incorrectos
 
 ```text
 - GeoHub sin lista de servicios
@@ -596,18 +596,18 @@ Menú de servicios: urgente, apertura de puertas, cambio de cerraduras, cambio d
 - Cobertura local escrita como si hubiese oficinas en cada zona
 ```
 
-### Regla final
+### §16.6 Regla final
 
 ```text
 El GeoHub organiza Main City, servicios y cobertura local real.
 ```
-## 6. GeoArticle Content Architecture
+## §17 6. GeoArticle Content Architecture
 
-### Explicación
+### §17.1 Explicación
 
 Este bloque define la arquitectura interna de contenido para este tipo de página. No se limita a H1 y meta title. Incluye intro, H2s, bloques de apoyo, áreas de cobertura local, FAQs, CTA, enlaces internos y schema.
 
-### Estructura completa
+### §17.2 Estructura completa
 
 ```text
 H1
@@ -623,11 +623,11 @@ Enlaces internos
 Schema
 ```
 
-### Uso de Local Coverage Areas
+### §17.3 Uso de Local Coverage Areas
 
 Las Local Coverage Areas se usan como ejemplos semánticos y contexto real. No se usan para fingir presencia física ni para crear intención principal distinta.
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §17.4 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 URL: /madrid/cuanto-cuesta-un-cerrajero-urgente/
@@ -635,7 +635,7 @@ Texto: El precio de un cerrajero urgente en Madrid puede variar según el tipo d
 Enlaces: /cerrajero/madrid/cerrajero-urgente/, /madrid/, /madrid/que-hacer-si-no-puedes-entrar-casa/
 ```
 
-### Ejemplos incorrectos
+### §17.5 Ejemplos incorrectos
 
 ```text
 - Article targeting Almagro as primary location without page
@@ -644,13 +644,13 @@ Enlaces: /cerrajero/madrid/cerrajero-urgente/, /madrid/, /madrid/que-hacer-si-no
 - Article written as sales landing
 ```
 
-### Regla final
+### §17.6 Regla final
 
 ```text
 GeoArticles use local coverage as context and send authority back to the Main City service page.
 ```
 
-## Tabla de uso de Local Coverage Areas por tipo de página
+## §18 Tabla de uso de Local Coverage Areas por tipo de página
 
 | Page Type | ¿Usa Local Coverage Areas? | Cómo las usa |
 |---|---|---|
@@ -661,7 +661,7 @@ GeoArticles use local coverage as context and send authority back to the Main Ci
 | GeoHub | Sí, recomendado | Sección principal de cobertura local |
 | GeoArticle | Sí | Ejemplos, contexto, landmarks, FAQs |
 
-## Ejemplo práctico completo
+## §19 Ejemplo práctico completo
 
 ```text
 Main City:
@@ -686,7 +686,7 @@ Texto:
 Cerrajeros Madrid 24h ayuda a clientes en Madrid con aperturas urgentes, llaves rotas, cambios de bombín y problemas de acceso. También cubrimos zonas de posicionamiento local como Almagro, Chamberí, Salamanca y Retiro según disponibilidad. Estas zonas son señales GEO de proximidad que refuerzan la relevancia local mientras la página sigue enfocada en el servicio de cerrajero urgente en Madrid.
 ```
 
-## FAQ ejemplo
+## §20 FAQ ejemplo
 
 ```text
 Pregunta:
@@ -696,25 +696,25 @@ Respuesta:
 Sí. Cerrajeros Madrid 24h atiende clientes en Madrid y zonas de cobertura como Almagro, Chamberí y Salamanca según disponibilidad. Esta página se centra en el servicio de cerrajero urgente en Madrid y aclara la cobertura local real.
 ```
 
-## Homepage con cobertura ligera — Regla operativa 1
+## §21 Homepage con cobertura ligera — Regla operativa 1
 
-### Explicación
+### §21.1 Explicación
 
 La homepage puede mencionar Local Coverage Areas, pero no debe convertirse en una lista interminable de zonas. Su prioridad sigue siendo entidad, categoría GBP, Main City, servicios, NAP y confianza.
 
-### Patrón o fórmula
+### §21.2 Patrón o fórmula
 
 ```text
 Homepage → Main City primero → 3–5 coverage areas como preview
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §21.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h menciona que atiende Madrid y zonas como Almagro, Chamberí, Salamanca y Retiro, pero el H1 se mantiene centrado en Madrid.
 ```
 
-### Ejemplos incorrectos
+### §21.4 Ejemplos incorrectos
 
 ```text
 - Hacer un H1 con todas las áreas de cobertura
@@ -722,31 +722,31 @@ Cerrajeros Madrid 24h menciona que atiende Madrid y zonas como Almagro, Chamber�
 - Crear enlaces a zonas sin URL
 ```
 
-### Regla final
+### §21.5 Regla final
 
 ```text
 La cobertura en homepage debe ser breve y subordinada a la Main City.
 ```
 
-## Service Overview sin cobertura local — Regla operativa 2
+## §22 Service Overview sin cobertura local — Regla operativa 2
 
-### Explicación
+### §22.1 Explicación
 
 Las páginas de servicio general deben evitar Main City y Local Coverage Areas como objetivo principal. Su trabajo es explicar el servicio de forma no geolocalizada y actuar como pilar temático.
 
-### Patrón o fórmula
+### §22.2 Patrón o fórmula
 
 ```text
 Service Overview → sin ciudad → sin coverage areas → autoridad temática
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §22.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 La página /cerrajero/apertura-puertas/ explica Apertura de puertas sin mencionar Almagro o Chamberí como targets.
 ```
 
-### Ejemplos incorrectos
+### §22.4 Ejemplos incorrectos
 
 ```text
 - Meter una sección de zonas en Service Overview
@@ -754,31 +754,31 @@ La página /cerrajero/apertura-puertas/ explica Apertura de puertas sin menciona
 - Enlazar a áreas sin página propia
 ```
 
-### Regla final
+### §22.5 Regla final
 
 ```text
 La cobertura local no pertenece al pilar de servicio general.
 ```
 
-## Intro local en Location-Based Service — Regla operativa 3
+## §23 Intro local en Location-Based Service — Regla operativa 3
 
-### Explicación
+### §23.1 Explicación
 
 La página servicio+Main City debe abrir con una intro localizada de 100–150 palabras. Aquí se puede mencionar 2–4 Local Coverage Areas de forma natural si refuerzan el contexto, pero sin desplazar la Main City.
 
-### Patrón o fórmula
+### §23.2 Patrón o fórmula
 
 ```text
 Servicio + Main City + problema local + cobertura ligera
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §23.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 La intro de /cerrajero/madrid/cerrajero-urgente/ menciona aperturas urgentes en Madrid y puede citar Almagro o Chamberí como cobertura cercana.
 ```
 
-### Ejemplos incorrectos
+### §23.4 Ejemplos incorrectos
 
 ```text
 - Abrir con una lista de zonas en vez de problema del usuario
@@ -786,31 +786,31 @@ La intro de /cerrajero/madrid/cerrajero-urgente/ menciona aperturas urgentes en 
 - Prometer oficina en áreas de cobertura
 ```
 
-### Regla final
+### §23.5 Regla final
 
 ```text
 La intro local debe reforzar la Main City y el problema real del usuario.
 ```
 
-## Sección Local Coverage Areas Served — Regla operativa 4
+## §24 Sección Local Coverage Areas Served — Regla operativa 4
 
-### Explicación
+### §24.1 Explicación
 
 Las páginas locales pueden incluir una sección específica de cobertura. Esta sección permite mencionar barrios, distritos o municipios seleccionados como señales GEO sin crear páginas propias ni URLs artificiales.
 
-### Patrón o fórmula
+### §24.2 Patrón o fórmula
 
 ```text
 H2 Coverage Areas → áreas reales → sin enlaces salvo URLs aprobadas
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §24.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h incluye un H2: Soporte de cerrajería en Madrid y zonas de cobertura cercanas, mencionando Almagro, Chamberí, Salamanca y Retiro.
 ```
 
-### Ejemplos incorrectos
+### §24.4 Ejemplos incorrectos
 
 ```text
 - Convertir cada área en enlace inexistente
@@ -818,31 +818,31 @@ Cerrajeros Madrid 24h incluye un H2: Soporte de cerrajería en Madrid y zonas de
 - Listar zonas que el negocio no atiende
 ```
 
-### Regla final
+### §24.5 Regla final
 
 ```text
 Las áreas de cobertura se mencionan como señales GEO de proximidad, no como páginas implícitas.
 ```
 
-## Additional Category con caso local — Regla operativa 5
+## §25 Additional Category con caso local — Regla operativa 5
 
-### Explicación
+### §25.1 Explicación
 
 Las páginas de categorías adicionales deben usar Local Coverage Areas solo cuando ayuden a explicar escenarios reales del servicio. El foco sigue siendo servicio adicional + Main City.
 
-### Patrón o fórmula
+### §25.2 Patrón o fórmula
 
 ```text
 Additional Category → problema local → cobertura como ejemplo
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §25.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 En /cerrajero/madrid/duplicado-llaves/, Cerrajeros Madrid 24h menciona llaves de repuesto para hogares y negocios en Madrid y zonas de cobertura cercanas.
 ```
 
-### Ejemplos incorrectos
+### §25.4 Ejemplos incorrectos
 
 ```text
 - Crear una página de duplicado de llaves para cada área sin aprobación
@@ -850,31 +850,31 @@ En /cerrajero/madrid/duplicado-llaves/, Cerrajeros Madrid 24h menciona llaves de
 - No conectar la categoría con el GBP
 ```
 
-### Regla final
+### §25.5 Regla final
 
 ```text
 La cobertura local debe contextualizar, no multiplicar páginas.
 ```
 
-## GeoHub con sección de cobertura principal — Regla operativa 6
+## §26 GeoHub con sección de cobertura principal — Regla operativa 6
 
-### Explicación
+### §26.1 Explicación
 
 El GeoHub es el mejor lugar para explicar la cobertura local. Debe tener una sección clara de áreas de posicionamiento local (Direct y Candidate LCA), conectada con servicios y sin transformar cada zona en URL si no está aprobada.
 
-### Patrón o fórmula
+### §26.2 Patrón o fórmula
 
 ```text
 /main-city/ → services → local coverage → resources
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §26.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 En /madrid/, Cerrajeros Madrid 24h lista servicios en Madrid y una sección de cobertura con Almagro, Chamberí, Salamanca y Retiro.
 ```
 
-### Ejemplos incorrectos
+### §26.4 Ejemplos incorrectos
 
 ```text
 - Hacer del GeoHub una página turística sin servicios
@@ -882,31 +882,31 @@ En /madrid/, Cerrajeros Madrid 24h lista servicios en Madrid y una sección de c
 - No incluir cobertura aunque sea relevante para clientes
 ```
 
-### Regla final
+### §26.5 Regla final
 
 ```text
 El GeoHub debe organizar ciudad, servicios y señales GEO locales (Direct + Candidate LCA).
 ```
 
-## GeoArticles con ejemplos locales — Regla operativa 7
+## §27 GeoArticles con ejemplos locales — Regla operativa 7
 
-### Explicación
+### §27.1 Explicación
 
 Los GeoArticles pueden usar Local Coverage Areas como ejemplos semánticos: tipos de vivienda, zonas cercanas, landmarks o escenarios. Eso ayuda a NLP y AIO sin convertir el artículo en página de zona.
 
-### Patrón o fórmula
+### §27.2 Patrón o fórmula
 
 ```text
 GeoArticle → tema + Main City → ejemplos de cobertura
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §27.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 En /madrid/cuanto-cuesta-un-cerrajero-urgente/, Cerrajeros Madrid 24h explica que el coste puede variar según tipo de apertura urgente y zona de cobertura.
 ```
 
-### Ejemplos incorrectos
+### §27.4 Ejemplos incorrectos
 
 ```text
 - Escribir el artículo como landing de Almagro
@@ -914,31 +914,31 @@ En /madrid/cuanto-cuesta-un-cerrajero-urgente/, Cerrajeros Madrid 24h explica qu
 - Afirmar presencia física en zonas de cobertura
 ```
 
-### Regla final
+### §27.5 Regla final
 
 ```text
 Los ejemplos locales deben enriquecer el tema, no cambiar la intención.
 ```
 
-## Reviews y trust blocks en contenido — Regla operativa 8
+## §28 Reviews y trust blocks en contenido — Regla operativa 8
 
-### Explicación
+### §28.1 Explicación
 
 Las reseñas y señales de confianza deben colocarse donde apoyan la intención: homepage, landings locales, GeoHub y, ocasionalmente, artículos. No deben inventarse ni repetirse como bloque genérico sin contexto.
 
-### Patrón o fórmula
+### §28.2 Patrón o fórmula
 
 ```text
 Trust signal → sección adecuada → servicio o Main City
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §28.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h usa reseñas iniciales pendientes de recopilar tras crear el GBP en homepage y en /cerrajero/madrid/cerrajero-urgente/ como prueba local.
 ```
 
-### Ejemplos incorrectos
+### §28.4 Ejemplos incorrectos
 
 ```text
 - Pegar el mismo bloque de reseñas en todas las páginas sin contexto
@@ -946,31 +946,31 @@ Cerrajeros Madrid 24h usa reseñas iniciales pendientes de recopilar tras crear 
 - Inventar certificaciones
 ```
 
-### Regla final
+### §28.5 Regla final
 
 ```text
 Las señales de confianza deben apoyar la intención de la página.
 ```
 
-## FAQs con cobertura natural — Regla operativa 9
+## §29 FAQs con cobertura natural — Regla operativa 9
 
-### Explicación
+### §29.1 Explicación
 
 Las FAQs pueden mencionar Local Coverage Areas si responden preguntas reales de usuarios. Deben sonar naturales y no funcionar como llaveword stuffing de zonas.
 
-### Patrón o fórmula
+### §29.2 Patrón o fórmula
 
 ```text
 Pregunta real → Main City + coverage area → respuesta útil
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §29.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 ¿Atendéis emergencias de cerrajería en Almagro y Chamberí? Sí, Cerrajeros Madrid 24h atiende solicitudes en Madrid y zonas de cobertura cercanas según disponibilidad.
 ```
 
-### Ejemplos incorrectos
+### §29.4 Ejemplos incorrectos
 
 ```text
 - Crear una FAQ por cada zona sin valor nuevo
@@ -978,31 +978,31 @@ Pregunta real → Main City + coverage area → respuesta útil
 - Responder con promesas de oficina inexistente
 ```
 
-### Regla final
+### §29.5 Regla final
 
 ```text
 Las FAQs de cobertura deben resolver dudas reales.
 ```
 
-## Schema areaServed coherente — Regla operativa 10
+## §30 Schema areaServed coherente — Regla operativa 10
 
-### Explicación
+### §30.1 Explicación
 
 Las Local Coverage Areas pueden reflejarse en areaServed si representan cobertura real. El schema debe diferenciar cobertura de dirección física y no añadir áreas falsas solo por SEO.
 
-### Patrón o fórmula
+### §30.2 Patrón o fórmula
 
 ```text
 Real coverage → areaServed | Physical address → address
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §30.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h usa Madrid como address si es su ubicación y puede incluir Almagro, Chamberí, Salamanca y Retiro en areaServed.
 ```
 
-### Ejemplos incorrectos
+### §30.4 Ejemplos incorrectos
 
 ```text
 - Poner Almagro como address sin sede
@@ -1010,31 +1010,31 @@ Cerrajeros Madrid 24h usa Madrid como address si es su ubicación y puede inclui
 - Omitir areaServed si la cobertura es clave
 ```
 
-### Regla final
+### §30.5 Regla final
 
 ```text
 areaServed debe representar cobertura real, no ubicación física.
 ```
 
-## No URLs por cobertura sin aprobación — Regla operativa 11
+## §31 No URLs por cobertura sin aprobación — Regla operativa 11
 
-### Explicación
+### §31.1 Explicación
 
 Mencionar una zona en el contenido no implica crear una URL. Esta separación es clave para que el sistema base se mantenga enfocado y no genere thin content.
 
-### Patrón o fórmula
+### §31.2 Patrón o fórmula
 
 ```text
 Local Coverage Area mencionada → no URL | Approved Expansion Area → URL
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §31.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h menciona Retiro como cobertura, pero no crea /retiro/ en la base.
 ```
 
-### Ejemplos incorrectos
+### §31.4 Ejemplos incorrectos
 
 ```text
 - Enlazar automáticamente cada zona mencionada
@@ -1042,31 +1042,31 @@ Cerrajeros Madrid 24h menciona Retiro como cobertura, pero no crea /retiro/ en l
 - Tratar una mención como arquitectura
 ```
 
-### Regla final
+### §31.5 Regla final
 
 ```text
 La cobertura se menciona primero; la página se aprueba después.
 ```
 
-## Umbral de expansión — Regla operativa 12
+## §32 Umbral de expansión — Regla operativa 12
 
-### Explicación
+### §32.1 Explicación
 
 Una Local Coverage Area solo se convierte en Approved Expansion Area si hay demanda, valor comercial, oportunidad competitiva y contenido único. Esta regla protege el sistema de expansión prematura.
 
-### Patrón o fórmula
+### §32.2 Patrón o fórmula
 
 ```text
 Cobertura → evaluación → aprobación → fórmula de expansión
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §32.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Si Almagro tiene búsquedas y competidores con páginas locales débiles, Cerrajeros Madrid 24h puede aprobar Almagro como expansión futura.
 ```
 
-### Ejemplos incorrectos
+### §32.4 Ejemplos incorrectos
 
 ```text
 - Aprobar todas las zonas por defecto
@@ -1074,13 +1074,13 @@ Si Almagro tiene búsquedas y competidores con páginas locales débiles, Cerraj
 - Copiar el contenido de Madrid cambiando el nombre de la zona
 ```
 
-### Regla final
+### §32.5 Regla final
 
 ```text
 La expansión necesita justificación, no solo cobertura.
 ```
 
-## Checklist final del Paso 6
+## §33 Checklist final del Paso 6
 
 | Check | Pregunta | Estado |
 |---|---|---|
@@ -1095,7 +1095,7 @@ La expansión necesita justificación, no solo cobertura.
 | Enlaces internos | ¿Solo se enlaza a URLs existentes? | ✅ / ⬜ |
 | One service | ¿La página mantiene un solo servicio principal cuando aplica? | ✅ / ⬜ |
 
-## Outputs del Paso 6
+## §34 Outputs del Paso 6
 
 - Arquitectura interna por tipo de página
 - Reglas de uso de Local Coverage Areas
@@ -1107,7 +1107,7 @@ La expansión necesita justificación, no solo cobertura.
 
 ---
 
-# Fuentes internas GMB Crush usadas
+# §35 Fuentes internas GMB Crush usadas
 
 - Analysis Framework.pdf
 - GMB CRUSH Universal AI Local SEO Framework Template
@@ -1120,7 +1120,7 @@ La expansión necesita justificación, no solo cobertura.
 
 
 
-### GeoArticles completos (15)
+### §35.1 GeoArticles completos (15)
 
 > **Aviso de trazabilidad:** estos 15 títulos son un primer borrador derivado de la fórmula G × S = 15 y de la lógica del servicio. **No vienen de keyword research real**. Antes de producirlos hay que validar volumen de búsqueda, dificultad y oportunidad competitiva por título. La fórmula garantiza la cantidad; los temas concretos requieren validación.
 

@@ -2,13 +2,13 @@ Versión literal del chat · Sistema GMB Crush para webs locales
 Documento regenerado siguiendo la estructura fija acordada en la conversación.
 Proveniencia: sistema construido paso a paso en el chat y alineado con los frameworks oficiales GMB Crush.
 
-# Paso 12 — Master Prompt Reutilizable
+# §1 Paso 12 — Master Prompt Reutilizable
 
-## Índice corto
+## §2 Índice corto
 
 **Paso 12 — Master Prompt Reutilizable**
 
-## Objetivo del Paso 12
+## §3 Objetivo del Paso 12
 
 Este paso existe para resolver un problema concreto dentro del sistema GMB Crush: convertir todo el sistema en un prompt maestro reutilizable que genere arquitectura, matriz, contenidos, schema, enlaces, prioridad, QA y roadmap para cualquier negocio local.
 La web local no debe construirse desde la intuición, sino desde una secuencia operativa que conecta entidad, categoría GBP, servicios, ciudad principal, cobertura local, schema, contenido e interlinking.
@@ -36,7 +36,7 @@ Error que previene: mezclar Target Cities y Secondary Cities en la base.
 Error que previene: crear URLs para Local Coverage Areas sin aprobación.
 Error que previene: generar outputs sin matriz, sin enlaces, sin QA o sin fases.
 
-## Lo que tienes que rellenar
+## §4 Lo que tienes que rellenar
 
 ```text
 Business Name:
@@ -182,7 +182,7 @@ Tracking Tools:
 GMB Crush / Google Search Console / GA4 / Rank Tracker / Other
 ```
 
-## Ejemplo rellenado
+## §5 Ejemplo rellenado
 
 ```text
 Business Name:
@@ -312,29 +312,29 @@ Tracking Tools:
 GMB Crush Geo Grid, Google Search Console, GA4
 ```
 
-# Cuerpo operativo del Paso 12
+# §6 Cuerpo operativo del Paso 12
 
 > **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
-## Regla 1 — El Master Prompt debe generar el sistema completo
+## §7 Regla 1 — El Master Prompt debe generar el sistema completo
 
-### Explicación
+### §7.1 Explicación
 
 El prompt maestro no debe limitarse a pedir URLs. Debe pedir validación, fórmula, matriz, tipos de página, estructura de contenido, enlaces internos, schema, prioridad, fases, QA y roadmap.
 
-### Patrón o fórmula
+### §7.2 Patrón o fórmula
 
 ```text
 Prompt → validate → generate → link → score → QA → roadmap
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §7.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h recibe un sistema completo de 28 páginas SEO base más /contacto/ como página auxiliar, no solo una lista de URLs
 ```
 
-### Ejemplos incorrectos
+### §7.4 Ejemplos incorrectos
 
 ```text
 - Prompt que solo pide H1s
@@ -342,31 +342,31 @@ Cerrajeros Madrid 24h recibe un sistema completo de 28 páginas SEO base más /c
 - Prompt sin QA ni enlaces
 ```
 
-### Regla final
+### §7.5 Regla final
 
 ```text
 El Master Prompt debe producir un sistema, no una lista.
 ```
 
-## Regla 2 — Main City first
+## §8 Regla 2 — Main City first
 
-### Explicación
+### §8.1 Explicación
 
 La versión base debe construir alrededor de una Main City. No debe usar Target Cities o Secondary Cities como motor base.
 
-### Patrón o fórmula
+### §8.2 Patrón o fórmula
 
 ```text
 Main City = base architecture
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §8.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Madrid genera /madrid/ y /cerrajero/madrid/service/
 ```
 
-### Ejemplos incorrectos
+### §8.4 Ejemplos incorrectos
 
 ```text
 - Target Cities: Madrid, Almagro, Salamanca como base
@@ -374,31 +374,31 @@ Madrid genera /madrid/ y /cerrajero/madrid/service/
 - Multiplicar servicios por zonas de cobertura
 ```
 
-### Regla final
+### §8.5 Regla final
 
 ```text
 La base es Main City first.
 ```
 
-## Regla 3 — Local Coverage Areas como señales de contenido
+## §9 Regla 3 — Local Coverage Areas como señales de contenido
 
-### Explicación
+### §9.1 Explicación
 
 El prompt debe pedir Local Coverage Areas, pero debe prohibir que generen URLs por defecto.
 
-### Patrón o fórmula
+### §9.2 Patrón o fórmula
 
 ```text
 Local Coverage Areas = content signals
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §9.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Almagro, Chamberí, Salamanca, Retiro aparecen en contenido y areaServed
 ```
 
-### Ejemplos incorrectos
+### §9.4 Ejemplos incorrectos
 
 ```text
 - Crear /almagro/ sin aprobación
@@ -406,31 +406,31 @@ Almagro, Chamberí, Salamanca, Retiro aparecen en contenido y areaServed
 - Usar cobertura como H1
 ```
 
-### Regla final
+### §9.5 Regla final
 
 ```text
 Las áreas de cobertura se usan dentro del contenido.
 ```
 
-## Regla 4 — Approved Expansion Areas separadas
+## §10 Regla 4 — Approved Expansion Areas separadas
 
-### Explicación
+### §10.1 Explicación
 
 Si el negocio quiere páginas para otras zonas, el prompt debe tratarlas como expansión opcional.
 
-### Patrón o fórmula
+### §10.2 Patrón o fórmula
 
 ```text
 Approved Expansion Areas → optional module
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §10.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 None in Phase 1
 ```
 
-### Ejemplos incorrectos
+### §10.4 Ejemplos incorrectos
 
 ```text
 - Aprobar todas las zonas
@@ -438,31 +438,31 @@ None in Phase 1
 - No justificar expansion
 ```
 
-### Regla final
+### §10.5 Regla final
 
 ```text
 La expansión no pertenece a la base.
 ```
 
-## Regla 5 — Duplicate category detection
+## §11 Regla 5 — Duplicate category detection
 
-### Explicación
+### §11.1 Explicación
 
 El prompt debe detectar categorías adicionales ya cubiertas por servicios core.
 
-### Patrón o fórmula
+### §11.2 Patrón o fórmula
 
 ```text
 additional category → covered or separate page
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §11.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Servicio de cerrajería de urgencia cubierta por Cerrajero urgente
 ```
 
-### Ejemplos incorrectos
+### §11.4 Ejemplos incorrectos
 
 ```text
 - Crear cerrajero-urgente duplicada
@@ -470,31 +470,31 @@ Servicio de cerrajería de urgencia cubierta por Cerrajero urgente
 - No clasificar categorías
 ```
 
-### Regla final
+### §11.5 Regla final
 
 ```text
 Las categorías se consolidan o generan página, pero no se duplican.
 ```
 
-## Regla 6 — Output con tablas limpias
+## §12 Regla 6 — Output con tablas limpias
 
-### Explicación
+### §12.1 Explicación
 
 El output debe devolver tablas operativas y no solo texto explicativo.
 
-### Patrón o fórmula
+### §12.2 Patrón o fórmula
 
 ```text
 URL Matrix + Linking Matrix + Schema Map + Score + QA
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §12.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Tabla con HP-001, SO-001, GH-001, LBS-001, AC-001, GA-001
 ```
 
-### Ejemplos incorrectos
+### §12.4 Ejemplos incorrectos
 
 ```text
 - Narrativa sin tablas
@@ -502,31 +502,31 @@ Tabla con HP-001, SO-001, GH-001, LBS-001, AC-001, GA-001
 - No IDs
 ```
 
-### Regla final
+### §12.5 Regla final
 
 ```text
 Cada output debe ser accionable.
 ```
 
-## Regla 7 — Page Type Rules completas
+## §13 Regla 7 — Page Type Rules completas
 
-### Explicación
+### §13.1 Explicación
 
 El prompt debe desarrollar cada tipo con función, patrón, H1, meta, estructura, schema, CTA, links y ejemplo.
 
-### Patrón o fórmula
+### §13.2 Patrón o fórmula
 
 ```text
 Page Type → full brief
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §13.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 LBS /cerrajero/madrid/cerrajero-urgente/ con H1, metas, H2s, FAQs, schema
 ```
 
-### Ejemplos incorrectos
+### §13.4 Ejemplos incorrectos
 
 ```text
 - Solo URL
@@ -534,31 +534,31 @@ LBS /cerrajero/madrid/cerrajero-urgente/ con H1, metas, H2s, FAQs, schema
 - Sin schema
 ```
 
-### Regla final
+### §13.5 Regla final
 
 ```text
 Cada tipo debe salir como brief completo.
 ```
 
-## Regla 8 — Content Architecture obligatoria
+## §14 Regla 8 — Content Architecture obligatoria
 
-### Explicación
+### §14.1 Explicación
 
 El prompt debe incluir el nuevo paso de estructura de contenido y áreas de cobertura.
 
-### Patrón o fórmula
+### §14.2 Patrón o fórmula
 
 ```text
 Step 6 included
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §14.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Location page incluye H2 Local Coverage Areas Served
 ```
 
-### Ejemplos incorrectos
+### §14.4 Ejemplos incorrectos
 
 ```text
 - Omitir cómo mencionar zonas
@@ -566,31 +566,31 @@ Location page incluye H2 Local Coverage Areas Served
 - No definir CTA
 ```
 
-### Regla final
+### §14.5 Regla final
 
 ```text
 El contenido interno es obligatorio.
 ```
 
-## Regla 9 — Internal Linking Map obligatorio
+## §15 Regla 9 — Internal Linking Map obligatorio
 
-### Explicación
+### §15.1 Explicación
 
 El prompt debe pedir enlaces internos con source, target, anchor, placement y prioridad.
 
-### Patrón o fórmula
+### §15.2 Patrón o fórmula
 
 ```text
 Source URL → Target URL + Anchor + Placement
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §15.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 /madrid/cuanto-cuesta-un-cerrajero-urgente/ → /cerrajero/madrid/cerrajero-urgente/
 ```
 
-### Ejemplos incorrectos
+### §15.4 Ejemplos incorrectos
 
 ```text
 - Sin anchors
@@ -598,31 +598,31 @@ Source URL → Target URL + Anchor + Placement
 - Enlaces a URLs inexistentes
 ```
 
-### Regla final
+### §15.5 Regla final
 
 ```text
 El mapa de enlaces debe estar completo.
 ```
 
-## Regla 10 — QA final obligatorio
+## §16 Regla 10 — QA final obligatorio
 
-### Explicación
+### §16.1 Explicación
 
 El prompt debe terminar con checklist QA por página.
 
-### Patrón o fórmula
+### §16.2 Patrón o fórmula
 
 ```text
 QA fields for each page
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §16.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 URL approved, schema approved, no false location, no canibalization
 ```
 
-### Ejemplos incorrectos
+### §16.4 Ejemplos incorrectos
 
 ```text
 - Sin QA
@@ -630,14 +630,14 @@ URL approved, schema approved, no false location, no canibalization
 - No revisar false location
 ```
 
-### Regla final
+### §16.5 Regla final
 
 ```text
 No hay publicación sin QA.
 ```
 
 
-## Master Prompt reutilizable completo
+## §17 Master Prompt reutilizable completo
 
 ```text
 Actúa como Matteo de GMB Crush, especialista top 1% en Local SEO, Google Business Profile optimization, AI Overview visibility, semantic SEO, GeoHub architecture, internal linking y LocalBusiness site structure.
@@ -1220,7 +1220,7 @@ Do not create URLs for Local Coverage Areas unless they are Approved Expansion A
 Do not create pages with no clear parent, target, or internal link destination.
 ```
 
-## Prompt auxiliar 1 — Solo URL Matrix
+## §18 Prompt auxiliar 1 — Solo URL Matrix
 
 ```text
 Actúa como Matteo de GMB Crush.
@@ -1273,7 +1273,7 @@ Status
 Notes
 ```
 
-## Prompt auxiliar 2 — Solo contenido de una página
+## §19 Prompt auxiliar 2 — Solo contenido de una página
 
 ```text
 Actúa como Matteo de GMB Crush y senior SEO content strategist.
@@ -1354,7 +1354,7 @@ Rules:
 - Do not claim physical presence in Local Coverage Areas unless true.
 ```
 
-## Prompt auxiliar 3 — Solo GeoArticles
+## §20 Prompt auxiliar 3 — Solo GeoArticles
 
 ```text
 Actúa como Matteo de GMB Crush, especialista en GeoArticles, AI Overview y semantic SEO local.
@@ -1396,7 +1396,7 @@ Rules:
 - Do not create URLs for Local Coverage Areas.
 ```
 
-## Prompt auxiliar 4 — Solo QA
+## §21 Prompt auxiliar 4 — Solo QA
 
 ```text
 Actúa como Matteo de GMB Crush y haz QA de esta página antes de publicarla.
@@ -1476,25 +1476,25 @@ Return:
 - Final status:
   Approved / Needs Revision / Blocked
 ```
-## Rol y restricciones iniciales — Regla operativa 1
+## §22 Rol y restricciones iniciales — Regla operativa 1
 
-### Explicación
+### §22.1 Explicación
 
 El Master Prompt debe empezar definiendo el rol, la metodología y las reglas no negociables. Esto evita que la IA improvise estructuras ajenas al sistema.
 
-### Patrón o fórmula
+### §22.2 Patrón o fórmula
 
 ```text
 Role → Methodology → Non-negotiables
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §22.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 El prompt dice: Actúa como Matteo de GMB Crush y usa Homepage, Service Overview, Location-Based Service, Additional Category, GeoHub y GeoArticle.
 ```
 
-### Ejemplos incorrectos
+### §22.4 Ejemplos incorrectos
 
 ```text
 - Pedir simplemente “crea una web SEO”
@@ -1502,31 +1502,31 @@ El prompt dice: Actúa como Matteo de GMB Crush y usa Homepage, Service Overview
 - No prohibir mezclar servicios o zonas
 ```
 
-### Regla final
+### §22.5 Regla final
 
 ```text
 El prompt maestro debe fijar rol y límites desde el inicio.
 ```
 
-## Inputs geográficos simplificados — Regla operativa 2
+## §23 Inputs geográficos simplificados — Regla operativa 2
 
-### Explicación
+### §23.1 Explicación
 
 El prompt debe pedir Main City, Physical Location City, Local Coverage Areas y Approved Expansion Areas. No debe usar Target Cities ni Secondary Cities en la base.
 
-### Patrón o fórmula
+### §23.2 Patrón o fórmula
 
 ```text
 Main City + Local Coverage Areas + Approved Expansion Areas
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §23.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h: Main City Madrid; Local Coverage Areas Almagro, Chamberí, Salamanca y Retiro; Approved Expansion Areas vacío.
 ```
 
-### Ejemplos incorrectos
+### §23.4 Ejemplos incorrectos
 
 ```text
 - Pedir Target Cities como base
@@ -1534,31 +1534,31 @@ Cerrajeros Madrid 24h: Main City Madrid; Local Coverage Areas Almagro, Chamberí
 - No pedir ubicación física
 ```
 
-### Regla final
+### §23.5 Regla final
 
 ```text
 La geografía del prompt debe reflejar la versión simplificada.
 ```
 
-## Fórmula base explícita — Regla operativa 3
+## §24 Fórmula base explícita — Regla operativa 3
 
-### Explicación
+### §24.1 Explicación
 
 El prompt debe obligar a calcular la fórmula base antes de generar URLs. Así la IA no salta directamente a matrices infladas o incompletas.
 
-### Patrón o fórmula
+### §24.2 Patrón o fórmula
 
 ```text
 1 + S + 1 + S + A + G×S
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §24.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Para Cerrajeros Madrid 24h, el prompt debe devolver 28 páginas SEO base más /contacto/ como página auxiliar con S=5, A=1, G=3.
 ```
 
-### Ejemplos incorrectos
+### §24.4 Ejemplos incorrectos
 
 ```text
 - Usar C = target cities
@@ -1566,31 +1566,31 @@ Para Cerrajeros Madrid 24h, el prompt debe devolver 28 páginas SEO base más /c
 - No mostrar tabla de conteo
 ```
 
-### Regla final
+### §24.5 Regla final
 
 ```text
 El Master Prompt debe calcular antes de listar.
 ```
 
-## URL Matrix obligatoria — Regla operativa 4
+## §25 URL Matrix obligatoria — Regla operativa 4
 
-### Explicación
+### §25.1 Explicación
 
 El output debe exigir una URL Matrix con ID, Page Type, Parent, Service, City, URL, H1, metas, schema, links, priority, phase y status.
 
-### Patrón o fórmula
+### §25.2 Patrón o fórmula
 
 ```text
 Inputs → URL Matrix → producción
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §25.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 El prompt genera filas HP-001, SO-001, GH-001, LBS-001, AC-001 y GA-001 para Cerrajeros Madrid 24h.
 ```
 
-### Ejemplos incorrectos
+### §25.4 Ejemplos incorrectos
 
 ```text
 - Pedir solo lista de URLs
@@ -1598,31 +1598,31 @@ El prompt genera filas HP-001, SO-001, GH-001, LBS-001, AC-001 y GA-001 para Cer
 - No incluir status o phase
 ```
 
-### Regla final
+### §25.5 Regla final
 
 ```text
 Sin matriz completa, el prompt no produce un sistema operativo.
 ```
 
-## Page Type Rules completas — Regla operativa 5
+## §26 Page Type Rules completas — Regla operativa 5
 
-### Explicación
+### §26.1 Explicación
 
 El Master Prompt debe desarrollar cada tipo de página con propósito, patrón, H1, metas, word count, secciones, schema, enlaces y CTA.
 
-### Patrón o fórmula
+### §26.2 Patrón o fórmula
 
 ```text
 Page Type → rules → example
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §26.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Homepage de Cerrajeros Madrid 24h incluye H1 de Servicios de cerrajería en Madrid, servicios core, NAP y enlaces.
 ```
 
-### Ejemplos incorrectos
+### §26.4 Ejemplos incorrectos
 
 ```text
 - Definir solo URL patterns
@@ -1630,31 +1630,31 @@ Homepage de Cerrajeros Madrid 24h incluye H1 de Servicios de cerrajería en Madr
 - No pedir schema por tipo
 ```
 
-### Regla final
+### §26.5 Regla final
 
 ```text
 Cada tipo de página debe tener reglas completas.
 ```
 
-## Content Architecture incluida — Regla operativa 6
+## §27 Content Architecture incluida — Regla operativa 6
 
-### Explicación
+### §27.1 Explicación
 
 El prompt debe incluir el nuevo Paso 6: dónde y cómo usar Local Coverage Areas dentro del contenido. Sin esto, la IA vuelve a crear páginas innecesarias o ignora cobertura.
 
-### Patrón o fórmula
+### §27.2 Patrón o fórmula
 
 ```text
 Page Type → content sections → coverage usage
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §27.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 En /cerrajero/madrid/cerrajero-urgente/, el prompt pide sección de Local Coverage Areas Served con Almagro, Chamberí, Salamanca y Retiro.
 ```
 
-### Ejemplos incorrectos
+### §27.4 Ejemplos incorrectos
 
 ```text
 - No pedir secciones internas
@@ -1662,31 +1662,31 @@ En /cerrajero/madrid/cerrajero-urgente/, el prompt pide sección de Local Covera
 - No pedir FAQs de cobertura
 ```
 
-### Regla final
+### §27.5 Regla final
 
 ```text
 El prompt debe enseñar a escribir cada página por dentro.
 ```
 
-## Internal Linking Map detallado — Regla operativa 7
+## §28 Internal Linking Map detallado — Regla operativa 7
 
-### Explicación
+### §28.1 Explicación
 
 El Master Prompt debe pedir Source URL, Target URL, Anchor, Priority y Placement. Esto convierte enlaces en producción, no en recomendación genérica.
 
-### Patrón o fórmula
+### §28.2 Patrón o fórmula
 
 ```text
 Source → Target → Anchor → Placement
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §28.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 GA-001 enlaza a /cerrajero/madrid/cerrajero-urgente/ con anchor cerrajero urgente en Madrid.
 ```
 
-### Ejemplos incorrectos
+### §28.4 Ejemplos incorrectos
 
 ```text
 - Pedir “añade enlaces internos” sin mapa
@@ -1694,31 +1694,31 @@ GA-001 enlaza a /cerrajero/madrid/cerrajero-urgente/ con anchor cerrajero urgent
 - Enlazar a coverage areas sin URL
 ```
 
-### Regla final
+### §28.5 Regla final
 
 ```text
 Los enlaces deben salir como matriz accionable.
 ```
 
-## Schema Map por page type — Regla operativa 8
+## §29 Schema Map por page type — Regla operativa 8
 
-### Explicación
+### §29.1 Explicación
 
 El prompt debe obligar a asignar schema por URL. Esto ayuda a evitar errores posteriores de implementación.
 
-### Patrón o fórmula
+### §29.2 Patrón o fórmula
 
 ```text
 URL → Page Type → Schema Required
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §29.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 AC-001 usa Service with areaServed; GA-001 usa Article + FAQPage + BreadcrumbList + Speakable.
 ```
 
-### Ejemplos incorrectos
+### §29.4 Ejemplos incorrectos
 
 ```text
 - No pedir schema
@@ -1726,31 +1726,31 @@ AC-001 usa Service with areaServed; GA-001 usa Article + FAQPage + BreadcrumbLis
 - No diferenciar address y areaServed
 ```
 
-### Regla final
+### §29.5 Regla final
 
 ```text
 El schema debe generarse desde el output maestro.
 ```
 
-## Priority Score con Local Relevance — Regla operativa 9
+## §30 Priority Score con Local Relevance — Regla operativa 9
 
-### Explicación
+### §30.1 Explicación
 
 La fórmula del prompt debe usar Local Relevance en lugar de City Priority. Esto es coherente con una base de una Main City.
 
-### Patrón o fórmula
+### §30.2 Patrón o fórmula
 
 ```text
 Revenue + Intent + GBP + Local Relevance + Gap + Urgency
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §30.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajero urgente Madrid obtiene score alto por urgencia, GBP relevance y Main City fit.
 ```
 
-### Ejemplos incorrectos
+### §30.4 Ejemplos incorrectos
 
 ```text
 - Usar Top Priority Cities
@@ -1758,31 +1758,31 @@ Cerrajero urgente Madrid obtiene score alto por urgencia, GBP relevance y Main C
 - No explicar el score
 ```
 
-### Regla final
+### §30.5 Regla final
 
 ```text
 La prioridad debe medir páginas, no zonas sin arquitectura.
 ```
 
-## Publishing Phases con expansión opcional — Regla operativa 10
+## §31 Publishing Phases con expansión opcional — Regla operativa 10
 
-### Explicación
+### §31.1 Explicación
 
 El prompt debe separar fases base y expansión opcional. Esto evita volver al modelo multi-ciudad por defecto.
 
-### Patrón o fórmula
+### §31.2 Patrón o fórmula
 
 ```text
 Phase 1–4 base | Phase 5 expansion optional
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §31.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h publica primero Madrid y sus servicios; Almagro solo entra si se aprueba como expansión.
 ```
 
-### Ejemplos incorrectos
+### §31.4 Ejemplos incorrectos
 
 ```text
 - Publicar coverage areas en Phase 2
@@ -1790,31 +1790,31 @@ Cerrajeros Madrid 24h publica primero Madrid y sus servicios; Almagro solo entra
 - Publicar artículos antes de landings
 ```
 
-### Regla final
+### §31.5 Regla final
 
 ```text
 La expansión debe vivir en una fase separada.
 ```
 
-## QA Checklist obligatoria — Regla operativa 11
+## §32 QA Checklist obligatoria — Regla operativa 11
 
-### Explicación
+### §32.1 Explicación
 
 El prompt debe devolver QA por page type y por cobertura local: URL, H1, metadata, schema, links, NAP, canibalización y no false location claims.
 
-### Patrón o fórmula
+### §32.2 Patrón o fórmula
 
 ```text
 Page → QA checks → final status
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §32.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 LBS-001 no se aprueba si dice “Almagro office” sin oficina real.
 ```
 
-### Ejemplos incorrectos
+### §32.4 Ejemplos incorrectos
 
 ```text
 - No incluir QA
@@ -1822,31 +1822,31 @@ LBS-001 no se aprueba si dice “Almagro office” sin oficina real.
 - No revisar enlaces internos
 ```
 
-### Regla final
+### §32.5 Regla final
 
 ```text
 El Master Prompt debe producir control de calidad.
 ```
 
-## Anti-duplicación de reglas — Regla operativa 12
+## §33 Anti-duplicación de reglas — Regla operativa 12
 
-### Explicación
+### §33.1 Explicación
 
 El prompt debe prohibir reglas operativas repetidas. Cada regla debe tener nombre semántico y contenido distinto. Esto evita ruido y pérdida de confianza.
 
-### Patrón o fórmula
+### §33.2 Patrón o fórmula
 
 ```text
 Rule name → specific content → duplicate check
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §33.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 En Paso 4, las reglas son canonical domain, trailing slash, service overview pattern, GeoArticle URL, local coverage no URL, etc.
 ```
 
-### Ejemplos incorrectos
+### §33.4 Ejemplos incorrectos
 
 ```text
 - Regla operativa 1–12 con el mismo texto
@@ -1854,31 +1854,31 @@ En Paso 4, las reglas son canonical domain, trailing slash, service overview pat
 - Inflar longitud sin contenido nuevo
 ```
 
-### Regla final
+### §33.5 Regla final
 
 ```text
 Cada regla operativa debe aportar una decisión nueva.
 ```
 
-## Expansion Module controlado — Regla operativa 13
+## §34 Expansion Module controlado — Regla operativa 13
 
-### Explicación
+### §34.1 Explicación
 
 El prompt debe pedir Approved Expansion Areas como campo opcional y generar URLs solo si ese campo tiene contenido validado.
 
-### Patrón o fórmula
+### §34.2 Patrón o fórmula
 
 ```text
 Approved Expansion Areas empty → no expansion URLs
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §34.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 Cerrajeros Madrid 24h deja Approved Expansion Areas vacío y el output no genera /almagro/.
 ```
 
-### Ejemplos incorrectos
+### §34.4 Ejemplos incorrectos
 
 ```text
 - Generar URLs por coverage areas
@@ -1886,14 +1886,14 @@ Cerrajeros Madrid 24h deja Approved Expansion Areas vacío y el output no genera
 - Mezclar expansión con fórmula base
 ```
 
-### Regla final
+### §34.5 Regla final
 
 ```text
 La expansión se activa solo con aprobación explícita.
 ```
 
 #
-## Web-First GBP Rule for the Master Prompt
+## §35 Web-First GBP Rule for the Master Prompt
 
 ```text
 The GBP does not exist at the beginning of this workflow.
@@ -1902,25 +1902,25 @@ Do not insert a GBP URL, Google review claim, Google Maps embed or sameAs GBP li
 Paso 14 creates, verifies and synchronizes the GBP after the website base is published.
 ```
 
-# Output final ordenado — Regla operativa 14
+# §36 Output final ordenado — Regla operativa 14
 
-### Explicación
+### §36.1 Explicación
 
 El prompt debe exigir un orden de salida fijo para que cualquier usuario o IA pueda consumir el resultado sin buscar secciones perdidas.
 
-### Patrón o fórmula
+### §36.2 Patrón o fórmula
 
 ```text
 Summary → Validation → Formula → Matrix → Rules → Links → Score → Phases → QA → Takeaway
 ```
 
-### Ejemplo correcto con Cerrajeros Madrid 24h
+### §36.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
 El output de Cerrajeros Madrid 24h termina con URL Matrix, Internal Linking Map, Publishing Plan y QA Checklist.
 ```
 
-### Ejemplos incorrectos
+### §36.4 Ejemplos incorrectos
 
 ```text
 - Entregar respuesta libre sin estructura
@@ -1928,13 +1928,13 @@ El output de Cerrajeros Madrid 24h termina con URL Matrix, Internal Linking Map,
 - Mezclar explicación con tablas sin orden
 ```
 
-### Regla final
+### §36.5 Regla final
 
 ```text
 El Master Prompt debe generar un sistema, no una respuesta suelta.
 ```
 
-## Checklist final del Paso 12
+## §37 Checklist final del Paso 12
 
 | Check | Pregunta | Estado |
 |---|---|---|
@@ -1952,7 +1952,7 @@ El Master Prompt debe generar un sistema, no una respuesta suelta.
 | QA | ¿Incluye checklist completo? | ✅ / ⬜ |
 | Aux prompts | ¿Incluye prompts auxiliares reutilizables? | ✅ / ⬜ |
 
-## Outputs del Paso 12
+## §38 Outputs del Paso 12
 
 - Master Prompt completo
 - Prompt auxiliar para URL Matrix
@@ -1965,7 +1965,7 @@ El Master Prompt debe generar un sistema, no una respuesta suelta.
 
 ---
 
-# Fuentes internas GMB Crush usadas
+# §39 Fuentes internas GMB Crush usadas
 
 - Analysis Framework.pdf
 - GMB CRUSH Universal AI Local SEO Framework Template
@@ -1978,7 +1978,7 @@ El Master Prompt debe generar un sistema, no una respuesta suelta.
 
 
 
-### GeoArticles completos (15)
+### §39.1 GeoArticles completos (15)
 
 > **Aviso de trazabilidad:** estos 15 títulos son un primer borrador derivado de la fórmula G × S = 15 y de la lógica del servicio. **No vienen de keyword research real**. Antes de producirlos hay que validar volumen de búsqueda, dificultad y oportunidad competitiva por título. La fórmula garantiza la cantidad; los temas concretos requieren validación.
 
