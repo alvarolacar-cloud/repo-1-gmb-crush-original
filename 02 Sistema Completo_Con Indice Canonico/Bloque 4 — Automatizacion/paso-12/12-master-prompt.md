@@ -164,7 +164,7 @@ Trust Signals:
 - Urgencias / servicio en el mismo día / servicio móvil:
 
 Preferred CTA:
-Llamar ahora / Reservar online / Solicitar presupuesto / Contactoar
+Llamar ahora / Reservar online / Solicitar presupuesto / Contactar
 
 Publishing Capacity:
 Pages per week:

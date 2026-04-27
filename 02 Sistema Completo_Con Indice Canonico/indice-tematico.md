@@ -1,451 +1,153 @@
 # Índice temático — Sistema GMB Crush
 
-Este índice apunta a las secciones donde se **define o se desarrolla** cada concepto del framework GMB Crush. No incluye datos del ejemplo concreto (Cerrajeros Madrid 24h, Madrid, servicios específicos): solo conceptos del sistema.
+Concepto del framework → dónde aparece en los 14 pasos. No incluye datos del ejemplo concreto (Cerrajeros Madrid 24h, Madrid, servicios específicos).
 
-Formato de referencia: `paso-XX §Y` (donde Y es el ID canónico de sección dentro del paso anclado).
+Formato: `paso-XX §Y`. Solo se listan las secciones donde el concepto se **define o se desarrolla**, no cada mención casual.
 
 ---
 
 ## A
 
-**Additional Category Page** *(GBP Additional Category Support)*
-- Definición y función: paso-05 §10
-- Patrón de URL: paso-04 §13 (Regla 7)
-- Estructura de contenido: paso-06 §15
-- Cómo se decide si una categoría adicional necesita página propia: paso-01 §11 (Planned Additional GBP Categories), paso-01 §21 (Regla operativa 3)
-- Internal linking de la página: paso-07 §12 (Regla 6)
-
-**Anchor text**
-- Anchors preferidos (CTA / Informational / Local): paso-07 §15 (Regla 9)
-- Variación natural en anchors: paso-07 §15
-- Anchors específicos por LBS: paso-07 §18
-
-**Approved Expansion Areas**
-- Definición: paso-01 §16
-- Regla operativa "en blanco por defecto": paso-01 §26 (Regla operativa 8)
-- Cuándo una zona pasa a Approved Expansion: paso-01 §37
-- Fórmula opcional de expansión: paso-02 §13, paso-02 §17 (Optional Expansion Formula)
-- Política en URLs: paso-04 §X (Regla 12)
-- En el pseudocódigo: paso-11 §17 (bloque "Generate expansion only if approved")
-
-**areaServed (schema)**
-- Cobertura real, no ubicación física: paso-06 §X (Regla operativa 10)
-- Diferencia con `address` del schema: paso-06 §X
-- Política en GBP service areas: paso-14 §19
-
----
+- **Additional Category Page**: paso-01 §11, paso-04 §13, paso-05 §10, paso-06 §15, paso-07 §12
+- **Anchor text**: paso-07 §15, §28
+- **Approved Expansion Areas**: paso-01 §16, §26, §37 · paso-02 §17 · paso-04 §16, §35 · paso-10 §11 · paso-11 §17
+- **areaServed (schema)**: paso-06 §30 · paso-14 §19
 
 ## B
 
-**Brand tone**
-- Definición y opciones: paso-05 §4 (intake) y paso-05 §5 (ejemplo)
-
-**Breadcrumbs**
-- Patrón por page type: paso-07 §19 (Breadcrumbs recomendados)
-- Como enlace estructural: paso-07 §X (Regla operativa 10)
-
----
+- **Brand tone**: paso-05 §4
+- **Breadcrumbs**: paso-07 §19, §29
 
 ## C
 
-**Calendario de producción**
-- Calendario de 7 fases del ejemplo: paso-10 §12 (Calendario ejemplo)
-- Capacidad de publicación: paso-10 §21 (Regla operativa 8)
-- Refresh de contenido: paso-10 §22 (Regla operativa 9)
-
-**Candidate Local Coverage Areas**
-- Definición: paso-01 §15 (Local Coverage Areas)
-- Diferencia con Direct LCAs: paso-01 §35 (Regla práctica)
-- Test de coherencia GEO: paso-01 §34
-- En la doctrina de schema y homepage: paso-06 §X
-- En el plan GBP: paso-14 §19
-
-**Categorías adicionales del GBP** *(Planned y Confirmed)*
-- Planned (pre-creación): paso-01 §11
-- Clasificación (cubierta por servicio core / necesita página propia): paso-01 §21 (Regla operativa 3)
-- Confirmed (post-creación, paso 14): paso-14 §8 (Regla operativa)
-- Validación con soporte web: paso-14 §14 (Regla operativa)
-- Distinción con `core_services`: ver entrada propia "GBP Services ≠ core services"
-
-**City Priority** *(deprecated)*
-- Sustitución por Local Relevance: paso-08 §11 (Regla 5), paso-08 §22 (Regla operativa 4)
-
-**Competition Gap** *(factor 5 del Priority Score)*
-- Definición: paso-08 §12 (Regla 6)
-- Regla operativa: paso-08 §23 (Regla operativa 5)
-
-**Conversion Urgency** *(factor 6 del Priority Score)*
-- Definición: paso-08 §13 (Regla 7)
-- Regla operativa: paso-08 §24 (Regla operativa 6)
-
-**core_services (variable)**
-- Definición y diferencia con GBP Services: paso-01 §X (nota explícita), paso-12 §X (nota repetida en master prompt)
-- Conteo en la fórmula (variable S): paso-02 §9 (Regla 2)
-- En el pseudocódigo: paso-11 §7 (Load inputs)
-
-**/contacto/**
-- Función como página auxiliar (no parte del SEO base): paso-02 §16 (Tabla de inventario base — nota auxiliar)
-- Patrón URL: paso-04 §X
-- Conexión con GBP: paso-14 §11
-
-**CTA (Call To Action)**
-- Definición y opciones: paso-01 §17 (Preferred CTA)
-- Adaptación al page type: paso-05 §21 (Regla operativa 9)
-- En QA: paso-09 §18 (Regla 12)
-- Anchors de CTA: paso-07 §15 (Regla 9)
-
----
+- **Calendario de producción**: paso-10 §12 · paso-13 §54.4
+- **Candidate Local Coverage Areas**: paso-01 §15, §34, §35
+- **Categorías adicionales del GBP** *(Planned y Confirmed)*: paso-01 §11, §21 · paso-14 §8, §14
+- **Checklist final** *(de cada paso)*: paso-01 §27, paso-02 §29, paso-03 §28, paso-04 §36, paso-05 §23, paso-06 §33, paso-07 §32, paso-08 §29, paso-09 §31, paso-10 §24, paso-11 §31, paso-12 §37, paso-13 §52
+- **City Priority** *(deprecated)*: paso-08 §11, §22
+- **Competition Gap** *(factor 5 del Priority Score)*: paso-08 §12, §23
+- **Conversion Urgency** *(factor 6)*: paso-08 §13, §24
+- **core_services** *(variable)*: paso-02 §9, §19 · paso-11 §7
+- **/contacto/**: paso-02 §16 · paso-04 §22 · paso-14 §11, §22
+- **CTA**: paso-01 §17 · paso-05 §21 · paso-07 §15 · paso-09 §18
 
 ## D
 
-**Definición operativa de Local Coverage Areas**
-- Bloque doctrinal repetido en cabecera del cuerpo operativo de los 14 pasos
-- Origen: paso-01 §6 (entre encabezado y Business Name)
-
-**Direct Local Coverage Areas**
-- Definición: paso-01 §15 (Local Coverage Areas)
-- Salidas directas de la dirección física: paso-01 §35 (Regla práctica)
-- Test de coherencia GEO: paso-01 §34
-
-**Dirección física (módulo de interpretación GMB Crush)**
-- Cómo se interpreta una dirección concreta: paso-01 §30
-- Qué dice GMB Crush sobre elegir barrios/zonas/landmarks: paso-01 §31
-- Cómo se deciden las zonas: paso-01 §32
-
-**Dominio canónico**
-- Política de URL: paso-04 §7 (Regla 1)
-- En QA: paso-09 §X
-
----
+- **Definición operativa de Local Coverage Areas** *(nota doctrinal)*: cabecera del cuerpo operativo de los 14 pasos
+- **Direct Local Coverage Areas**: paso-01 §15, §34, §35
+- **Dirección física (módulo de interpretación)**: paso-01 §30–§39
+- **Dominio canónico**: paso-04 §7, §24 · paso-09 §7
 
 ## E
 
-**Email de contacto**
-- En el NAP: paso-01 §9 (Full NAP)
-
-**Expansión territorial** *(módulo opcional)*
-- Fórmula adicional: paso-02 §17
-- Cuándo se aprueba una zona: paso-01 §37
-- Fase 5 de producción: paso-10 §11 (Fase 5 — Optional Expansion Module)
-
----
+- **Email** *(en NAP)*: paso-01 §9
+- **Expansión territorial** *(módulo opcional)*: paso-01 §37 · paso-02 §17 · paso-10 §11, §18 · paso-11 §17, §30 · paso-12 §34
 
 ## F
 
-**Fórmula maestra** *(`1 + S + 1 + S + A + G×S = 28 páginas SEO base`)*
-- Definición y reglas: paso-02 §8–§15 (Reglas 1–8)
-- Variables S, A, G: paso-02 §9, §10, §11
-- Tabla de inventario base: paso-02 §16
-- /contacto/ como página auxiliar fuera del cálculo: paso-02 §16
-- Resumen final: paso-13 §21 (Fórmula final base)
-
-**Fotos del GBP**
-- Pack de fotos preparatorio: paso-14 §16 (Regla operativa)
-- Política de fotos sin fingir oficina: paso-14 §16
-
----
+- **Fórmula maestra** *(`1+S+1+S+A+G×S = 28 páginas SEO base`)*: paso-02 §8–§15, §16, §23 · paso-13 §21, §22
+- **Fotos del GBP**: paso-14 §16
 
 ## G
 
-**GBP Category Relevance** *(factor 3 del Priority Score)*
-- Definición: paso-08 §10 (Regla 4)
-- Regla operativa: paso-08 §21 (Regla operativa 3)
-
-**GBP Services ≠ core services** *(distinción crítica)*
-- Nota doctrinal explícita: paso-01 §X (cabecera cuerpo operativo), paso-02 §X, paso-05 §X, paso-11 §X, paso-14 §X
-- Función: separar las categorías y servicios del perfil GBP de las variables internas del sistema web
-
-**GeoArticle Page** *(Semantic Booster)*
-- Definición y función: paso-05 §12
-- Patrón de URL: paso-04 §X (Regla)
-- Estructura de contenido: paso-06 §17
-- Cantidad por servicio (variable G): paso-02 §11 (Regla 4)
-- Internal linking: paso-07 §13 (Regla 7)
-- Lista completa de los 15 GeoArticles del ejemplo (apéndice): paso-02 (final), paso-04 (final), paso-13 (final)
-- Aviso de trazabilidad sobre topics: en el apéndice de GeoArticles de cada paso
-
-**GeoHub Page** *(Main City Silo Container)*
-- Definición y función: paso-05 §11
-- Patrón de URL: paso-04 §11 (Regla 5)
-- Estructura de contenido: paso-06 §16
-- Internal linking: paso-07 §10 (Regla 4)
-
-**Google Posts**
-- Plan de posts del GBP: paso-14 §24 (Regla operativa)
-- Conexión con páginas web: paso-14 §24
-
----
+- **GBP Category Relevance** *(factor 3 del Priority Score)*: paso-08 §10, §21
+- **GBP Not Created** *(estado pre-creación)*: paso-02 §7 · paso-09 §33
+- **GBP Services ≠ core services** *(nota doctrinal)*: al final de paso-01, paso-02, paso-05, paso-11, paso-14
+- **GeoArticle Page** *(Semantic Booster)*: paso-02 §11, §22 · paso-04 §14, §31 · paso-05 §12, §18 · paso-06 §17 · paso-07 §13, §26 · paso-11 §15 · paso-13 §54.1
+- **GeoHub Page** *(Main City Silo Container)*: paso-04 §11, §28 · paso-05 §11, §17 · paso-06 §16 · paso-07 §10, §22 · paso-11 §12
+- **Google Posts** *(GBP)*: paso-14 §24
 
 ## H
 
-**H1 (Heading principal)**
-- Por page type: paso-05 §X (cada subsección H1)
-- En QA: paso-09 §13 (Regla 7)
-
-**Homepage** *(Root Entity Anchor)*
-- Definición y función: paso-05 §7
-- Patrón URL (raíz): paso-04 §9 (Regla 3)
-- Estructura de contenido: paso-06 §12
-- Internal linking: paso-07 §8 (Regla 2)
-- Siempre P1 en Priority Score: paso-08 §16 (Regla 10)
-- Actualización post-GBP: paso-14 §21
-
----
+- **H1** *(por page type)*: paso-05 §7.3, §8.3, §9.3, §10.3, §11.3, §12.3 · paso-09 §13, §22
+- **Homepage** *(Root Entity Anchor)*: paso-04 §9, §26 · paso-05 §7, §13 · paso-06 §12, §21 · paso-07 §8, §20 · paso-08 §16 · paso-11 §10 · paso-14 §21
+- **Horarios del GBP**: paso-14 §18
 
 ## I
 
-**Internal Linking**
-- Reglas generales: paso-07 §7–§16 (Reglas 1–10)
-- Top Priority Services: paso-07 §17 (Matriz de enlaces obligatorios)
-- Anchors preferidos: paso-07 §15 (Regla 9)
-- Breadcrumbs: paso-07 §19
-- En QA: paso-09 §16 (Regla 10)
-
-**Intake form** *(Paso 1 entero)*
-- Estructura: paso-01 §4 (Lo que tienes que rellenar)
-- Ejemplo rellenado: paso-01 §5
-- Reglas operativas (8): paso-01 §19–§26
-
-**Inventario SEO base (28 páginas)**
-- Cálculo: paso-02 §16 (Tabla de inventario base)
-- Distribución por tipo: paso-02 §16
-- Priority Score completo: paso-08 §X (apéndice)
-- Estado QA por URL: paso-09 §X (apéndice)
-
----
+- **Internal Linking**: paso-07 §7–§16 (reglas), §20–§31 (reglas operativas), §17 (matriz) · paso-09 §16, §25 · paso-11 §18, §27 · paso-12 §28
+- **Intake form** *(Paso 1 entero)*: paso-01 §4, §5, §19–§26 · paso-11 §7
+- **Inventario SEO base (28 páginas)**: paso-02 §16 · paso-08 §31.1 · paso-09 §34.1 · paso-13 §23, §54.2, §54.3
 
 ## L
 
-**Local Relevance** *(sustituye a City Priority)*
-- Definición y diferencia: paso-08 §11 (Regla 5)
-- Regla operativa: paso-08 §22 (Regla operativa 4)
-
-**Location-Based Service (LBS)** *(Main City Converter)*
-- Definición y función: paso-05 §9
-- Patrón URL: paso-04 §12 (Regla 6)
-- Estructura de contenido: paso-06 §14
-- Internal linking: paso-07 §11 (Regla 5)
-
----
+- **Local Relevance** *(sustituye a City Priority)*: paso-08 §11, §22 · paso-12 §30
+- **Location-Based Service (LBS)** *(Main City Converter)*: paso-04 §12, §29 · paso-05 §9, §15 · paso-06 §14, §23 · paso-07 §11, §23 · paso-11 §13
 
 ## M
 
-**Main City**
-- Definición y función como ancla: paso-01 §12
-- Regla operativa "Main City separada de cobertura local": paso-01 §22 (Regla operativa 4)
-- Distinción con Physical Location City: paso-01 §13
-- Como único multiplicador de la fórmula: paso-02 §8 (Regla 1), paso-02 §21 (Regla operativa 3)
-- Como campo geográfico de la matriz: paso-03 §21 (Regla operativa 4)
-- En el GeoHub: paso-04 §11 (Regla 5)
-
-**Master Prompt reutilizable**
-- Reglas para construirlo: paso-12 §7–§16
-- Master Prompt completo: paso-12 §17
-- Prompts auxiliares: paso-12 §18–§21
-
-**Matriz de URLs (URL Matrix)**
-- Reglas: paso-03 §7–§14
-- Columnas obligatorias: paso-03 §15
-- Ejemplo de URL Matrix base: paso-03 §16
-- Filas que NO se generan en la base: paso-03 §17
-
-**Metadata (Meta Title / Meta Description)**
-- Por page type: paso-05 §X (cada subsección)
-- En QA: paso-09 §13 (Regla 7)
-
-**Modelo de negocio del GBP** *(Storefront / Service Area Business / Hybrid)*
-- Definición y elección: paso-14 §10 (Regla operativa)
-
----
+- **Main City**: paso-01 §12, §22 · paso-02 §8, §21 · paso-03 §21 · paso-04 §11, §28 · paso-12 §8
+- **Master Prompt reutilizable**: paso-12 §7–§16 (reglas), §17 (completo), §18–§21 (auxiliares), §22–§34 + §36 (reglas operativas), §35 (Web-First GBP Rule)
+- **Matriz de URLs (URL Matrix)**: paso-03 §7–§17, §18–§27 · paso-12 §25
+- **Metadata** *(Meta Title / Meta Description)*: paso-05 §7.4–7.5, §8.4–8.5, §9.4–9.5, §10.4–10.5, §11.4–11.5, §12.4–12.5 · paso-09 §13, §22
+- **Modelo de negocio del GBP** *(Storefront / Service Area Business / Hybrid)*: paso-14 §10
 
 ## N
 
-**NAP** *(Name, Address, Phone, Email)*
-- Definición: paso-01 §9 (Full NAP)
-- Regla operativa "NAP completo y rastreable": paso-01 §19 (Regla operativa 1)
-- Validación final antes de crear el GBP: paso-14 §9 (Regla operativa)
-- En QA: paso-09 §X
-
----
+- **NAP** *(Name, Address, Phone, Email)*: paso-01 §9, §19 · paso-09 §26 · paso-14 §9
+- **Notes en la matriz** *(decisiones estratégicas)*: paso-03 §26
 
 ## P
 
-**Page Type Rules**
-- Las 6 page types: paso-05 §7–§12 (Homepage, Service Overview, LBS, Additional Category, GeoHub, GeoArticle)
-- Reglas operativas asociadas: paso-05 §13–§22
-
-**Physical Location City**
-- Definición: paso-01 §13
-- Diferencia con Main City: paso-01 §13
-- Regla operativa "Ubicación física sin falsas promesas": paso-01 §24 (Regla operativa 6)
-
-**Planned GBP Categories** *(Primary y Additional)*
-- Definición pre-creación del GBP: paso-01 §10 (Primary), paso-01 §11 (Additional)
-- Antes de crear el GBP, las categorías son "planificadas": paso-02 §7
-- Conversión a Confirmed en paso 14: paso-14 §8 (Regla operativa)
-
-**Priority Score**
-- Fórmula 6 factores: paso-08 §7 (Regla 1)
-- Los 6 factores explicados: paso-08 §8–§13 (Reglas 2–7)
-- Tiers P1–P4: paso-08 §14 (Regla 8 — Priority Tiers)
-- Tabla de prioridad del ejemplo: paso-08 §17
-- Orden recomendado de publicación: paso-08 §18
-- Inventario completo de scores (apéndice): paso-08 §X (apéndice)
-
-**Producción en fases**
-- Las 5 fases: paso-10 §7–§11 (Entity Foundation, Main City Conversion, Semantic Expansion, Optimization Loop, Optional Expansion)
-- Calendario completo del ejemplo: paso-10 §12
-- Dependencias de publicación: paso-10 §13
-
-**Pseudocódigo del sistema** *(16 bloques)*
-- Bloques 1–16: paso-11 §7–§22
-
----
+- **Page Type Rules**: paso-05 §7–§22 · paso-12 §13, §26
+- **Physical Location City**: paso-01 §13, §24
+- **Planned GBP Categories** *(Primary y Additional)*: paso-01 §10, §11 · paso-02 §7 · paso-14 §8
+- **Priority Score**: paso-08 §7–§28 (reglas), §17 (tabla ejemplo), §18 (orden), §31.1 (inventario completo) · paso-11 §19, §28 · paso-12 §30
+- **Producción en fases** *(5 fases)*: paso-10 §7–§11, §14–§23 (reglas operativas), §12 (calendario) · paso-13 §45
+- **Pseudocódigo del sistema** *(16 bloques)*: paso-11 §7–§22, §23–§30 (reglas operativas)
 
 ## Q
 
-**Q&A del GBP**
-- Plan de Q&A: paso-14 §23 (Regla operativa)
-- Preguntas alineadas con web: paso-14 §23
-
-**QA Checklist**
-- Reglas (12): paso-09 §7–§18
-- Por page type: paso-09 §19
-- Final Publish Gate: paso-09 §20
-- Estado QA por URL (inventario completo): paso-09 §X (apéndice)
-
----
+- **Q&A del GBP**: paso-14 §23
+- **QA Checklist**: paso-09 §7–§30, §33 (GBP Not Created), §34.1 (estado QA por URL) · paso-11 §21, §29 · paso-12 §32
 
 ## R
 
-**Reglas operativas**
-- Paso 1 (Intake): paso-01 §19–§26 (8 reglas)
-- Paso 2 (Fórmula): paso-02 §19–§28 (10 reglas)
-- Paso 3 (Matriz): paso-03 §18–§27 (10 reglas)
-- Paso 4 (URL Rules): paso-04 §X (12 reglas)
-- Paso 5 (Page Types): paso-05 §13–§22 (10 reglas)
-- Paso 6 (Content): paso-06 §21–§32 (12 reglas)
-- Paso 7 (Linking): paso-07 §20–§31 (12 reglas)
-- Paso 8 (Priority): paso-08 §19–§28 (10 reglas)
-- Paso 9 (QA): paso-09 §21–§30 (10 reglas)
-- Paso 10 (Producción): paso-10 §14–§23 (10 reglas)
-- Paso 11 (Pseudocódigo): paso-11 §X (reglas operativas inline)
-- Paso 12 (Master Prompt): paso-12 §22–§35 (14 reglas)
-- Paso 13 (Sistema Final): paso-13 §X (16 reglas)
-- Paso 14 (GBP): paso-14 §7–§27 (21 reglas operativas)
-
-**Reseñas**
-- Estado pendiente pre-GBP: paso-01 §18 (Trust Signals)
-- Review strategy: paso-14 §X
-- No reclamar reseñas antes de tenerlas (regla no negociable): paso-14 §15 (Regla operativa)
-
-**Revenue Value** *(factor 1 del Priority Score)*
-- Definición: paso-08 §8 (Regla 2)
-- Regla operativa: paso-08 §19 (Regla operativa 1)
-
----
+- **Reglas operativas por paso** *(recuento)*:
+  - paso-01: §19–§26 *(8)* · paso-02: §19–§28 *(10)* · paso-03: §18–§27 *(10)* · paso-04: §24–§35 *(12)* · paso-05: §13–§22 *(10)* · paso-06: §21–§32 *(12)* · paso-07: §20–§31 *(12)* · paso-08: §19–§28 *(10)* · paso-09: §21–§30 *(10)* · paso-10: §14–§23 *(10)* · paso-11: §23–§30 *(8)* · paso-12: §22–§34 + §36 *(14)* · paso-13: §36–§51 *(16)* · paso-14: §7–§30 *(24)*
+- **Reseñas** *(no reclamar antes de tenerlas)*: paso-01 §18 · paso-14 §15
+- **Revenue Value** *(factor 1 del Priority Score)*: paso-08 §8, §19
 
 ## S
 
-**sameAs (schema)**
-- Pendiente hasta crear el GBP: paso-09 §X (GBP Not Created QA)
-- Actualización post-creación: paso-14 §20 (Regla operativa)
-
-**Schema** *(datos estructurados)*
-- Por page type: paso-03 §11 (Regla 5), paso-05 §19 (Regla operativa 7)
-- Schema map por tipo: paso-05 §X
-- En QA: paso-09 §15 (Regla 9)
-- Actualización post-GBP: paso-14 §20
-
-**Search Intent** *(factor 2 del Priority Score)*
-- Definición: paso-08 §9 (Regla 3)
-- Regla operativa: paso-08 §20 (Regla operativa 2)
-
-**Service Area Business** *(modelo de negocio GBP)*
-- Definición: paso-14 §10 (Regla operativa)
-- Política de visibilidad de dirección: paso-14 §10
-
-**Service Overview Page** *(Topical Authority Pillar)*
-- Definición y función: paso-05 §8
-- Patrón URL (sin ciudad): paso-04 §10 (Regla 4)
-- Estructura de contenido: paso-06 §13
-- Internal linking: paso-07 §9 (Regla 3)
-
-**Servicios principales** *(core services)*
-- Definición: paso-01 §14
-- Regla operativa "Servicios core normalizados": paso-01 §23 (Regla operativa 5)
-
-**Slugs**
-- Política de slugs limpios: paso-04 §X (Regla)
-- Asignación inicial: paso-02 §X (cuerpo operativo)
-- Normalización en pseudocódigo: paso-11 §8 (Normalize slugs)
-
----
+- **sameAs (schema)**: paso-09 §33 · paso-14 §20
+- **Schema** *(datos estructurados)*: paso-03 §11, §22 · paso-05 §7.8, §8.8, §9.8, §10.8, §11.8, §12.8, §19 · paso-09 §15, §24 · paso-12 §29 · paso-14 §20
+- **Search Intent** *(factor 2 del Priority Score)*: paso-08 §9, §20
+- **Service Area Business** *(modelo GBP)*: paso-14 §10
+- **Service Overview Page** *(Topical Authority Pillar)*: paso-04 §10, §27 · paso-05 §8, §14 · paso-06 §13, §22 · paso-07 §9, §21 · paso-11 §11
+- **Servicios principales** *(core services)*: paso-01 §14, §23
+- **Slugs**: paso-04 §17, §18, §19, §32, §33 · paso-11 §8, §23
 
 ## T
 
-**Test de coherencia GEO** *(6 criterios)*
-- Definición y los 6 criterios: paso-01 §34
-- Aplicación a Candidate LCAs: paso-01 §15 (Local Coverage Areas), paso-01 §35 (Regla práctica)
-
-**Tracking**
-- Herramientas (GMB Crush Geo Grid, GSC, GA4): paso-10 §X (intake)
-- Plan post-GBP: paso-14 §X (cola de actualización post-creación)
-
-**Trailing slash**
-- Política: paso-04 §8 (Regla 2)
-
-**Trust signals**
-- Definición y opciones: paso-01 §18
-- Regla operativa "Trust signals reutilizables": paso-01 §25 (Regla operativa 7)
-
----
+- **Test de coherencia GEO** *(6 criterios)*: paso-01 §34
+- **Tracking**: paso-10 §4, §5 · paso-14 §29, §30 · paso-13 §46
+- **Trailing slash**: paso-04 §8, §25
+- **Trust signals**: paso-01 §18, §25 · paso-06 §28
 
 ## U
 
-**URL canónica** *(dominio canónico)*
-- Política de dominio canónico: paso-04 §7 (Regla 1)
-
-**URL Matrix** *(ver Matriz de URLs)*
-
-**URLs (patrones por page type)**
-- Homepage `/`: paso-04 §9 (Regla 3)
-- Service Overview `/[category]/[service]/`: paso-04 §10 (Regla 4)
-- GeoHub `/[main-city]/`: paso-04 §11 (Regla 5)
-- LBS `/[category]/[main-city]/[service]/`: paso-04 §12 (Regla 6)
-- Additional Category `/[category]/[main-city]/[additional-category]/`: paso-04 §X
-- GeoArticle `/[main-city]/[topic]/`: paso-04 §X
-- URLs no aprobadas en fase base: paso-04 §X (Estructura final)
-
-**UTM URL del GBP**
-- Política de UTM sin romper canonicals: paso-14 §12 (Regla operativa)
-
----
+- **URL canónica** *(dominio canónico)*: paso-04 §7, §24
+- **URLs (patrones por page type)**: paso-04 §9 (Homepage), §10 (Service Overview), §11 (GeoHub), §12 (LBS), §13 (Additional Category), §14 (GeoArticle), §22 (estructura final), §23 (no aprobadas)
+- **UTM URL del GBP**: paso-14 §12
 
 ## V
 
-**Variables S, A, G** *(de la fórmula maestra)*
-- S (servicios core): paso-02 §9 (Regla 2), paso-02 §19 (Regla operativa 1)
-- A (categorías adicionales efectivas): paso-02 §10 (Regla 3), paso-02 §20 (Regla operativa 2)
-- G (GeoArticles por servicio): paso-02 §11 (Regla 4), paso-02 §22 (Regla operativa 4)
+- **Variables S, A, G** *(de la fórmula maestra)*: paso-02 §9 (S), §10 (A), §11 (G), §19, §20, §22
 
----
+## W
+
+- **Word count por intención**: paso-05 §7.6, §8.6, §9.6, §10.6, §11.6, §12.6, §20 · paso-09 §14, §23
 
 ## Z
 
-**Zonas (módulo dirección física, paso 1 §29–§39)**
-- Cómo se interpreta la dirección física: paso-01 §30
-- Cómo se deciden las zonas (jerarquía 1–6): paso-01 §32
-- Test GMB Crush (6 criterios): paso-01 §34
-- Regla práctica (Direct / Candidate / No entra): paso-01 §35
-- Cómo se usa una zona aprobada: paso-01 §36
-- Cuándo una zona pasa a página propia: paso-01 §37
+- **Zonas** *(módulo dirección física, paso 1)*: paso-01 §29–§39 (módulo completo: interpretación, criterios, test, regla práctica, casos)
 
 ---
 
-## Notas sobre el índice
+## Cómo leer este índice
 
-1. **Algunas referencias quedan abiertas como `§X`** porque el §X.Y exacto depende de la versión del paso después de cada corrección. Todas se resuelven con un grep en el archivo correspondiente.
-2. **El índice es navegable, no exhaustivo**: cada concepto apunta a la sección donde se **define o se desarrolla**, no a cada vez que se menciona.
-3. **No incluye datos del ejemplo concreto** (Cerrajeros Madrid 24h, Madrid, Calle Rafael Calvo 12, servicios específicos): el índice es del framework, no de la instancia.
-4. **Para buscar una mención de un dato concreto** (ej. "dónde aparece Madrid"), usar Ctrl+F en el documento maestro o grep sobre los archivos.
+- Cada concepto del framework GMB Crush aparece una vez con sus apariciones principales.
+- `§X` apunta a una sección H1/H2; `§X.Y` apunta a una subsección H3.
+- Si un concepto aparece en muchos sitios, se listan los más relevantes (definición, regla operativa, aplicación). No se listan menciones triviales.
+- Para encontrar datos del ejemplo concreto (Cerrajeros Madrid 24h, Madrid, servicios específicos), usar Ctrl+F en el documento maestro.

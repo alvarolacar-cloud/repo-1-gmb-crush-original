@@ -92,7 +92,7 @@ Servicios principales:
 Direct Local Coverage Areas:
 Zonas que salen directamente de la dirección física.
 
-> **Nota para la IA:** Antes de decidir las zonas de posicionamiento local, consultar el módulo **Interpretación GMB Crush de la dirección física y zonas GEO** al final de este documento. Ese módulo explica cómo se interpreta la dirección física, cómo se eligen las zonas y qué criterios deben cumplir.
+> **Nota para la IA:** Antes de decidir las Local Coverage Areas, consultar el módulo **Interpretación GMB Crush de la dirección física y zonas GEO** al final de este documento. Ese módulo explica cómo se interpreta la dirección física, cómo se eligen las zonas y qué criterios deben cumplir.
 1.
 2.
 
@@ -611,7 +611,7 @@ Reviews + years + certifications + guarantees
 ### §18.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-10+ años de experiencia, 250+ reseñas, técnicos certificados
+10+ años de experiencia, reseñas iniciales pendientes tras crear el GBP, técnicos cerrajeros cualificados, servicio móvil en el mismo día, garantía de trabajo
 ```
 
 ### §18.4 Ejemplos incorrectos

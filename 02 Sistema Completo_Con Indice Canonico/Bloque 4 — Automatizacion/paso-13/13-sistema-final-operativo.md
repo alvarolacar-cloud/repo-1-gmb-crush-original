@@ -107,12 +107,6 @@ Zonas que sí tendrán URLs propias. Default: None in Phase 1.
 Should Local Coverage Areas generate pages?
 Default: No.
 
-Approved Expansion Areas:
-Optional.
-1.
-2.
-3.
-
 Additional Categories already covered by core services:
 1.
 2.
@@ -630,7 +624,7 @@ El prompt maestro debe generar el sistema completo.
 ```
 
 
-## §19 Índice final del sistema de 13 pasos
+## §19 Índice final del sistema de 14 pasos
 
 ```text
 1. Intake Form
@@ -1571,7 +1565,7 @@ El documento final debe reunir los pasos, pero no sustituye los archivos individ
 ### §51.2 Patrón o fórmula
 
 ```text
-13 pasos → sistema completo → ejecución por documentos
+14 pasos → sistema completo → ejecución por documentos
 ```
 
 ### §51.3 Ejemplo correcto con Cerrajeros Madrid 24h
@@ -1598,7 +1592,7 @@ El sistema final coordina; los pasos individuales ejecutan.
 
 | Check | Pregunta | Estado |
 |---|---|---|
-| 13 pasos | ¿El sistema final incluye los 13 pasos? | ✅ / ⬜ |
+| 14 pasos | ¿El sistema final incluye los 14 pasos? | ✅ / ⬜ |
 | Main City | ¿La base se construye sobre una sola Main City? | ✅ / ⬜ |
 | Local Coverage | ¿Las áreas de cobertura no generan URLs por defecto? | ✅ / ⬜ |
 | Expansion | ¿La expansión está separada y aprobada? | ✅ / ⬜ |
@@ -1614,7 +1608,7 @@ El sistema final coordina; los pasos individuales ejecutan.
 
 ## §53 Outputs del Paso 13
 
-- SOP final de 13 pasos
+- SOP final de 14 pasos
 - Índice definitivo
 - Fórmula final base
 - Arquitectura Cerrajeros Madrid 24h aplicada

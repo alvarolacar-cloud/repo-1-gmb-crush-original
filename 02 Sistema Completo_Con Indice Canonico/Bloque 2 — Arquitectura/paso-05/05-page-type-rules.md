@@ -100,13 +100,13 @@ Preferred CTA:
 Option A: Llamar ahora
 Option B: Reservar online
 Option C: Solicitar presupuesto
-Option D: Contactoar
+Option D: Contactar
 
 Brand tone:
 Option A: Professional
 Option B: Friendly
 Option C: Premium
-Option D: Urgente / urgente
+Option D: Urgente
 Option E: Local and conversational
 ```
 
