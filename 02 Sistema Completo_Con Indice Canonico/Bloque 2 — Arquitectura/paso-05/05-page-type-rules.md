@@ -909,7 +909,7 @@ El GeoHub organiza todas las señales de la Main City: servicios, categorías ad
 ### §17.3 Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Cerrajeros Madrid 24h usa /madrid/ como hub de Servicios de cerrajería en Madrid y lista páginas locales de urgente, apertura de puertas, cambio de cerraduras, cambio de bombines y cambio de bombines.
+Cerrajeros Madrid 24h usa /madrid/ como hub de Servicios de cerrajería en Madrid y lista páginas locales de urgente, apertura de puertas, cambio de cerraduras, cambio de bombines e instalación de cerraduras de seguridad.
 ```
 
 ### §17.4 Ejemplos incorrectos

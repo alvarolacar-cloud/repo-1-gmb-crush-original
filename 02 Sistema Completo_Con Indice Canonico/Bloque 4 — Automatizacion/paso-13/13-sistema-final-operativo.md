@@ -708,7 +708,7 @@ GeoArticles:
 /madrid/cuanto-cuesta-un-cerrajero-urgente/
 /madrid/que-hacer-si-no-puedes-entrar-casa/
 /madrid/cuanto-tarda-un-cerrajero/
-... plus 3 articles per service
+Ver lista completa de 15 GeoArticles en §54.1
 ```
 
 ## §24 Local Coverage Areas en contenido
@@ -784,8 +784,7 @@ docs/
 ├── 10-produccion-en-fases.md
 ├── 11-pseudocodigo-sistema.md
 ├── 12-master-prompt.md
-├── 13-sistema-final-operativo.md
-└── gmb-crush-sistema-completo-estilo-literal-13-pasos.md
+└── 13-sistema-final-operativo.md
 ```
 
 #

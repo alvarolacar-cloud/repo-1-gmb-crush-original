@@ -131,7 +131,7 @@ Preferred CTA:
 Option A: Llamar ahora
 Option B: Reservar online
 Option C: Solicitar presupuesto
-Option D: Contactoar
+Option D: Contactar
 
 Trust Signals:
 - Years in business:
@@ -920,7 +920,7 @@ Este módulo se añade dentro del **Paso 1 — Intake Form**, justo después de 
 
 ```text
 Main City
-Zonas de posicionamiento local
+Local Coverage Areas
 Approved Expansion Areas
 ```
 
