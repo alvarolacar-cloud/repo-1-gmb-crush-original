@@ -204,6 +204,8 @@ N/A — GBP not created yet
 
 # Cuerpo operativo del Paso 11
 
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
+
 ## 1. Load inputs
 
 ### Explicación
@@ -226,7 +228,8 @@ INPUT physical_location_city
 INPUT core_services[]
 INPUT service_slugs[]
 INPUT additional_gbp_categories[]
-INPUT local_coverage_areas[]
+INPUT direct_local_coverage_areas[]
+INPUT candidate_local_coverage_areas[]
 INPUT approved_expansion_areas[]
 INPUT geoarticles_per_service
 INPUT nap
@@ -257,18 +260,28 @@ planned_primary_gbp_category:
 Cerrajero
 
 core_services:
-- Apertura de puertas
 - Cerrajero urgente
+- Apertura de puertas
 - Cambio de cerraduras
-- Duplicado de llaves
+- Cambio de bombines
 - Instalación de cerraduras de seguridad
 
-local_coverage_areas:
+additional_categories_with_page:
+- Duplicado de llaves
+
+direct_local_coverage_areas:
 - Almagro
 - Chamberí
+
+candidate_local_coverage_areas:
 - Salamanca
 - Retiro
 - Centro
+- Tetuán
+- Chamartín
+- Arganzuela
+- Moncloa
+- Prosperidad
 
 approved_expansion_areas:
 None
@@ -642,7 +655,7 @@ FOR each service IN core_services:
     url = /category/main-city/service/
     parent = /category/service/
     geohub = /main-city/
-    content_uses = local_coverage_areas
+    content_uses = direct_local_coverage_areas + candidate_local_coverage_areas (filtrado por test GEO)
     schema = LocalBusiness + BreadcrumbList
 ```
 
@@ -650,19 +663,19 @@ FOR each service IN core_services:
 
 ```text
 Service:
-Apertura de puertas
+Cerrajero urgente
 
 Main City:
 Madrid
 
 URL:
-/cerrajero/madrid/apertura-puertas/
+/cerrajero/madrid/cerrajero-urgente/
 
 H1:
-Cerrajeros Madrid 24h – Apertura de puertas en Madrid
+Cerrajeros Madrid 24h – Cerrajero urgente en Madrid
 
 Parent Service Overview:
-/cerrajero/apertura-puertas/
+/cerrajero/cerrajero-urgente/
 
 Main City GeoHub:
 /madrid/
@@ -817,19 +830,27 @@ Las Local Coverage Areas ayudan a contextualizar la cobertura del negocio, pero 
 ```text
 FOR each content page:
     IF page_type supports local coverage:
-        inject local_coverage_areas into intro, examples, FAQs, areaServed
-    DO NOT generate URLs for local_coverage_areas
+        inject direct_local_coverage_areas into intro, examples, FAQs, areaServed
+        inject candidate_local_coverage_areas only if GEO coherence test passes
+    DO NOT generate URLs for any local_coverage_areas
 ```
 
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Local Coverage Areas:
+Direct Local Coverage Areas:
 - Almagro
 - Chamberí
+
+Candidate Local Coverage Areas (solo si pasan el test de coherencia GEO del paso 1):
 - Salamanca
 - Retiro
 - Centro
+- Tetuán
+- Chamartín
+- Arganzuela
+- Moncloa
+- Prosperidad
 
 Use in:
 /madrid/
@@ -942,20 +963,20 @@ IF GeoArticle:
 
 ```text
 Source:
-/cerrajero/madrid/apertura-puertas/
+/cerrajero/madrid/cerrajero-urgente/
 
 Required links:
-- /cerrajero/apertura-puertas/
+- /cerrajero/cerrajero-urgente/
 - /madrid/
-- /cerrajero/madrid/cerrajero-urgente/
+- /cerrajero/madrid/apertura-puertas/
 - /cerrajero/madrid/cambio-cerraduras/
 - /madrid/cuanto-cuesta-un-cerrajero-urgente/
 - /contacto/
 
 Anchor examples:
-- apertura de puertas en Madrid
-- servicios de cerrajería en Madrid
 - cerrajero urgente en Madrid
+- servicios de cerrajería en Madrid
+- apertura de puertas en Madrid
 ```
 
 ### Ejemplos incorrectos
@@ -1069,17 +1090,17 @@ Página solicitada:
 LBS-001
 
 URL:
-/cerrajero/madrid/apertura-puertas/
+/cerrajero/madrid/cerrajero-urgente/
 
 Page Type:
 Location-Based Service
 
 Dependency check:
 - Homepage exists: /
-- Parent Service Overview exists: /cerrajero/apertura-puertas/
+- Parent Service Overview exists: /cerrajero/cerrajero-urgente/
 - Main City GeoHub exists: /madrid/
 - Main City approved: Madrid
-- Service approved: Apertura de puertas
+- Service approved: Cerrajero urgente
 
 Resultado:
 Ready for QA
@@ -1089,10 +1110,10 @@ Si intentamos crear la misma página sin que exista el Service Overview:
 
 ```text
 URL:
-/cerrajero/madrid/apertura-puertas/
+/cerrajero/madrid/cerrajero-urgente/
 
 Missing dependency:
-/cerrajero/apertura-puertas/
+/cerrajero/cerrajero-urgente/
 
 Resultado:
 Blocked — Missing Parent Service Overview
@@ -1102,7 +1123,7 @@ Si intentamos crearla sin que exista el GeoHub:
 
 ```text
 URL:
-/cerrajero/madrid/apertura-puertas/
+/cerrajero/madrid/cerrajero-urgente/
 
 Missing dependency:
 /madrid/
@@ -1157,7 +1178,7 @@ Página revisada:
 LBS-001
 
 URL esperada:
-/cerrajero/madrid/apertura-puertas/
+/cerrajero/madrid/cerrajero-urgente/
 
 URL encontrada:
 /madrid/apertura-puertas/
@@ -1181,7 +1202,7 @@ Needs Revision
 Corrección necesaria:
 
 ```text
-- Cambiar URL a /cerrajero/madrid/apertura-puertas/
+- Cambiar URL a /cerrajero/madrid/cerrajero-urgente/
 - Sustituir Article schema por LocalBusiness schema
 - Añadir CTA local visible
 - Confirmar enlaces a /cerrajero/apertura-puertas/ y /madrid/
@@ -1237,17 +1258,17 @@ Output 1 — URL Matrix:
 HP-001 | Homepage | / | P1 | Phase 1
 SO-001 | Service Overview | /cerrajero/apertura-puertas/ | P1 | Phase 1
 GH-001 | GeoHub | /madrid/ | P1 | Phase 1
-LBS-001 | Location-Based Service | /cerrajero/madrid/apertura-puertas/ | P1 | Phase 2
+LBS-001 | Location-Based Service | /cerrajero/madrid/cerrajero-urgente/ | P1 | Phase 2
 GA-001 | GeoArticle | /madrid/cuanto-cuesta-un-cerrajero-urgente/ | P3 | Phase 3
 
 Output 2 — Internal Linking Matrix:
-Source: /cerrajero/madrid/apertura-puertas/
-Target: /cerrajero/apertura-puertas/
-Anchor: apertura de puertas
+Source: /cerrajero/madrid/cerrajero-urgente/
+Target: /cerrajero/cerrajero-urgente/
+Anchor: cerrajero urgente
 Priority: P1
 
 Output 3 — Schema Map:
-URL: /cerrajero/madrid/apertura-puertas/
+URL: /cerrajero/madrid/cerrajero-urgente/
 Schema: LocalBusiness, BreadcrumbList, FAQPage optional
 
 Output 4 — Priority Score:
@@ -1263,7 +1284,7 @@ Phase 4: Optimization
 Phase 5: GBP Creation & Website Alignment
 
 Output 6 — QA Matrix:
-URL: /cerrajero/madrid/apertura-puertas/
+URL: /cerrajero/madrid/cerrajero-urgente/
 QA Status: Approved / Needs Revision / Blocked
 ```
 

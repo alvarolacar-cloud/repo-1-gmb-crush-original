@@ -197,6 +197,8 @@ GMB Crush Geo Grid, Google Search Console, GA4
 
 # Cuerpo operativo del Paso 10
 
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
+
 ## Fase 1 — Entity Foundation
 
 ### Explicación
@@ -212,7 +214,7 @@ Homepage + Contacto + About + Top Service Overview + Main City GeoHub
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-/, /contact/, /cerrajero/cerrajero-urgente/, /cerrajero/apertura-puertas/, /madrid/
+/, /contacto/, /cerrajero/cerrajero-urgente/, /cerrajero/apertura-puertas/, /madrid/
 ```
 
 ### Ejemplos incorrectos
@@ -276,7 +278,7 @@ GeoArticles for Main City
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-/madrid/guia-precios-cerrajero-urgente/, /madrid/que-hacer-si-no-puedes-entrar-casa/
+/madrid/cuanto-cuesta-un-cerrajero-urgente/, /madrid/que-hacer-si-no-puedes-entrar-casa/
 ```
 
 ### Ejemplos incorrectos
@@ -365,7 +367,7 @@ La expansión es opcional y posterior.
 | Día | Página |
 |---|---|
 | 1 | `/` |
-| 2 | `/contact/` |
+| 2 | `/contacto/` |
 | 3 | `/cerrajero/cerrajero-urgente/` |
 | 4 | `/cerrajero/apertura-puertas/` |
 | 5 | `/cerrajero/cambio-bombines/` |
@@ -394,7 +396,7 @@ La expansión es opcional y posterior.
 
 | Día | Página |
 |---|---|
-| 1 | `/madrid/guia-precios-cerrajero-urgente/` |
+| 1 | `/madrid/cuanto-cuesta-un-cerrajero-urgente/` |
 | 2 | `/madrid/que-hacer-si-no-puedes-entrar-casa/` |
 | 3 | `/madrid/cuanto-tarda-un-cerrajero/` |
 | 4 | Schema QA |
@@ -426,7 +428,7 @@ Homepage + Contacto + About + Service Overviews + Main GeoHub
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Cerrajeros Madrid 24h publica /, /contact/, /about/, /cerrajero/cerrajero-urgente/ y /madrid/ en la primera base.
+Cerrajeros Madrid 24h publica /, /contacto/, /about/, /cerrajero/cerrajero-urgente/ y /madrid/ en la primera base.
 ```
 
 ### Ejemplos incorrectos
@@ -490,7 +492,7 @@ GeoArticles → matching LBS + GeoHub
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Después de /cerrajero/madrid/cerrajero-urgente/, Cerrajeros Madrid 24h publica /madrid/guia-precios-cerrajero-urgente/.
+Después de /cerrajero/madrid/cerrajero-urgente/, Cerrajeros Madrid 24h publica /madrid/cuanto-cuesta-un-cerrajero-urgente/.
 ```
 
 ### Ejemplos incorrectos
@@ -682,7 +684,7 @@ Los contenidos importantes deben revisarse periódicamente. GeoArticles, FAQs, m
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Cerrajeros Madrid 24h refresca /madrid/guia-precios-cerrajero-urgente/ a los 6 meses con nuevas FAQs y enlaces.
+Cerrajeros Madrid 24h refresca /madrid/cuanto-cuesta-un-cerrajero-urgente/ a los 6 meses con nuevas FAQs y enlaces.
 ```
 
 ### Ejemplos incorrectos
@@ -810,3 +812,85 @@ La web base se publica primero; el GBP se crea y se sincroniza después.
 - GeoArticle Pages AI Framework
 - Additional Categories Pages AI Framework
 
+
+
+### GeoArticles completos (15)
+
+> **Aviso de trazabilidad:** estos 15 títulos son un primer borrador derivado de la fórmula G × S = 15 y de la lógica del servicio. **No vienen de keyword research real**. Antes de producirlos hay que validar volumen de búsqueda, dificultad y oportunidad competitiva por título. La fórmula garantiza la cantidad; los temas concretos requieren validación.
+
+**Cerrajero urgente (3):**
+1. /madrid/cuanto-cuesta-un-cerrajero-urgente/
+2. /madrid/que-hacer-si-no-puedes-entrar-casa/
+3. /madrid/cuanto-tarda-un-cerrajero/
+
+**Apertura de puertas (3):**
+4. /madrid/cuanto-cuesta-abrir-una-puerta/
+5. /madrid/que-hacer-si-te-dejas-las-llaves-dentro/
+6. /madrid/apertura-de-puertas-sin-romper-cerradura/
+
+**Cambio de cerraduras (3):**
+7. /madrid/cuando-cambiar-la-cerradura-de-casa/
+8. /madrid/cambio-de-cerradura-tras-perder-llaves/
+9. /madrid/cerradura-nueva-o-reparacion/
+
+**Cambio de bombines (3):**
+10. /madrid/cuando-cambiar-el-bombin/
+11. /madrid/bombin-antibumping-madrid/
+12. /madrid/cambio-de-bombin-sin-cambiar-cerradura/
+
+**Instalación de cerraduras de seguridad (3):**
+13. /madrid/mejores-cerraduras-de-seguridad-para-viviendas/
+14. /madrid/cerraduras-de-seguridad-para-comunidades/
+15. /madrid/instalar-cerradura-de-seguridad-en-puerta-blindada/
+
+
+
+### Calendario de producción completo
+
+**Fase 1 — Estructura base (Semana 1-2):**
+- / (Homepage)
+- /contacto/
+- /madrid/ (GeoHub)
+- /cerrajero/madrid/cerrajero-urgente/ (LBS principal)
+- /cerrajero/madrid/apertura-puertas/ (LBS)
+
+**Fase 2 — Servicios core (Semana 2-3):**
+- /cerrajero/madrid/cambio-cerraduras/ (LBS)
+- /cerrajero/madrid/cambio-bombines/ (LBS)
+- /cerrajero/madrid/instalacion-cerraduras-seguridad/ (LBS)
+- /cerrajero/madrid/duplicado-llaves/ (Additional Category)
+
+**Fase 3 — Service Overview Pages (Semana 3-4):**
+- /cerrajero/cerrajero-urgente/
+- /cerrajero/apertura-puertas/
+- /cerrajero/cambio-cerraduras/
+- /cerrajero/cambio-bombines/
+- /cerrajero/instalacion-cerraduras-seguridad/
+
+**Fase 4 — GeoArticles lote 1 (Semana 4-5):**
+- /madrid/cuanto-cuesta-un-cerrajero-urgente/
+- /madrid/que-hacer-si-no-puedes-entrar-casa/
+- /madrid/cuanto-tarda-un-cerrajero/
+- /madrid/cuanto-cuesta-abrir-una-puerta/
+- /madrid/que-hacer-si-te-dejas-las-llaves-dentro/
+
+**Fase 5 — GeoArticles lote 2 (Semana 5-6):**
+- /madrid/apertura-de-puertas-sin-romper-cerradura/
+- /madrid/cuando-cambiar-la-cerradura-de-casa/
+- /madrid/cambio-de-cerradura-tras-perder-llaves/
+- /madrid/cerradura-nueva-o-reparacion/
+- /madrid/cuando-cambiar-el-bombin/
+
+**Fase 6 — GeoArticles lote 3 (Semana 6-7):**
+- /madrid/bombin-antibumping-madrid/
+- /madrid/cambio-de-bombin-sin-cambiar-cerradura/
+- /madrid/mejores-cerraduras-de-seguridad-para-viviendas/
+- /madrid/cerraduras-de-seguridad-para-comunidades/
+- /madrid/instalar-cerradura-de-seguridad-en-puerta-blindada/
+
+**Fase 7 — GBP y sincronización (Semana 7-8):**
+- Paso 14: Crear GBP
+- Verificar GBP
+- Sincronizar web con GBP (schema sameAs, trust signals, contacto)
+
+> El calendario debe cubrir todo el inventario base o declararse como calendario parcial.

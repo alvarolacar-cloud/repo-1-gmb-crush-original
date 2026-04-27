@@ -840,7 +840,7 @@ Trust signal → página aplicable → bloque de confianza → revisión de vera
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Cerrajeros Madrid 24h registra 10+ años de experiencia, reseñas iniciales pendientes de recopilar tras crear el GBP, licensed technicians y en el mismo día mobile support como señales reutilizables.
+Cerrajeros Madrid 24h registra 10+ años de experiencia, reseñas iniciales pendientes de recopilar tras crear el GBP, técnicos cerrajeros cualificados y servicio móvil en el mismo día como señales reutilizables.
 ```
 
 ### Ejemplos incorrectos
@@ -1138,7 +1138,7 @@ La versión base no calcula páginas para múltiples ciudades. Calcula una arqui
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-1 + 5 + 1 + 5 + 1 + 15 = 28 páginas base
+1 + 5 + 1 + 5 + 1 + 15 = 28 páginas SEO base. Adicionalmente, /contacto/ como página auxiliar fuera del inventario SEO base.
 ```
 
 ### Ejemplos incorrectos
@@ -1330,7 +1330,7 @@ Service Page exists → GeoArticle can be published
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-/madrid/guia-precios-cerrajero-urgente/ apoya /cerrajero/madrid/cerrajero-urgente/
+/madrid/cuanto-cuesta-un-cerrajero-urgente/ apoya /cerrajero/madrid/cerrajero-urgente/
 ```
 
 ### Ejemplos incorrectos
@@ -1362,13 +1362,13 @@ Total pages ≠ publish all at once
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-28 páginas base planificadas; se publican por fases
+28 páginas SEO base más /contacto/ como página auxiliar planificadas; se publican por fases
 ```
 
 ### Ejemplos incorrectos
 
 ```text
-- Publicar 28 páginas sin QA
+- Publicar 28 páginas SEO base (29 con /contacto/ como página auxiliar) sin QA
 - No priorizar
 - Confundir inventario con calendario
 ```
@@ -1560,7 +1560,7 @@ La fórmula debe devolver un inventario ejecutable, no un mapa teórico inmaneja
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Con S = 5, A = 1 y G = 3, Cerrajeros Madrid 24h produce 1 + 5 + 1 + 5 + 1 + 15 = 28 páginas base.
+Con S = 5, A = 1 y G = 3, Cerrajeros Madrid 24h produce 1 + 5 + 1 + 5 + 1 + 15 = 28 páginas SEO base. Adicionalmente, /contacto/ como página auxiliar fuera del inventario SEO base.
 ```
 
 ### Ejemplos incorrectos
@@ -1684,7 +1684,7 @@ Página hija → página padre existente → enlace interno posible
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-El artículo /madrid/guia-precios-cerrajero-urgente/ se programa después de /cerrajero/madrid/cerrajero-urgente/ y /madrid/.
+El artículo /madrid/cuanto-cuesta-un-cerrajero-urgente/ se programa después de /cerrajero/madrid/cerrajero-urgente/ y /madrid/.
 ```
 
 ### Ejemplos incorrectos
@@ -2221,7 +2221,7 @@ Ninguna página debe estar sin status.
 | GH-001 | GeoHub | `/madrid/` | Cerrajeros Madrid 24h – Servicios de cerrajería en Madrid | CollectionPage, BreadcrumbList | P1 | Phase 1 |
 | LBS-001 | Location-Based Service | `/cerrajero/madrid/cerrajero-urgente/` | Cerrajeros Madrid 24h – Cerrajero urgente en Madrid | LocalBusiness, BreadcrumbList | P1 | Phase 2 |
 | AC-001 | Additional Category | `/cerrajero/madrid/duplicado-llaves/` | Cerrajeros Madrid 24h – Duplicado de llaves experto en Madrid | Service, BreadcrumbList | P3 | Phase 2 |
-| GA-001 | GeoArticle | `/madrid/guia-precios-cerrajero-urgente/` | How Much Does an Precio de cerrajero urgente en Madrid? | Article, FAQPage, BreadcrumbList | P3 | Phase 3 |
+| GA-001 | GeoArticle | `/madrid/cuanto-cuesta-un-cerrajero-urgente/` | How Much Does an Precio de cerrajero urgente en Madrid? | Article, FAQPage, BreadcrumbList | P3 | Phase 3 |
 
 ## Filas que NO se generan en la base
 
@@ -2230,7 +2230,7 @@ Ninguna página debe estar sin status.
 /cerrajero/almagro/cerrajero-urgente/
 /chamberi/
 /cerrajero/salamanca/apertura-puertas/
-/retiro/guia-precios-cerrajero-urgente/
+/retiro/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
 Estas URLs solo se generarían si esas zonas pasan a Approved Expansion Areas.
@@ -2280,7 +2280,7 @@ HP / SO / GH / LBS / AC / GA + número correlativo
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-LBS-001 identifica /cerrajero/madrid/cerrajero-urgente/ y GA-001 identifica /madrid/guia-precios-cerrajero-urgente/.
+LBS-001 identifica /cerrajero/madrid/cerrajero-urgente/ y GA-001 identifica /madrid/cuanto-cuesta-un-cerrajero-urgente/.
 ```
 
 ### Ejemplos incorrectos
@@ -2989,7 +2989,7 @@ Los GeoArticles son boosters semánticos y viven bajo la Main City.
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-/madrid/guia-precios-cerrajero-urgente/
+/madrid/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
 ### Ejemplos incorrectos
@@ -2998,7 +2998,7 @@ Los GeoArticles son boosters semánticos y viven bajo la Main City.
 - /blog/cerrajero-urgente-cost-madrid/
 - /cerrajero/madrid/cerrajero-urgente/
 - /articles/madrid-cerrajero-urgente-cost/
-- /guia-precios-cerrajero-urgente-madrid/
+- /cuanto-cuesta-un-cerrajero-urgente-madrid/
 ```
 
 ### Regla final
@@ -3260,7 +3260,7 @@ Main City Additional Category:
 /cerrajero/madrid/duplicado-llaves/
 
 GeoArticles de la Main City:
-/madrid/guia-precios-cerrajero-urgente/
+/madrid/cuanto-cuesta-un-cerrajero-urgente/
 /madrid/que-hacer-si-no-puedes-entrar-casa/
 /madrid/cuanto-tarda-un-cerrajero/
 ```
@@ -3272,7 +3272,7 @@ GeoArticles de la Main City:
 /cerrajero/almagro/cerrajero-urgente/
 /chamberi/
 /cerrajero/salamanca/apertura-puertas/
-/retiro/guia-precios-cerrajero-urgente/
+/retiro/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
 Estas URLs solo se crearían como Approved Expansion Areas.
@@ -3508,13 +3508,13 @@ Los GeoArticles son contenido de soporte, no landings comerciales. Su URL debe r
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-El artículo de coste usa /madrid/guia-precios-cerrajero-urgente/ y enlaza a /cerrajero/madrid/cerrajero-urgente/.
+El artículo de coste usa /madrid/cuanto-cuesta-un-cerrajero-urgente/ y enlaza a /cerrajero/madrid/cerrajero-urgente/.
 ```
 
 ### Ejemplos incorrectos
 
 ```text
-- /cerrajero/madrid/guia-precios-cerrajero-urgente/ si complica la distinción de landing
+- /cerrajero/madrid/cuanto-cuesta-un-cerrajero-urgente/ si complica la distinción de landing
 - /cerrajero-urgente-cost-madrid/
 - /blog/random-post-123/
 ```
@@ -4053,7 +4053,7 @@ Relevant GeoArticle
 URL: /cerrajero/cerrajero-urgente/
 H1: Servicios profesionales de cerrajería urgente por Cerrajeros Madrid 24h
 Meta Title: Cerrajero urgente por Cerrajeros Madrid 24h | Expertos en cerrajería
-Enlaces internos: /, /cerrajero/apertura-puertas/, /cerrajero/madrid/cerrajero-urgente/, /madrid/guia-precios-cerrajero-urgente/
+Enlaces internos: /, /cerrajero/apertura-puertas/, /cerrajero/madrid/cerrajero-urgente/, /madrid/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
 ### Ejemplos incorrectos
@@ -4148,7 +4148,7 @@ Contacto
 URL: /cerrajero/madrid/cerrajero-urgente/
 H1: Cerrajeros Madrid 24h – Cerrajero urgente en Madrid
 Local Coverage Areas: Almagro, Chamberí, Salamanca, Retiro mencionadas de forma natural
-Enlaces: /cerrajero/cerrajero-urgente/, /madrid/, /cerrajero/madrid/apertura-puertas/, /madrid/guia-precios-cerrajero-urgente/
+Enlaces: /cerrajero/cerrajero-urgente/, /madrid/, /cerrajero/madrid/apertura-puertas/, /madrid/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
 ### Ejemplos incorrectos
@@ -4331,9 +4331,9 @@ Página de contacto
 ```text
 URL: /madrid/
 H1: Cerrajeros Madrid 24h – Servicios de cerrajería en Madrid
-Menú de servicios: urgente, apertura de puertas, cambio de cerraduras, cambio de bombines, cambio de bombines
+Menú de servicios: urgente, apertura de puertas, cambio de cerraduras, cambio de bombines, instalación de cerraduras de seguridad
 Sección de cobertura: Almagro, Chamberí, Salamanca, Retiro
-Enlaces: /cerrajero/madrid/cerrajero-urgente/, /cerrajero/madrid/duplicado-llaves/, /madrid/guia-precios-cerrajero-urgente/
+Enlaces: /cerrajero/madrid/cerrajero-urgente/, /cerrajero/madrid/duplicado-llaves/, /madrid/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
 ### Ejemplos incorrectos
@@ -4422,7 +4422,7 @@ Contacto
 ### Ejemplo rellenado con Cerrajeros Madrid 24h
 
 ```text
-URL: /madrid/guia-precios-cerrajero-urgente/
+URL: /madrid/cuanto-cuesta-un-cerrajero-urgente/
 H1: How Much Does an Precio de cerrajero urgente en Madrid?
 Enlaces: /cerrajero/madrid/cerrajero-urgente/, /madrid/, /madrid/que-hacer-si-no-puedes-entrar-casa/
 ```
@@ -4610,7 +4610,7 @@ El GeoArticle no es una landing comercial. Debe cubrir un tema long-tail de serv
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-El artículo /madrid/guia-precios-cerrajero-urgente/ explica costes y enlaza a /cerrajero/madrid/cerrajero-urgente/.
+El artículo /madrid/cuanto-cuesta-un-cerrajero-urgente/ explica costes y enlaza a /cerrajero/madrid/cerrajero-urgente/.
 ```
 
 ### Ejemplos incorrectos
@@ -4703,7 +4703,7 @@ Page Type → CTA intent → enlace o acción
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-En /cerrajero/madrid/cerrajero-urgente/ el CTA es llamar ahora; en /madrid/guia-precios-cerrajero-urgente/ el CTA invita a consultar la página de Cerrajero urgente en Madrid.
+En /cerrajero/madrid/cerrajero-urgente/ el CTA es llamar ahora; en /madrid/cuanto-cuesta-un-cerrajero-urgente/ el CTA invita a consultar la página de Cerrajero urgente en Madrid.
 ```
 
 ### Ejemplos incorrectos
@@ -4948,7 +4948,7 @@ Matching GeoHub:
 /madrid/
 
 Related GeoArticles:
-1. /madrid/guia-precios-cerrajero-urgente/
+1. /madrid/cuanto-cuesta-un-cerrajero-urgente/
 2. /madrid/que-hacer-si-no-puedes-entrar-casa/
 3. /madrid/cuanto-tarda-un-cerrajero/
 
@@ -5359,7 +5359,7 @@ El GeoHub es el lugar más natural para una sección explícita de Local Coverag
 URL: /madrid/
 H2: Zonas de cobertura de cerrajería en Madrid
 Texto: Cerrajeros Madrid 24h provides servicios de cerrajería en Madrid and local coverage areas such as Almagro, Chamberí, Salamanca and Retiro. Estas áreas representan cobertura real y ayudan al usuario a entender dónde puede estar disponible el servicio.
-Menú de servicios: urgente, apertura de puertas, cambio de cerraduras, cambio de bombines, cambio de bombines.
+Menú de servicios: urgente, apertura de puertas, cambio de cerraduras, cambio de bombines, instalación de cerraduras de seguridad.
 ```
 
 ### Ejemplos incorrectos
@@ -5405,7 +5405,7 @@ Las Local Coverage Areas se usan como ejemplos semánticos y contexto real. No s
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-URL: /madrid/guia-precios-cerrajero-urgente/
+URL: /madrid/cuanto-cuesta-un-cerrajero-urgente/
 Texto: El precio de un cerrajero urgente en Madrid puede variar según el tipo de cerradura, la hora, la urgencia y la zona de cobertura. Una apertura sencilla en un piso de Madrid puede ser diferente de un aviso nocturno en Almagro, Chamberí o Salamanca según disponibilidad y condiciones de desplazamiento.
 Enlaces: /cerrajero/madrid/cerrajero-urgente/, /madrid/, /madrid/que-hacer-si-no-puedes-entrar-casa/
 ```
@@ -5671,7 +5671,7 @@ GeoArticle → tema + Main City → ejemplos de cobertura
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-En /madrid/guia-precios-cerrajero-urgente/, Cerrajeros Madrid 24h explica que el coste puede variar según tipo de apertura urgente y zona de cobertura.
+En /madrid/cuanto-cuesta-un-cerrajero-urgente/, Cerrajeros Madrid 24h explica que el coste puede variar según tipo de apertura urgente y zona de cobertura.
 ```
 
 ### Ejemplos incorrectos
@@ -6025,7 +6025,7 @@ Páginas de categoría adicional en la Main City:
 1. /cerrajero/madrid/duplicado-llaves/
 
 Main City GeoArticle Pages:
-1. /madrid/guia-precios-cerrajero-urgente/
+1. /madrid/cuanto-cuesta-un-cerrajero-urgente/
 2. /madrid/que-hacer-si-no-puedes-entrar-casa/
 3. /madrid/cuanto-tarda-un-cerrajero/
 
@@ -6042,7 +6042,7 @@ Approved Expansion Areas with URLs:
 None in Phase 1.
 
 Página de contacto URL:
-/contact/
+/contacto/
 
 GBP URL:
 N/A — GBP not created yet
@@ -6111,7 +6111,7 @@ Homepage → Service Overview + Main City GeoHub + Contacto
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-/ → /cerrajero/cerrajero-urgente/, /cerrajero/apertura-puertas/, /madrid/, /contact/
+/ → /cerrajero/cerrajero-urgente/, /cerrajero/apertura-puertas/, /madrid/, /contacto/
 ```
 
 ### Ejemplos incorrectos
@@ -6207,7 +6207,7 @@ LBS → parent service + GeoHub + same-city services + articles
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-/cerrajero/madrid/cerrajero-urgente/ → /cerrajero/cerrajero-urgente/ + /madrid/ + /madrid/guia-precios-cerrajero-urgente/
+/cerrajero/madrid/cerrajero-urgente/ → /cerrajero/cerrajero-urgente/ + /madrid/ + /madrid/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
 ### Ejemplos incorrectos
@@ -6271,7 +6271,7 @@ GeoArticle → LBS + GeoHub + related article
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-/madrid/guia-precios-cerrajero-urgente/ → /cerrajero/madrid/cerrajero-urgente/ + /madrid/
+/madrid/cuanto-cuesta-un-cerrajero-urgente/ → /cerrajero/madrid/cerrajero-urgente/ + /madrid/
 ```
 
 ### Ejemplos incorrectos
@@ -6415,8 +6415,8 @@ Required links:
 - /madrid/
 - /cerrajero/madrid/apertura-puertas/
 - /cerrajero/madrid/cambio-cerraduras/
-- /madrid/guia-precios-cerrajero-urgente/
-- /contact/
+- /madrid/cuanto-cuesta-un-cerrajero-urgente/
+- /contacto/
 
 Anchor suggestions:
 - urgente servicios de cerrajería
@@ -6463,7 +6463,7 @@ Homepage → Service Overviews + Main GeoHub + Contacto
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Cerrajeros Madrid 24h enlaza desde / a /cerrajero/cerrajero-urgente/, /cerrajero/apertura-puertas/, /madrid/ y /contact/.
+Cerrajeros Madrid 24h enlaza desde / a /cerrajero/cerrajero-urgente/, /cerrajero/apertura-puertas/, /madrid/ y /contacto/.
 ```
 
 ### Ejemplos incorrectos
@@ -6525,7 +6525,7 @@ El GeoHub debe ser el índice de la Main City. Debe enlazar a todas las páginas
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-/madrid/ enlaza a /cerrajero/madrid/cerrajero-urgente/, /cerrajero/madrid/apertura-puertas/ y /madrid/guia-precios-cerrajero-urgente/.
+/madrid/ enlaza a /cerrajero/madrid/cerrajero-urgente/, /cerrajero/madrid/apertura-puertas/ y /madrid/cuanto-cuesta-un-cerrajero-urgente/.
 ```
 
 ### Ejemplos incorrectos
@@ -6649,7 +6649,7 @@ GeoArticle → matching LBS + GeoHub + related article
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-/madrid/guia-precios-cerrajero-urgente/ enlaza a /cerrajero/madrid/cerrajero-urgente/ y /madrid/.
+/madrid/cuanto-cuesta-un-cerrajero-urgente/ enlaza a /cerrajero/madrid/cerrajero-urgente/ y /madrid/.
 ```
 
 ### Ejemplos incorrectos
@@ -7256,7 +7256,7 @@ Landing first → article second
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-/cerrajero/madrid/cerrajero-urgente/ antes de /madrid/guia-precios-cerrajero-urgente/
+/cerrajero/madrid/cerrajero-urgente/ antes de /madrid/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
 ### Ejemplos incorrectos
@@ -7319,7 +7319,7 @@ La homepage va primero.
 | Location-Based Service | `/cerrajero/madrid/cambio-bombines/` | 5 | 4 | 4 | 5 | 3 | 4 | 25 | P2 |
 | Location-Based Service | `/cerrajero/madrid/cambio-cerraduras/` | 4 | 4 | 4 | 5 | 3 | 4 | 24 | P2 |
 | Additional Category | `/cerrajero/madrid/duplicado-llaves/` | 2 | 3 | 4 | 5 | 3 | 2 | 19 | P3 |
-| GeoArticle | `/madrid/guia-precios-cerrajero-urgente/` | 3 | 3 | 4 | 5 | 4 | 3 | 22 | P2 after landing |
+| GeoArticle | `/madrid/cuanto-cuesta-un-cerrajero-urgente/` | 3 | 3 | 4 | 5 | 4 | 3 | 22 | P2 after landing |
 
 ## Orden recomendado
 
@@ -7534,7 +7534,7 @@ Page Type + Score + Dependency → Priority final
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Homepage es P1; /madrid/guia-precios-cerrajero-urgente/ puede ser P3 aunque su tema sea importante.
+Homepage es P1; /madrid/cuanto-cuesta-un-cerrajero-urgente/ puede ser P3 aunque su tema sea importante.
 ```
 
 ### Ejemplos incorrectos
@@ -7823,7 +7823,7 @@ Required Enlaces internos:
 2. /madrid/
 3. /cerrajero/madrid/apertura-puertas/
 4. /cerrajero/madrid/cambio-cerraduras/
-5. /madrid/guia-precios-cerrajero-urgente/
+5. /madrid/cuanto-cuesta-un-cerrajero-urgente/
 
 Required Schema:
 LocalBusiness
@@ -8498,7 +8498,7 @@ Intención principal → URL única
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-/madrid/guia-precios-cerrajero-urgente/ no compite con /cerrajero/madrid/cerrajero-urgente/ porque apunta a costes, no a landing comercial.
+/madrid/cuanto-cuesta-un-cerrajero-urgente/ no compite con /cerrajero/madrid/cerrajero-urgente/ porque apunta a costes, no a landing comercial.
 ```
 
 ### Ejemplos incorrectos
@@ -8838,7 +8838,7 @@ Homepage + Contacto + About + Top Service Overview + Main City GeoHub
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-/, /contact/, /cerrajero/cerrajero-urgente/, /cerrajero/apertura-puertas/, /madrid/
+/, /contacto/, /cerrajero/cerrajero-urgente/, /cerrajero/apertura-puertas/, /madrid/
 ```
 
 ### Ejemplos incorrectos
@@ -8902,7 +8902,7 @@ GeoArticles for Main City
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-/madrid/guia-precios-cerrajero-urgente/, /madrid/que-hacer-si-no-puedes-entrar-casa/
+/madrid/cuanto-cuesta-un-cerrajero-urgente/, /madrid/que-hacer-si-no-puedes-entrar-casa/
 ```
 
 ### Ejemplos incorrectos
@@ -8991,7 +8991,7 @@ La expansión es opcional y posterior.
 | Día | Página |
 |---|---|
 | 1 | `/` |
-| 2 | `/contact/` |
+| 2 | `/contacto/` |
 | 3 | `/cerrajero/cerrajero-urgente/` |
 | 4 | `/cerrajero/apertura-puertas/` |
 | 5 | `/cerrajero/cambio-bombines/` |
@@ -9020,7 +9020,7 @@ La expansión es opcional y posterior.
 
 | Día | Página |
 |---|---|
-| 1 | `/madrid/guia-precios-cerrajero-urgente/` |
+| 1 | `/madrid/cuanto-cuesta-un-cerrajero-urgente/` |
 | 2 | `/madrid/que-hacer-si-no-puedes-entrar-casa/` |
 | 3 | `/madrid/cuanto-tarda-un-cerrajero/` |
 | 4 | Schema QA |
@@ -9051,7 +9051,7 @@ Homepage + Contacto + About + Service Overviews + Main GeoHub
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Cerrajeros Madrid 24h publica /, /contact/, /about/, /cerrajero/cerrajero-urgente/ y /madrid/ en la primera base.
+Cerrajeros Madrid 24h publica /, /contacto/, /about/, /cerrajero/cerrajero-urgente/ y /madrid/ en la primera base.
 ```
 
 ### Ejemplos incorrectos
@@ -9113,7 +9113,7 @@ GeoArticles → matching LBS + GeoHub
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Después de /cerrajero/madrid/cerrajero-urgente/, Cerrajeros Madrid 24h publica /madrid/guia-precios-cerrajero-urgente/.
+Después de /cerrajero/madrid/cerrajero-urgente/, Cerrajeros Madrid 24h publica /madrid/cuanto-cuesta-un-cerrajero-urgente/.
 ```
 
 ### Ejemplos incorrectos
@@ -9299,7 +9299,7 @@ Los contenidos importantes deben revisarse periódicamente. GeoArticles, FAQs, m
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Cerrajeros Madrid 24h refresca /madrid/guia-precios-cerrajero-urgente/ a los 6 meses con nuevas FAQs y enlaces.
+Cerrajeros Madrid 24h refresca /madrid/cuanto-cuesta-un-cerrajero-urgente/ a los 6 meses con nuevas FAQs y enlaces.
 ```
 
 ### Ejemplos incorrectos
@@ -10058,7 +10058,7 @@ FOR each service IN core_services:
     url = /category/main-city/service/
     parent = /category/service/
     geohub = /main-city/
-    content_uses = local_coverage_areas
+    content_uses = direct_local_coverage_areas + candidate_local_coverage_areas (filtrado por test GEO)
     schema = LocalBusiness + BreadcrumbList
 ```
 
@@ -11256,9 +11256,8 @@ Trust Signals:
 - 10+ años de experiencia
 - reseñas iniciales pendientes de recopilar tras crear el GBP
 - Técnicos cerrajeros cualificados
-- Reconocimiento local de servicio
 - Garantía de trabajo
-- Soporte móvil en el mismo día
+- Servicio móvil en el mismo día
 
 Preferred CTA:
 Llamar ahora
@@ -11296,7 +11295,7 @@ Prompt → validate → generate → link → score → QA → roadmap
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Cerrajeros Madrid 24h recibe un sistema completo de 28 páginas base, no solo una lista de URLs
+Cerrajeros Madrid 24h recibe un sistema completo de 28 páginas SEO base más /contacto/ como página auxiliar, no solo una lista de URLs
 ```
 
 ### Ejemplos incorrectos
@@ -11552,7 +11551,7 @@ Source URL → Target URL + Anchor + Placement
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-/madrid/guia-precios-cerrajero-urgente/ → /cerrajero/madrid/cerrajero-urgente/
+/madrid/cuanto-cuesta-un-cerrajero-urgente/ → /cerrajero/madrid/cerrajero-urgente/
 ```
 
 ### Ejemplos incorrectos
@@ -12506,7 +12505,7 @@ El prompt debe obligar a calcular la fórmula base antes de generar URLs. Así l
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Para Cerrajeros Madrid 24h, el prompt debe devolver 28 páginas base con S=5, A=1, G=3.
+Para Cerrajeros Madrid 24h, el prompt debe devolver 28 páginas SEO base más /contacto/ como página auxiliar con S=5, A=1, G=3.
 ```
 
 ### Ejemplos incorrectos
@@ -13344,7 +13343,7 @@ Homepage → Services → GeoHub → LBS → Articles
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-/madrid/guia-precios-cerrajero-urgente/ links to /cerrajero/madrid/cerrajero-urgente/
+/madrid/cuanto-cuesta-un-cerrajero-urgente/ links to /cerrajero/madrid/cerrajero-urgente/
 ```
 
 ### Ejemplos incorrectos
@@ -13573,7 +13572,7 @@ G = 3
 + 5 Madrid Service Pages
 + 1 Madrid Additional Category Page
 + 15 Madrid GeoArticles
-= 28 páginas base
+= 28 páginas SEO base. Adicionalmente, /contacto/ como página auxiliar fuera del inventario SEO base.
 ```
 
 ## URLs base finales para Cerrajeros Madrid 24h
@@ -13603,7 +13602,7 @@ Additional Category:
 /cerrajero/madrid/duplicado-llaves/
 
 GeoArticles:
-/madrid/guia-precios-cerrajero-urgente/
+/madrid/cuanto-cuesta-un-cerrajero-urgente/
 /madrid/que-hacer-si-no-puedes-entrar-casa/
 /madrid/cuanto-tarda-un-cerrajero/
 ... plus 3 articles per service
@@ -14143,7 +14142,7 @@ Homepage → Services / GeoHub → LBS → GeoArticles → back
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-Cerrajeros Madrid 24h enlaza /madrid/guia-precios-cerrajero-urgente/ hacia /cerrajero/madrid/cerrajero-urgente/ y /madrid/.
+Cerrajeros Madrid 24h enlaza /madrid/cuanto-cuesta-un-cerrajero-urgente/ hacia /cerrajero/madrid/cerrajero-urgente/ y /madrid/.
 ```
 
 ### Ejemplos incorrectos
@@ -14734,7 +14733,6 @@ Representa la intención principal del negocio: servicios de cerrajería en Madr
 Confirmed Additional GBP Categories:
 1. Servicio de cerrajería de urgencia
 2. Servicio de duplicado de llaves
-3. Proveedor de sistemas de seguridad
 
 Categories rejected or avoided:
 1. Tienda de llaves si no existe tienda física abierta al público
@@ -15088,7 +15086,6 @@ Página de soporte:
 ### Ejemplos incorrectos
 
 ```text
-- Añadir “Proveedor de sistemas de seguridad” si no se instalan sistemas de seguridad.
 - Añadir una categoría por ranking sin página de soporte.
 - Duplicar una categoría adicional que ya está cubierta por un servicio core sin diferenciar intención.
 ```
@@ -15739,6 +15736,147 @@ Después el GBP como entidad local conectada.
 Finalmente, sincronización continua entre web, perfil y tracking.
 ```
 
+
+
+
+### Inventario SEO base — Priority Score completo
+
+| # | URL | Tipo | Priority Score |
+|---|-----|------|----------------|
+| 1 | / | Homepage | 100 |
+| 2 | /cerrajero/cerrajero-urgente/ | Service Overview | 90 |
+| 3 | /cerrajero/apertura-puertas/ | Service Overview | 88 |
+| 4 | /cerrajero/cambio-cerraduras/ | Service Overview | 86 |
+| 5 | /cerrajero/cambio-bombines/ | Service Overview | 84 |
+| 6 | /cerrajero/instalacion-cerraduras-seguridad/ | Service Overview | 82 |
+| 7 | /madrid/ | GeoHub | 95 |
+| 8 | /cerrajero/madrid/cerrajero-urgente/ | LBS | 92 |
+| 9 | /cerrajero/madrid/apertura-puertas/ | LBS | 88 |
+| 10 | /cerrajero/madrid/cambio-cerraduras/ | LBS | 85 |
+| 11 | /cerrajero/madrid/cambio-bombines/ | LBS | 83 |
+| 12 | /cerrajero/madrid/instalacion-cerraduras-seguridad/ | LBS | 80 |
+| 13 | /cerrajero/madrid/duplicado-llaves/ | Additional Category | 75 |
+| 14 | /madrid/cuanto-cuesta-un-cerrajero-urgente/ | GeoArticle | 70 |
+| 15 | /madrid/que-hacer-si-no-puedes-entrar-casa/ | GeoArticle | 68 |
+| 16 | /madrid/cuanto-tarda-un-cerrajero/ | GeoArticle | 65 |
+| 17 | /madrid/cuanto-cuesta-abrir-una-puerta/ | GeoArticle | 64 |
+| 18 | /madrid/que-hacer-si-te-dejas-las-llaves-dentro/ | GeoArticle | 62 |
+| 19 | /madrid/apertura-de-puertas-sin-romper-cerradura/ | GeoArticle | 60 |
+| 20 | /madrid/cuando-cambiar-la-cerradura-de-casa/ | GeoArticle | 58 |
+| 21 | /madrid/cambio-de-cerradura-tras-perder-llaves/ | GeoArticle | 56 |
+| 22 | /madrid/cerradura-nueva-o-reparacion/ | GeoArticle | 54 |
+| 23 | /madrid/cuando-cambiar-el-bombin/ | GeoArticle | 52 |
+| 24 | /madrid/bombin-antibumping-madrid/ | GeoArticle | 50 |
+| 25 | /madrid/cambio-de-bombin-sin-cambiar-cerradura/ | GeoArticle | 48 |
+| 26 | /madrid/mejores-cerraduras-de-seguridad-para-viviendas/ | GeoArticle | 46 |
+| 27 | /madrid/cerraduras-de-seguridad-para-comunidades/ | GeoArticle | 44 |
+| 28 | /madrid/instalar-cerradura-de-seguridad-en-puerta-blindada/ | GeoArticle | 42 |
+| — | /contacto/ | Auxiliar | Sin score SEO |
+
+> Cada URL SEO del inventario base debe tener prioridad asignada.
+
+
+### Inventario SEO base — Estado QA
+
+| # | URL | Tipo | QA Status |
+|---|-----|------|-----------|
+| 1 | / | Homepage | Pending |
+| 2 | /cerrajero/cerrajero-urgente/ | Service Overview | Pending |
+| 3 | /cerrajero/apertura-puertas/ | Service Overview | Pending |
+| 4 | /cerrajero/cambio-cerraduras/ | Service Overview | Pending |
+| 5 | /cerrajero/cambio-bombines/ | Service Overview | Pending |
+| 6 | /cerrajero/instalacion-cerraduras-seguridad/ | Service Overview | Pending |
+| 7 | /madrid/ | GeoHub | Pending |
+| 8 | /cerrajero/madrid/cerrajero-urgente/ | LBS | Pending |
+| 9 | /cerrajero/madrid/apertura-puertas/ | LBS | Pending |
+| 10 | /cerrajero/madrid/cambio-cerraduras/ | LBS | Pending |
+| 11 | /cerrajero/madrid/cambio-bombines/ | LBS | Pending |
+| 12 | /cerrajero/madrid/instalacion-cerraduras-seguridad/ | LBS | Pending |
+| 13 | /cerrajero/madrid/duplicado-llaves/ | Additional Category | Pending |
+| 14-28 | 15 GeoArticles | GeoArticle | Pending |
+| — | /contacto/ | Auxiliar | Pending |
+
+> Ninguna URL se publica sin QA, aunque el documento muestre solo un ejemplo desarrollado.
+
+
+### Calendario de producción completo
+
+**Fase 1 — Estructura base (Semana 1-2):**
+- / (Homepage)
+- /contacto/
+- /madrid/ (GeoHub)
+- /cerrajero/madrid/cerrajero-urgente/ (LBS principal)
+- /cerrajero/madrid/apertura-puertas/ (LBS)
+
+**Fase 2 — Servicios core (Semana 2-3):**
+- /cerrajero/madrid/cambio-cerraduras/ (LBS)
+- /cerrajero/madrid/cambio-bombines/ (LBS)
+- /cerrajero/madrid/instalacion-cerraduras-seguridad/ (LBS)
+- /cerrajero/madrid/duplicado-llaves/ (Additional Category)
+
+**Fase 3 — Service Overview Pages (Semana 3-4):**
+- /cerrajero/cerrajero-urgente/
+- /cerrajero/apertura-puertas/
+- /cerrajero/cambio-cerraduras/
+- /cerrajero/cambio-bombines/
+- /cerrajero/instalacion-cerraduras-seguridad/
+
+**Fase 4 — GeoArticles lote 1 (Semana 4-5):**
+- /madrid/cuanto-cuesta-un-cerrajero-urgente/
+- /madrid/que-hacer-si-no-puedes-entrar-casa/
+- /madrid/cuanto-tarda-un-cerrajero/
+- /madrid/cuanto-cuesta-abrir-una-puerta/
+- /madrid/que-hacer-si-te-dejas-las-llaves-dentro/
+
+**Fase 5 — GeoArticles lote 2 (Semana 5-6):**
+- /madrid/apertura-de-puertas-sin-romper-cerradura/
+- /madrid/cuando-cambiar-la-cerradura-de-casa/
+- /madrid/cambio-de-cerradura-tras-perder-llaves/
+- /madrid/cerradura-nueva-o-reparacion/
+- /madrid/cuando-cambiar-el-bombin/
+
+**Fase 6 — GeoArticles lote 3 (Semana 6-7):**
+- /madrid/bombin-antibumping-madrid/
+- /madrid/cambio-de-bombin-sin-cambiar-cerradura/
+- /madrid/mejores-cerraduras-de-seguridad-para-viviendas/
+- /madrid/cerraduras-de-seguridad-para-comunidades/
+- /madrid/instalar-cerradura-de-seguridad-en-puerta-blindada/
+
+**Fase 7 — GBP y sincronización (Semana 7-8):**
+- Paso 14: Crear GBP
+- Verificar GBP
+- Sincronizar web con GBP (schema sameAs, trust signals, contacto)
+
+> El calendario debe cubrir todo el inventario base o declararse como calendario parcial.
+
+### GeoArticles completos (15)
+
+> **Aviso de trazabilidad:** estos 15 títulos son un primer borrador derivado de la fórmula G × S = 15 y de la lógica del servicio. **No vienen de keyword research real**. Antes de producirlos hay que validar volumen de búsqueda, dificultad y oportunidad competitiva por título. La fórmula garantiza la cantidad; los temas concretos requieren validación.
+
+**Cerrajero urgente (3):**
+1. /madrid/cuanto-cuesta-un-cerrajero-urgente/
+2. /madrid/que-hacer-si-no-puedes-entrar-casa/
+3. /madrid/cuanto-tarda-un-cerrajero/
+
+**Apertura de puertas (3):**
+4. /madrid/cuanto-cuesta-abrir-una-puerta/
+5. /madrid/que-hacer-si-te-dejas-las-llaves-dentro/
+6. /madrid/apertura-de-puertas-sin-romper-cerradura/
+
+**Cambio de cerraduras (3):**
+7. /madrid/cuando-cambiar-la-cerradura-de-casa/
+8. /madrid/cambio-de-cerradura-tras-perder-llaves/
+9. /madrid/cerradura-nueva-o-reparacion/
+
+**Cambio de bombines (3):**
+10. /madrid/cuando-cambiar-el-bombin/
+11. /madrid/bombin-antibumping-madrid/
+12. /madrid/cambio-de-bombin-sin-cambiar-cerradura/
+
+**Instalación de cerraduras de seguridad (3):**
+13. /madrid/mejores-cerraduras-de-seguridad-para-viviendas/
+14. /madrid/cerraduras-de-seguridad-para-comunidades/
+15. /madrid/instalar-cerradura-de-seguridad-en-puerta-blindada/
 
 ---
 

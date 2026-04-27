@@ -199,6 +199,8 @@ Friendly, professional, local and urgente when needed
 
 # Cuerpo operativo del Paso 5
 
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
+
 ## 1. Homepage — Root Entity Anchor
 
 ### Función
@@ -370,7 +372,7 @@ Relevant GeoArticle
 URL: /cerrajero/cerrajero-urgente/
 H1: Servicios profesionales de cerrajería urgente por Cerrajeros Madrid 24h
 Meta Title: Cerrajero urgente por Cerrajeros Madrid 24h | Expertos en cerrajería
-Enlaces internos: /, /cerrajero/apertura-puertas/, /cerrajero/madrid/cerrajero-urgente/, /madrid/guia-precios-cerrajero-urgente/
+Enlaces internos: /, /cerrajero/apertura-puertas/, /cerrajero/madrid/cerrajero-urgente/, /madrid/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
 ### Ejemplos incorrectos
@@ -465,7 +467,7 @@ Contacto
 URL: /cerrajero/madrid/cerrajero-urgente/
 H1: Cerrajeros Madrid 24h – Cerrajero urgente en Madrid
 Local Coverage Areas: Almagro, Chamberí, Salamanca, Retiro mencionadas de forma natural
-Enlaces: /cerrajero/cerrajero-urgente/, /madrid/, /cerrajero/madrid/apertura-puertas/, /madrid/guia-precios-cerrajero-urgente/
+Enlaces: /cerrajero/cerrajero-urgente/, /madrid/, /cerrajero/madrid/apertura-puertas/, /madrid/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
 ### Ejemplos incorrectos
@@ -648,9 +650,9 @@ Página de contacto
 ```text
 URL: /madrid/
 H1: Cerrajeros Madrid 24h – Servicios de cerrajería en Madrid
-Menú de servicios: urgente, apertura de puertas, cambio de cerraduras, cambio de bombines, cambio de bombines
+Menú de servicios: urgente, apertura de puertas, cambio de cerraduras, cambio de bombines, instalación de cerraduras de seguridad
 Sección de cobertura: Almagro, Chamberí, Salamanca, Retiro
-Enlaces: /cerrajero/madrid/cerrajero-urgente/, /cerrajero/madrid/duplicado-llaves/, /madrid/guia-precios-cerrajero-urgente/
+Enlaces: /cerrajero/madrid/cerrajero-urgente/, /cerrajero/madrid/duplicado-llaves/, /madrid/cuanto-cuesta-un-cerrajero-urgente/
 ```
 
 ### Ejemplos incorrectos
@@ -739,7 +741,7 @@ Contacto
 ### Ejemplo rellenado con Cerrajeros Madrid 24h
 
 ```text
-URL: /madrid/guia-precios-cerrajero-urgente/
+URL: /madrid/cuanto-cuesta-un-cerrajero-urgente/
 H1: How Much Does an Precio de cerrajero urgente en Madrid?
 Enlaces: /cerrajero/madrid/cerrajero-urgente/, /madrid/, /madrid/que-hacer-si-no-puedes-entrar-casa/
 ```
@@ -933,7 +935,7 @@ El GeoArticle no es una landing comercial. Debe cubrir un tema long-tail de serv
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-El artículo /madrid/guia-precios-cerrajero-urgente/ explica costes y enlaza a /cerrajero/madrid/cerrajero-urgente/.
+El artículo /madrid/cuanto-cuesta-un-cerrajero-urgente/ explica costes y enlaza a /cerrajero/madrid/cerrajero-urgente/.
 ```
 
 ### Ejemplos incorrectos
@@ -1029,7 +1031,7 @@ Page Type → CTA intent → enlace o acción
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-En /cerrajero/madrid/cerrajero-urgente/ el CTA es llamar ahora; en /madrid/guia-precios-cerrajero-urgente/ el CTA invita a consultar la página de Cerrajero urgente en Madrid.
+En /cerrajero/madrid/cerrajero-urgente/ el CTA es llamar ahora; en /madrid/cuanto-cuesta-un-cerrajero-urgente/ el CTA invita a consultar la página de Cerrajero urgente en Madrid.
 ```
 
 ### Ejemplos incorrectos

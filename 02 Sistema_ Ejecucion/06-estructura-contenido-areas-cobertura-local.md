@@ -167,7 +167,7 @@ Matching GeoHub:
 /madrid/
 
 Related GeoArticles:
-1. /madrid/guia-precios-cerrajero-urgente/
+1. /madrid/cuanto-cuesta-un-cerrajero-urgente/
 2. /madrid/que-hacer-si-no-puedes-entrar-casa/
 3. /madrid/cuanto-tarda-un-cerrajero/
 
@@ -185,6 +185,8 @@ Only for Madrid, not for Local Coverage Areas unless true.
 ```
 
 # Cuerpo operativo del Paso 6
+
+> **Definición operativa — Local Coverage Areas:** zonas, barrios, distritos o landmarks seleccionados desde la dirección física, la Main City, la coherencia GEO, la proximidad, los datos de búsqueda, los competidores y la lógica GMB Crush para reforzar relevancia local dentro del contenido, schema y futuros análisis. No son automáticamente URLs. No son automáticamente páginas propias. No son necesariamente oficinas físicas. Las Local Coverage Areas se usan primero como señales GEO dentro del contenido. No generan URLs por defecto.
 
 ## Principio 1 — Main City crea arquitectura
 
@@ -578,7 +580,7 @@ El GeoHub es el lugar más natural para una sección explícita de Local Coverag
 URL: /madrid/
 H2: Zonas de cobertura de cerrajería en Madrid
 Texto: Cerrajeros Madrid 24h provides servicios de cerrajería en Madrid and local coverage areas such as Almagro, Chamberí, Salamanca and Retiro. Estas áreas representan cobertura real y ayudan al usuario a entender dónde puede estar disponible el servicio.
-Menú de servicios: urgente, apertura de puertas, cambio de cerraduras, cambio de bombines, cambio de bombines.
+Menú de servicios: urgente, apertura de puertas, cambio de cerraduras, cambio de bombines, instalación de cerraduras de seguridad.
 ```
 
 ### Ejemplos incorrectos
@@ -624,7 +626,7 @@ Las Local Coverage Areas se usan como ejemplos semánticos y contexto real. No s
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-URL: /madrid/guia-precios-cerrajero-urgente/
+URL: /madrid/cuanto-cuesta-un-cerrajero-urgente/
 Texto: El precio de un cerrajero urgente en Madrid puede variar según el tipo de cerradura, la hora, la urgencia y la zona de cobertura. Una apertura sencilla en un piso de Madrid puede ser diferente de un aviso nocturno en Almagro, Chamberí o Salamanca según disponibilidad y condiciones de desplazamiento.
 Enlaces: /cerrajero/madrid/cerrajero-urgente/, /madrid/, /madrid/que-hacer-si-no-puedes-entrar-casa/
 ```
@@ -897,7 +899,7 @@ GeoArticle → tema + Main City → ejemplos de cobertura
 ### Ejemplo correcto con Cerrajeros Madrid 24h
 
 ```text
-En /madrid/guia-precios-cerrajero-urgente/, Cerrajeros Madrid 24h explica que el coste puede variar según tipo de apertura urgente y zona de cobertura.
+En /madrid/cuanto-cuesta-un-cerrajero-urgente/, Cerrajeros Madrid 24h explica que el coste puede variar según tipo de apertura urgente y zona de cobertura.
 ```
 
 ### Ejemplos incorrectos
@@ -1111,4 +1113,35 @@ La expansión necesita justificación, no solo cobertura.
 - GeoHub Pages AI Framework
 - GeoArticle Pages AI Framework
 - Additional Categories Pages AI Framework
+
+
+
+### GeoArticles completos (15)
+
+> **Aviso de trazabilidad:** estos 15 títulos son un primer borrador derivado de la fórmula G × S = 15 y de la lógica del servicio. **No vienen de keyword research real**. Antes de producirlos hay que validar volumen de búsqueda, dificultad y oportunidad competitiva por título. La fórmula garantiza la cantidad; los temas concretos requieren validación.
+
+**Cerrajero urgente (3):**
+1. /madrid/cuanto-cuesta-un-cerrajero-urgente/
+2. /madrid/que-hacer-si-no-puedes-entrar-casa/
+3. /madrid/cuanto-tarda-un-cerrajero/
+
+**Apertura de puertas (3):**
+4. /madrid/cuanto-cuesta-abrir-una-puerta/
+5. /madrid/que-hacer-si-te-dejas-las-llaves-dentro/
+6. /madrid/apertura-de-puertas-sin-romper-cerradura/
+
+**Cambio de cerraduras (3):**
+7. /madrid/cuando-cambiar-la-cerradura-de-casa/
+8. /madrid/cambio-de-cerradura-tras-perder-llaves/
+9. /madrid/cerradura-nueva-o-reparacion/
+
+**Cambio de bombines (3):**
+10. /madrid/cuando-cambiar-el-bombin/
+11. /madrid/bombin-antibumping-madrid/
+12. /madrid/cambio-de-bombin-sin-cambiar-cerradura/
+
+**Instalación de cerraduras de seguridad (3):**
+13. /madrid/mejores-cerraduras-de-seguridad-para-viviendas/
+14. /madrid/cerraduras-de-seguridad-para-comunidades/
+15. /madrid/instalar-cerradura-de-seguridad-en-puerta-blindada/
 
