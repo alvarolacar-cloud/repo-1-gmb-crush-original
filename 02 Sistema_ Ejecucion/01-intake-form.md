@@ -90,6 +90,8 @@ Servicios principales:
 
 Primary Local Coverage Areas:
 Recommended: start with 3–5 strongest real areas served.
+
+> **Nota para la IA:** Antes de decidir las zonas de posicionamiento local, consultar el módulo **Interpretación GMB Crush de la dirección física y zonas GEO** al final de este documento. Ese módulo explica cómo se interpreta la dirección física, cómo se eligen las zonas y qué criterios deben cumplir.
 1.
 2.
 3.
@@ -897,6 +899,363 @@ La expansión territorial se aprueba; no se asume.
 - Lista de servicios core
 - Trust signals reutilizables
 - CTA principal
+
+---
+
+# Módulo — Interpretación GMB Crush de la dirección física y zonas GEO
+
+Este módulo se añade dentro del **Paso 1 — Intake Form**, justo después de recoger el **Physical Address / NAP** y antes de definir:
+
+```text
+Main City
+Zonas de posicionamiento local
+Approved Expansion Areas
+```
+
+La función de este bloque es dejar claro cómo se interpreta una dirección física concreta dentro de la lógica GMB Crush.
+
+---
+
+## Interpretación GMB Crush de la dirección física
+
+A partir de una dirección concreta como:
+
+```text
+Rafael Calvo 40, Madrid
+```
+
+GMB Crush nos dice que hagamos esto:
+
+| Orden | Qué hacer | Resultado |
+|---:|---|---|
+| 1 | Usar la dirección como **Physical Address / NAP** | Nombre, dirección, ciudad, teléfono y país quedan como datos base del negocio. El Analysis Framework pide Physical Address y Service Areas como input inicial. |
+| 2 | Extraer la **Main City** desde la dirección | Main City = **Madrid**. |
+| 3 | Construir la arquitectura sobre la ciudad, no sobre la calle | La unidad base no es "Rafael Calvo", sino **Madrid**. |
+| 4 | Crear la homepage como entidad raíz | `/` con H1 tipo `[Brand] + [Primary Service] + Madrid`, NAP visible, servicios core y enlaces internos. |
+| 5 | Crear páginas de servicio sin ciudad | `/cerrajero/apertura-puertas/`, `/cerrajero/cerrajero-urgente/`, etc. Estas páginas son pilares temáticos, no páginas locales. |
+| 6 | Crear páginas servicio + ciudad | `/cerrajero/madrid/apertura-puertas/`, `/cerrajero/madrid/cerrajero-urgente/`, etc. GMB Crush define este patrón como `/category/city/service/`. |
+| 7 | Crear GeoHub de ciudad | `/madrid/`, como contenedor de todos los servicios, categorías y artículos de Madrid. |
+| 8 | Usar barrios, zonas cercanas o landmarks solo como señales GEO dentro del contenido | Se pueden mencionar barrios, zonas o landmarks en intro, H2s, FAQs, GeoHub y GeoArticles, pero no generan páginas por defecto. El framework permite "neighborhood coverage" en GeoHub y referencias locales en GeoArticles. |
+| 9 | No fingir ubicación física en otras zonas | Puedes decir que el contenido referencia zonas locales, pero no "tenemos oficina en X" si no es verdad. Los GeoArticles indican expresamente no fingir ubicación física. |
+| 10 | Usar `areaServed` en schema | En páginas locales, el schema `LocalBusiness` debe incluir `areaServed`, URL, teléfono, email y `sameAs` si existe. |
+
+### En una frase
+
+GMB Crush no dice:
+
+```text
+Tengo una dirección en Rafael Calvo 40 → creo páginas por barrios automáticamente.
+```
+
+Dice:
+
+```text
+Tengo una dirección física → fijo NAP y Main City → construyo homepage, servicios, páginas servicio+Madrid, GeoHub Madrid y GeoArticles → uso barrios/zonas como señales GEO dentro del contenido, no como URLs por defecto.
+```
+
+### Aplicado al ejemplo
+
+```text
+Dirección:
+Rafael Calvo 40, Madrid
+
+Main City:
+Madrid
+```
+
+Arquitectura base:
+
+```text
+/
+/cerrajero/apertura-puertas/
+/cerrajero/cerrajero-urgente/
+/madrid/
+/cerrajero/madrid/apertura-puertas/
+/cerrajero/madrid/cerrajero-urgente/
+/madrid/cuanto-cuesta-un-cerrajero-urgente/
+```
+
+Si luego queremos crear páginas por zona o barrio, eso ya es una **expansión**, no la base GMB Crush.
+
+---
+
+## Qué dice GMB Crush sobre elegir barrios, zonas o landmarks
+
+GMB Crush **no da una fórmula cerrada tipo "elige estos 3 barrios"**.
+
+Lo que sí dice es:
+
+1. **El input inicial debe incluir Physical Address y Service Areas.**
+
+   Es decir, la dirección física y las áreas relevantes son datos base de análisis local.
+
+2. **La arquitectura base se construye con ciudad, no con barrio.**
+
+   La homepage usa:
+
+   ```text
+   [Brand] + [Primary Service] + [Main City]
+   ```
+
+   Las páginas locales usan:
+
+   ```text
+   /category/city/service/
+   ```
+
+   Y el GeoHub es:
+
+   ```text
+   /city/
+   ```
+
+3. **Los barrios, zonas o landmarks se usan dentro del contenido como señales GEO.**
+
+   GMB Crush los menciona en tres sitios:
+
+   ```text
+   Location-Based Service Pages:
+   opening geo-specific con neighborhood / local issues
+
+   GeoHub Pages:
+   neighborhood coverage opcional
+
+   GeoArticles:
+   local references, landmarks, neighborhoods
+   ```
+
+4. **No se debe fingir ubicación física en esas zonas.**
+
+   GeoArticles dice expresamente que deben enviar señales geográficas sin pretender que el negocio está físicamente ubicado allí si no es verdad.
+
+---
+
+## Entonces, ¿cómo se deciden las zonas?
+
+Según GMB Crush, se deciden así:
+
+| Orden | Criterio | Qué significa |
+|---:|---|---|
+| 1 | **Dirección física** | Primero extraes la ciudad, barrio, distrito o zona que salen directamente del NAP. |
+| 2 | **Main City** | La ciudad de la dirección se convierte en la base de la arquitectura. |
+| 3 | **Service Areas / zonas relevantes** | Se identifican zonas que tienen sentido como señales GEO dentro de la ciudad o área principal. |
+| 4 | **Neighborhood coverage** | Se usan barrios o zonas en GeoHub, páginas locales y artículos como cobertura semántica. |
+| 5 | **Local issues / landmarks** | Se añaden referencias locales reales para dar contexto humano y GEO. |
+| 6 | **No URLs automáticas** | Esas zonas no generan páginas por defecto. Solo se mencionan como señales GEO. |
+
+### Aplicado a Rafael Calvo 40, Madrid
+
+| Paso | Resultado |
+|---|---|
+| Dirección física | Rafael Calvo 40, Madrid |
+| Main City | Madrid |
+| Zonas derivadas directas | Si la dirección está en Almagro / Chamberí, esas zonas son las primeras referencias GEO |
+| Zonas cercanas o representativas | Se pueden usar como neighborhood coverage si son coherentes: Salamanca, Retiro, Centro, etc. |
+| Uso en arquitectura | No crean URLs por defecto |
+| Uso en contenido | Intro local, H2s, FAQs, GeoHub, GeoArticles, schema `areaServed` |
+
+---
+
+## Regla final sobre barrios, zonas y landmarks
+
+GMB Crush no dice:
+
+```text
+Crea páginas por barrios.
+```
+
+GMB Crush dice:
+
+```text
+Usa la dirección física para fijar Main City, crea páginas city+service, y usa barrios, zonas o landmarks como señales GEO dentro del contenido.
+```
+
+Y para elegir esas zonas:
+
+```text
+Empieza por las zonas derivadas directamente de la dirección física.
+Después añade zonas cercanas o relevantes solo si tienen sentido GEO, semántico o competitivo.
+No las conviertas en URLs salvo que pasen a una fase de expansión aprobada.
+```
+
+---
+
+## Test GMB Crush para saber si una zona tiene sentido
+
+Una zona se puede añadir como señal GEO si cumple **al menos 3 de estos 6 criterios**.
+
+| Criterio | Pregunta | Si la respuesta es sí |
+|---|---|---|
+| 1. Ancla física | ¿La zona sale directamente de la dirección? | Entra casi seguro |
+| 2. Main City | ¿La zona pertenece claramente a la Main City? | Puede usarse como señal GEO |
+| 3. Proximidad | ¿Está cerca o conectada al punto físico? | Puede usarse como zona candidata |
+| 4. Intención local | ¿La zona ayuda a explicar una necesidad local real del servicio? | Puede aparecer en contenido |
+| 5. Demanda o competencia | ¿Hay búsquedas o competidores trabajando esa zona? | Refuerza su inclusión |
+| 6. No falsa ubicación | ¿Podemos mencionarla sin decir que tenemos oficina allí? | Es segura para contenido |
+
+Si una zona solo cumple 1 criterio débil, no la metemos.
+
+---
+
+## Regla práctica
+
+### Entra directamente
+
+Zonas que salen de la dirección física.
+
+Ejemplo:
+
+```text
+Dirección:
+Calle Rafael Calvo 40, Barrio Almagro, Distrito Chamberí, Madrid
+```
+
+Entonces:
+
+```text
+Madrid = Main City
+Almagro = zona GEO directa
+Chamberí = zona GEO directa
+```
+
+Estas son coherentes porque salen del propio ancla físico.
+
+### Entra como candidata
+
+Zonas que no salen de la dirección, pero pueden tener sentido por proximidad, búsqueda o competencia.
+
+Ejemplo:
+
+```text
+Salamanca
+Retiro
+Centro
+Tetuán
+Chamartín
+Arganzuela
+Moncloa
+Prosperidad
+```
+
+Estas no deberían añadirse automáticamente. Solo entran si podemos justificar que:
+
+```text
+están conectadas geográficamente
+o tienen demanda
+o aparecen en competencia
+o ayudan a explicar contexto local real
+```
+
+### No entra
+
+Una zona no entra si:
+
+```text
+no sale de la dirección
+no está conectada a la Main City
+no aporta contexto local
+no hay búsqueda ni competencia
+solo se añade para inflar contenido
+obliga a fingir ubicación física
+```
+
+Ejemplo incorrecto:
+
+```text
+"Cerrajero en Valencia" dentro de una página de Madrid.
+```
+
+Ejemplo también débil:
+
+```text
+Meter 20 barrios de Madrid en todas las páginas sin relación concreta.
+```
+
+---
+
+## Cómo se usa una zona aprobada
+
+Una zona aprobada primero se usa como **señal GEO**, no como URL.
+
+### Correcto
+
+```text
+/cerrajero/madrid/cerrajero-urgente/
+```
+
+Dentro del contenido:
+
+```text
+Atendemos situaciones habituales de cerrajería urgente en Madrid, especialmente en zonas próximas al eje Almagro-Chamberí y otras áreas urbanas donde son frecuentes los problemas de acceso en viviendas, oficinas y comunidades.
+```
+
+### Incorrecto
+
+```text
+/cerrajero/almagro/cerrajero-urgente/
+```
+
+si Almagro no está aprobada como Expansion Area.
+
+---
+
+## Cuándo una zona pasa a página propia
+
+Una zona solo puede pasar de "señal GEO" a "URL propia" si cumple criterios más fuertes:
+
+| Criterio | Necesario para página propia |
+|---|---|
+| Está geográficamente clara | Sí |
+| Tiene demanda de búsqueda | Muy recomendable |
+| Competidores la trabajan | Muy recomendable |
+| Puede tener contenido único | Sí |
+| No duplica la página de Madrid | Sí |
+| No finge oficina física | Obligatorio |
+| Tiene valor comercial | Sí |
+
+Ejemplo:
+
+```text
+/madrid/chamberi/
+```
+
+o:
+
+```text
+/cerrajero/madrid/chamberi/cerrajero-urgente/
+```
+
+solo si Chamberí pasa a **Approved Expansion Area**.
+
+---
+
+## Aplicado a Rafael Calvo 40, Madrid
+
+| Zona | Decisión correcta |
+|---|---|
+| Madrid | Crea arquitectura base |
+| Almagro | Señal GEO directa |
+| Chamberí | Señal GEO directa |
+| Salamanca | Candidata, validar proximidad/demanda/competencia |
+| Retiro | Candidata, validar antes de usar fuerte |
+| Centro | Candidata, no automática |
+| Tetuán | Candidata, no automática |
+| Chamartín | Candidata, no automática |
+| Arganzuela | Candidata, no automática |
+
+---
+
+## Fórmula final
+
+```text
+Dirección física → Main City → zonas directas → zonas candidatas → validación → uso en contenido → expansión solo si procede
+```
+
+En una frase:
+
+```text
+Una zona tiene sentido GEO si sale del ancla física o ayuda a reforzar la relevancia local de la Main City sin crear una falsa ubicación, y si además puede justificarse por proximidad, demanda, competencia o contexto real del servicio.
+```
 
 ---
 
