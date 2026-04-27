@@ -22,3 +22,11 @@ Cada subcarpeta de paso contiene:
 
 - El archivo del sistema con índice canónico (§X en cada encabezado).
 - El archivo de decisiones V1 (inventario de decisiones tomadas en ese paso).
+
+## Estado
+
+Versión: V6.4 (estado cerrado)
+
+Última revisión: 2026-04-27
+
+Cambios principales: 14 pasos consolidados, índice canónico §X aplicado, Direct/Candidate LCAs, 28 páginas SEO base, Bloque GBP separado.
