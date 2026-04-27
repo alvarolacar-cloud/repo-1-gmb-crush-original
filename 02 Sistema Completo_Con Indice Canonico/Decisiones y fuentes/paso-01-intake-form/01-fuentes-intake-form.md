@@ -26,11 +26,11 @@ IA sin respaldo
 
 ## Bloque 1 — Identidad del negocio
 
-| ID | Decisión tomada | Valor decidido en el ejemplo | Fuente | Referencia canónica | Funcionamiento de la fuente |
-|---|---|---|---|---|---|
-| 1.01 | Se define el nombre del negocio | Cerrajeros Madrid 24h | Input humano | Paso-01 §7 Business Name | El cliente proporciona el nombre del negocio directamente. El sistema lo recoge sin transformación. |
-| 1.02 | Se define la URL principal de la web | https://www.cerrajerosmadrid24h.com | IA sin respaldo | Paso-01 §8 Website URL | No hay dato real aportado por el cliente. El dominio fue generado para el ejemplo y debe confirmarse antes de producción. |
-| 1.03 | Se define el dominio canónico | https://www.cerrajerosmadrid24h.com | IA sin respaldo | Paso-01 §8 Website URL | Deriva del dominio de ejemplo. El sistema exige elegir entre opción A (con www) y opción B (sin www); la elección concreta no fue confirmada por input real. |
+| ID · Ref. canónica | Decisión tomada | Valor decidido en el ejemplo | Fuente | Funcionamiento de la fuente |
+|---|---|---|---|---|
+| 1.01 · Paso-01 §7 Business Name | Se define el nombre del negocio | Cerrajeros Madrid 24h | Input humano | El cliente proporciona el nombre del negocio directamente. El sistema lo recoge sin transformación. |
+| 1.02 · Paso-01 §8 Website URL | Se define la URL principal de la web | https://www.cerrajerosmadrid24h.com | IA sin respaldo | No hay dato real aportado por el cliente. El dominio fue generado para el ejemplo y debe confirmarse antes de producción. |
+| 1.03 · Paso-01 §8 Website URL | Se define el dominio canónico | https://www.cerrajerosmadrid24h.com | IA sin respaldo | Deriva del dominio de ejemplo. El sistema exige elegir entre opción A (con www) y opción B (sin www); la elección concreta no fue confirmada por input real. |
 
 ## Bloque 2 — Estado inicial del GBP
 
