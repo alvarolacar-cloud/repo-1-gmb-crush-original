@@ -40,20 +40,61 @@ ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Funcio
 
 ---
 
-## Catálogo de fuentes — 10 entradas
+## Catálogo de fuentes — dos dimensiones ortogonales
+
+Cada decisión se rellena con **dos columnas independientes**:
+
+- **Fuente para la decisión** — quién dicta la decisión (la doctrina, el cliente, el operador, la IA).
+- **Origen del dato** — de dónde sale el valor concreto que aparece en la decisión.
+
+Ambas dimensiones son ortogonales: la mayoría de decisiones tienen Fuente = GMB Crush porque la doctrina dicta cómo se hace algo, pero el Origen del dato puede ser distinto (competidores, cliente, búsqueda, herencia, etc.).
+
+### Tabla 1 — Fuente para la decisión (5 valores)
+
+Quién dicta la decisión.
 
 | # | Fuente | Frase fija de funcionamiento |
 |---|---|---|
-| 1 | GMB Crush | El framework define esta regla. Se aplica igual en todos los proyectos. |
-| 2 | Input humano | El cliente proporciona este dato directamente. El sistema lo recoge sin transformación. |
-| 3 | Input humano + GMB Crush | El cliente aporta el dato y GMB Crush define cómo usarlo dentro de la arquitectura, contenido, schema o GBP. |
-| 4 | Datos de búsqueda | Se valida con keyword research (volumen, intención, dificultad). Requiere validación antes de confirmar. |
-| 5 | Competidores | Se valida con análisis de competencia (SERP analysis, gap competitivo). Requiere validación antes de confirmar. |
-| 6 | IA sin respaldo | Valor generado para el ejemplo sin dato real, sin keyword research, sin análisis competitivo y sin confirmación humana. Debe validarse o sustituirse antes de producción. |
-| 7 | GMB Crush + IA sin respaldo | GMB Crush valida la estructura o regla. El valor concreto usado en el ejemplo está pendiente de validación con input humano, datos de búsqueda o competidores. La IA se generó en este mismo paso. |
-| 8 | Input humano + IA sin respaldo | El dato base viene del input humano. Algún campo concreto es placeholder y requiere validación. |
-| 9 | IA heredada (paso X.YY) | El valor se hereda de una decisión IA sin respaldo en el paso indicado. Esta decisión se cura cuando se cierra la decisión origen. La IA NO se generó aquí, viene de otro paso. |
-| 10 | Decisión de diseño | El operador o agencia toma esta decisión basándose en criterios de UX, conversión y mejores prácticas del sector. Está cerrada salvo que el cliente solicite cambio o las métricas justifiquen revisión. |
+| 1 | GMB Crush | El framework define esta regla. Se aplica igual en todos los proyectos. La doctrina dicta cómo se hace; el dato concreto puede venir de varios sitios (ver Origen del dato). |
+| 2 | Input humano | El cliente proporciona este dato directamente sin filtro del framework. El sistema lo recoge sin transformación. |
+| 3 | Decisión de diseño | El operador o agencia toma esta decisión basándose en criterios de UX, conversión y mejores prácticas del sector. Está cerrada salvo que el cliente solicite cambio o las métricas justifiquen revisión. |
+| 4 | IA sin respaldo | Caso extremo: la decisión no sigue ninguna doctrina ni input externo; la IA decide libremente. Solo aplica a placeholders puros del ejemplo (datos de proceso QA, etc.). |
+| 5 | IA heredada (paso X.YY) | La fuente que dicta se hereda del paso de origen citado. La cita del paso es obligatoria. |
+
+### Tabla 2 — Origen del dato (6 valores)
+
+De dónde sale el valor concreto.
+
+| # | Origen del dato | Significa |
+|---|---|---|
+| 1 | Doctrina GMB Crush | El valor está fijado por el framework (regla, default, patrón). No es input externo. |
+| 2 | Input humano | El cliente proporciona el valor concreto. |
+| 3 | Competidores | El valor sale de análisis SERP / Local Pack. Si todavía no se ha ejecutado, queda como pendiente. |
+| 4 | Datos de búsqueda | El valor sale de keyword research (volumen, intención, dificultad). Si todavía no se ha ejecutado, queda como pendiente. |
+| 5 | Decisión de diseño | El operador eligió el valor por criterios de UX/conversión (extracción de web de referencia, paleta visual, CTA, layouts). |
+| 6 | Heredado del paso X.YY | El valor cascadea de otra decisión. La cita del paso de origen es obligatoria. |
+| 7 | IA sin respaldo | Valor inventado para el ejemplo sin investigación. Debe sustituirse por dato real antes de producción. |
+
+### Por qué dos columnas y no una
+
+Las dos columnas responden a preguntas distintas:
+
+- "¿Quién dicta esta decisión?" → la doctrina, el cliente o el operador. Eso va en **Fuente**.
+- "¿De dónde sale el valor concreto que aparece?" → competidores, búsqueda, cliente, herencia o IA. Eso va en **Origen del dato**.
+
+Ejemplo: para el servicio core "Cerrajero urgente" (1.34):
+
+- **Fuente:** GMB Crush (la doctrina dicta cómo identificar core services).
+- **Origen del dato:** Competidores (el valor concreto debe venir del Local Pack del sector).
+
+Antes mezclábamos las dos en una sola columna y salían combinaciones raras como `GMB Crush + IA sin respaldo`. Con dos columnas, cada celda tiene una fuente y un origen claros y separados.
+
+### Filtrado de tareas
+
+- **Decisiones cerradas:** Origen del dato ∈ {Doctrina GMB Crush, Input humano, Decisión de diseño, Heredado de un paso ya cerrado}.
+- **Decisiones pendientes:** Origen del dato ∈ {Competidores (pendiente), Datos de búsqueda (pendiente), IA sin respaldo, Heredado de un paso pendiente}.
+
+La columna **Fuente** no se usa para filtrar tareas — todas las decisiones GMB Crush son canónicas. Lo que pendiente o cerrada es la columna **Origen del dato**.
 
 ---
 
