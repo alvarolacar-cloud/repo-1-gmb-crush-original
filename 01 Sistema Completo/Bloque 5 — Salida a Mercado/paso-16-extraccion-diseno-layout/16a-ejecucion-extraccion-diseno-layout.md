@@ -175,14 +175,14 @@ Instrucción: presentar resumen al usuario y preguntar "¿Apruebas este diseño 
 
 ### §8.2 Design Tokens en formato Tailwind
 
-Output de §8.2.1 — Tipografía:
+#### §8.2.1 Tipografía
 
 | Token | Valor |
 |:---|:---|
 | font-heading | [FONT] |
 | font-body | [FONT] |
 
-Output de §8.2.2 — Colores:
+#### §8.2.2 Colores
 
 | Token | Valor |
 |:---|:---|
@@ -195,7 +195,7 @@ Output de §8.2.2 — Colores:
 | text-light | [HEX] |
 | text-secondary | [HEX] |
 
-Output de §8.2.3 — Componentes:
+#### §8.2.3 Componentes
 
 | Token | Valor |
 |:---|:---|
@@ -205,7 +205,7 @@ Output de §8.2.3 — Componentes:
 | input-radius | [PX] |
 | section-padding-y | [PX] |
 
-Output de §8.2.4 — Reglas críticas de aplicación CSS:
+#### §8.2.4 Reglas críticas de aplicación CSS
 
 - **Hero**: fondo, color de texto, tamaño H1, posición CTA.
 - **Botones primarios**: color de fondo, color de texto, hover state, focus state.

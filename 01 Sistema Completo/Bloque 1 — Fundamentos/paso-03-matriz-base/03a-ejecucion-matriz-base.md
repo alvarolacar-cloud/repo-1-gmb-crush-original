@@ -865,3 +865,56 @@ La matriz manda; el contenido sigue.
 14. /madrid/cerraduras-de-seguridad-para-comunidades/
 15. /madrid/instalar-cerradura-de-seguridad-en-puerta-blindada/
 
+---
+
+## §31 GeoArticle Topics — método de extracción
+
+### §31.1 Explicación
+
+Los topics de GeoArticle no se inventan: se extraen mediante keyword research por servicio core. La fórmula maestra del Paso 2 fija la cantidad (G × S = N artículos), pero los temas concretos requieren validación con datos reales de búsqueda antes de producirse. Sin keyword research el GeoArticle nace sin demanda real y se vuelve thin content.
+
+### §31.2 Patrón o método
+
+```text
+Por cada core service (paso-01 §14, filas 1.34–1.38):
+
+1. Ejecutar keyword research con volumen ≥ X impresiones/mes
+   y dificultad ≤ Y (umbrales del cliente / sector).
+2. Filtrar queries con intent informativo:
+   - cómo, qué, cuándo, por qué, cuánto, dónde, cuál, mejor.
+3. Excluir queries con intent transaccional o que coincidan
+   con la query de la LBS (anti-canibalización paso-04 §21).
+4. Seleccionar G topics por servicio (G=3 por defecto, paso-02 §11):
+   - Priorizar volumen alto + dificultad baja.
+   - Asegurar complementariedad: cada topic responde una intención
+     distinta dentro del mismo servicio.
+5. Generar el slug del topic:
+   - Base = la query como apareció en keyword research.
+   - Normalizar siguiendo paso-04 §17–§19 (lowercase, sin acentos,
+     guiones medios, sin adjetivos SEO vacíos).
+6. Construir la URL del GeoArticle:
+   - Patrón: /[main-city]/[topic-slug]/ (paso-04 §14).
+```
+
+### §31.3 Ejemplo correcto con Cerrajeros Madrid 24h
+
+15 GeoArticles = 5 servicios core × G=3 topics. Ver listado completo en §30.1.
+
+### §31.4 Ejemplos incorrectos
+
+```text
+- Inventar topics por intuición sin datos de búsqueda
+- Usar el mismo topic para varios servicios (canibalización)
+- Crear GeoArticles con intent transaccional que ya cubre la LBS
+- Topics con dificultad muy alta sin volumen que la justifique
+- Slug que no es la query real (manipulado para SEO)
+- GeoArticles sin servicio core asignado (huérfanos)
+```
+
+### §31.5 Regla final
+
+```text
+Los topics de GeoArticle se descubren con keyword research por servicio
+core. Cantidad fija por fórmula, contenido validado por datos reales.
+```
+

@@ -63,21 +63,21 @@ Fase 2 de trazabilidad del sistema GMB Crush — modelo final con `Qué dicta la
 
 | ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
 |---|---|---|---|---|---|---|
-| 3.19 | Se decide crear GeoArticle de coste de cerrajero urgente | /madrid/cuanto-cuesta-un-cerrajero-urgente/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
-| 3.20 | Se decide crear GeoArticle sobre no poder entrar en casa | /madrid/que-hacer-si-no-puedes-entrar-casa/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
-| 3.21 | Se decide crear GeoArticle sobre tiempo de llegada | /madrid/cuanto-tarda-un-cerrajero/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
-| 3.22 | Se decide crear GeoArticle sobre coste de apertura de puertas | /madrid/cuanto-cuesta-abrir-una-puerta/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
-| 3.23 | Se decide crear GeoArticle sobre llaves dentro | /madrid/que-hacer-si-te-dejas-las-llaves-dentro/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
-| 3.24 | Se decide crear GeoArticle sobre apertura sin romper cerradura | /madrid/apertura-de-puertas-sin-romper-cerradura/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
-| 3.25 | Se decide crear GeoArticle sobre cuándo cambiar cerradura | /madrid/cuando-cambiar-la-cerradura-de-casa/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
-| 3.26 | Se decide crear GeoArticle sobre cambio tras perder llaves | /madrid/cambio-de-cerradura-tras-perder-llaves/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
-| 3.27 | Se decide crear GeoArticle sobre cerradura nueva o reparación | /madrid/cerradura-nueva-o-reparacion/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
-| 3.28 | Se decide crear GeoArticle sobre cuándo cambiar bombín | /madrid/cuando-cambiar-el-bombin/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
-| 3.29 | Se decide crear GeoArticle sobre bombín antibumping | /madrid/bombin-antibumping-madrid/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
-| 3.30 | Se decide crear GeoArticle sobre cambio de bombín sin cambiar cerradura | /madrid/cambio-de-bombin-sin-cambiar-cerradura/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
-| 3.31 | Se decide crear GeoArticle sobre cerraduras de seguridad para viviendas | /madrid/mejores-cerraduras-de-seguridad-para-viviendas/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
-| 3.32 | Se decide crear GeoArticle sobre cerraduras de seguridad para comunidades | /madrid/cerraduras-de-seguridad-para-comunidades/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
-| 3.33 | Se decide crear GeoArticle sobre cerradura de seguridad en puerta blindada | /madrid/instalar-cerradura-de-seguridad-en-puerta-blindada/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
+| 3.19 | Se decide crear GeoArticle de coste de cerrajero urgente | /madrid/cuanto-cuesta-un-cerrajero-urgente/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §31 |
+| 3.20 | Se decide crear GeoArticle sobre no poder entrar en casa | /madrid/que-hacer-si-no-puedes-entrar-casa/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §31 |
+| 3.21 | Se decide crear GeoArticle sobre tiempo de llegada | /madrid/cuanto-tarda-un-cerrajero/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §31 |
+| 3.22 | Se decide crear GeoArticle sobre coste de apertura de puertas | /madrid/cuanto-cuesta-abrir-una-puerta/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §31 |
+| 3.23 | Se decide crear GeoArticle sobre llaves dentro | /madrid/que-hacer-si-te-dejas-las-llaves-dentro/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §31 |
+| 3.24 | Se decide crear GeoArticle sobre apertura sin romper cerradura | /madrid/apertura-de-puertas-sin-romper-cerradura/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §31 |
+| 3.25 | Se decide crear GeoArticle sobre cuándo cambiar cerradura | /madrid/cuando-cambiar-la-cerradura-de-casa/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §31 |
+| 3.26 | Se decide crear GeoArticle sobre cambio tras perder llaves | /madrid/cambio-de-cerradura-tras-perder-llaves/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §31 |
+| 3.27 | Se decide crear GeoArticle sobre cerradura nueva o reparación | /madrid/cerradura-nueva-o-reparacion/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §31 |
+| 3.28 | Se decide crear GeoArticle sobre cuándo cambiar bombín | /madrid/cuando-cambiar-el-bombin/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §31 |
+| 3.29 | Se decide crear GeoArticle sobre bombín antibumping | /madrid/bombin-antibumping-madrid/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §31 |
+| 3.30 | Se decide crear GeoArticle sobre cambio de bombín sin cambiar cerradura | /madrid/cambio-de-bombin-sin-cambiar-cerradura/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §31 |
+| 3.31 | Se decide crear GeoArticle sobre cerraduras de seguridad para viviendas | /madrid/mejores-cerraduras-de-seguridad-para-viviendas/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §31 |
+| 3.32 | Se decide crear GeoArticle sobre cerraduras de seguridad para comunidades | /madrid/cerraduras-de-seguridad-para-comunidades/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §31 |
+| 3.33 | Se decide crear GeoArticle sobre cerradura de seguridad en puerta blindada | /madrid/instalar-cerradura-de-seguridad-en-puerta-blindada/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §31 |
 
 ## Bloque 7 — Tratamiento de Local Coverage Areas
 
