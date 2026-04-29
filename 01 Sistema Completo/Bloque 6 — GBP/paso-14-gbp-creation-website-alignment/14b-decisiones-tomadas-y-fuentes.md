@@ -1,124 +1,114 @@
 # Paso 14 — GBP Creation & Website Alignment
 
-Fase 2 de trazabilidad del sistema GMB Crush.
+Fase 2 de trazabilidad del sistema GMB Crush — modelo final con `Qué dicta la fuente`.
 
-Fuentes permitidas:
+---
 
-```text
-GMB Crush
-Input humano
-Decisión de diseño
-IA sin respaldo
-IA heredada (paso X.YY)
-```
+## Convención de columnas
 
-Orígenes del dato permitidos:
-
-```text
-Doctrina GMB Crush
-Input humano
-Competidores
-Datos de búsqueda
-Decisión de diseño
-Heredado del paso X.YY
-IA sin respaldo
-```
+- **ID** — identificador único de la fila.
+- **Decisión** — qué se decide.
+- **Ejemplo** — valor concreto en el ejemplo Cerrajeros Madrid 24h.
+- **Fuente** — quién dicta la decisión. Combinaciones con `+` cuando la doctrina dirige a otra fuente.
+- **Qué dicta la fuente** — POR QUÉ / CÓMO / PRINCIPIO. 6-12 palabras. NO repetir Decisión + Ejemplo.
+- **Dato en cascada** — `no` o `← X.YY`.
+- **Funcionamiento** — referencia canónica `§X` del documento de ejecución (`14a-ejecucion-gbp-creation-website-alignment.md`).
 
 ---
 
 ## Bloque 1 — Momento de creación y estado inicial
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 14.01 · Paso-14 §7 Web-first | Se decide crear el GBP después de publicar la web base | GMB Crush | Doctrina GMB Crush | El framework define web-first: GBP en Paso 14. | After website launch |
-| 14.02 · Paso-14 §7 Web-first | Se define el estado inicial del GBP | GMB Crush | Doctrina GMB Crush | El framework define GBP Status = Not Created hasta el Paso 14. | Not Created |
-| 14.03 · Paso-14 §29 Tracking | Se decide sincronizar GBP, web, schema y tracking al final | GMB Crush | Doctrina GMB Crush | El framework define que el Paso 14 cierra el ecosistema. | Paso 14 como cierre |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 14.01 | Se decide crear el GBP después de publicar la web base | After website launch | GMB Crush | GBP sin web detrás no soporta sameAs ni schema integrado | no | §7 |
+| 14.02 | Se define el estado inicial del GBP | Not Created | GMB Crush | Estado inicial determina qué se construye y qué se hereda | ← 1.04 | §7 |
+| 14.03 | Se decide sincronizar GBP, web, schema y tracking al final | Paso 14 como cierre | GMB Crush | Cierre conjunto evita desalineamientos entre canales | no | §29 |
 
 ## Bloque 2 — NAP, modelo de negocio y dirección
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 14.04 · Paso-14 §9 NAP | Se define el NAP final para el GBP | GMB Crush | Heredado del paso 1.08–1.15 | El framework dicta usar el NAP del Paso 1 sin modificación. El NAP completo incluye nombre, dirección, teléfono y email del cliente; el teléfono y email del ejemplo son placeholders. | Cerrajeros Madrid 24h + Calle Rafael Calvo 12 + Madrid + teléfono |
-| 14.05 · Paso-14 §10 Modelo de negocio | Se define el modelo de negocio | Input humano | Input humano | El cliente confirma el modelo (Storefront/SAB/Hybrid). El framework define los 3 modelos canónicos. | Service Area Business |
-| 14.06 · Paso-14 §9 NAP | Se define la dirección física | GMB Crush | Heredado del paso 1.19 | El framework dicta usar la dirección como ancla NAP del GBP. Heredada del paso 1.19. | Calle Rafael Calvo 12, Barrio Almagro, Distrito Chamberí, Madrid |
-| 14.07 · Paso-14 §10 Visibilidad dirección | Se decide que mostrar la dirección públicamente depende del modelo y elegibilidad | GMB Crush | Doctrina GMB Crush | El framework define que la visibilidad pública depende del modelo y la elegibilidad GBP. | Depends on business model and eligibility |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 14.04 | Se define el NAP final para el GBP | Cerrajeros Madrid 24h + Calle Rafael Calvo 12 + Madrid + teléfono | GMB Crush | NAP discrepante entre web y GBP rompe verificación local | ← 1.08–1.15 | §9 |
+| 14.05 | Se define el modelo de negocio | Service Area Business | Input humano | Modelo (SAB/Storefront/Hybrid) condiciona dirección y radio | no | §10 |
+| 14.06 | Se define la dirección física | Calle Rafael Calvo 12, Barrio Almagro, Distrito Chamberí, Madrid | GMB Crush | Dirección verificable es el ancla de la entidad local | ← 1.19 | §9 |
+| 14.07 | Se decide que mostrar la dirección públicamente depende del modelo y elegibilidad | Depends on business model and eligibility | GMB Crush | Mostrar dirección de un SAB puede romper elegibilidad GBP | no | §10 |
 
 ## Bloque 3 — Main City y Local Coverage Areas
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 14.08 · Paso-14 §9 Main City | Se define la Main City para el GBP | GMB Crush | Heredado del paso 1.20 | El framework dicta usar la Main City como ancla del cluster. Heredada del paso 1.20. | Madrid |
-| 14.09 · Paso-14 §19 areaServed | Se definen Direct Local Coverage Areas para el GBP | GMB Crush | Heredado del paso 1.22–1.23 | El framework dicta el uso de Direct LCAs. Heredadas del paso 1.22–1.23. | Almagro, Chamberí |
-| 14.10 · Paso-14 §19 areaServed | Se definen Candidate Local Coverage Areas para el GBP | GMB Crush | Heredado del paso 1.24–1.31 | El framework dicta el uso de Candidate LCAs. Heredadas del paso 1.24–1.31. Pendientes de validación con test GEO. | Salamanca, Retiro, Centro, Tetuán, Chamartín, Arganzuela, Moncloa, Prosperidad |
-| 14.11 · Paso-14 §19 areaServed | Se decide que no hay Approved Expansion Areas en fase inicial | GMB Crush | Doctrina GMB Crush | El framework define expansión opcional con aprobación. | None in Phase 1 |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 14.08 | Se define la Main City para el GBP | Madrid | GMB Crush | Main City divergente entre web y GBP fragmenta la entidad | ← 1.20 | §9 |
+| 14.09 | Se definen Direct Local Coverage Areas para el GBP | Almagro, Chamberí | GMB Crush | Direct LCAs en GBP refuerzan señales locales fuertes | ← 1.22, 1.23 | §19 |
+| 14.10 | Se definen Candidate Local Coverage Areas para el GBP | Salamanca, Retiro, Centro, Tetuán, Chamartín, Arganzuela, Moncloa, Prosperidad | GMB Crush | Sin test GEO 3/6 las candidatas son ruido en el GBP | ← 1.24–1.31 | §19 |
+| 14.11 | Se decide que no hay Approved Expansion Areas en fase inicial | None in Phase 1 | GMB Crush | Expansión sin tracción real produce áreas zombie en GBP | no | §19 |
 
 ## Bloque 4 — Categorías GBP
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 14.12 · Paso-14 §8 Categorías GBP | Se confirma la categoría principal GBP prevista | GMB Crush | Heredado del paso 1.16 | El framework dicta confirmar la categoría primaria del Paso 1. | Cerrajero |
-| 14.13 · Paso-14 §8 Categorías GBP | Se confirma la primera categoría adicional GBP prevista | GMB Crush | Heredado del paso 1.17 | El framework dicta confirmar las categorías adicionales del Paso 1. | Servicio de cerrajería de urgencia |
-| 14.14 · Paso-14 §8 Categorías GBP | Se confirma la segunda categoría adicional GBP prevista | GMB Crush | Heredado del paso 1.18 | El framework dicta confirmar las categorías adicionales del Paso 1. | Servicio de duplicado de llaves |
-| 14.15 · Paso-14 §14 No categorías sin web | Se decide no añadir categoría de seguridad sin soporte web real | GMB Crush | Doctrina GMB Crush | El framework define la regla "no categoría sin soporte web". | No añadir Proveedor de sistemas de seguridad |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 14.12 | Se confirma la categoría principal GBP prevista | Cerrajero | GMB Crush | Categoría primaria mal elegida desactiva el Local Pack | ← 1.16 | §8 |
+| 14.13 | Se confirma la primera categoría adicional GBP prevista | Servicio de cerrajería de urgencia | GMB Crush | Adicionales amplían cobertura sin diluir la primaria | ← 1.17 | §8 |
+| 14.14 | Se confirma la segunda categoría adicional GBP prevista | Servicio de duplicado de llaves | GMB Crush | Adicionales amplían cobertura sin diluir la primaria | ← 1.18 | §8 |
+| 14.15 | Se decide no añadir categoría de seguridad sin soporte web real | No añadir Proveedor de sistemas de seguridad | GMB Crush | Categoría GBP sin landing web rompe trust y E-E-A-T | no | §14 |
 
 ## Bloque 5 — Servicios del GBP
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 14.16 · Paso-14 §8 GBP Services | Se define el servicio GBP 1 | GMB Crush | Heredado del paso 1.35 | El framework dicta 1:1 entre servicios web y servicios GBP. Heredado del paso 1.35. | Apertura de puertas |
-| 14.17 · Paso-14 §8 GBP Services | Se define el servicio GBP 2 | GMB Crush | Heredado del paso 1.34 | El framework dicta 1:1 entre servicios web y servicios GBP. Heredado del paso 1.34. | Cerrajero urgente |
-| 14.18 · Paso-14 §8 GBP Services | Se define el servicio GBP 3 | GMB Crush | Heredado del paso 1.36 | El framework dicta 1:1 entre servicios web y servicios GBP. Heredado del paso 1.36. | Cambio de cerraduras |
-| 14.19 · Paso-14 §8 GBP Services | Se define el servicio GBP 4 | GMB Crush | Heredado del paso 1.37 | El framework dicta 1:1 entre servicios web y servicios GBP. Heredado del paso 1.37. | Cambio de bombines |
-| 14.20 · Paso-14 §8 GBP Services | Se define el servicio GBP 5 | GMB Crush | Heredado del paso 1.18 | El framework dicta 1:1 entre servicios web y servicios GBP. Heredado del paso 1.18 (Additional Category). | Duplicado de llaves |
-| 14.21 · Paso-14 §8 GBP Services | Se define el servicio GBP 6 | GMB Crush | Heredado del paso 1.38 | El framework dicta 1:1 entre servicios web y servicios GBP. Heredado del paso 1.38. | Instalación de cerraduras de seguridad |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 14.16 | Se define el servicio GBP 1 | Apertura de puertas | GMB Crush | Servicios GBP duplican señales si coinciden con la web | ← 1.35 | §8 |
+| 14.17 | Se define el servicio GBP 2 | Cerrajero urgente | GMB Crush | Servicios GBP duplican señales si coinciden con la web | ← 1.34 | §8 |
+| 14.18 | Se define el servicio GBP 3 | Cambio de cerraduras | GMB Crush | Servicios GBP duplican señales si coinciden con la web | ← 1.36 | §8 |
+| 14.19 | Se define el servicio GBP 4 | Cambio de bombines | GMB Crush | Servicios GBP duplican señales si coinciden con la web | ← 1.37 | §8 |
+| 14.20 | Se define el servicio GBP 5 | Duplicado de llaves | GMB Crush | Servicio extra cubre la categoría adicional efectiva | ← 1.18 | §8 |
+| 14.21 | Se define el servicio GBP 6 | Instalación de cerraduras de seguridad | GMB Crush | Servicios GBP duplican señales si coinciden con la web | ← 1.38 | §8 |
 
 ## Bloque 6 — URLs conectadas al GBP
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 14.22 · Paso-14 §11 URL web-GBP | Se define la URL web que se conectará al GBP | GMB Crush | Heredado del paso 1.02 | El framework dicta usar el dominio del Paso 1.02 sin modificación. | https://www.cerrajerosmadrid24h.com/ |
-| 14.23 · Paso-14 §11 URL contacto | Se define la URL de contacto o cita | GMB Crush | Heredado del paso 1.02 | El framework dicta usar el dominio + slug `/contacto/` (canónico). Dominio heredado del paso 1.02. | https://www.cerrajerosmadrid24h.com/contacto/ |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 14.22 | Se define la URL web que se conectará al GBP | https://www.cerrajerosmadrid24h.com/ | GMB Crush | URL canónica diferente entre GBP y web rompe sameAs | ← 1.02 | §11 |
+| 14.23 | Se define la URL de contacto o cita | https://www.cerrajerosmadrid24h.com/contacto/ | GMB Crush | URL específica de contacto mejora el flujo de conversión | ← 1.02 | §11 |
 
 ## Bloque 7 — Horarios y recursos visuales
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 14.24 · Paso-14 §18 Horarios | Se definen horarios de apertura | Input humano | Input humano | El cliente proporciona los horarios. El nombre del negocio sugiere 24h. | 24 horas, todos los días |
-| 14.25 · Paso-14 §16 Fotos | Se decide preparar logo | GMB Crush | Doctrina GMB Crush | El framework define foto canónica obligatoria. | Logo del negocio |
-| 14.26 · Paso-14 §16 Fotos | Se decide preparar cover photo | GMB Crush | Doctrina GMB Crush | El framework define foto canónica obligatoria. | Foto de portada del GBP |
-| 14.27 · Paso-14 §16 Fotos | Se decide preparar foto de exterior | GMB Crush | Doctrina GMB Crush | El framework define foto exterior solo si procede según modelo. | Solo si procede según modelo de negocio (Service Area Business) |
-| 14.28 · Paso-14 §16 Fotos | Se decide preparar foto de interior | GMB Crush | Doctrina GMB Crush | El framework define foto interior no prioritaria si SAB. | No prioritario si es Service Area Business |
-| 14.29 · Paso-14 §16 Fotos | Se decide preparar fotos de equipo | GMB Crush | Doctrina GMB Crush | El framework dicta foto de equipo. | Foto del equipo de cerrajeros |
-| 14.30 · Paso-14 §16 Fotos | Se decide preparar fotos de vehículo | GMB Crush | Doctrina GMB Crush | El framework dicta foto de vehículo. | Foto del vehículo de servicio |
-| 14.31 · Paso-14 §16 Fotos | Se decide preparar fotos de trabajo | GMB Crush | Doctrina GMB Crush | El framework dicta fotos de ejemplos de trabajo. | Ejemplos de trabajos realizados (cerraduras instaladas, aperturas, etc.) |
-| 14.32 · Paso-14 §16 Fotos | Se decide preparar fotos de contexto local | GMB Crush | Doctrina GMB Crush | El framework define la regla "no fake location" — sin fingir oficina física en zonas. | Fotos en zonas de cobertura, sin fingir oficina física en esas zonas |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 14.24 | Se definen horarios de apertura | 24 horas, todos los días | Input humano | Horarios reales determinan disponibilidad y trust en SERP | no | §18 |
+| 14.25 | Se decide preparar logo | Logo del negocio | GMB Crush | Sin logo el GBP no genera reconocimiento de marca | no | §16 |
+| 14.26 | Se decide preparar cover photo | Foto de portada del GBP | GMB Crush | Cover photo afecta CTR del listado en Local Pack | no | §16 |
+| 14.27 | Se decide preparar foto de exterior | Solo si procede según modelo de negocio (Service Area Business) | GMB Crush | Foto exterior en SAB puede sugerir storefront falso | ← 14.05 | §16 |
+| 14.28 | Se decide preparar foto de interior | No prioritario si es Service Area Business | GMB Crush | Foto interior en SAB no aporta señal verificable | ← 14.05 | §16 |
+| 14.29 | Se decide preparar fotos de equipo | Foto del equipo de cerrajeros | GMB Crush | Equipo visible activa señales E-E-A-T y humaniza la marca | no | §16 |
+| 14.30 | Se decide preparar fotos de vehículo | Foto del vehículo de servicio | GMB Crush | Vehículo branded refuerza prueba de operación real | no | §16 |
+| 14.31 | Se decide preparar fotos de trabajo | Ejemplos de trabajos realizados (cerraduras instaladas, aperturas, etc.) | GMB Crush | Trabajos reales convierten más que fotos genéricas | no | §16 |
+| 14.32 | Se decide preparar fotos de contexto local | Fotos en zonas de cobertura, sin fingir oficina física en esas zonas | GMB Crush | Falsa ubicación viola guidelines y dispara penalizaciones | no | §16 |
 
 ## Bloque 8 — Q&A, posts, reseñas y tracking
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 14.33 · Paso-14 §23 Q&A | Se decide preparar Q&A 1 del GBP | GMB Crush | Datos de búsqueda | El framework dicta preparar Q&A. El valor concreto requiere keyword research + GBP Auto-Suggest; pendiente de validar. | "¿Ofrecéis cerrajero urgente en Madrid?" |
-| 14.34 · Paso-14 §23 Q&A | Se decide preparar Q&A 2 del GBP | GMB Crush | Datos de búsqueda | El framework dicta preparar Q&A. El valor concreto requiere keyword research + GBP Auto-Suggest; pendiente de validar. | "¿Atendéis en Chamberí, Salamanca y Retiro?" |
-| 14.35 · Paso-14 §23 Q&A | Se decide preparar Q&A 3 del GBP | GMB Crush | Datos de búsqueda | El framework dicta preparar Q&A. El valor concreto requiere keyword research + GBP Auto-Suggest; pendiente de validar. | "¿Podéis hacer apertura de puertas sin dañar la cerradura?" |
-| 14.36 · Paso-14 §24 Google Posts | Se decide preparar Google Post 1 | GMB Crush | Datos de búsqueda | El framework dicta preparar Posts. El valor concreto requiere keyword research; pendiente de validar. | "Presentación del negocio y servicios de cerrajería en Madrid" |
-| 14.37 · Paso-14 §24 Google Posts | Se decide preparar Google Post 2 | GMB Crush | Datos de búsqueda | El framework dicta preparar Posts. El valor concreto requiere keyword research; pendiente de validar. | "Servicio de cerrajero urgente 24h" |
-| 14.38 · Paso-14 §24 Google Posts | Se decide preparar Google Post 3 | GMB Crush | Datos de búsqueda | El framework dicta preparar Posts. El valor concreto requiere keyword research; pendiente de validar. | "Cambio de cerraduras y bombines en Madrid" |
-| 14.39 · Paso-14 §15 Reseñas | Se decide crear estrategia de reseñas reales | GMB Crush | Doctrina GMB Crush | El framework define la regla "no fake reviews". | Solicitar reseñas a clientes reales después de servicios completados, sin incentivos prohibidos y sin reseñas inventadas |
-| 14.40 · Paso-14 §12 UTM | Se decide crear UTM para el enlace del GBP | GMB Crush | Heredado del paso 1.02 | El framework define el formato UTM canónico. Dominio heredado del paso 1.02. | https://www.cerrajerosmadrid24h.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 14.33 | Se decide preparar Q&A 1 del GBP | "¿Ofrecéis cerrajero urgente en Madrid?" | GMB Crush + Datos de búsqueda | Pre-poblar Q&A real evita que la SERP las llene de spam | no | §23 |
+| 14.34 | Se decide preparar Q&A 2 del GBP | "¿Atendéis en Chamberí, Salamanca y Retiro?" | GMB Crush + Datos de búsqueda | Pre-poblar Q&A real evita que la SERP las llene de spam | no | §23 |
+| 14.35 | Se decide preparar Q&A 3 del GBP | "¿Podéis hacer apertura de puertas sin dañar la cerradura?" | GMB Crush + Datos de búsqueda | Pre-poblar Q&A real evita que la SERP las llene de spam | no | §23 |
+| 14.36 | Se decide preparar Google Post 1 | "Presentación del negocio y servicios de cerrajería en Madrid" | GMB Crush + Datos de búsqueda | Posts señalan actividad reciente y mejoran ranking GBP | no | §24 |
+| 14.37 | Se decide preparar Google Post 2 | "Servicio de cerrajero urgente 24h" | GMB Crush + Datos de búsqueda | Posts señalan actividad reciente y mejoran ranking GBP | no | §24 |
+| 14.38 | Se decide preparar Google Post 3 | "Cambio de cerraduras y bombines en Madrid" | GMB Crush + Datos de búsqueda | Posts señalan actividad reciente y mejoran ranking GBP | no | §24 |
+| 14.39 | Se decide crear estrategia de reseñas reales | Solicitar reseñas a clientes reales después de servicios completados, sin incentivos prohibidos y sin reseñas inventadas | GMB Crush | Fake reviews violan guidelines y pueden suspender el GBP | no | §15 |
+| 14.40 | Se decide crear UTM para el enlace del GBP | https://www.cerrajerosmadrid24h.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp | GMB Crush | Sin UTM el tráfico GBP se confunde con orgánico en analítica | ← 1.02 | §12 |
 
 ## Bloque 9 — Ajustes post-GBP en la web
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 14.41 · Paso-14 §20 Schema sameAs | Se decide actualizar schema después de crear el GBP | GMB Crush | Doctrina GMB Crush | El framework dicta añadir `sameAs` cuando exista GBP URL. | Añadir `sameAs` cuando exista GBP URL |
-| 14.42 · Paso-14 §21 Homepage | Se decide actualizar la Homepage tras crear el GBP | GMB Crush | Doctrina GMB Crush | El framework dicta añadir GBP URL, reseñas reales y trust blocks. | Añadir GBP URL, reseñas reales si existen, trust blocks |
-| 14.43 · Paso-14 §22 Contacto | Se decide actualizar la página de contacto tras crear el GBP | GMB Crush | Doctrina GMB Crush | El framework dicta datos confirmados y mapa si procede. | Añadir datos confirmados y mapa si procede |
-| 14.44 · Paso-14 §22 LBS | Se decide actualizar las Location-Based Service Pages tras crear el GBP | GMB Crush | Doctrina GMB Crush | El framework dicta ajustar schema, sameAs, reseñas y NAP. | Ajustar schema, `sameAs`, reseñas y NAP |
-| 14.45 · Paso-14 §22 GeoHub | Se decide actualizar el GeoHub tras crear el GBP | GMB Crush | Doctrina GMB Crush | El framework dicta alinear cobertura, reviews y enlaces. | Alinear cobertura, reviews y enlaces |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 14.41 | Se decide actualizar schema después de crear el GBP | Añadir `sameAs` cuando exista GBP URL | GMB Crush | sameAs cierra el grafo entre web y GBP en knowledge graph | no | §20 |
+| 14.42 | Se decide actualizar la Homepage tras crear el GBP | Añadir GBP URL, reseñas reales si existen, trust blocks | GMB Crush | Homepage sin trust real desactiva conversión post-GBP | no | §21 |
+| 14.43 | Se decide actualizar la página de contacto tras crear el GBP | Añadir datos confirmados y mapa si procede | GMB Crush | Contacto sin datos GBP confirma falta de coherencia | no | §22 |
+| 14.44 | Se decide actualizar las Location-Based Service Pages tras crear el GBP | Ajustar schema, `sameAs`, reseñas y NAP | GMB Crush | LBS sin sameAs queda desconectada del knowledge graph | no | §22 |
+| 14.45 | Se decide actualizar el GeoHub tras crear el GBP | Alinear cobertura, reviews y enlaces | GMB Crush | GeoHub debe reflejar la realidad GBP para no contradecirse | no | §22 |
 
 ## Bloque 10 — No invención
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 14.46 · Paso-14 §15 Reseñas | Se decide no inventar reseñas antes de que existan | GMB Crush | Doctrina GMB Crush | El framework define la regla "no fake reviews" obligatoria. | Reseñas iniciales pendientes |
-| 14.47 · Paso-14 §11 GBP URL | Se decide no inventar GBP URL antes de crear el perfil | GMB Crush | Doctrina GMB Crush | El framework define la regla "no GBP URL inventada" obligatoria. | GBP URL N/A hasta creación |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 14.46 | Se decide no inventar reseñas antes de que existan | Reseñas iniciales pendientes | GMB Crush | Fake reviews violan guidelines y pueden suspender el GBP | no | §15 |
+| 14.47 | Se decide no inventar GBP URL antes de crear el perfil | GBP URL N/A hasta creación | GMB Crush | URL inventada rompe sameAs y dispara penalizaciones | no | §11 |

@@ -1,97 +1,87 @@
 # Paso 3 — Matriz Base
 
-Fase 2 de trazabilidad del sistema GMB Crush.
+Fase 2 de trazabilidad del sistema GMB Crush — modelo final con `Qué dicta la fuente`.
 
-Fuentes permitidas:
+---
 
-```text
-GMB Crush
-Input humano
-Decisión de diseño
-IA sin respaldo
-IA heredada (paso X.YY)
-```
+## Convención de columnas
 
-Orígenes del dato permitidos:
-
-```text
-Doctrina GMB Crush
-Input humano
-Competidores
-Datos de búsqueda
-Decisión de diseño
-Heredado del paso X.YY
-IA sin respaldo
-```
+- **ID** — identificador único de la fila.
+- **Decisión** — qué se decide.
+- **Ejemplo** — valor concreto en el ejemplo Cerrajeros Madrid 24h.
+- **Fuente** — quién dicta la decisión. Combinaciones con `+` cuando la doctrina dirige a otra fuente.
+- **Qué dicta la fuente** — POR QUÉ / CÓMO / PRINCIPIO. 6-12 palabras. NO repetir Decisión + Ejemplo.
+- **Dato en cascada** — `no` o `← X.YY`.
+- **Funcionamiento** — referencia canónica `§X` del documento de ejecución (`03a-ejecucion-matriz-base.md`).
 
 ---
 
 ## Bloque 1 — Estructura de la matriz
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 3.01 · Paso-03 §7 URL Matrix | Se decide crear una matriz operativa para controlar las URLs | GMB Crush | Doctrina GMB Crush | El framework define la URL Matrix como fuente de verdad. | URL Matrix |
-| 3.02 · Paso-03 §7 URL Matrix | Se decide que cada página tenga un ID único | GMB Crush | Doctrina GMB Crush | El framework define los IDs canónicos HP, SO, GH, LBS, AC, GA. | HP, SO, GH, LBS, AC, GA |
-| 3.03 · Paso-03 §7 URL Matrix | Se decide incluir columnas de producción | GMB Crush | Doctrina GMB Crush | El framework define las 20 columnas canónicas de la matriz. | URL, H1, Meta Title, Schema, Priority, Phase, Status |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 3.01 | Se decide crear una matriz operativa para controlar las URLs | URL Matrix | GMB Crush | Sin matriz central, URLs y schema divergen entre páginas | no | §7 |
+| 3.02 | Se decide que cada página tenga un ID único | HP, SO, GH, LBS, AC, GA | GMB Crush | Permite cruzar matrices sin ambigüedad operativa | no | §7 |
+| 3.03 | Se decide incluir columnas de producción | URL, H1, Meta Title, Schema, Priority, Phase, Status | GMB Crush | 20 campos cubren producción, QA, schema y publicación | no | §7 |
 
 ## Bloque 2 — Homepage y páginas auxiliares
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 3.04 · Paso-03 §7 URL Matrix | Se decide incluir la Homepage en la matriz | GMB Crush | Doctrina GMB Crush | El framework define la Homepage como Root Entity Anchor. | HP-001 |
-| 3.05 · Paso-03 §7 URL Matrix | Se decide que la Homepage use la raíz | GMB Crush | Doctrina GMB Crush | El framework define el patrón URL Homepage = `/`. | / |
-| 3.06 · Paso-03 §7 URL Matrix | Se decide incluir página de contacto como auxiliar | GMB Crush | Doctrina GMB Crush | El framework define `/contacto/` como página auxiliar. | /contacto/ |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 3.04 | Se decide incluir la Homepage en la matriz | HP-001 | GMB Crush | Homepage concentra señales de marca y entidad | no | §7 |
+| 3.05 | Se decide que la Homepage use la raíz | / | GMB Crush | Raíz da jerarquía SEO máxima al ancla del cluster | no | §7 |
+| 3.06 | Se decide incluir página de contacto como auxiliar | /contacto/ | GMB Crush | Contacto recibe link sitewide para conversión final | no | §7 |
 
 ## Bloque 3 — Service Overview Pages
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 3.07 · Paso-03 §7 URL Matrix | Se decide crear Service Overview para Cerrajero urgente | GMB Crush | Heredado del paso 1.34 | El framework define el patrón URL `/category/service/`. El slug del servicio sale del paso 1.34. | /cerrajero/cerrajero-urgente/ |
-| 3.08 · Paso-03 §7 URL Matrix | Se decide crear Service Overview para Apertura de puertas | GMB Crush | Heredado del paso 1.35 | El framework define el patrón URL `/category/service/`. El slug del servicio sale del paso 1.35. | /cerrajero/apertura-puertas/ |
-| 3.09 · Paso-03 §7 URL Matrix | Se decide crear Service Overview para Cambio de cerraduras | GMB Crush | Heredado del paso 1.36 | El framework define el patrón URL `/category/service/`. El slug del servicio sale del paso 1.36. | /cerrajero/cambio-cerraduras/ |
-| 3.10 · Paso-03 §7 URL Matrix | Se decide crear Service Overview para Cambio de bombines | GMB Crush | Heredado del paso 1.37 | El framework define el patrón URL `/category/service/`. El slug del servicio sale del paso 1.37. | /cerrajero/cambio-bombines/ |
-| 3.11 · Paso-03 §7 URL Matrix | Se decide crear Service Overview para Instalación de cerraduras de seguridad | GMB Crush | Heredado del paso 1.38 | El framework define el patrón URL `/category/service/`. El slug del servicio sale del paso 1.38. | /cerrajero/instalacion-cerraduras-seguridad/ |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 3.07 | Se decide crear Service Overview para Cerrajero urgente | /cerrajero/cerrajero-urgente/ | GMB Crush | URL `/categoria/servicio/` aísla pillar temático sin ciudad | ← 1.34 | §7 |
+| 3.08 | Se decide crear Service Overview para Apertura de puertas | /cerrajero/apertura-puertas/ | GMB Crush | URL `/categoria/servicio/` aísla pillar temático sin ciudad | ← 1.35 | §7 |
+| 3.09 | Se decide crear Service Overview para Cambio de cerraduras | /cerrajero/cambio-cerraduras/ | GMB Crush | URL `/categoria/servicio/` aísla pillar temático sin ciudad | ← 1.36 | §7 |
+| 3.10 | Se decide crear Service Overview para Cambio de bombines | /cerrajero/cambio-bombines/ | GMB Crush | URL `/categoria/servicio/` aísla pillar temático sin ciudad | ← 1.37 | §7 |
+| 3.11 | Se decide crear Service Overview para Instalación de cerraduras de seguridad | /cerrajero/instalacion-cerraduras-seguridad/ | GMB Crush | URL `/categoria/servicio/` aísla pillar temático sin ciudad | ← 1.38 | §7 |
 
 ## Bloque 4 — GeoHub y Location-Based Service Pages
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 3.12 · Paso-03 §7 URL Matrix | Se decide crear el GeoHub principal de Madrid | GMB Crush | Heredado del paso 1.20 | El framework define el patrón URL GeoHub = `/[city]/`. La Main City sale del paso 1.20. | /madrid/ |
-| 3.13 · Paso-03 §7 URL Matrix | Se decide crear LBS de Cerrajero urgente en Madrid | GMB Crush | Heredado del paso 1.34 | El framework define el patrón URL `/category/city/service/`. El slug del servicio sale del paso 1.34. | /cerrajero/madrid/cerrajero-urgente/ |
-| 3.14 · Paso-03 §7 URL Matrix | Se decide crear LBS de Apertura de puertas en Madrid | GMB Crush | Heredado del paso 1.35 | El framework define el patrón URL `/category/city/service/`. El slug del servicio sale del paso 1.35. | /cerrajero/madrid/apertura-puertas/ |
-| 3.15 · Paso-03 §7 URL Matrix | Se decide crear LBS de Cambio de cerraduras en Madrid | GMB Crush | Heredado del paso 1.36 | El framework define el patrón URL `/category/city/service/`. El slug del servicio sale del paso 1.36. | /cerrajero/madrid/cambio-cerraduras/ |
-| 3.16 · Paso-03 §7 URL Matrix | Se decide crear LBS de Cambio de bombines en Madrid | GMB Crush | Heredado del paso 1.37 | El framework define el patrón URL `/category/city/service/`. El slug del servicio sale del paso 1.37. | /cerrajero/madrid/cambio-bombines/ |
-| 3.17 · Paso-03 §7 URL Matrix | Se decide crear LBS de Instalación de cerraduras de seguridad en Madrid | GMB Crush | Heredado del paso 1.38 | El framework define el patrón URL `/category/city/service/`. El slug del servicio sale del paso 1.38. | /cerrajero/madrid/instalacion-cerraduras-seguridad/ |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 3.12 | Se decide crear el GeoHub principal de Madrid | /madrid/ | GMB Crush | URL `/ciudad/` agrupa toda la cobertura local del cluster | ← 1.20 | §7 |
+| 3.13 | Se decide crear LBS de Cerrajero urgente en Madrid | /cerrajero/madrid/cerrajero-urgente/ | GMB Crush | URL `/cat/ciudad/servicio/` es ancla local de conversión | ← 1.34 | §7 |
+| 3.14 | Se decide crear LBS de Apertura de puertas en Madrid | /cerrajero/madrid/apertura-puertas/ | GMB Crush | URL `/cat/ciudad/servicio/` es ancla local de conversión | ← 1.35 | §7 |
+| 3.15 | Se decide crear LBS de Cambio de cerraduras en Madrid | /cerrajero/madrid/cambio-cerraduras/ | GMB Crush | URL `/cat/ciudad/servicio/` es ancla local de conversión | ← 1.36 | §7 |
+| 3.16 | Se decide crear LBS de Cambio de bombines en Madrid | /cerrajero/madrid/cambio-bombines/ | GMB Crush | URL `/cat/ciudad/servicio/` es ancla local de conversión | ← 1.37 | §7 |
+| 3.17 | Se decide crear LBS de Instalación de cerraduras de seguridad en Madrid | /cerrajero/madrid/instalacion-cerraduras-seguridad/ | GMB Crush | URL `/cat/ciudad/servicio/` es ancla local de conversión | ← 1.38 | §7 |
 
 ## Bloque 5 — Additional Category Page
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 3.18 · Paso-03 §7 URL Matrix | Se decide crear página de duplicado de llaves en Madrid | GMB Crush | Heredado del paso 1.18 | El framework define el patrón URL para Additional Category. El slug del servicio sale del paso 1.18. | /cerrajero/madrid/duplicado-llaves/ |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 3.18 | Se decide crear página de duplicado de llaves en Madrid | /cerrajero/madrid/duplicado-llaves/ | GMB Crush | AC da soporte web a categoría GBP sin servicio core | ← 1.18 | §7 |
 
 ## Bloque 6 — GeoArticles
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 3.19 · Paso-03 §7 URL Matrix | Se decide crear GeoArticle de coste de cerrajero urgente | GMB Crush | Datos de búsqueda | El framework define el patrón URL `/[city]/[topic]/`. El topic concreto requiere keyword research; pendiente de validar volumen y dificultad. | /madrid/cuanto-cuesta-un-cerrajero-urgente/ |
-| 3.20 · Paso-03 §7 URL Matrix | Se decide crear GeoArticle sobre no poder entrar en casa | GMB Crush | Datos de búsqueda | El framework define el patrón URL. El topic concreto requiere keyword research; pendiente de validar. | /madrid/que-hacer-si-no-puedes-entrar-casa/ |
-| 3.21 · Paso-03 §7 URL Matrix | Se decide crear GeoArticle sobre tiempo de llegada | GMB Crush | Datos de búsqueda | El framework define el patrón URL. El topic concreto requiere keyword research; pendiente de validar. | /madrid/cuanto-tarda-un-cerrajero/ |
-| 3.22 · Paso-03 §7 URL Matrix | Se decide crear GeoArticle sobre coste de apertura de puertas | GMB Crush | Datos de búsqueda | El framework define el patrón URL. El topic concreto requiere keyword research; pendiente de validar. | /madrid/cuanto-cuesta-abrir-una-puerta/ |
-| 3.23 · Paso-03 §7 URL Matrix | Se decide crear GeoArticle sobre llaves dentro | GMB Crush | Datos de búsqueda | El framework define el patrón URL. El topic concreto requiere keyword research; pendiente de validar. | /madrid/que-hacer-si-te-dejas-las-llaves-dentro/ |
-| 3.24 · Paso-03 §7 URL Matrix | Se decide crear GeoArticle sobre apertura sin romper cerradura | GMB Crush | Datos de búsqueda | El framework define el patrón URL. El topic concreto requiere keyword research; pendiente de validar. | /madrid/apertura-de-puertas-sin-romper-cerradura/ |
-| 3.25 · Paso-03 §7 URL Matrix | Se decide crear GeoArticle sobre cuándo cambiar cerradura | GMB Crush | Datos de búsqueda | El framework define el patrón URL. El topic concreto requiere keyword research; pendiente de validar. | /madrid/cuando-cambiar-la-cerradura-de-casa/ |
-| 3.26 · Paso-03 §7 URL Matrix | Se decide crear GeoArticle sobre cambio tras perder llaves | GMB Crush | Datos de búsqueda | El framework define el patrón URL. El topic concreto requiere keyword research; pendiente de validar. | /madrid/cambio-de-cerradura-tras-perder-llaves/ |
-| 3.27 · Paso-03 §7 URL Matrix | Se decide crear GeoArticle sobre cerradura nueva o reparación | GMB Crush | Datos de búsqueda | El framework define el patrón URL. El topic concreto requiere keyword research; pendiente de validar. | /madrid/cerradura-nueva-o-reparacion/ |
-| 3.28 · Paso-03 §7 URL Matrix | Se decide crear GeoArticle sobre cuándo cambiar bombín | GMB Crush | Datos de búsqueda | El framework define el patrón URL. El topic concreto requiere keyword research; pendiente de validar. | /madrid/cuando-cambiar-el-bombin/ |
-| 3.29 · Paso-03 §7 URL Matrix | Se decide crear GeoArticle sobre bombín antibumping | GMB Crush | Datos de búsqueda | El framework define el patrón URL. El topic concreto requiere keyword research; pendiente de validar. | /madrid/bombin-antibumping-madrid/ |
-| 3.30 · Paso-03 §7 URL Matrix | Se decide crear GeoArticle sobre cambio de bombín sin cambiar cerradura | GMB Crush | Datos de búsqueda | El framework define el patrón URL. El topic concreto requiere keyword research; pendiente de validar. | /madrid/cambio-de-bombin-sin-cambiar-cerradura/ |
-| 3.31 · Paso-03 §7 URL Matrix | Se decide crear GeoArticle sobre cerraduras de seguridad para viviendas | GMB Crush | Datos de búsqueda | El framework define el patrón URL. El topic concreto requiere keyword research; pendiente de validar. | /madrid/mejores-cerraduras-de-seguridad-para-viviendas/ |
-| 3.32 · Paso-03 §7 URL Matrix | Se decide crear GeoArticle sobre cerraduras de seguridad para comunidades | GMB Crush | Datos de búsqueda | El framework define el patrón URL. El topic concreto requiere keyword research; pendiente de validar. | /madrid/cerraduras-de-seguridad-para-comunidades/ |
-| 3.33 · Paso-03 §7 URL Matrix | Se decide crear GeoArticle sobre cerradura de seguridad en puerta blindada | GMB Crush | Datos de búsqueda | El framework define el patrón URL. El topic concreto requiere keyword research; pendiente de validar. | /madrid/instalar-cerradura-de-seguridad-en-puerta-blindada/ |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 3.19 | Se decide crear GeoArticle de coste de cerrajero urgente | /madrid/cuanto-cuesta-un-cerrajero-urgente/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
+| 3.20 | Se decide crear GeoArticle sobre no poder entrar en casa | /madrid/que-hacer-si-no-puedes-entrar-casa/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
+| 3.21 | Se decide crear GeoArticle sobre tiempo de llegada | /madrid/cuanto-tarda-un-cerrajero/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
+| 3.22 | Se decide crear GeoArticle sobre coste de apertura de puertas | /madrid/cuanto-cuesta-abrir-una-puerta/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
+| 3.23 | Se decide crear GeoArticle sobre llaves dentro | /madrid/que-hacer-si-te-dejas-las-llaves-dentro/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
+| 3.24 | Se decide crear GeoArticle sobre apertura sin romper cerradura | /madrid/apertura-de-puertas-sin-romper-cerradura/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
+| 3.25 | Se decide crear GeoArticle sobre cuándo cambiar cerradura | /madrid/cuando-cambiar-la-cerradura-de-casa/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
+| 3.26 | Se decide crear GeoArticle sobre cambio tras perder llaves | /madrid/cambio-de-cerradura-tras-perder-llaves/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
+| 3.27 | Se decide crear GeoArticle sobre cerradura nueva o reparación | /madrid/cerradura-nueva-o-reparacion/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
+| 3.28 | Se decide crear GeoArticle sobre cuándo cambiar bombín | /madrid/cuando-cambiar-el-bombin/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
+| 3.29 | Se decide crear GeoArticle sobre bombín antibumping | /madrid/bombin-antibumping-madrid/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
+| 3.30 | Se decide crear GeoArticle sobre cambio de bombín sin cambiar cerradura | /madrid/cambio-de-bombin-sin-cambiar-cerradura/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
+| 3.31 | Se decide crear GeoArticle sobre cerraduras de seguridad para viviendas | /madrid/mejores-cerraduras-de-seguridad-para-viviendas/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
+| 3.32 | Se decide crear GeoArticle sobre cerraduras de seguridad para comunidades | /madrid/cerraduras-de-seguridad-para-comunidades/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
+| 3.33 | Se decide crear GeoArticle sobre cerradura de seguridad en puerta blindada | /madrid/instalar-cerradura-de-seguridad-en-puerta-blindada/ | GMB Crush + Datos de búsqueda | Topic con volumen real captado por keyword research | no | §7 |
 
 ## Bloque 7 — Tratamiento de Local Coverage Areas
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 3.34 · Paso-03 §7 URL Matrix | Se decide que las Local Coverage Areas aparezcan como notas o campos de contenido | GMB Crush | Doctrina GMB Crush | El framework define que las LCA se usan como señales GEO en contenido. | Almagro, Chamberí, Salamanca, Retiro, Centro, Tetuán, Chamartín, Arganzuela, Moncloa, Prosperidad |
-| 3.35 · Paso-03 §7 URL Matrix | Se decide que no haya filas URL para Local Coverage Areas | GMB Crush | Doctrina GMB Crush | El framework define que las LCA no generan URLs por defecto. | No /almagro/, no /chamberi/, no /salamanca/ |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 3.34 | Se decide que las Local Coverage Areas aparezcan como notas o campos de contenido | Almagro, Chamberí, Salamanca, Retiro, Centro, Tetuán, Chamartín, Arganzuela, Moncloa, Prosperidad | GMB Crush | LCA refuerza relevancia local sin diluir autoridad | ← 1.22–1.31 | §7 |
+| 3.35 | Se decide que no haya filas URL para Local Coverage Areas | No /almagro/, no /chamberi/, no /salamanca/ | GMB Crush | URL por LCA dispersa autoridad y canibaliza la LBS | no | §7 |

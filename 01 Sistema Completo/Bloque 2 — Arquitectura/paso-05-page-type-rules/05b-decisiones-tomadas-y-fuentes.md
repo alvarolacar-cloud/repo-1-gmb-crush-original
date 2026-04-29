@@ -1,71 +1,61 @@
 # Paso 5 — Page Type Rules
 
-Fase 2 de trazabilidad del sistema GMB Crush.
+Fase 2 de trazabilidad del sistema GMB Crush — modelo final con `Qué dicta la fuente`.
 
-Fuentes permitidas:
+---
 
-```text
-GMB Crush
-Input humano
-Decisión de diseño
-IA sin respaldo
-IA heredada (paso X.YY)
-```
+## Convención de columnas
 
-Orígenes del dato permitidos:
-
-```text
-Doctrina GMB Crush
-Input humano
-Competidores
-Datos de búsqueda
-Decisión de diseño
-Heredado del paso X.YY
-IA sin respaldo
-```
+- **ID** — identificador único de la fila.
+- **Decisión** — qué se decide.
+- **Ejemplo** — valor concreto en el ejemplo Cerrajeros Madrid 24h.
+- **Fuente** — quién dicta la decisión. Combinaciones con `+` cuando la doctrina dirige a otra fuente.
+- **Qué dicta la fuente** — POR QUÉ / CÓMO / PRINCIPIO. 6-12 palabras. NO repetir Decisión + Ejemplo.
+- **Dato en cascada** — `no` o `← X.YY`.
+- **Funcionamiento** — referencia canónica `§X` del documento de ejecución (`05a-ejecucion-page-type-rules.md`).
 
 ---
 
 ## Bloque 1 — Homepage
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 5.01 · Paso-05 §7 Homepage | Se decide que la Homepage sea Root Entity Anchor | GMB Crush | Doctrina GMB Crush | El framework define el rol canónico de la Homepage. | / |
-| 5.02 · Paso-05 §7 Homepage | Se decide que la Homepage ancle marca, servicio principal y ciudad | GMB Crush | Doctrina GMB Crush | El framework define el patrón H1: Brand + Primary Service + Main City. | Cerrajeros Madrid 24h + Cerrajero + Madrid |
-| 5.03 · Paso-05 §7 Homepage | Se decide que la Homepage incluya servicios core | GMB Crush | Doctrina GMB Crush | El framework dicta mostrar los servicios principales en Homepage. | 5 servicios principales |
-| 5.04 · Paso-05 §7 Homepage | Se decide que la Homepage incluya NAP y CTA | GMB Crush | Doctrina GMB Crush | El framework dicta NAP visible y CTA claro en Homepage. | NAP + Llamar ahora |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 5.01 | Se decide que la Homepage sea Root Entity Anchor | / | GMB Crush | Homepage concentra todas las señales de marca y entidad | no | §7 |
+| 5.02 | Se decide que la Homepage ancle marca, servicio principal y ciudad | Cerrajeros Madrid 24h + Cerrajero + Madrid | GMB Crush | Triángulo marca-categoría-ciudad activa relevancia local máxima | ← 1.01, 1.16, 1.20 | §7 |
+| 5.03 | Se decide que la Homepage incluya servicios core | 5 servicios principales | GMB Crush | Servicios en Homepage distribuyen autoridad a las SO | ← 1.34–1.38 | §7 |
+| 5.04 | Se decide que la Homepage incluya NAP y CTA | NAP + Llamar ahora | GMB Crush | NAP visible refuerza señales locales y conversión | ← 1.08–1.15, 1.42 | §7 |
 
 ## Bloque 2 — Service Overview Pages
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 5.05 · Paso-05 §8 Service Overview | Se decide que las Service Overview Pages sean no geolocalizadas | GMB Crush | Doctrina GMB Crush | El framework define las SO como pillars temáticos sin ciudad. | /cerrajero/[service]/ |
-| 5.06 · Paso-05 §8 Service Overview | Se decide que Cerrajero urgente tenga Service Overview Page | GMB Crush | Heredado del paso 1.34 | El framework dicta "1 SO por servicio core". Servicio heredado del paso 1.34. | /cerrajero/cerrajero-urgente/ |
-| 5.07 · Paso-05 §8 Service Overview | Se decide que Apertura de puertas tenga Service Overview Page | GMB Crush | Heredado del paso 1.35 | El framework dicta "1 SO por servicio core". Servicio heredado del paso 1.35. | /cerrajero/apertura-puertas/ |
-| 5.08 · Paso-05 §8 Service Overview | Se decide que Cambio de cerraduras tenga Service Overview Page | GMB Crush | Heredado del paso 1.36 | El framework dicta "1 SO por servicio core". Servicio heredado del paso 1.36. | /cerrajero/cambio-cerraduras/ |
-| 5.09 · Paso-05 §8 Service Overview | Se decide que Cambio de bombines tenga Service Overview Page | GMB Crush | Heredado del paso 1.37 | El framework dicta "1 SO por servicio core". Servicio heredado del paso 1.37. | /cerrajero/cambio-bombines/ |
-| 5.10 · Paso-05 §8 Service Overview | Se decide que Instalación de cerraduras de seguridad tenga Service Overview Page | GMB Crush | Heredado del paso 1.38 | El framework dicta "1 SO por servicio core". Servicio heredado del paso 1.38. | /cerrajero/instalacion-cerraduras-seguridad/ |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 5.05 | Se decide que las Service Overview Pages sean no geolocalizadas | /cerrajero/[service]/ | GMB Crush | Sin ciudad capturan intención temática nacional o regional | no | §8 |
+| 5.06 | Se decide que Cerrajero urgente tenga Service Overview Page | /cerrajero/cerrajero-urgente/ | GMB Crush | SO es pillar temático que distribuye autoridad a la LBS | ← 1.34 | §8 |
+| 5.07 | Se decide que Apertura de puertas tenga Service Overview Page | /cerrajero/apertura-puertas/ | GMB Crush | SO es pillar temático que distribuye autoridad a la LBS | ← 1.35 | §8 |
+| 5.08 | Se decide que Cambio de cerraduras tenga Service Overview Page | /cerrajero/cambio-cerraduras/ | GMB Crush | SO es pillar temático que distribuye autoridad a la LBS | ← 1.36 | §8 |
+| 5.09 | Se decide que Cambio de bombines tenga Service Overview Page | /cerrajero/cambio-bombines/ | GMB Crush | SO es pillar temático que distribuye autoridad a la LBS | ← 1.37 | §8 |
+| 5.10 | Se decide que Instalación de cerraduras de seguridad tenga Service Overview Page | /cerrajero/instalacion-cerraduras-seguridad/ | GMB Crush | SO es pillar temático que distribuye autoridad a la LBS | ← 1.38 | §8 |
 
 ## Bloque 3 — Location-Based Service Pages
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 5.11 · Paso-05 §9 LBS | Se decide que las LBS sean convertidores locales | GMB Crush | Doctrina GMB Crush | El framework define las LBS como Main City Converter. | /cerrajero/madrid/[service]/ |
-| 5.12 · Paso-05 §9 LBS | Se decide que Cerrajero urgente en Madrid sea LBS canónica | GMB Crush | Heredado del paso 1.34 | El framework define la estructura LBS canónica. Servicio heredado del paso 1.34. | /cerrajero/madrid/cerrajero-urgente/ |
-| 5.13 · Paso-05 §9 LBS | Se decide que las LBS incluyan servicio + ciudad en H1 y metadata | GMB Crush | Doctrina GMB Crush | El framework define el patrón H1 LBS = [Service] + Main City. | [Service] + Madrid |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 5.11 | Se decide que las LBS sean convertidores locales | /cerrajero/madrid/[service]/ | GMB Crush | LBS captura intención servicio + ciudad y convierte | no | §9 |
+| 5.12 | Se decide que Cerrajero urgente en Madrid sea LBS canónica | /cerrajero/madrid/cerrajero-urgente/ | GMB Crush | LBS Madrid es el principal punto de conversión del cluster | ← 1.34 | §9 |
+| 5.13 | Se decide que las LBS incluyan servicio + ciudad en H1 y metadata | [Service] + Madrid | GMB Crush | Servicio + ciudad en H1 alinea con la query SERP local | ← 1.20 | §9 |
 
 ## Bloque 4 — Additional Category, GeoHub y GeoArticles
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 5.14 · Paso-05 §10 Additional Category | Se decide que Duplicado de llaves sea Additional Category Page | GMB Crush | Heredado del paso 1.18 | El framework define la regla "AC para categoría adicional efectiva". Categoría heredada del paso 1.18. | /cerrajero/madrid/duplicado-llaves/ |
-| 5.15 · Paso-05 §11 GeoHub | Se decide que `/madrid/` sea GeoHub | GMB Crush | Doctrina GMB Crush | El framework define GeoHub = Main City Silo Container. | GeoHub de Madrid |
-| 5.16 · Paso-05 §12 GeoArticle | Se decide que GeoArticles sean boosters semánticos, no landings | GMB Crush | Doctrina GMB Crush | El framework define GeoArticle = Semantic Booster, no convierte. | 15 GeoArticles |
-| 5.17 · Paso-05 §12 GeoArticle | Se decide que GeoArticles enlacen a su LBS y GeoHub | GMB Crush | Doctrina GMB Crush | El framework dicta que cada GeoArticle apoya un LBS específico. | GeoArticle → LBS + /madrid/ |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 5.14 | Se decide que Duplicado de llaves sea Additional Category Page | /cerrajero/madrid/duplicado-llaves/ | GMB Crush | AC da soporte web a categoría GBP sin servicio core | ← 1.18 | §10 |
+| 5.15 | Se decide que `/madrid/` sea GeoHub | GeoHub de Madrid | GMB Crush | GeoHub agrupa la cobertura local de la Main City | ← 1.20 | §11 |
+| 5.16 | Se decide que GeoArticles sean boosters semánticos, no landings | 15 GeoArticles | GMB Crush | Captan tráfico informativo y derivan a la LBS de conversión | no | §12 |
+| 5.17 | Se decide que GeoArticles enlacen a su LBS y GeoHub | GeoArticle → LBS + /madrid/ | GMB Crush | Sin link a LBS el tráfico informativo no convierte | no | §12 |
 
 ## Bloque 5 — Schema
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 5.18 · Paso-05 §19 Schema | Se decide asignar schema por tipo de página | GMB Crush | Doctrina GMB Crush | El framework define el mapa schema canónico por page type. | Organization, WebSite, Service, LocalBusiness, CollectionPage, Article |
-| 5.19 · Paso-05 §19 Schema | Se decide no usar `sameAs` de GBP hasta que exista el GBP | GMB Crush | Doctrina GMB Crush | El framework prohíbe inventar GBP URL ni sameAs antes del Paso 14. | N/A hasta Paso 14 |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 5.18 | Se decide asignar schema por tipo de página | Organization, WebSite, Service, LocalBusiness, CollectionPage, Article | GMB Crush | Schema mismatch confunde a Google sobre la entidad servida | no | §19 |
+| 5.19 | Se decide no usar `sameAs` de GBP hasta que exista el GBP | N/A hasta Paso 14 | GMB Crush | `sameAs` a GBP inexistente rompe validación schema y E-E-A-T | no | §19 |

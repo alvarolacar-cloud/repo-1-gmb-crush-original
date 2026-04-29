@@ -1,65 +1,55 @@
 # Paso 9 — QA Checklist
 
-Fase 2 de trazabilidad del sistema GMB Crush.
+Fase 2 de trazabilidad del sistema GMB Crush — modelo final con `Qué dicta la fuente`.
 
-Fuentes permitidas:
+---
 
-```text
-GMB Crush
-Input humano
-Decisión de diseño
-IA sin respaldo
-IA heredada (paso X.YY)
-```
+## Convención de columnas
 
-Orígenes del dato permitidos:
-
-```text
-Doctrina GMB Crush
-Input humano
-Competidores
-Datos de búsqueda
-Decisión de diseño
-Heredado del paso X.YY
-IA sin respaldo
-```
+- **ID** — identificador único de la fila.
+- **Decisión** — qué se decide.
+- **Ejemplo** — valor concreto en el ejemplo Cerrajeros Madrid 24h.
+- **Fuente** — quién dicta la decisión. Combinaciones con `+` cuando la doctrina dirige a otra fuente.
+- **Qué dicta la fuente** — POR QUÉ / CÓMO / PRINCIPIO. 6-12 palabras. NO repetir Decisión + Ejemplo.
+- **Dato en cascada** — `no` o `← X.YY`.
+- **Funcionamiento** — referencia canónica `§X` del documento de ejecución (`09a-ejecucion-qa-checklist.md`).
 
 ---
 
 ## Bloque 1 — Ejemplo desarrollado
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 9.01 · Paso-09 §7 QA Checklist | Se decide auditar como ejemplo una LBS concreta | GMB Crush | Heredado del paso 1.34 | El framework dicta auditar la LBS canónica como ejemplo. Servicio heredado del paso 1.34. | /cerrajero/madrid/cerrajero-urgente/ |
-| 9.02 · Paso-09 §7 QA Checklist | Se asigna ID de QA | GMB Crush | Doctrina GMB Crush | El framework define los IDs canónicos LBS-001, etc. | LBS-001 |
-| 9.03 · Paso-09 §9 Page Type | Se define el tipo de página auditada | GMB Crush | Doctrina GMB Crush | El framework define los page types canónicos. | Location-Based Service |
-| 9.04 · Paso-09 §9 Servicio | Se define el servicio objetivo | GMB Crush | Heredado del paso 1.34 | El framework dicta auditar el servicio core. Valor heredado del paso 1.34. | Cerrajero urgente |
-| 9.05 · Paso-09 §9 Main City | Se define la Main City | GMB Crush | Heredado del paso 1.20 | El framework dicta usar la Main City como ancla. Valor heredado del paso 1.20. | Madrid |
-| 9.06 · Paso-09 §7 QA Checklist | Se define el estado de QA | IA sin respaldo | IA sin respaldo | Dato del proceso QA inventado para el ejemplo. En producción real el reviewer asigna el estado. | Ready for QA |
-| 9.07 · Paso-09 §7 QA Checklist | Se define reviewer | IA sin respaldo | IA sin respaldo | Dato del proceso QA inventado para el ejemplo. En producción real el reviewer real se asigna. | SEO Manager |
-| 9.08 · Paso-09 §7 QA Checklist | Se define fecha de QA | IA sin respaldo | IA sin respaldo | Dato del proceso QA inventado para el ejemplo. En producción real es timestamp real. | 2026-04-24 |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 9.01 | Se decide auditar como ejemplo una LBS concreta | /cerrajero/madrid/cerrajero-urgente/ | GMB Crush | LBS de Main City concentra todos los checks críticos | ← 1.34 | §7 |
+| 9.02 | Se asigna ID de QA | LBS-001 | GMB Crush | ID permite trazar QA contra la URL Matrix | no | §7 |
+| 9.03 | Se define el tipo de página auditada | Location-Based Service | GMB Crush | Los checks varían según page type, no son universales | no | §9 |
+| 9.04 | Se define el servicio objetivo | Cerrajero urgente | GMB Crush | Sin servicio objetivo no se puede validar enfoque temático | ← 1.34 | §9 |
+| 9.05 | Se define la Main City | Madrid | GMB Crush | Sin ciudad no se puede validar la señal local de la LBS | ← 1.20 | §9 |
+| 9.06 | Se define el estado de QA | Ready for QA | IA sin respaldo | Estado del proceso real lo asigna el reviewer humano | no | §7 |
+| 9.07 | Se define reviewer | SEO Manager | IA sin respaldo | Reviewer real depende de la estructura de equipo del cliente | no | §7 |
+| 9.08 | Se define fecha de QA | 2026-04-24 | IA sin respaldo | Timestamp real depende del momento de ejecución del QA | no | §7 |
 
 ## Bloque 2 — Checks obligatorios
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 9.09 · Paso-09 §16 Internal Links | Se decide validar parent page | GMB Crush | Doctrina GMB Crush | El framework dicta que LBS debe enlazar a su Service Overview padre. | /cerrajero/cerrajero-urgente/ |
-| 9.10 · Paso-09 §16 Internal Links | Se decide validar GeoHub | GMB Crush | Doctrina GMB Crush | El framework dicta que LBS debe enlazar al GeoHub Main City. | /madrid/ |
-| 9.11 · Paso-09 §16 Internal Links | Se decide validar servicios relacionados | GMB Crush | Doctrina GMB Crush | El framework dicta que LBS debe enlazar a otras LBS de la misma ciudad. | Apertura de puertas, Cambio de cerraduras |
-| 9.12 · Paso-09 §16 Internal Links | Se decide validar GeoArticle relacionado | GMB Crush | Doctrina GMB Crush | El framework dicta que LBS debe enlazar a GeoArticle del mismo servicio. | /madrid/cuanto-cuesta-un-cerrajero-urgente/ |
-| 9.13 · Paso-09 §15 Schema | Se decide validar LocalBusiness schema | GMB Crush | Doctrina GMB Crush | El framework dicta que LBS requiere LocalBusiness schema. | Required |
-| 9.14 · Paso-09 §15 Schema | Se decide validar BreadcrumbList | GMB Crush | Doctrina GMB Crush | El framework dicta que todas las páginas requieren BreadcrumbList. | Required |
-| 9.15 · Paso-09 §15 Schema | Se decide validar FAQPage | GMB Crush | Doctrina GMB Crush | El framework dicta que LBS típicamente incluye FAQPage. | Required |
-| 9.16 · Paso-09 §15 Schema | Se decide validar Speakable | GMB Crush | Doctrina GMB Crush | El framework dicta schema Speakable para asistentes de voz. | Required |
-| 9.17 · Paso-09 §26 NAP | Se decide validar NAP | GMB Crush | Doctrina GMB Crush | El framework dicta que el NAP del Paso 1 debe ser consistente. | NAP del Paso 1 |
-| 9.18 · Paso-09 §18 CTA | Se decide validar CTA | GMB Crush | Doctrina GMB Crush | El framework dicta CTA presente en cada página. | CTA presente |
-| 9.19 · Paso-09 §11 No falsa ubicación | Se decide validar no falsa ubicación | GMB Crush | Doctrina GMB Crush | El framework define la regla "no fake location". | No oficina falsa en zonas |
-| 9.20 · Paso-09 §17 Anti-canibalización | Se decide validar no canibalización | GMB Crush | Doctrina GMB Crush | El framework define la regla "una intención = una URL". | No duplicate intent |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 9.09 | Se decide validar parent page | /cerrajero/cerrajero-urgente/ | GMB Crush | Sin link a SO se rompe la jerarquía servicio → categoría | no | §16 |
+| 9.10 | Se decide validar GeoHub | /madrid/ | GMB Crush | Sin link a GeoHub se rompe el cluster geográfico | no | §16 |
+| 9.11 | Se decide validar servicios relacionados | Apertura de puertas, Cambio de cerraduras | GMB Crush | Cross-links activan cluster temático y reducen orfandad | no | §16 |
+| 9.12 | Se decide validar GeoArticle relacionado | /madrid/cuanto-cuesta-un-cerrajero-urgente/ | GMB Crush | Sin link a GeoArticle el flujo informativo no llega a LBS | no | §16 |
+| 9.13 | Se decide validar LocalBusiness schema | Required | GMB Crush | LocalBusiness es la entidad clave para activar Local Pack | no | §15 |
+| 9.14 | Se decide validar BreadcrumbList | Required | GMB Crush | BreadcrumbList mejora CTR en SERP y explicita jerarquía | no | §15 |
+| 9.15 | Se decide validar FAQPage | Required | GMB Crush | FAQPage captura rich results y resuelve dudas pre-conversión | no | §15 |
+| 9.16 | Se decide validar Speakable | Required | GMB Crush | Speakable activa búsqueda por voz en asistentes locales | no | §15 |
+| 9.17 | Se decide validar NAP | NAP del Paso 1 | GMB Crush | NAP inconsistente rompe verificación local en Google | ← 1.08–1.15 | §26 |
+| 9.18 | Se decide validar CTA | CTA presente | GMB Crush | Sin CTA visible la página no convierte tráfico cualificado | no | §18 |
+| 9.19 | Se decide validar no falsa ubicación | No oficina falsa en zonas | GMB Crush | Falsa ubicación viola guidelines y dispara penalizaciones | no | §11 |
+| 9.20 | Se decide validar no canibalización | No duplicate intent | GMB Crush | Dos URLs por intención dividen señales y pierden ranking | no | §17 |
 
 ## Bloque 3 — Inventario QA
 
-| ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Origen del dato | Funcionamiento de la fuente | Decisión en el ejemplo |
-|---|---|---|---|---|---|
-| 9.21 · Paso-09 §34.1 QA Status | Se decide que el inventario SEO base tenga QA Status | GMB Crush | Doctrina GMB Crush | El framework dicta que cada URL del inventario debe pasar QA antes de publicar. | 28 URLs |
-| 9.22 · Paso-09 §34.1 QA Status | Se decide que `/contacto/` también pase QA operativo | GMB Crush | Doctrina GMB Crush | El framework dicta que la página auxiliar también requiere QA. | Página auxiliar |
-| 9.23 · Paso-09 §34.1 QA Status | Se decide que el resto de URLs queden Pending hasta ejecución real | GMB Crush | Doctrina GMB Crush | El framework define QA Pending hasta ejecución por reviewer. | QA Pending |
+| ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento |
+|---|---|---|---|---|---|---|
+| 9.21 | Se decide que el inventario SEO base tenga QA Status | 28 URLs | GMB Crush | Sin QA por URL se publica sin red de seguridad | no | §34.1 |
+| 9.22 | Se decide que `/contacto/` también pase QA operativo | Página auxiliar | GMB Crush | Contacto sin QA puede romper el flujo de conversión | no | §34.1 |
+| 9.23 | Se decide que el resto de URLs queden Pending hasta ejecución real | QA Pending | GMB Crush | Pending fuerza al reviewer a ejecutar antes de publicar | no | §34.1 |
