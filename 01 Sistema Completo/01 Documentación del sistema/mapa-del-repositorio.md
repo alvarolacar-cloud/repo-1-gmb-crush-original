@@ -48,17 +48,23 @@ El Bloque 5 tiene 4 archivos meta en su raíz:
 - `indice-capa-salida-mercado.md` — índice corto con líneas por archivo.
 - `VALIDACION-PACK-COMPLETO.md` — verificación de archivos incluidos y conteo de decisiones.
 
-### Otros archivos en 01 Sistema Completo
-
-- `README.md` — presentación general del sistema.
-- `indice-tematico.md` — índice temático cruzado.
-
 ### Carpetas auxiliares
 
 | Carpeta | Qué contiene |
 |---|---|
-| `01 Documentación del sistema/` | Catálogo de fuentes, este mapa del repositorio, reglas no negociables y reglas relevantes del sistema |
+| `01 Documentación del sistema/` | Catálogo de fuentes, mapa del repositorio, reglas no negociables, reglas relevantes del sistema, README general y índice temático |
 | `Taller/` | Borradores y versiones intermedias de decisiones/fuentes (V1 y V2). No son canónicos. |
+
+### Documentación del sistema — archivos
+
+Dentro de `01 Documentación del sistema/`:
+
+- `README.md` — presentación general del sistema.
+- `indice-tematico.md` — índice temático cruzado.
+- `mapa-del-repositorio.md` — este documento.
+- `catalogo-de-fuentes.md` — modelo de Fuentes y Dato en cascada para los archivos `Xb`.
+- `reglas-no-negociables.md` — 28 reglas estructurales del framework.
+- `reglas-relevantes-sistema-gmb-crush.md` — referencia rápida de reglas operativas.
 
 ---
 
