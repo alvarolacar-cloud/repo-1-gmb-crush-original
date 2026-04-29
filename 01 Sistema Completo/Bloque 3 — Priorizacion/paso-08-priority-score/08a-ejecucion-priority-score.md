@@ -233,6 +233,24 @@ cerrajero urgente en Madrid = 5
 La intención comercial manda sobre contenido informativo.
 ```
 
+### §9.6 Método (medir Search Intent con keyword research)
+
+```text
+1. Ejecutar keyword research sobre la query principal de la URL
+   (ej. "cerrajero urgente Madrid" para una LBS).
+2. Anotar volumen mensual y modificadores que aparecen en el listado:
+   - Modificadores transaccionales: precio, cerca, urgente, 24h, ya, ahora.
+   - Modificadores informacionales: cómo, qué, cuánto, cuándo, por qué.
+3. Asignar el score según predominio:
+   - 5: query principal + ≥60% modificadores transaccionales.
+   - 4: query principal + 40-60% transaccional.
+   - 3: mezcla equilibrada (40-60%/40-60%).
+   - 2: query con 60-80% modificadores informacionales.
+   - 1: query puramente informacional (cómo funciona, qué es, etc.).
+4. Verificar coherencia con page type: LBS y AC ≥ 4. SO entre 3-4.
+   GeoArticle entre 1-3.
+```
+
 ## §10 Regla 4 — GBP Category Relevance
 
 ### §10.1 Explicación
@@ -263,6 +281,27 @@ Cerrajero urgente = 5; Duplicado de llaves = 4
 
 ```text
 La web debe respaldar el GBP.
+```
+
+### §10.6 Método (medir GBP Category Relevance con Local Pack)
+
+```text
+1. Identificar la categoría que cubre la URL evaluada:
+   - Homepage / GeoHub → Primary Category Planned (paso-01 §10).
+   - Service Overview / LBS → core service que cubre (paso-01 §14).
+   - Additional Category → adicional efectiva (paso-01 §11).
+   - GeoArticle → la categoría del LBS al que apoya.
+2. Buscar en Google Maps "[categoría] [main city]" y abrir los 5
+   perfiles GBP del Local Pack.
+3. Comprobar si la categoría (primaria o adicional) aparece declarada
+   en los perfiles del Local Pack:
+   - 5: aparece como Primary Category en ≥3 de 5 (categoría dominante).
+   - 4: aparece como Additional Category en ≥3 de 5.
+   - 3: aparece de forma irregular (1-2 perfiles).
+   - 2: solo aparece en perfiles fuera del top.
+   - 1: no aparece en ningún perfil del Local Pack del sector.
+4. Score 1-2 indica que la página no respalda categoría real del GBP.
+   Replantear el page type o la URL.
 ```
 
 ## §11 Regla 5 — Local Relevance
@@ -327,6 +366,25 @@ Competidores con pages genéricas = 4
 
 ```text
 Donde la competencia es débil, se acelera.
+```
+
+### §12.6 Método (evaluar Competition Gap con SERP analysis)
+
+```text
+1. Buscar la query principal de la URL en Google sin login (ej.
+   "cerrajero urgente Madrid").
+2. Analizar las 10 primeras páginas orgánicas (excluir Local Pack y Ads):
+   - ¿Son LBS dedicadas con servicio + ciudad en H1?
+   - ¿Son SO genéricas sin ciudad?
+   - ¿Son directorios (Yelp, Páginas Amarillas, etc.)?
+   - ¿Son blogs con thin content?
+3. Asignar el score:
+   - 5: ≤2 LBS dedicadas + resto directorios o thin content (gap fuerte).
+   - 4: 3-4 LBS dedicadas + resto débil (gap moderado).
+   - 3: 5-6 LBS dedicadas (competencia normal).
+   - 2: 7-8 LBS dedicadas con buen on-page (competencia alta).
+   - 1: ≥9 LBS profesionales con E-E-A-T fuerte (gap inexistente).
+4. Score 4-5 acelera publicación. Score 1-2 fuerza estrategia long-tail.
 ```
 
 ## §13 Regla 7 — Conversion Urgency

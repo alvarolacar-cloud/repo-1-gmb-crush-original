@@ -935,6 +935,29 @@ Sí, atendemos servicios de cerrajería urgente en Madrid y zonas de cobertura l
 El Q&A del GBP debe reforzar servicio real, cobertura real y confianza.
 ```
 
+### §23.6 Método (extraer Q&A reales)
+
+```text
+1. GBP Auto-Suggest: empezar a escribir en Google Search "[servicio]
+   [main city]" y anotar las sugerencias automáticas que aparecen.
+   Estas son las dudas reales que la gente busca.
+2. People Also Ask (PAA): hacer la búsqueda principal en Google y
+   abrir el bloque "La gente también pregunta". Anotar 5-10 preguntas
+   relevantes para servicios del cliente.
+3. Keyword research informacional: filtrar queries con modificadores
+   de pregunta (cómo, qué, cuándo, cuánto, atendéis, hacéis) que
+   tengan volumen ≥ 10/mes.
+4. Reseñas y Q&A de competidores: revisar 3-5 GBP de competidores
+   top y leer las preguntas que ya tienen respondidas. Identificar
+   patrones recurrentes.
+5. Filtrar y priorizar:
+   - Eliminar preguntas que no apliquen al cliente (no atiende esa zona,
+     no ofrece ese servicio).
+   - Priorizar 3-5 preguntas que cubran objeciones comerciales reales
+     (cobertura, precio, urgencia, garantía).
+6. Redactar respuestas alineadas con copy de Homepage/LBS y NAP.
+```
+
 ## §24 Regla operativa — Planificar Google Posts conectados con páginas web
 
 ### §24.1 Explicación
@@ -969,6 +992,31 @@ https://www.cerrajerosmadrid24h.com/cerrajero/madrid/cerrajero-urgente/
 
 ```text
 Los posts del GBP deben apoyar páginas web reales y objetivos comerciales claros.
+```
+
+### §24.6 Método (extraer topics de Google Posts)
+
+```text
+1. Listar las URLs prioritarias del cluster con score Priority ≥ P2
+   (paso-08): Homepage, las 5 LBS, AC, GeoHub. Cada URL es candidata
+   a tener un post asociado.
+2. Para cada URL candidata, hacer keyword research transaccional:
+   - Anotar las queries top con volumen ≥ 30/mes y intent comercial
+     (no informacional).
+   - Excluir queries que canibalicen con la página (intent informativo
+     largo).
+3. Por cada URL prioritaria, generar 1-3 posts cubriendo angles distintos:
+   - Servicio principal (lo que hace).
+   - Beneficio diferencial (por qué con este negocio).
+   - Llamada a acción local (urgencia, cobertura).
+4. Cada post lleva la URL de la página soporte como destino:
+   - Post sobre servicio core → URL de la LBS.
+   - Post sobre cobertura → URL del GeoHub.
+   - Post sobre categoría adicional → URL de la AC.
+5. Calendario: 1 post nuevo por semana mínimo. Variar el angle para
+   no duplicar contenido.
+6. Cada 4 semanas revisar GSC: si una URL recibe poco tráfico orgánico,
+   reforzarla con post adicional.
 ```
 
 ## §25 Regla operativa — Evitar duplicados de GBP

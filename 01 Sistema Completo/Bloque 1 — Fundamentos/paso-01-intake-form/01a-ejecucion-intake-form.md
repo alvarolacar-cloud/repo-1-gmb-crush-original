@@ -372,6 +372,19 @@ Cerrajero → cerrajero
 La categoría principal debe verse reflejada en homepage, servicios y páginas locales.
 ```
 
+### §10.6 Método (extraer de competidores)
+
+```text
+1. Buscar en Google Maps "[servicio principal] [main city]" sin login.
+2. Anotar la categoría primaria declarada por los 5 negocios mejor
+   posicionados en el Local Pack.
+3. Seleccionar la categoría que más se repite (>3 de 5) como Primary
+   Category Planned. Si hay empate, priorizar la más amplia (categoría
+   madre del catálogo GBP).
+4. Validar contra el catálogo oficial de GBP. Si la categoría no existe
+   exactamente, escoger la más próxima del catálogo.
+```
+
 ## §11 Planned Additional GBP Categories
 
 ### §11.1 Explicación
@@ -402,6 +415,20 @@ Servicio de cerrajería de urgencia cubierta por Cerrajero urgente; Servicio de 
 
 ```text
 Cada categoría adicional se consolida o se convierte en página, pero nunca se duplica.
+```
+
+### §11.6 Método (extraer de competidores)
+
+```text
+1. Tras escoger la Primary Category (§10), revisar las categorías
+   adicionales declaradas por los mismos 5 competidores top.
+2. Listar todas las categorías secundarias que aparecen en al menos
+   2 de los 5 competidores.
+3. Filtrar las que el cliente realmente ofrece (cruce con servicios
+   reales). Las que no ofrece se descartan.
+4. Aplicar la regla de consolidación (§11.5): si una categoría adicional
+   coincide con un core service, se marca como cubierta. Si no, se marca
+   como "necesita página propia".
 ```
 
 ## §12 Main City
@@ -500,6 +527,22 @@ Cerrajero urgente, Apertura de puertas, Cambio de cerraduras, Cambio de bombines
 Cada core service importante debe tener página propia.
 ```
 
+### §14.6 Método (extraer de competidores)
+
+```text
+1. Buscar en Google Maps "[categoría principal] [main city]" y abrir
+   los 5 perfiles GBP mejor posicionados del Local Pack.
+2. En cada perfil, abrir la sección "Servicios" del GBP y listar los
+   servicios declarados.
+3. Contar la frecuencia de cada servicio entre los 5 competidores.
+   Seleccionar los 5 servicios más frecuentes (top 5 por frecuencia).
+4. Cruzar con la oferta real del cliente. Si el cliente no ofrece uno
+   de los servicios top, sustituirlo por el siguiente más frecuente
+   que sí ofrezca.
+5. Si hay empate de frecuencia, priorizar el servicio con más volumen
+   de búsqueda local (cruce con keyword research).
+```
+
 ## §15 Local Coverage Areas
 
 ### §15.1 Explicación
@@ -530,6 +573,21 @@ Almagro, Chamberí, Salamanca, Retiro
 
 ```text
 Las áreas de cobertura refuerzan el contenido; no crean páginas automáticamente.
+```
+
+### §15.6 Método (extraer Candidate LCAs de competidores)
+
+```text
+1. Tras fijar las Direct LCAs (que salen del NAP, §15 y §34), revisar
+   las áreas de servicio declaradas por los 3-5 competidores top en
+   Google Maps.
+2. Listar todas las zonas (barrios, distritos, municipios) que
+   aparecen en al menos 2 competidores y NO están ya en Direct.
+3. Para cada zona candidata, aplicar el test de coherencia GEO 3/6
+   (§34). Si pasa 3 de 6 criterios, queda como Candidate validable.
+   Si no, se descarta.
+4. Las Candidate aprobadas entran como contenido en LBS, GeoHub y
+   GeoArticles. Solo generan URL si pasan a Approved Expansion (§16).
 ```
 
 ## §16 Approved Expansion Areas
@@ -626,6 +684,21 @@ Reviews + years + certifications + guarantees
 
 ```text
 Los trust signals deben ser reales y reutilizables.
+```
+
+### §18.6 Método (benchmark contra competidores)
+
+```text
+1. Revisar las homepages y LBS de los 5 competidores top del Local Pack.
+2. Listar los trust signals que aparecen en al menos 3 de los 5
+   competidores (el "estándar" del sector).
+3. Listar los trust signals que aparecen en 1 o 2 competidores (los
+   "diferenciadores" que pocos usan).
+4. Confirmar con el cliente cuáles puede acreditar como reales (años,
+   certificaciones, garantías, equipo cualificado). Filtrar los que
+   no puede demostrar.
+5. Output: 3-5 trust signals que sean del estándar del sector + 1-2
+   diferenciadores acreditables.
 ```
 
 ## §19 NAP completo y rastreable — Regla operativa 1
