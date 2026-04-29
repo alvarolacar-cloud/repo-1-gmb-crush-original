@@ -1,6 +1,6 @@
 # Mapa del repositorio
 
-Última actualización: 28 abril 2026
+Última actualización: 29 abril 2026
 
 ---
 
@@ -35,7 +35,7 @@ El sistema GMB Crush completo: 19 pasos en 6 bloques + documentación + reglas.
 Cada carpeta de paso tiene 2 archivos canónicos:
 
 - `XXa-ejecucion-{nombre}.md` — reglas, fórmulas, ejemplo ejecutado.
-- `XXb-decisiones-tomadas-y-fuentes.md` — cada decisión con su fuente del catálogo de 10 fuentes.
+- `XXb-decisiones-tomadas-y-fuentes.md` — cada decisión con su fuente, qué dicta y dato en cascada (modelo final con 7 columnas).
 
 Excepción: el Paso 15 tiene un tercer archivo `15c-content-pack-por-url.md` con el contenido final por URL listo para construcción.
 
@@ -57,9 +57,8 @@ El Bloque 5 tiene 4 archivos meta en su raíz:
 
 | Carpeta | Qué contiene |
 |---|---|
-| `Documentación del sistema/` | Catálogo de fuentes (reglas de trazabilidad) y este mapa del repositorio |
-| `Reglas del sistema/` | Reglas operativas del framework GMB Crush |
-| `Carpeta de trabajo/` | Borradores y versiones intermedias de decisiones/fuentes (V1 y V2). No son canónicos. |
+| `01 Documentación del sistema/` | Catálogo de fuentes, este mapa del repositorio, reglas no negociables y reglas relevantes del sistema |
+| `Taller/` | Borradores y versiones intermedias de decisiones/fuentes (V1 y V2). No son canónicos. |
 
 ---
 
@@ -85,5 +84,6 @@ Versiones anteriores del sistema y ejemplos ejecutados con otros negocios. No so
 | Decisiones trazadas (pasos 1–14) | 334 |
 | Decisiones trazadas (pasos 15–19) | 160 |
 | Total decisiones | 494 |
-| Fuentes en el catálogo | 10 |
-| IA sin respaldo puro en Bloque 5 | 0 |
+| Fuentes en el catálogo | 6 únicas + 4 combinaciones (10 valores) |
+| Filas con cascada `← X.YY` | 199 (~40%) |
+| Filas pendientes de validación | 68 (~14%) |

@@ -1,153 +1,169 @@
-# Decisiones y fuentes — GMB Crush V6.4
+# Catálogo de fuentes — GMB Crush V6.4
 
-Fase 2 de trazabilidad del sistema GMB Crush. Un archivo por paso, asignando a cada decisión su fuente real.
-
-Este documento usa la taxonomía V3 ampliada con dos fuentes adicionales:
-
-- `IA heredada (paso X.YY)` — para cascadas: cuando la decisión actual es patrón GMB pero el valor viene de una IA generada en otro paso.
-- `Decisión de diseño` — para elecciones del operador o agencia que no provienen del cliente, framework, datos de búsqueda ni competidores.
-
----
-
-## Archivos por paso
-
-| Paso | Archivo |
-|---|---|
-| 01 — Intake Form | [01-fuentes-intake-form.md](01-fuentes-intake-form.md) |
-| 02 — Fórmula maestra | [02-fuentes-formula-maestra-arquitectura.md](02-fuentes-formula-maestra-arquitectura.md) |
-| 03 — Matriz base | [03-fuentes-matriz-base.md](03-fuentes-matriz-base.md) |
-| 04 — URL Rules | [04-fuentes-url-rules.md](04-fuentes-url-rules.md) |
-| 05 — Page Type Rules | [05-fuentes-page-type-rules.md](05-fuentes-page-type-rules.md) |
-| 06 — Estructura contenido y LCA | [06-fuentes-estructura-contenido-areas-cobertura-local.md](06-fuentes-estructura-contenido-areas-cobertura-local.md) |
-| 07 — Internal Linking Rules | [07-fuentes-internal-linking-rules.md](07-fuentes-internal-linking-rules.md) |
-| 08 — Priority Score | [08-fuentes-priority-score.md](08-fuentes-priority-score.md) |
-| 09 — QA Checklist | [09-fuentes-qa-checklist.md](09-fuentes-qa-checklist.md) |
-| 10 — Producción en fases | [10-fuentes-produccion-en-fases.md](10-fuentes-produccion-en-fases.md) |
-| 11 — Pseudocódigo | [11-fuentes-pseudocodigo-sistema.md](11-fuentes-pseudocodigo-sistema.md) |
-| 12 — Master Prompt | [12-fuentes-master-prompt.md](12-fuentes-master-prompt.md) |
-| 13 — Sistema final operativo | [13-fuentes-sistema-final-operativo.md](13-fuentes-sistema-final-operativo.md) |
-| 14 — GBP Creation & Website Alignment | [14-fuentes-gbp-creation-website-alignment.md](14-fuentes-gbp-creation-website-alignment.md) |
+Fase 2 de trazabilidad del sistema GMB Crush. Un archivo por paso, asignando a cada decisión su fuente real, su dato en cascada y la regla concreta que aplica.
 
 ---
 
 ## Estructura de cada tabla
 
-Cada archivo usa 5 columnas:
+Cada archivo `XXb-decisiones-tomadas-y-fuentes.md` usa **7 columnas**:
 
+```text
+ID | Decisión | Ejemplo | Fuente | Qué dicta la fuente | Dato en cascada | Funcionamiento
 ```
-ID · Ref. canónica | Decisión que se toma | Fuente para la decisión | Funcionamiento de la fuente | Decisión en el ejemplo
-```
+
+- **ID** — identificador único de la fila (`X.YY`).
+- **Decisión** — qué se decide.
+- **Ejemplo** — valor concreto en el ejemplo Cerrajeros Madrid 24h.
+- **Fuente** — quién dicta la decisión. Combinaciones con `+` cuando la doctrina dirige a otra fuente.
+- **Qué dicta la fuente** — POR QUÉ / CÓMO / PRINCIPIO. 6-12 palabras. NO repetir Decisión + Ejemplo.
+- **Dato en cascada** — `no` si el valor nace en esta fila; `← X.YY` (o `← X.YY, Z.ZZ`) si cascadea de filas previas.
+- **Funcionamiento** — referencia canónica `§X` del documento ejecutable del paso (`XXa-ejecucion-...md`).
 
 ---
 
-## Catálogo de fuentes — dos dimensiones ortogonales
+## Catálogo de Fuentes
 
-Cada decisión se rellena con **dos columnas independientes**:
+Hay **6 fuentes** y **4 combinaciones permitidas** con `+`. Total: 10 valores posibles en la columna Fuente.
 
-- **Fuente para la decisión** — quién dicta la decisión (la doctrina, el cliente, el operador, la IA).
-- **Origen del dato** — de dónde sale el valor concreto que aparece en la decisión.
+### Fuentes únicas
 
-Ambas dimensiones son ortogonales: la mayoría de decisiones tienen Fuente = GMB Crush porque la doctrina dicta cómo se hace algo, pero el Origen del dato puede ser distinto (competidores, cliente, búsqueda, herencia, etc.).
-
-### Tabla 1 — Fuente para la decisión (5 valores)
-
-Quién dicta la decisión.
-
-| # | Fuente | Frase fija de funcionamiento |
+| # | Fuente | Cuándo aplica |
 |---|---|---|
-| 1 | GMB Crush | El framework define esta regla. Se aplica igual en todos los proyectos. La doctrina dicta cómo se hace; el dato concreto puede venir de varios sitios (ver Origen del dato). |
-| 2 | Input humano | El cliente proporciona este dato directamente sin filtro del framework. El sistema lo recoge sin transformación. |
-| 3 | Decisión de diseño | El operador o agencia toma esta decisión basándose en criterios de UX, conversión y mejores prácticas del sector. Está cerrada salvo que el cliente solicite cambio o las métricas justifiquen revisión. |
-| 4 | IA sin respaldo | Caso extremo: la decisión no sigue ninguna doctrina ni input externo; la IA decide libremente. Solo aplica a placeholders puros del ejemplo (datos de proceso QA, etc.). |
-| 5 | IA heredada (paso X.YY) | La fuente que dicta se hereda del paso de origen citado. La cita del paso es obligatoria. |
+| 1 | GMB Crush | La doctrina dicta directamente la decisión y aporta el valor (regla canónica, fórmula, default). |
+| 2 | Input humano | El cliente proporciona el valor directamente, sin filtro doctrinal. |
+| 3 | Decisión de diseño | El operador o agencia elige el valor con criterios de UX, conversión o legibilidad. |
+| 4 | Competidores | Excepcional — solo si la decisión nace exclusivamente del análisis competitivo sin doctrina detrás. |
+| 5 | Datos de búsqueda | Excepcional — solo si la decisión nace exclusivamente del keyword research sin doctrina detrás. |
+| 6 | IA sin respaldo | La IA inventa el valor. Solo aplica a placeholders del ejemplo (datos del proceso QA, etc.). Pendiente sustituir por dato real antes de producción. |
 
-### Tabla 2 — Origen del dato (6 valores)
+### Combinaciones permitidas
 
-De dónde sale el valor concreto.
-
-| # | Origen del dato | Significa |
+| # | Fuente combinada | Cuándo aplica |
 |---|---|---|
-| 1 | Doctrina GMB Crush | El valor está fijado por el framework (regla, default, patrón). No es input externo. |
-| 2 | Input humano | El cliente proporciona el valor concreto. |
-| 3 | Competidores | El valor sale de análisis SERP / Local Pack. Si todavía no se ha ejecutado, queda como pendiente. |
-| 4 | Datos de búsqueda | El valor sale de keyword research (volumen, intención, dificultad). Si todavía no se ha ejecutado, queda como pendiente. |
-| 5 | Decisión de diseño | El operador eligió el valor por criterios de UX/conversión (extracción de web de referencia, paleta visual, CTA, layouts). |
-| 6 | Heredado del paso X.YY | El valor cascadea de otra decisión. La cita del paso de origen es obligatoria. |
-| 7 | IA sin respaldo | Valor inventado para el ejemplo sin investigación. Debe sustituirse por dato real antes de producción. |
-
-### Por qué dos columnas y no una
-
-Las dos columnas responden a preguntas distintas:
-
-- "¿Quién dicta esta decisión?" → la doctrina, el cliente o el operador. Eso va en **Fuente**.
-- "¿De dónde sale el valor concreto que aparece?" → competidores, búsqueda, cliente, herencia o IA. Eso va en **Origen del dato**.
-
-Ejemplo: para el servicio core "Cerrajero urgente" (1.34):
-
-- **Fuente:** GMB Crush (la doctrina dicta cómo identificar core services).
-- **Origen del dato:** Competidores (el valor concreto debe venir del Local Pack del sector).
-
-Antes mezclábamos las dos en una sola columna y salían combinaciones raras como `GMB Crush + IA sin respaldo`. Con dos columnas, cada celda tiene una fuente y un origen claros y separados.
-
-### Filtrado de tareas
-
-- **Decisiones cerradas:** Origen del dato ∈ {Doctrina GMB Crush, Input humano, Decisión de diseño, Heredado de un paso ya cerrado}.
-- **Decisiones pendientes:** Origen del dato ∈ {Competidores (pendiente), Datos de búsqueda (pendiente), IA sin respaldo, Heredado de un paso pendiente}.
-
-La columna **Fuente** no se usa para filtrar tareas — todas las decisiones GMB Crush son canónicas. Lo que pendiente o cerrada es la columna **Origen del dato**.
+| 7 | GMB Crush + Competidores | La doctrina dicta tomar la decisión y dirige a competidores para obtener el valor. Aplica a: servicios core, categorías GBP, candidate LCAs, trust signals, GBP Category Relevance, Competition Gap. |
+| 8 | GMB Crush + Datos de búsqueda | La doctrina dicta tomar la decisión y dirige a keyword research para obtener el valor. Aplica a: topics GeoArticles, Q&A del GBP, Google Posts, Search Intent. |
+| 9 | GMB Crush + IA sin respaldo | La doctrina dicta la estructura/regla y la IA genera el valor concreto pendiente de validar. Aplica a: copy redactado, argumentos por sección, entidades por validar. |
+| 10 | GMB Crush + Input humano | La doctrina dicta tomar la decisión y dirige al cliente para obtener el dato. Caso raro — ej. Revenue Value en Priority Score. |
 
 ---
 
-## Cómo distinguir IA heredada de las combinaciones con IA
+## Reglas de uso
 
-Las tres categorías que contienen "IA" se aplican distinto según dónde se genera el valor IA:
+### Regla 1 — Fuente única vs combinada
 
-| Si la IA se genera... | Fuente correcta |
-|---|---|
-| en este mismo paso, sola | `IA sin respaldo` |
-| en este mismo paso, junto a regla GMB | `GMB Crush + IA sin respaldo` |
-| en este mismo paso, junto a dato del cliente | `Input humano + IA sin respaldo` |
-| en otro paso (cascada) | `IA heredada (paso X.YY)` |
+```text
+Una sola fuente   = quien la pone es quien la dicta y aporta el valor.
+Fuente combinada  = la doctrina dicta tomar la decisión y dirige a otra fuente para obtener el valor.
+```
 
-Cuando la decisión es "IA heredada", la cita del paso origen es obligatoria entre paréntesis.
+### Regla 2 — La doctrina manda, las otras fuentes alimentan
+
+```text
+GMB Crush dicta estructuras, page types, patrones URL, schema, internal linking,
+QA, redacción y reglas de no invención. Competidores y Datos de búsqueda no
+dictan la arquitectura — validan valores concretos.
+```
+
+### Regla 3 — Cascadas
+
+```text
+Si una decisión usa un servicio, categoría, topic, score o claim heredado,
+la columna Dato en cascada debe señalar la fila origen con `← X.YY`.
+Si combina varias filas: `← X.YY, Z.ZZ`. Si es un rango: `← X.YY–X.ZZ`.
+```
+
+### Regla 4 — `Qué dicta la fuente` no repite la Decisión
+
+```text
+Antes de aceptar una celda, comprueba:
+1. ¿Aporta info que NO está en Decisión + Ejemplo?
+2. ¿Responde a una de estas tres preguntas?
+   - POR QUÉ: la razón / motivo operativo
+   - CÓMO:    la fórmula / método / regla concreta
+   - PRINCIPIO: el concepto subyacente
+3. ¿Cumple 6-12 palabras (máx 12, hard cap 15)?
+```
+
+### Regla 5 — Claims no publicables sin validar
+
+```text
+Rangos numéricos (precios, tiempos, garantías), marcas concretas, normativa
+concreta, métricas de cobertura ("intervenimos con frecuencia") no son
+publicables salvo que haya input humano, keyword research, competidores o
+documentación real detrás.
+```
 
 ---
 
 ## Filtrado de tareas
 
-- **Pendientes de validación:** cualquier celda cuya fuente contenga `IA sin respaldo`, `IA heredada`, `Datos de búsqueda` o `Competidores`.
-- **Cerradas:** `GMB Crush`, `Input humano`, `Input humano + GMB Crush`, `Decisión de diseño`.
+```text
+Cerradas:    Fuente ∈ {GMB Crush solo, Input humano, Decisión de diseño}
+             Y Dato en cascada apunta a fila ya cerrada (o `no`).
+
+Pendientes:  Fuente contiene `Competidores`, `Datos de búsqueda` o `IA sin respaldo`.
+             O Dato en cascada apunta a fila pendiente.
+```
 
 ---
 
-## Resumen del ejemplo Cerrajeros Madrid 24h (334 decisiones)
+## Archivos por paso (19 archivos · 494 decisiones)
+
+| Bloque | Paso | Archivo | Filas |
+|---|---|---|---:|
+| 1 — Fundamentos | 01 — Intake Form | `paso-01-intake-form/01b-decisiones-tomadas-y-fuentes.md` | 47 |
+| 1 — Fundamentos | 02 — Fórmula maestra | `paso-02-formula-maestra-arquitectura/02b-decisiones-tomadas-y-fuentes.md` | 28 |
+| 1 — Fundamentos | 03 — Matriz base | `paso-03-matriz-base/03b-decisiones-tomadas-y-fuentes.md` | 35 |
+| 2 — Arquitectura | 04 — URL Rules | `paso-04-url-rules/04b-decisiones-tomadas-y-fuentes.md` | 18 |
+| 2 — Arquitectura | 05 — Page Type Rules | `paso-05-page-type-rules/05b-decisiones-tomadas-y-fuentes.md` | 19 |
+| 2 — Arquitectura | 06 — Estructura contenido + LCAs | `paso-06-estructura-contenido-areas-cobertura-local/06b-decisiones-tomadas-y-fuentes.md` | 13 |
+| 2 — Arquitectura | 07 — Internal Linking | `paso-07-internal-linking-rules/07b-decisiones-tomadas-y-fuentes.md` | 18 |
+| 3 — Priorización | 08 — Priority Score | `paso-08-priority-score/08b-decisiones-tomadas-y-fuentes.md` | 15 |
+| 3 — Priorización | 09 — QA Checklist | `paso-09-qa-checklist/09b-decisiones-tomadas-y-fuentes.md` | 23 |
+| 3 — Priorización | 10 — Producción en fases | `paso-10-produccion-en-fases/10b-decisiones-tomadas-y-fuentes.md` | 17 |
+| 4 — Automatización | 11 — Pseudocódigo | `paso-11-pseudocodigo-sistema/11b-decisiones-tomadas-y-fuentes.md` | 16 |
+| 4 — Automatización | 12 — Master Prompt | `paso-12-master-prompt/12b-decisiones-tomadas-y-fuentes.md` | 20 |
+| 4 — Automatización | 13 — Sistema final operativo | `paso-13-sistema-final-operativo/13b-decisiones-tomadas-y-fuentes.md` | 18 |
+| 6 — GBP | 14 — GBP Creation & Website Alignment | `paso-14-gbp-creation-website-alignment/14b-decisiones-tomadas-y-fuentes.md` | 47 |
+| 5 — Salida a Mercado | 15 — Redacción de contenido | `paso-15-redaccion-contenido/15b-decisiones-tomadas-y-fuentes.md` | 38 |
+| 5 — Salida a Mercado | 16 — Extracción diseño y layout | `paso-16-extraccion-diseno-layout/16b-decisiones-tomadas-y-fuentes.md` | 32 |
+| 5 — Salida a Mercado | 17 — Constructor del sitio | `paso-17-constructor-sitio/17b-decisiones-tomadas-y-fuentes.md` | 36 |
+| 5 — Salida a Mercado | 18 — QA y deploy | `paso-18-qa-deploy/18b-decisiones-tomadas-y-fuentes.md` | 41 |
+| 5 — Salida a Mercado | 19 — Acciones futuro y escalado | `paso-19-acciones-futuro-escalado/19b-decisiones-tomadas-y-fuentes.md` | 13 |
+
+---
+
+## Resumen del ejemplo Cerrajeros Madrid 24h (494 decisiones)
+
+### Distribución de fuentes
 
 | Fuente | Cantidad | % | Estado |
 |---|---:|---:|---|
-| GMB Crush | 182 | ~54% | Cerrada |
-| Input humano + GMB Crush | 20 | ~6% | Cerrada |
-| Input humano | 16 | ~5% | Cerrada |
-| Decisión de diseño | 1 | <1% | Cerrada |
-| IA heredada (paso X.YY) | 56 | ~17% | Pendiente — se cura al cerrar el paso origen |
-| GMB Crush + IA sin respaldo | 25 | ~7% | Pendiente — IA generada en este paso |
-| Input humano + IA sin respaldo | 1 | <1% | Pendiente — detalle concreto sin validar |
-| IA sin respaldo | 29 | ~9% | Pendiente |
-| Competidores | 4 | ~1% | Pendiente |
-| Datos de búsqueda | 0 | 0% | — |
+| GMB Crush | 372 | 75.3% | Cerrada |
+| Decisión de diseño | 32 | 6.5% | Cerrada |
+| GMB Crush + Competidores | 24 | 4.9% | Pendiente — validar Local Pack |
+| GMB Crush + Datos de búsqueda | 23 | 4.7% | Pendiente — keyword research |
+| Input humano | 21 | 4.3% | Cerrada |
+| GMB Crush + IA sin respaldo | 17 | 3.4% | Pendiente — validar copy |
+| IA sin respaldo | 3 | 0.6% | Pendiente — placeholder |
+| GMB Crush + Input humano | 1 | 0.2% | Pendiente — validar con cliente |
 
-**Estado general:** 219 decisiones cerradas (~66%) · 115 decisiones pendientes (~34%).
+### Estado general
 
-**Hallazgos principales:**
+```text
+Cerradas:    425 decisiones (~86%)
+Pendientes:  68 decisiones  (~14%) — todas validables con análisis externo
+Cascadas:    199 decisiones (~40%) usan `← X.YY`
+```
 
-- 0 decisiones citan Datos de búsqueda; 4 citan Competidores (los trust signals del paso 1 que requieren benchmark sectorial).
-- Pasos 4, 5, 6, 7, 11 y 13 son framework puro (0% IA).
-- Pasos 1, 3 y 14 concentran la mayor parte de IA sin respaldo no heredada.
-- Paso 2 está dominado por `IA heredada (paso 1.34–1.38)` (18 de 28 decisiones) porque depende de los servicios IA del paso 1.
-- Paso 3 tiene 15 GeoArticles marcados `GMB Crush + IA sin respaldo` (regla framework pero topics concretos IA generados aquí, requieren keyword research).
-- Las 8 Candidate LCAs (1.24–1.31) se marcan `GMB Crush + IA sin respaldo`.
-- Las 2 Direct LCAs (1.22, 1.23) se marcan `Input humano + GMB Crush`.
-- El dominio web (1.02, 1.03) y sus 4 herederos (4.02, 14.22, 14.23, 14.40) se marcan `Input humano` o `Input humano + GMB Crush`.
-- El modelo de negocio (14.05) y los horarios (14.24) se marcan `Input humano`.
-- Los 4 trust signals (1.43, 1.45, 1.46, 1.47) se marcan `Competidores`.
-- El CTA (1.42) se marca `Decisión de diseño`.
-- 56 decisiones IA heredada se curan automáticamente al validar el paso de origen (mayoría: paso 1.34–1.38 servicios + 1.17–1.18 categorías + 1.24–1.31 candidate LCAs).
+### Hallazgos principales
+
+- Pasos 4, 5, 7, 11, 12, 13 son framework puro (Fuente única `GMB Crush` en el 100% de filas).
+- Paso 1 concentra los inputs del cliente (NAP, GBP status, dominio): 14 filas con `Input humano`.
+- Paso 3 tiene 15 GeoArticles con `GMB Crush + Datos de búsqueda` — topics pendientes de keyword research.
+- Pasos 1, 2, 14 concentran las cascadas hacia los servicios core 1.34–1.38 y categorías 1.16–1.18.
+- Paso 16 está dominado por `Decisión de diseño` (29 de 32 filas) — el operador define tokens y layouts.
+- Las 8 Candidate LCAs (1.24–1.31) y los 5 servicios core (1.34–1.38) son `GMB Crush + Competidores`.
+- El CTA principal (1.42) y todos los tokens visuales del Paso 16 son `Decisión de diseño`.
+- 0 filas superan las 12 palabras en `Qué dicta la fuente`. Media: 8.6 palabras.
