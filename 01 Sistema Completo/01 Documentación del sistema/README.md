@@ -19,15 +19,16 @@ Sistema de 19 pasos en 6 bloques para construir webs locales optimizadas para SE
 ```text
 repos-1-y-2/
 ├── 01 Sistema Completo/       ← sistema canónico GMB Crush V6.4
-│   ├── 01 Documentación del sistema/   ← este README + 3 docs auxiliares
-│   ├── Bloque 1 — Fundamentos/         ← pasos 1–3
-│   ├── Bloque 2 — Arquitectura/        ← pasos 4–7
-│   ├── Bloque 3 — Priorizacion/        ← pasos 8–10
-│   ├── Bloque 4 — Automatizacion/      ← pasos 11–13
-│   ├── Bloque 5 — Salida a Mercado/    ← pasos 15–19
-│   ├── Bloque 6 — GBP/                 ← paso 14
-│   └── Taller/                         ← borradores y versiones intermedias (no canónicas)
-├── 02 Varios/                 ← versiones anteriores y ejemplos en otros negocios
+│   ├── 01 Documentación del sistema/   ← este README + 3 docs auxiliares + auditoría
+│   ├── 02 Ejecución del sistema/       ← los 19 pasos en 6 bloques
+│   │   ├── Bloque 1 — Fundamentos/         ← pasos 1–3
+│   │   ├── Bloque 2 — Arquitectura/        ← pasos 4–7
+│   │   ├── Bloque 3 — Priorizacion/        ← pasos 8–10
+│   │   ├── Bloque 4 — Automatizacion/      ← pasos 11–13
+│   │   ├── Bloque 5 — Salida a Mercado/    ← pasos 15–19
+│   │   └── Bloque 6 — GBP/                 ← paso 14
+│   ├── 03 Taller/                      ← borradores y versiones intermedias (no canónicas)
+│   └── 04 Varios/                      ← versiones anteriores y ejemplos en otros negocios
 └── README.md
 ```
 
@@ -114,7 +115,7 @@ Cambios:         19 pasos consolidados, índice canónico §X, modelo de Fuentes
 
 ---
 
-## 02 Varios
+## 04 Varios
 
 Versiones anteriores del sistema y ejemplos ejecutados con otros negocios. No son canónicos.
 

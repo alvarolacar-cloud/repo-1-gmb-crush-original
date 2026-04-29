@@ -1,52 +1,44 @@
 # GMB Crush Website Build System
 
-Sistema completo en 14 pasos para construir una web local desde cero siguiendo la metodología GMB Crush.
+Sistema completo en **19 pasos** y **6 bloques** para construir webs locales optimizadas para SEO + GBP. Web-first, con GBP como cierre del ecosistema.
 
 ---
 
 ## Estructura del repositorio
 
-Este repositorio contiene 4 carpetas, cada una con una versión o perspectiva diferente del sistema:
-
-### 01 Sistema_Vision Rapida
-
-Todos los pasos del sistema explicados de manera **resumida**. Cada paso tiene su esquema estructurado con fórmulas, reglas y matrices, pero sin ejemplos extensos ni profundidad procedimental. Es la referencia rápida del sistema: lo que necesitas para entender qué hace cada paso sin entrar en detalle.
-
-### 02 Sistema_ Ejecucion
-
-Todos los pasos **ampliados** con el ejemplo completo de **Cerrajeros Madrid 24h**. Cada paso incluye objetivo, formulario en blanco, ejemplo rellenado, cuerpo operativo con reglas, ejemplos correctos e incorrectos, checklist final y fuentes GMB Crush. Es la versión que se usa para ejecutar el sistema con un negocio real.
-
-### 03 Sistema_ Vision Completa
-
-Clon de la carpeta 02 donde se añaden las **decisiones** que se toman en cada paso. Para cada decisión concreta del ejemplo (qué servicios se eligen, qué zonas se cubren, qué URLs se crean, qué prioridades se asignan), se indica de qué fuente viene: Framework GMB Crush, Competidores, Datos de búsqueda, Geografía o Input humano. El objetivo es verificar que cada decisión está anclada a una fuente y detectar las que la IA tomó sin respaldo.
-
-### 04 Ejemplos Antiguos
-
-Versiones anteriores del sistema usadas durante el desarrollo:
-
-- **Miami-ABC-Locksmith-V4**: ejemplo original en inglés con ABC Locksmith en Miami (13 pasos)
-- **Cerrajeros-Madrid-V5**: primera versión en español con Cerrajeros Madrid 24h (13 pasos)
-
-Estas versiones están superadas por la V6.4 de la carpeta 02.
+```text
+repos-1-y-2/
+├── 01 Sistema Completo/
+│   ├── 01 Documentación del sistema/   ← entrada al sistema (reglas, índice, catálogo, audit)
+│   ├── 02 Ejecución del sistema/       ← los 19 pasos en 6 bloques
+│   ├── 03 Taller/                       ← borradores y versiones intermedias (no canónicas)
+│   └── 04 Varios/                       ← versiones anteriores y ejemplos en otros negocios
+└── README.md
+```
 
 ---
 
-## Flujo del sistema
+## Por dónde empezar
 
-```
-Input → Architecture → URL Matrix → URL Rules → Page Types → Content Structure → Internal Links → Priority → QA → Production → Pseudocode → Master Prompt → Final System → GBP Alignment
-```
+Abre `01 Sistema Completo/01 Documentación del sistema/README.md`. Es la entrada oficial del sistema canónico.
 
-## Fórmula de arquitectura
+Allí encontrarás:
 
-```
-Total páginas = 1 + S + C + (S × C) + (A × C) + (G × S × C)
+- **README** — visión general, principios, estructura, estado.
+- **reglas-del-sistema.md** — las 47 reglas estructurales y operativas.
+- **indice-tematico.md** — índice cruzado de conceptos con referencia canónica `§X`.
+- **catalogo-de-fuentes.md** — modelo de Fuentes para los archivos de decisiones.
+- **auditoria-fuentes-externas/** — audit de las decisiones que dependen de Competidores y Datos de búsqueda.
 
-Donde:
-  S = Servicios principales
-  C = Ciudades objetivo
-  A = Categorías GBP adicionales (sin duplicados)
-  G = GeoArticles por servicio × ciudad
+---
+
+## Versión y estado
+
+```text
+Versión:         V6.4 (estado cerrado)
+Última revisión: 2026-04-29
+Decisiones:      494 trazadas (425 cerradas, 68 pendientes)
+Refs canónicas:  494 / 494 válidas
 ```
 
 ---
